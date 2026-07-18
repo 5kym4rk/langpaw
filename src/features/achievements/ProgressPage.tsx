@@ -1,11 +1,19 @@
 import { useEffect, useMemo, useState } from "react";
 import { PageHeader } from "@/components/common/PageHeader";
 import { GlassPanel } from "@/components/common/GlassPanel";
+import { ActivityBarChart } from "@/components/common/ActivityBarChart";
 import { getAllProgress } from "@/db/repositories/progress-repository";
-import { getStatsForLanguage } from "@/db/repositories/stats-repository";
+import { getAllStats } from "@/db/repositories/stats-repository";
 import { computeStreak } from "@/services/session/streak";
-import { recentDateKeys } from "@/utils/date";
-import type { DailyStat, LearningState, VocabularyProgress } from "@/types";
+import { inferLanguageFromId } from "@/utils/vocabulary-id";
+import { LANGUAGES, LANGUAGE_ORDER } from "@/config/languages";
+import type {
+  DailyStat,
+  LanguageCode,
+  LearningState,
+  VocabularyProgress,
+} from "@/types";
+import { cn } from "@/utils/cn";
 
 const STATE_LABELS: Record<LearningState, string> = {
   new: "Từ mới",
@@ -14,23 +22,42 @@ const STATE_LABELS: Record<LearningState, string> = {
   mastered: "Đã thuộc",
 };
 
+type Tab = "all" | LanguageCode;
+
+const TABS: { id: Tab; label: string }[] = [
+  { id: "all", label: "Tổng quan" },
+  ...LANGUAGE_ORDER.map((c) => ({ id: c, label: LANGUAGES[c].labelVi })),
+];
+
 export default function ProgressPage() {
   const [progress, setProgress] = useState<VocabularyProgress[]>([]);
   const [stats, setStats] = useState<DailyStat[]>([]);
+  const [tab, setTab] = useState<Tab>("all");
 
   useEffect(() => {
     let active = true;
-    void Promise.all([getAllProgress(), getStatsForLanguage("all")]).then(
-      ([p, s]) => {
-        if (!active) return;
-        setProgress(p);
-        setStats(s);
-      },
-    );
+    void Promise.all([getAllProgress(), getAllStats()]).then(([p, s]) => {
+      if (!active) return;
+      setProgress(p);
+      setStats(s);
+    });
     return () => {
       active = false;
     };
   }, []);
+
+  // Lọc theo tab ngôn ngữ.
+  const scopedProgress = useMemo(
+    () =>
+      tab === "all"
+        ? progress
+        : progress.filter((p) => inferLanguageFromId(p.vocabularyId) === tab),
+    [progress, tab],
+  );
+  const scopedStats = useMemo(
+    () => stats.filter((s) => s.language === tab),
+    [stats, tab],
+  );
 
   const stateCounts = useMemo(() => {
     const counts: Record<LearningState, number> = {
@@ -39,13 +66,16 @@ export default function ProgressPage() {
       review: 0,
       mastered: 0,
     };
-    for (const p of progress) counts[p.state] += 1;
+    for (const p of scopedProgress) counts[p.state] += 1;
     return counts;
-  }, [progress]);
+  }, [scopedProgress]);
 
-  const totalSeen = progress.length;
-  const totalCorrect = progress.reduce((s, p) => s + p.correctCount, 0);
-  const totalIncorrect = progress.reduce((s, p) => s + p.incorrectCount, 0);
+  const totalSeen = scopedProgress.length;
+  const totalCorrect = scopedProgress.reduce((s, p) => s + p.correctCount, 0);
+  const totalIncorrect = scopedProgress.reduce(
+    (s, p) => s + p.incorrectCount,
+    0,
+  );
   const accuracy =
     totalCorrect + totalIncorrect > 0
       ? Math.round((totalCorrect / (totalCorrect + totalIncorrect)) * 100)
@@ -53,28 +83,48 @@ export default function ProgressPage() {
 
   const statByDate = useMemo(() => {
     const map = new Map<string, DailyStat>();
-    for (const s of stats) map.set(s.date, s);
+    for (const s of scopedStats) map.set(s.date, s);
     return map;
-  }, [stats]);
+  }, [scopedStats]);
 
   const streak = useMemo(
-    () => computeStreak(stats.map((s) => s.date)),
-    [stats],
+    () => computeStreak(scopedStats.map((s) => s.date)),
+    [scopedStats],
   );
 
   const studyMinutes = Math.round(
-    stats.reduce((s, d) => s + d.studyMs, 0) / 60000,
+    scopedStats.reduce((s, d) => s + d.studyMs, 0) / 60000,
   );
+  const reviewsDone = scopedStats.reduce((s, d) => s + d.reviewsDone, 0);
 
   return (
     <div>
       <PageHeader title="Tiến độ" subtitle="Thống kê học tập của bạn" />
 
+      {/* Tab theo ngôn ngữ */}
+      <div className="mb-5 flex flex-wrap gap-2" role="tablist">
+        {TABS.map((t) => (
+          <button
+            key={t.id}
+            type="button"
+            role="tab"
+            aria-selected={tab === t.id}
+            onClick={() => setTab(t.id)}
+            className={cn(
+              "rounded-full px-4 py-1.5 text-sm font-medium",
+              tab === t.id ? "bg-corgi text-night" : "glass text-ivory/80",
+            )}
+          >
+            {t.label}
+          </button>
+        ))}
+      </div>
+
       <div className="grid gap-4 sm:grid-cols-4">
         <Stat label="Tổng từ đã gặp" value={totalSeen} />
         <Stat label="Tỷ lệ đúng" value={`${accuracy}%`} />
         <Stat label="Chuỗi ngày học" value={streak} />
-        <Stat label="Thời gian học" value={`${studyMinutes} phút`} />
+        <Stat label="Lượt ôn tập" value={reviewsDone} />
       </div>
 
       <div className="mt-4 grid gap-4 sm:grid-cols-4">
@@ -83,14 +133,20 @@ export default function ProgressPage() {
         ))}
       </div>
 
+      {studyMinutes > 0 ? (
+        <p className="mt-3 text-sm text-ivory/50">
+          Thời gian học: {studyMinutes} phút
+        </p>
+      ) : null}
+
       <GlassPanel className="mt-6">
         <h2 className="mb-4 font-semibold">7 ngày gần nhất</h2>
-        <BarChart days={7} statByDate={statByDate} />
+        <ActivityBarChart days={7} statByDate={statByDate} />
       </GlassPanel>
 
       <GlassPanel className="mt-4">
         <h2 className="mb-4 font-semibold">30 ngày gần nhất</h2>
-        <BarChart days={30} statByDate={statByDate} compact />
+        <ActivityBarChart days={30} statByDate={statByDate} compact />
       </GlassPanel>
     </div>
   );
@@ -118,54 +174,5 @@ function Stat({
         {value}
       </p>
     </GlassPanel>
-  );
-}
-
-function BarChart({
-  days,
-  statByDate,
-  compact,
-}: {
-  days: number;
-  statByDate: Map<string, DailyStat>;
-  compact?: boolean;
-}) {
-  const keys = recentDateKeys(days);
-  const values = keys.map((k) => {
-    const s = statByDate.get(k);
-    return (s?.wordsStudied ?? 0) + (s?.reviewsDone ?? 0);
-  });
-  const max = Math.max(1, ...values);
-
-  return (
-    <div
-      className="flex items-end gap-1"
-      style={{ height: compact ? 80 : 120 }}
-      role="img"
-      aria-label={`Biểu đồ hoạt động ${days} ngày`}
-    >
-      {keys.map((k, i) => {
-        const heightPct = (values[i] / max) * 100;
-        return (
-          <div
-            key={k}
-            className="flex flex-1 flex-col items-center justify-end"
-            title={`${k}: ${values[i]} hoạt động`}
-          >
-            <div
-              className="w-full rounded-t bg-corgi/70"
-              style={{
-                height: `${Math.max(heightPct, values[i] > 0 ? 6 : 2)}%`,
-              }}
-            />
-            {!compact ? (
-              <span className="mt-1 text-[10px] text-ivory/40">
-                {k.slice(8)}
-              </span>
-            ) : null}
-          </div>
-        );
-      })}
-    </div>
   );
 }

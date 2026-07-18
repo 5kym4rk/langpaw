@@ -2,6 +2,32 @@
 
 Định dạng theo tinh thần [Keep a Changelog](https://keepachangelog.com/).
 
+## [1.1.0] — Vòng sửa Batch 1 (lỗi P0)
+
+### Fixed / Changed
+
+- **P0.1** Học từ có phase setup/running/completed + màn hoàn thành (số từ, đã
+  biết/chưa nhớ, thời gian, tỷ lệ nhớ, học lại từ sai). Chống ghi lặp thẻ cuối
+  bằng khóa `savingRef` + phím tắt chỉ bật khi đang chạy. Thêm chọn số từ/phiên.
+- **P0.2** Luyện nghe có phase setup/running/result với điểm, đúng/sai, thời
+  gian, danh sách từ nghe sai (+ đánh dấu từ yếu, nghe lại từ sai). Ghi thống kê
+  học tập; dọn `setTimeout` phát âm khi đổi câu/rời trang.
+- **P0.3** Điều hướng mobile: bottom nav gồm 4 mục chính + nút "Thêm" mở bottom
+  sheet (focus trap, Escape, click ngoài, aria-expanded/controls, safe-area).
+- **P0.5 / P0.6** Dashboard thống kê theo ngôn ngữ đang chọn + biểu đồ 7 ngày
+  thật; trang Tiến độ thêm tab theo ngôn ngữ. Bỏ mọi text "Giai đoạn"/"MVP" khỏi
+  UI; xóa `PlaceholderPage` không dùng.
+- **Feature availability** Disable điều khiển nền động & nhạc khi chưa có tài
+  nguyên ("Chưa cài tài nguyên nền" / "Chưa cài gói âm thanh").
+
+### Added (tests)
+
+- Test hoàn thành phiên Học (1 thẻ / nhiều thẻ / chống double click).
+- Test màn kết quả Luyện nghe + ghi thống kê.
+- Test menu "Thêm" mobile (mở, chứa route phụ, Escape đóng).
+- Test `inferLanguageFromId`; E2E `mobile-nav` (360×800). Tổng 70 unit +
+  6 E2E test.
+
 ## [1.0.0] — Giai đoạn 6: PWA, backup, CI, deploy
 
 ### Added

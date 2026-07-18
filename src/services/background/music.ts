@@ -15,6 +15,13 @@ export const MUSIC_TRACKS: MusicTrack[] = [
 ];
 
 /**
+ * Có gói âm thanh hợp lệ hay chưa. Hiện chưa kèm file nhạc có giấy phép nên
+ * phần nhạc bị vô hiệu hóa trong giao diện. Đặt thành true khi đã thêm file
+ * âm thanh vào public/audio kèm ghi công trong ATTRIBUTIONS.md.
+ */
+export const MUSIC_AVAILABLE = false;
+
+/**
  * Bộ điều khiển nhạc nền. Chỉ phát sau tương tác người dùng (gọi play()).
  * Xử lý lỗi im lặng nếu file nhạc chưa tồn tại (MVP chưa kèm tài nguyên âm thanh).
  */

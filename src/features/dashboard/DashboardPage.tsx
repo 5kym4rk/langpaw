@@ -1,46 +1,70 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { GraduationCap, RefreshCw, Briefcase } from "lucide-react";
 import { PageHeader } from "@/components/common/PageHeader";
 import { GlassPanel } from "@/components/common/GlassPanel";
+import { ActivityBarChart } from "@/components/common/ActivityBarChart";
 import { useSettingsStore } from "@/stores/settings-store";
 import { LANGUAGES } from "@/config/languages";
 import { getAllProgress } from "@/db/repositories/progress-repository";
 import { getStatsForLanguage } from "@/db/repositories/stats-repository";
 import { computeStreak } from "@/services/session/streak";
-import {
-  summarizeProgress,
-  type ProgressSummary,
-} from "@/services/session/stats";
-
-const EMPTY: ProgressSummary = {
-  total: 0,
-  learned: 0,
-  due: 0,
-  weak: 0,
-  favorite: 0,
-};
+import { summarizeProgress } from "@/services/session/stats";
+import { inferLanguageFromId } from "@/utils/vocabulary-id";
+import type { DailyStat, VocabularyProgress } from "@/types";
 
 export default function DashboardPage() {
   const targetLanguage = useSettingsStore((s) => s.settings.targetLanguage);
   const dailyGoal = useSettingsStore((s) => s.settings.dailyGoal);
   const lang = LANGUAGES[targetLanguage];
-  const [summary, setSummary] = useState<ProgressSummary>(EMPTY);
-  const [streak, setStreak] = useState(0);
 
+  const [progress, setProgress] = useState<VocabularyProgress[]>([]);
+  const [stats, setStats] = useState<DailyStat[]>([]);
+
+  // Tải lại khi đổi ngôn ngữ để thống kê khớp ngôn ngữ đang chọn.
   useEffect(() => {
     let active = true;
-    void Promise.all([getAllProgress(), getStatsForLanguage("all")]).then(
-      ([all, stats]) => {
-        if (!active) return;
-        setSummary(summarizeProgress(all));
-        setStreak(computeStreak(stats.map((s) => s.date)));
-      },
-    );
+    void Promise.all([
+      getAllProgress(),
+      getStatsForLanguage(targetLanguage),
+    ]).then(([all, langStats]) => {
+      if (!active) return;
+      setProgress(all);
+      setStats(langStats);
+    });
     return () => {
       active = false;
     };
-  }, []);
+  }, [targetLanguage]);
+
+  // Chỉ tính tiến độ của ngôn ngữ đang chọn.
+  const langProgress = useMemo(
+    () =>
+      progress.filter(
+        (p) => inferLanguageFromId(p.vocabularyId) === targetLanguage,
+      ),
+    [progress, targetLanguage],
+  );
+  const summary = useMemo(
+    () => summarizeProgress(langProgress),
+    [langProgress],
+  );
+  const streak = useMemo(
+    () => computeStreak(stats.map((s) => s.date)),
+    [stats],
+  );
+  const todayStudied = useMemo(() => {
+    const today = new Date().toISOString().slice(0, 10);
+    return stats.find((s) => s.date === today)?.wordsStudied ?? 0;
+  }, [stats]);
+
+  const statByDate = useMemo(() => {
+    const map = new Map<string, DailyStat>();
+    for (const s of stats) map.set(s.date, s);
+    return map;
+  }, [stats]);
+
+  const hasActivity = stats.length > 0 || langProgress.length > 0;
 
   return (
     <div>
@@ -55,9 +79,9 @@ export default function DashboardPage() {
         <StatCard label="Cần ôn hôm nay" value={summary.due} unit="từ" />
         <StatCard
           label="Mục tiêu ngày"
-          value={dailyGoal}
+          value={`${todayStudied}/${dailyGoal}`}
           unit="từ"
-          hint="Đặt trong Cài đặt"
+          hint={`${lang.labelVi}`}
         />
       </div>
 
@@ -72,12 +96,21 @@ export default function DashboardPage() {
       </div>
 
       <GlassPanel className="mt-6">
-        <h2 className="text-lg font-semibold">Bảy ngày gần nhất</h2>
-        <p className="mt-1 text-sm text-ivory/60">
-          {summary.learned > 0
-            ? "Biểu đồ tiến độ chi tiết sẽ có ở Giai đoạn 3."
-            : "Biểu đồ tiến độ sẽ hiển thị khi bạn bắt đầu học."}
-        </p>
+        <div className="mb-3 flex items-center justify-between">
+          <h2 className="text-lg font-semibold">
+            Bảy ngày gần nhất · {lang.labelVi}
+          </h2>
+          <Link to="/progress" className="text-sm text-corgi">
+            Xem chi tiết
+          </Link>
+        </div>
+        {hasActivity ? (
+          <ActivityBarChart days={7} statByDate={statByDate} />
+        ) : (
+          <p className="text-sm text-ivory/60">
+            Biểu đồ tiến độ sẽ hiển thị khi bạn bắt đầu học.
+          </p>
+        )}
       </GlassPanel>
     </div>
   );
@@ -90,7 +123,7 @@ function StatCard({
   hint,
 }: {
   label: string;
-  value: number;
+  value: number | string;
   unit: string;
   hint?: string;
 }) {

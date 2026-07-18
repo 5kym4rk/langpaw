@@ -17,6 +17,8 @@ import type { ReviewGrade } from "@/config/learning";
 
 export interface SessionOptions extends VocabularyFilter {
   shuffleOrder?: boolean;
+  /** Giới hạn số thẻ trong phiên; bỏ qua để lấy tất cả sau lọc. */
+  sessionSize?: number;
 }
 
 interface LearningState {
@@ -30,6 +32,7 @@ interface LearningState {
 
   loadLanguage: (language: LanguageCode) => Promise<void>;
   startSession: (options: SessionOptions) => void;
+  startSessionFromIds: (ids: string[]) => void;
   next: () => void;
   previous: () => void;
   goTo: (index: number) => void;
@@ -90,7 +93,20 @@ export const useLearningStore = create<LearningState>((set, get) => ({
   startSession: (options) => {
     const { allItems, progressMap } = get();
     const filtered = filterVocabulary(allItems, options, progressMap);
-    const items = options.shuffleOrder ? shuffle(filtered) : filtered;
+    const ordered = options.shuffleOrder ? shuffle(filtered) : filtered;
+    const items =
+      options.sessionSize && options.sessionSize > 0
+        ? ordered.slice(0, options.sessionSize)
+        : ordered;
+    set({ sessionItems: items, currentIndex: 0 });
+  },
+
+  startSessionFromIds: (ids) => {
+    const { allItems } = get();
+    const byId = new Map(allItems.map((i) => [i.id, i]));
+    const items = ids
+      .map((id) => byId.get(id))
+      .filter((i): i is VocabularyItem => Boolean(i));
     set({ sessionItems: items, currentIndex: 0 });
   },
 

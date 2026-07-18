@@ -1,11 +1,12 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { PageHeader } from "@/components/common/PageHeader";
 import { GlassPanel } from "@/components/common/GlassPanel";
 import { ConfirmDialog } from "@/components/common/ConfirmDialog";
 import { useSettingsStore } from "@/stores/settings-store";
 import { LANGUAGES, LANGUAGE_ORDER } from "@/config/languages";
 import { DAILY_GOALS, type DailyGoal } from "@/config/learning";
-import { MUSIC_TRACKS } from "@/services/background/music";
+import { MUSIC_TRACKS, MUSIC_AVAILABLE } from "@/services/background/music";
+import { loadBackgroundManifest } from "@/services/background/background-manifest";
 import {
   buildBackup,
   downloadBackup,
@@ -25,6 +26,17 @@ export default function SettingsPage() {
   const update = useSettingsStore((s) => s.update);
   const reset = useSettingsStore((s) => s.reset);
   const setTargetLanguage = useSettingsStore((s) => s.setTargetLanguage);
+
+  const [hasBackgroundResource, setHasBackgroundResource] = useState(false);
+  useEffect(() => {
+    let active = true;
+    void loadBackgroundManifest().then((list) => {
+      if (active) setHasBackgroundResource(list.some((b) => b.enabled));
+    });
+    return () => {
+      active = false;
+    };
+  }, []);
 
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [importPreview, setImportPreview] = useState<BackupInput | null>(null);
@@ -157,17 +169,22 @@ export default function SettingsPage() {
         </GlassPanel>
 
         <GlassPanel>
-          <h2 className="mb-3 text-lg font-semibold">Hình nền</h2>
+          <div className="mb-3 flex items-center justify-between">
+            <h2 className="text-lg font-semibold">Hình nền</h2>
+            {!hasBackgroundResource ? (
+              <span className="rounded-full bg-ivory/10 px-2 py-0.5 text-xs text-ivory/60">
+                Chưa cài tài nguyên nền
+              </span>
+            ) : null}
+          </div>
           <div className="flex flex-col gap-3">
             <Toggle
               label="Bật nền động (video)"
-              checked={settings.dynamicBackgroundEnabled}
+              checked={
+                hasBackgroundResource && settings.dynamicBackgroundEnabled
+              }
+              disabled={!hasBackgroundResource}
               onChange={(v) => update({ dynamicBackgroundEnabled: v })}
-            />
-            <Toggle
-              label="Chỉ dùng ảnh tĩnh"
-              checked={settings.staticBackgroundMode}
-              onChange={(v) => update({ staticBackgroundMode: v })}
             />
             <Slider
               label="Độ tối nền"
@@ -187,51 +204,64 @@ export default function SettingsPage() {
               unit="px"
             />
           </div>
-          <p className="mt-2 text-xs text-ivory/40">
-            Bản MVP chưa kèm video Corgi có giấy phép; hiện dùng nền gradient ấm
-            áp. Thêm video vào public/backgrounds và manifest để bật nền động.
-          </p>
+          {!hasBackgroundResource ? (
+            <p className="mt-2 text-xs text-ivory/40">
+              Hiện dùng nền gradient ấm áp. Thêm video/ảnh có giấy phép vào
+              public/backgrounds và manifest để bật nền động.
+            </p>
+          ) : null}
         </GlassPanel>
 
         <GlassPanel>
-          <h2 className="mb-3 text-lg font-semibold">Nhạc nền</h2>
-          <div className="flex flex-col gap-3">
-            <Toggle
-              label="Bật nhạc nền"
-              checked={settings.musicEnabled}
-              onChange={(v) => update({ musicEnabled: v })}
-            />
-            <div className="flex flex-wrap gap-2">
-              {MUSIC_TRACKS.map((t) => (
-                <button
-                  key={t.id}
-                  type="button"
-                  disabled={!settings.musicEnabled}
-                  onClick={() => update({ musicTrack: t.id })}
-                  aria-pressed={(settings.musicTrack ?? "none") === t.id}
-                  className={cn(
-                    "rounded-full px-4 py-2 text-sm font-medium disabled:opacity-40",
-                    (settings.musicTrack ?? "none") === t.id
-                      ? "bg-corgi text-night"
-                      : "glass text-ivory/80",
-                  )}
-                >
-                  {t.labelVi}
-                </button>
-              ))}
-            </div>
-            <Slider
-              label="Âm lượng nhạc"
-              min={0}
-              max={1}
-              step={0.05}
-              value={settings.musicVolume}
-              onChange={(v) => update({ musicVolume: v })}
-            />
+          <div className="mb-3 flex items-center justify-between">
+            <h2 className="text-lg font-semibold">Nhạc nền</h2>
+            {!MUSIC_AVAILABLE ? (
+              <span className="rounded-full bg-ivory/10 px-2 py-0.5 text-xs text-ivory/60">
+                Chưa cài gói âm thanh
+              </span>
+            ) : null}
           </div>
-          <p className="mt-2 text-xs text-ivory/40">
-            Nhạc chỉ phát sau khi bạn bật. MVP chưa kèm file nhạc có giấy phép.
-          </p>
+          {MUSIC_AVAILABLE ? (
+            <div className="flex flex-col gap-3">
+              <Toggle
+                label="Bật nhạc nền"
+                checked={settings.musicEnabled}
+                onChange={(v) => update({ musicEnabled: v })}
+              />
+              <div className="flex flex-wrap gap-2">
+                {MUSIC_TRACKS.map((t) => (
+                  <button
+                    key={t.id}
+                    type="button"
+                    disabled={!settings.musicEnabled}
+                    onClick={() => update({ musicTrack: t.id })}
+                    aria-pressed={(settings.musicTrack ?? "none") === t.id}
+                    className={cn(
+                      "rounded-full px-4 py-2 text-sm font-medium disabled:opacity-40",
+                      (settings.musicTrack ?? "none") === t.id
+                        ? "bg-corgi text-night"
+                        : "glass text-ivory/80",
+                    )}
+                  >
+                    {t.labelVi}
+                  </button>
+                ))}
+              </div>
+              <Slider
+                label="Âm lượng nhạc"
+                min={0}
+                max={1}
+                step={0.05}
+                value={settings.musicVolume}
+                onChange={(v) => update({ musicVolume: v })}
+              />
+            </div>
+          ) : (
+            <p className="text-xs text-ivory/40">
+              Thêm file nhạc có giấy phép vào public/audio và bật cờ trong mã
+              nguồn để kích hoạt nhạc nền.
+            </p>
+          )}
         </GlassPanel>
 
         <GlassPanel>
@@ -384,19 +414,27 @@ function Toggle({
   label,
   checked,
   onChange,
+  disabled,
 }: {
   label: string;
   checked: boolean;
   onChange: (value: boolean) => void;
+  disabled?: boolean;
 }) {
   return (
-    <label className="flex cursor-pointer items-center justify-between gap-4">
+    <label
+      className={cn(
+        "flex items-center justify-between gap-4",
+        disabled ? "cursor-not-allowed opacity-50" : "cursor-pointer",
+      )}
+    >
       <span className="text-sm text-ivory/85">{label}</span>
       <button
         type="button"
         role="switch"
         aria-checked={checked}
         aria-label={label}
+        disabled={disabled}
         onClick={() => onChange(!checked)}
         className={cn(
           "relative h-6 w-11 rounded-full transition-colors",

@@ -1,9 +1,8 @@
-import { useEffect, useMemo, useState } from "react";
-import { Volume2, Check, X } from "lucide-react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { Volume2, Check, X, RotateCcw, AlertTriangle } from "lucide-react";
 import { PageHeader } from "@/components/common/PageHeader";
 import { LoadingState } from "@/components/common/LoadingState";
 import { GlassPanel } from "@/components/common/GlassPanel";
-import { EmptyState } from "@/components/common/EmptyState";
 import { useLearningStore } from "@/stores/learning-store";
 import { useSettingsStore } from "@/stores/settings-store";
 import { LANGUAGES } from "@/config/languages";
@@ -11,30 +10,65 @@ import { buildChoices } from "@/services/quiz/distractors";
 import { shuffle } from "@/services/data/vocabulary-filters";
 import { isAnswerCorrect } from "@/services/quiz/normalize-answer";
 import { speechService } from "@/services/speech/speech-service";
+import { recordActivity } from "@/db/repositories/stats-repository";
 import type { VocabularyItem } from "@/types";
 import { cn } from "@/utils/cn";
 
 type Mode = "choose" | "type";
+type Phase = "setup" | "running" | "result";
+
+const COUNTS = [5, 10, 20] as const;
+
+interface AnswerRecord {
+  item: VocabularyItem;
+  correct: boolean;
+}
 
 export default function ListeningPage() {
   const targetLanguage = useSettingsStore((s) => s.settings.targetLanguage);
   const speechEnabled = useSettingsStore((s) => s.settings.speechEnabled);
-  const { allItems, loading, loadLanguage } = useLearningStore();
+  const { allItems, loading, loadLanguage, toggleWeak } = useLearningStore();
   const lang = LANGUAGES[targetLanguage];
 
+  const [phase, setPhase] = useState<Phase>("setup");
   const [mode, setMode] = useState<Mode>("choose");
-  const [started, setStarted] = useState(false);
+  const [count, setCount] = useState<number>(10);
   const [queue, setQueue] = useState<VocabularyItem[]>([]);
   const [index, setIndex] = useState(0);
   const [selected, setSelected] = useState<string | null>(null);
   const [textAnswer, setTextAnswer] = useState("");
   const [revealed, setRevealed] = useState(false);
+  const [answers, setAnswers] = useState<AnswerRecord[]>([]);
+  const startedAtRef = useRef(0);
+  const playTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const clearPlayTimer = () => {
+    if (playTimerRef.current !== null) {
+      clearTimeout(playTimerRef.current);
+      playTimerRef.current = null;
+    }
+  };
 
   useEffect(() => {
     void loadLanguage(targetLanguage);
   }, [targetLanguage, loadLanguage]);
 
-  useEffect(() => () => speechService.cancel(), [targetLanguage]);
+  // Đổi ngôn ngữ → về setup, hủy speech và timeout đang chờ (P1.5).
+  useEffect(() => {
+    setPhase("setup");
+    return () => {
+      clearPlayTimer();
+      speechService.cancel();
+    };
+  }, [targetLanguage]);
+
+  // Cleanup khi unmount.
+  useEffect(() => {
+    return () => {
+      clearPlayTimer();
+      speechService.cancel();
+    };
+  }, []);
 
   const current = queue[index];
   const choices = useMemo(
@@ -47,40 +81,80 @@ export default function ListeningPage() {
     void speechService.speak(item.term, { lang: lang.speechLocale });
   };
 
+  const schedulePlay = (item: VocabularyItem | undefined, delay: number) => {
+    clearPlayTimer();
+    if (!item) return;
+    playTimerRef.current = setTimeout(() => {
+      playTimerRef.current = null;
+      playCurrent(item);
+    }, delay);
+  };
+
   const begin = () => {
-    const q = shuffle(allItems).slice(0, 10);
+    const q = shuffle(allItems).slice(0, count);
     setQueue(q);
     setIndex(0);
     setSelected(null);
     setTextAnswer("");
     setRevealed(false);
-    setStarted(true);
-    if (q[0]) setTimeout(() => playCurrent(q[0]), 300);
+    setAnswers([]);
+    startedAtRef.current = Date.now();
+    setPhase("running");
+    schedulePlay(q[0], 300);
   };
 
   const check = () => {
     if (revealed || !current) return;
     if (mode === "choose" && !selected) return;
+    const correct =
+      mode === "choose"
+        ? selected === current.id
+        : isAnswerCorrect(
+            textAnswer,
+            [current.term, ...(current.alternateForms ?? [])],
+            current.language,
+            { ignorePinyinTones: current.language === "zh" },
+          );
+    setAnswers((prev) => [...prev, { item: current, correct }]);
+    void recordActivity(current.language, {
+      wordsStudied: 1,
+      correct: correct ? 1 : 0,
+      incorrect: correct ? 0 : 1,
+    });
     setRevealed(true);
   };
 
   const goNext = () => {
+    clearPlayTimer();
     speechService.cancel();
     const nextIndex = index + 1;
     if (nextIndex >= queue.length) {
-      setStarted(false);
+      setPhase("result");
       return;
     }
     setIndex(nextIndex);
     setSelected(null);
     setTextAnswer("");
     setRevealed(false);
-    setTimeout(() => playCurrent(queue[nextIndex]), 200);
+    schedulePlay(queue[nextIndex], 200);
+  };
+
+  const relearnWrong = (items: VocabularyItem[]) => {
+    setQueue(items);
+    setIndex(0);
+    setSelected(null);
+    setTextAnswer("");
+    setRevealed(false);
+    setAnswers([]);
+    startedAtRef.current = Date.now();
+    setPhase("running");
+    schedulePlay(items[0], 300);
   };
 
   if (loading) return <LoadingState label="Đang tải bộ từ…" />;
 
-  if (!started) {
+  // ---- Setup ----
+  if (phase === "setup") {
     return (
       <div>
         <PageHeader
@@ -89,7 +163,7 @@ export default function ListeningPage() {
         />
         <GlassPanel className="mx-auto max-w-md">
           <h2 className="mb-3 font-semibold">Chế độ</h2>
-          <div className="mb-5 flex gap-2">
+          <div className="mb-4 flex gap-2">
             <ModeButton
               active={mode === "choose"}
               onClick={() => setMode("choose")}
@@ -102,6 +176,23 @@ export default function ListeningPage() {
             >
               Nghe → nhập từ
             </ModeButton>
+          </div>
+          <h2 className="mb-2 font-semibold">Số câu</h2>
+          <div className="mb-5 flex gap-2">
+            {COUNTS.map((n) => (
+              <button
+                key={n}
+                type="button"
+                onClick={() => setCount(n)}
+                aria-pressed={count === n}
+                className={cn(
+                  "rounded-full px-4 py-2 text-sm font-medium",
+                  count === n ? "bg-corgi text-night" : "glass text-ivory/80",
+                )}
+              >
+                {n}
+              </button>
+            ))}
           </div>
           {!speechEnabled ? (
             <p className="mb-4 text-sm text-danger">
@@ -121,34 +212,85 @@ export default function ListeningPage() {
     );
   }
 
-  if (!current) {
+  // ---- Result ----
+  if (phase === "result") {
+    const correctCount = answers.filter((a) => a.correct).length;
+    const wrong = answers.filter((a) => !a.correct);
+    const seconds = Math.round((Date.now() - startedAtRef.current) / 1000);
+    const score =
+      answers.length > 0
+        ? Math.round((correctCount / answers.length) * 100)
+        : 0;
     return (
-      <EmptyState
-        title="Đã hoàn thành"
-        description="Bạn đã nghe hết phiên luyện tập."
-        action={
+      <div className="mx-auto max-w-2xl">
+        <PageHeader title="Kết quả luyện nghe" />
+        <div className="grid gap-4 sm:grid-cols-3">
+          <StatCard label="Điểm" value={`${score}%`} />
+          <StatCard
+            label="Đúng / Sai"
+            value={`${correctCount} / ${wrong.length}`}
+          />
+          <StatCard label="Thời gian" value={`${seconds}s`} />
+        </div>
+
+        {wrong.length > 0 ? (
+          <GlassPanel className="mt-4">
+            <h2 className="mb-3 flex items-center gap-2 font-semibold text-danger">
+              <AlertTriangle size={18} /> Từ nghe sai ({wrong.length})
+            </h2>
+            <ul className="flex flex-col gap-2">
+              {wrong.map((a) => (
+                <li
+                  key={a.item.id}
+                  className="flex items-center justify-between gap-3 rounded-xl bg-night/40 px-3 py-2"
+                >
+                  <div>
+                    <p className="font-medium text-ivory">{a.item.term}</p>
+                    <p className="text-sm text-ivory/60">{a.item.meaningVi}</p>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => void toggleWeak(a.item.id)}
+                    className="rounded-full bg-ivory/10 px-3 py-1.5 text-xs text-ivory"
+                  >
+                    + Từ yếu
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </GlassPanel>
+        ) : (
+          <GlassPanel className="mt-4 text-center">
+            <p className="flex items-center justify-center gap-2 text-success">
+              <Check /> Bạn nghe đúng tất cả!
+            </p>
+          </GlassPanel>
+        )}
+
+        <div className="mt-5 flex flex-wrap justify-center gap-2">
+          {wrong.length > 0 ? (
+            <button
+              type="button"
+              onClick={() => relearnWrong(wrong.map((a) => a.item))}
+              className="flex items-center gap-2 rounded-full bg-corgi px-5 py-2.5 font-medium text-night"
+            >
+              <RotateCcw size={18} /> Nghe lại từ sai
+            </button>
+          ) : null}
           <button
             type="button"
-            onClick={() => setStarted(false)}
-            className="mt-2 rounded-full bg-corgi px-5 py-2 font-medium text-night"
+            onClick={() => setPhase("setup")}
+            className="glass rounded-full px-5 py-2.5 font-medium text-ivory"
           >
-            Luyện lại
+            Làm lại
           </button>
-        }
-      />
+        </div>
+      </div>
     );
   }
 
-  const typedCorrect =
-    mode === "type" &&
-    isAnswerCorrect(
-      textAnswer,
-      [current.term, ...(current.alternateForms ?? [])],
-      current.language,
-      {
-        ignorePinyinTones: current.language === "zh",
-      },
-    );
+  // ---- Running ----
+  if (!current) return null;
 
   return (
     <div className="mx-auto max-w-2xl">
@@ -215,7 +357,7 @@ export default function ListeningPage() {
         {revealed ? (
           <div className="mt-4 rounded-xl bg-night/40 p-4">
             <div className="flex items-center gap-2">
-              {(mode === "choose" ? selected === current.id : typedCorrect) ? (
+              {answers[answers.length - 1]?.correct ? (
                 <Check className="text-success" />
               ) : (
                 <X className="text-danger" />
@@ -247,12 +389,21 @@ export default function ListeningPage() {
               onClick={goNext}
               className="rounded-full bg-corgi px-6 py-2.5 font-medium text-night"
             >
-              {index + 1 >= queue.length ? "Hoàn thành" : "Tiếp theo"}
+              {index + 1 >= queue.length ? "Xem kết quả" : "Tiếp theo"}
             </button>
           )}
         </div>
       </GlassPanel>
     </div>
+  );
+}
+
+function StatCard({ label, value }: { label: string; value: string }) {
+  return (
+    <GlassPanel>
+      <p className="text-sm text-ivory/60">{label}</p>
+      <p className="mt-1 text-3xl font-bold text-corgi">{value}</p>
+    </GlassPanel>
   );
 }
 

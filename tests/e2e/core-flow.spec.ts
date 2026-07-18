@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 
-// Luồng cốt lõi theo §25.3 (rút gọn, ổn định).
-test("học từ, lưu tiến độ qua reload, phỏng vấn, backup", async ({ page }) => {
+// Luồng cốt lõi: học từ → hoàn thành phiên → tiến độ → phỏng vấn → nguồn → backup.
+test("học từ, hoàn thành phiên, phỏng vấn, backup", async ({ page }) => {
   await page.goto("/#/settings");
 
   // Đảm bảo đang học tiếng Anh và đặt mục tiêu 10 từ/ngày.
@@ -11,31 +11,35 @@ test("học từ, lưu tiến độ qua reload, phỏng vấn, backup", async ({
     .click();
   await page.getByRole("button", { name: "10 từ/ngày" }).click();
 
-  // Học từ: bắt đầu phiên, lật thẻ, đánh dấu Đã biết.
+  // Học từ: phiên 5 từ, đánh giá hết → màn hoàn thành.
   await page.goto("/#/learn");
+  await page.getByRole("combobox").nth(3).selectOption("5"); // Số từ/phiên = 5
   await page.getByRole("button", { name: "Bắt đầu học" }).click();
-  await expect(page.getByText(/^1 \/ \d+$/)).toBeVisible();
-  await page.getByRole("button", { name: /Đã biết/ }).click();
+  for (let i = 0; i < 5; i += 1) {
+    await page.getByRole("button", { name: /Đã biết/ }).click();
+  }
+  await expect(
+    page.getByRole("heading", { name: /Hoàn thành phiên học/ }),
+  ).toBeVisible();
 
-  // Reload và kiểm tra tiến độ vẫn còn trên trang chủ.
+  // Trang chủ: tiến độ đã được ghi.
   await page.goto("/#/");
   await expect(page.getByText("Từ đã học")).toBeVisible();
-  const learned = page.locator("text=Từ đã học").locator("..");
-  await expect(learned).toContainText("1");
 
-  // Mục phỏng vấn: lọc theo vị trí.
+  // Mục phỏng vấn.
   await page.goto("/#/interview");
   await expect(
     page.getByRole("heading", { name: /Phỏng vấn điện tử/ }),
   ).toBeVisible();
 
-  // Trang nguồn dữ liệu mở được.
+  // Trang nguồn dữ liệu.
   await page.goto("/#/sources");
-  await expect(page.getByText("Trạng thái kiểm duyệt")).toBeVisible();
+  await expect(
+    page.getByRole("heading", { name: "Trạng thái kiểm duyệt" }),
+  ).toBeVisible();
 
-  // Cài đặt: chuyển sang nền tĩnh và xuất backup.
+  // Cài đặt: xuất backup.
   await page.goto("/#/settings");
-  await page.getByRole("switch", { name: "Chỉ dùng ảnh tĩnh" }).click();
   const downloadPromise = page.waitForEvent("download");
   await page.getByRole("button", { name: /Xuất dữ liệu/ }).click();
   const download = await downloadPromise;

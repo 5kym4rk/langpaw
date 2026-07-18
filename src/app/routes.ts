@@ -22,10 +22,10 @@ export interface RouteMeta {
 export const ROUTES: RouteMeta[] = [
   { path: "/", labelVi: "Trang chủ", icon: Home, primary: true },
   { path: "/learn", labelVi: "Học từ", icon: GraduationCap, primary: true },
-  { path: "/listen", labelVi: "Luyện nghe", icon: Headphones, primary: true },
-  { path: "/quiz", labelVi: "Kiểm tra", icon: ListChecks, primary: true },
   { path: "/review", labelVi: "Ôn tập", icon: RefreshCw, primary: true },
-  { path: "/interview", labelVi: "Phỏng vấn", icon: Briefcase, primary: false },
+  { path: "/interview", labelVi: "Phỏng vấn", icon: Briefcase, primary: true },
+  { path: "/listen", labelVi: "Luyện nghe", icon: Headphones, primary: false },
+  { path: "/quiz", labelVi: "Kiểm tra", icon: ListChecks, primary: false },
   { path: "/progress", labelVi: "Tiến độ", icon: BarChart3, primary: false },
   {
     path: "/sources",
@@ -35,3 +35,9 @@ export const ROUTES: RouteMeta[] = [
   },
   { path: "/settings", labelVi: "Cài đặt", icon: Settings, primary: false },
 ];
+
+/** Các route hiển thị trực tiếp trên bottom navigation mobile. */
+export const PRIMARY_ROUTES = ROUTES.filter((r) => r.primary);
+
+/** Các route phụ, truy cập qua nút "Thêm" trên mobile. */
+export const SECONDARY_ROUTES = ROUTES.filter((r) => !r.primary);

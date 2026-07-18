@@ -1,17 +1,24 @@
-import type { ReactNode } from "react";
-import { NavLink } from "react-router-dom";
-import { PawPrint } from "lucide-react";
-import { ROUTES } from "@/app/routes";
+import { useState, type ReactNode } from "react";
+import { NavLink, useLocation } from "react-router-dom";
+import { PawPrint, MoreHorizontal } from "lucide-react";
+import { ROUTES, PRIMARY_ROUTES, SECONDARY_ROUTES } from "@/app/routes";
 import { APP_CONFIG } from "@/config/app";
 import { LanguageSwitcher } from "./LanguageSwitcher";
+import { MobileMoreMenu } from "./MobileMoreMenu";
 import { cn } from "@/utils/cn";
 
 interface AppShellProps {
   children: ReactNode;
 }
 
+const MORE_MENU_ID = "mobile-more-menu";
+
 export function AppShell({ children }: AppShellProps) {
-  const primaryRoutes = ROUTES.filter((r) => r.primary);
+  const [moreOpen, setMoreOpen] = useState(false);
+  const location = useLocation();
+  const isSecondaryActive = SECONDARY_ROUTES.some(
+    (r) => r.path === location.pathname,
+  );
 
   return (
     <div className="min-h-full">
@@ -66,15 +73,16 @@ export function AppShell({ children }: AppShellProps) {
       {/* Bottom navigation mobile */}
       <nav
         aria-label="Điều hướng chính"
-        className="glass-strong fixed inset-x-0 bottom-0 z-40 flex justify-around px-1 py-1.5 lg:hidden"
+        className="glass-strong fixed inset-x-0 bottom-0 z-40 flex justify-around px-1 py-1.5 pb-[calc(0.375rem+env(safe-area-inset-bottom))] lg:hidden"
       >
-        {primaryRoutes.map((route) => (
+        {PRIMARY_ROUTES.map((route) => (
           <NavLink
             key={route.path}
             to={route.path}
+            end={route.path === "/"}
             className={({ isActive }) =>
               cn(
-                "flex min-w-0 flex-col items-center gap-0.5 rounded-lg px-2 py-1 text-[11px]",
+                "flex min-h-[44px] min-w-0 flex-col items-center justify-center gap-0.5 rounded-lg px-2 py-1 text-[11px]",
                 isActive ? "text-corgi" : "text-ivory/70",
               )
             }
@@ -83,7 +91,27 @@ export function AppShell({ children }: AppShellProps) {
             <span className="truncate">{route.labelVi}</span>
           </NavLink>
         ))}
+        <button
+          type="button"
+          onClick={() => setMoreOpen(true)}
+          aria-haspopup="dialog"
+          aria-expanded={moreOpen}
+          aria-controls={MORE_MENU_ID}
+          className={cn(
+            "flex min-h-[44px] min-w-0 flex-col items-center justify-center gap-0.5 rounded-lg px-2 py-1 text-[11px]",
+            isSecondaryActive ? "text-corgi" : "text-ivory/70",
+          )}
+        >
+          <MoreHorizontal size={20} aria-hidden />
+          <span className="truncate">Thêm</span>
+        </button>
       </nav>
+
+      <MobileMoreMenu
+        open={moreOpen}
+        onClose={() => setMoreOpen(false)}
+        id={MORE_MENU_ID}
+      />
     </div>
   );
 }
