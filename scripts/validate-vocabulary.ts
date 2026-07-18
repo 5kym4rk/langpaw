@@ -4,8 +4,7 @@
  *
  * Trả exit code khác 0 nếu có lỗi nghiêm trọng (schema, trùng ID, thiếu nguồn…).
  */
-import { readFileSync, existsSync } from "node:fs";
-import { globSync } from "node:fs";
+import { readFileSync, existsSync, readdirSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import {
@@ -23,10 +22,19 @@ const hasHan = (s: string) => /[一-鿿]/.test(s);
 const hasKanji = (s: string) => /[一-鿿]/.test(s);
 const hasKana = (s: string) => /[぀-ヿ]/.test(s);
 
+// Đệ quy tìm file .json — không phụ thuộc globSync (chỉ có từ Node 22+).
 function findJsonFiles(dir: string): string[] {
   if (!existsSync(dir)) return [];
-  // Node 22+ hỗ trợ globSync ổn định.
-  return globSync("**/*.json", { cwd: dir }).map((f) => path.join(dir, f));
+  const result: string[] = [];
+  for (const entry of readdirSync(dir, { withFileTypes: true })) {
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      result.push(...findJsonFiles(full));
+    } else if (entry.isFile() && entry.name.endsWith(".json")) {
+      result.push(full);
+    }
+  }
+  return result;
 }
 
 const files = findJsonFiles(dataDir).filter(
