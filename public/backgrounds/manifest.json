@@ -1,0 +1,14 @@
+[
+  {
+    "id": "corgi-study-morning",
+    "title": "Corgi học bài buổi sáng",
+    "videoSrc": "backgrounds/corgi-study-morning.webm",
+    "posterSrc": "backgrounds/corgi-study-morning.jpg",
+    "author": "LangPaw project",
+    "sourceUrl": "",
+    "license": "Project-owned",
+    "resolution": "1920x1080",
+    "sizeBytes": 0,
+    "enabled": false
+  }
+]
