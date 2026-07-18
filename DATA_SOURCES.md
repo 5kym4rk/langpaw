@@ -1,0 +1,53 @@
+# Nguồn dữ liệu
+
+Tài liệu này mô tả từng nguồn tham khảo cho dữ liệu từ vựng LangPaw. **Nguyên
+tắc:** tham khảo phân cấp/định nghĩa uy tín nhưng KHÔNG sao chép hàng loạt dữ
+liệu nếu giấy phép không cho phép tái phân phối. Dữ liệu tự biên soạn được đánh
+dấu rõ và ở trạng thái `draft` cho tới khi có người kiểm duyệt.
+
+Mỗi nguồn cần: Tên · Đơn vị phát hành · URL · Mục đích · Giấy phép đã biết · Được
+đóng gói hay chỉ tham khảo · Phiên bản/ngày truy cập · Cách ghi công · Rủi ro.
+
+## Tiếng Anh
+
+| Nguồn                      | Đơn vị          | Mục đích                      | Đóng gói?                          | Rủi ro                       |
+| -------------------------- | --------------- | ----------------------------- | ---------------------------------- | ---------------------------- |
+| Open English WordNet       | OEWN            | Tham khảo nghĩa & quan hệ từ  | Tham khảo, ghi công theo giấy phép | Cần tuân thủ attribution     |
+| British Council KBVL       | British Council | Tham khảo lựa chọn & phân cấp | Chỉ tham khảo                      | Không mặc định được sao chép |
+| English Vocabulary Profile | Cambridge       | Tham khảo mức CEFR            | Chỉ tham khảo                      | Không tái phân phối          |
+
+Hiển thị: dùng nhãn **"Phân cấp tham khảo theo CEFR"**, không gọi là "danh sách
+CEFR chính thức".
+
+## Tiếng Trung
+
+| Nguồn          | Đơn vị                        | Mục đích         | Đóng gói?     | Rủi ro                                                                    |
+| -------------- | ----------------------------- | ---------------- | ------------- | ------------------------------------------------------------------------- |
+| HSK chính thức | Chinese Testing International | Tham khảo cấp độ | Chỉ tham khảo | Phân biệt HSK cũ 1–6 và HSK mới 3 giai đoạn / 9 bậc qua `syllabusVersion` |
+
+Pinyin luôn hiển thị có dấu thanh (`diànzǐ`).
+
+## Tiếng Hàn
+
+| Nguồn                   | Đơn vị                                | Mục đích            | Đóng gói?                | Rủi ro                                                              |
+| ----------------------- | ------------------------------------- | ------------------- | ------------------------ | ------------------------------------------------------------------- |
+| Korean Basic Dictionary | National Institute of Korean Language | Cách đọc, nghĩa gốc | Theo điều kiện giấy phép | Nếu cần API key: chỉ trong script/secret CI, không đưa vào frontend |
+
+## Tiếng Nhật
+
+| Nguồn          | Đơn vị           | Mục đích                         | Đóng gói?            | Rủi ro                                     |
+| -------------- | ---------------- | -------------------------------- | -------------------- | ------------------------------------------ |
+| JF Standard    | Japan Foundation | Tổ chức trình độ giao tiếp A1–B2 | Chỉ tham khảo        | Không tuyên bố "danh sách JLPT chính thức" |
+| JMdict / EDRDG | EDRDG            | Cách đọc & thông tin từ          | Theo giấy phép EDRDG | Phải ghi công theo điều kiện               |
+
+## Điện tử - viễn thông
+
+IEC Electropedia · ITU Terms and Definitions · NIST Glossary · O*NET · tài liệu
+tiêu chuẩn từ Cisco, 3GPP, IEEE, ARM, Microchip, STMicroelectronics, Texas
+Instruments khi được phép trích dẫn. **Chỉ tạo bộ từ chọn lọc, dẫn nguồn từng
+khái niệm** — không sao chép toàn bộ cơ sở dữ liệu thuật ngữ.
+
+## Trạng thái hiện tại
+
+Giai đoạn 0 chưa đóng gói dữ liệu thực. Dữ liệu mẫu (Giai đoạn 1+) sẽ tự biên
+soạn, gắn `reviewStatus: draft` và trỏ tới nguồn phù hợp.
