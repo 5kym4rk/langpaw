@@ -2,6 +2,26 @@
 
 Định dạng theo tinh thần [Keep a Changelog](https://keepachangelog.com/).
 
+## [1.4.0] — Vòng sửa Batch 4 (phỏng vấn)
+
+### Added / Changed (P1.8)
+
+- Trang Phỏng vấn tổ chức lại thành **3 tab**:
+  - **Thuật ngữ**: thêm ô tìm kiếm (từ/nghĩa/romanization), lọc vị trí & nhóm,
+    lưu yêu thích / từ yếu ngay trong chi tiết.
+  - **Câu hỏi phỏng vấn**: ngân hàng câu hỏi (`INTERVIEW_QUESTIONS`) theo 3 nhóm,
+    mỗi câu có câu hỏi tiếng Anh + phát âm, dịch Việt, ý chính, câu trả lời mẫu
+    (có placeholder), từ khóa, mức độ.
+  - **Luyện trả lời**: chọn câu hỏi, đồng hồ chuẩn bị 30s + trả lời 90s, ghi âm
+    cục bộ bằng `MediaRecorder` (nếu hỗ trợ), phát lại, lưu/xóa bản ghi — **không
+    tải lên máy chủ**, không chấm điểm AI.
+- Mọi timer/stream/recorder được dọn khi đổi câu hỏi hoặc unmount.
+
+### Added (tests)
+
+- `InterviewPage.test.tsx` — 3 tab, tìm kiếm lọc thuật ngữ, ngân hàng câu hỏi,
+  nút luyện trả lời + ghi chú không tải lên máy chủ. Tổng 86 unit + 6 E2E test.
+
 ## [1.3.0] — Vòng sửa Batch 3 (nguồn và kiểm duyệt)
 
 ### Added / Changed
