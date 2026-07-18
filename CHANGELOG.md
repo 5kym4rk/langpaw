@@ -2,6 +2,24 @@
 
 Định dạng theo tinh thần [Keep a Changelog](https://keepachangelog.com/).
 
+## [1.2.0] — Vòng sửa Batch 2 (đồng bộ tiến độ)
+
+### Added / Changed
+
+- **P1.1** Service dùng chung `recordPracticeResult()` (`practice.ts`): cập nhật
+  `VocabularyProgress` (correct/incorrect/streak, new→learning) và daily stats;
+  **không** tự đánh dấu "đã thuộc", không đụng lịch SRS.
+- Quiz: mỗi câu trả lời ghi tiến độ + thống kê qua service chung; chống double
+  submit bằng cờ `savingRef`.
+- **P1.2** Luyện nghe: chuyển sang `recordPracticeResult()` (ghi cả tiến độ lẫn
+  daily stats) thay vì chỉ daily stats; chống double submit.
+
+### Added (tests)
+
+- `practice.test.ts` — `applyPracticeToProgress` (đúng/sai/không mastered/mark
+  weak) + `recordPracticeResult` (lưu progress + stats, cộng dồn).
+- `QuizPage.test.tsx` — trả lời quiz ghi tiến độ cho từng mục. Tổng 77 unit test.
+
 ## [1.1.0] — Vòng sửa Batch 1 (lỗi P0)
 
 ### Fixed / Changed

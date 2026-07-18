@@ -10,7 +10,7 @@ import { buildChoices } from "@/services/quiz/distractors";
 import { shuffle } from "@/services/data/vocabulary-filters";
 import { isAnswerCorrect } from "@/services/quiz/normalize-answer";
 import { speechService } from "@/services/speech/speech-service";
-import { recordActivity } from "@/db/repositories/stats-repository";
+import { recordPracticeResult } from "@/services/session/practice";
 import type { VocabularyItem } from "@/types";
 import { cn } from "@/utils/cn";
 
@@ -40,6 +40,7 @@ export default function ListeningPage() {
   const [revealed, setRevealed] = useState(false);
   const [answers, setAnswers] = useState<AnswerRecord[]>([]);
   const startedAtRef = useRef(0);
+  const savingRef = useRef(false);
   const playTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const clearPlayTimer = () => {
@@ -104,7 +105,7 @@ export default function ListeningPage() {
   };
 
   const check = () => {
-    if (revealed || !current) return;
+    if (revealed || !current || savingRef.current) return;
     if (mode === "choose" && !selected) return;
     const correct =
       mode === "choose"
@@ -115,13 +116,17 @@ export default function ListeningPage() {
             current.language,
             { ignorePinyinTones: current.language === "zh" },
           );
+    savingRef.current = true;
     setAnswers((prev) => [...prev, { item: current, correct }]);
-    void recordActivity(current.language, {
-      wordsStudied: 1,
-      correct: correct ? 1 : 0,
-      incorrect: correct ? 0 : 1,
-    });
     setRevealed(true);
+    void recordPracticeResult({
+      vocabularyId: current.id,
+      language: current.language,
+      activityType: "listening",
+      correct,
+    }).finally(() => {
+      savingRef.current = false;
+    });
   };
 
   const goNext = () => {

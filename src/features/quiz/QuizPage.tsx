@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Check, RotateCcw, AlertTriangle } from "lucide-react";
 import { PageHeader } from "@/components/common/PageHeader";
 import { LoadingState } from "@/components/common/LoadingState";
@@ -9,6 +9,7 @@ import { useSettingsStore } from "@/stores/settings-store";
 import { LANGUAGES } from "@/config/languages";
 import { generateQuiz, type QuizQuestion } from "@/services/quiz/quiz-engine";
 import { isAnswerCorrect } from "@/services/quiz/normalize-answer";
+import { recordPracticeResult } from "@/services/session/practice";
 import { speechService } from "@/services/speech/speech-service";
 import { cn } from "@/utils/cn";
 
@@ -37,6 +38,8 @@ export default function QuizPage() {
   const [textAnswer, setTextAnswer] = useState("");
   const [revealed, setRevealed] = useState(false);
   const [startedAt, setStartedAt] = useState(0);
+  const savingRef = useRef(false);
+  const questionStartRef = useRef(0);
 
   useEffect(() => {
     void loadLanguage(targetLanguage);
@@ -53,13 +56,15 @@ export default function QuizPage() {
     setTextAnswer("");
     setRevealed(false);
     setStartedAt(Date.now());
+    questionStartRef.current = Date.now();
     setPhase("running");
   };
 
   const q = questions[current];
 
   const submit = () => {
-    if (!q || revealed) return;
+    // Chống double submit: revealed gate + cờ đang lưu.
+    if (!q || revealed || savingRef.current) return;
     let correct = false;
     let userAnswer = "";
     if (q.choices) {
@@ -77,8 +82,18 @@ export default function QuizPage() {
         },
       );
     }
+    savingRef.current = true;
     setAnswers((prev) => [...prev, { question: q, correct, userAnswer }]);
     setRevealed(true);
+    void recordPracticeResult({
+      vocabularyId: q.item.id,
+      language: q.item.language,
+      activityType: "quiz",
+      correct,
+      durationMs: Date.now() - questionStartRef.current,
+    }).finally(() => {
+      savingRef.current = false;
+    });
   };
 
   const goNext = () => {
@@ -91,6 +106,7 @@ export default function QuizPage() {
     setSelected(null);
     setTextAnswer("");
     setRevealed(false);
+    questionStartRef.current = Date.now();
   };
 
   if (loading) return <LoadingState label="Đang tải bộ từ…" />;
