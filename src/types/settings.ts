@@ -1,10 +1,13 @@
 import type { LanguageCode } from "./vocabulary";
 import type { DailyGoal } from "@/config/learning";
+import type { ReviewLevel } from "@/services/data/vocabulary-filters";
 
 export interface UserSettings {
   interfaceLanguage: "vi";
   targetLanguage: LanguageCode;
   dailyGoal: DailyGoal;
+  /** Lọc nội dung theo mức kiểm duyệt tối thiểu trong các chế độ học. */
+  contentReviewLevel: ReviewLevel;
 
   showMeaning: boolean;
   showReading: boolean;

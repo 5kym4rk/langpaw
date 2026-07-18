@@ -15,11 +15,15 @@ import {
   INTERVIEW_ROLE_ORDER,
   SAMPLE_INTERVIEW_QUESTIONS,
 } from "@/config/interview";
+import { meetsReviewLevel } from "@/services/data/vocabulary-filters";
 import type { InterviewRole, VocabularyItem } from "@/types";
 import { cn } from "@/utils/cn";
 
 export default function InterviewPage() {
   const targetLanguage = useSettingsStore((s) => s.settings.targetLanguage);
+  const contentReviewLevel = useSettingsStore(
+    (s) => s.settings.contentReviewLevel,
+  );
   const { allItems, loading, loadLanguage } = useLearningStore();
   const lang = LANGUAGES[targetLanguage];
 
@@ -32,8 +36,12 @@ export default function InterviewPage() {
   }, [targetLanguage, loadLanguage]);
 
   const interviewItems = useMemo(
-    () => allItems.filter((i) => i.isInterviewVocabulary),
-    [allItems],
+    () =>
+      allItems.filter(
+        (i) =>
+          i.isInterviewVocabulary && meetsReviewLevel(i, contentReviewLevel),
+      ),
+    [allItems, contentReviewLevel],
   );
 
   const availableRoles = useMemo(() => {

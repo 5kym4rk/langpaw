@@ -7,7 +7,10 @@ import { useLearningStore } from "@/stores/learning-store";
 import { useSettingsStore } from "@/stores/settings-store";
 import { LANGUAGES } from "@/config/languages";
 import { buildChoices } from "@/services/quiz/distractors";
-import { shuffle } from "@/services/data/vocabulary-filters";
+import {
+  shuffle,
+  filterByReviewLevel,
+} from "@/services/data/vocabulary-filters";
 import { isAnswerCorrect } from "@/services/quiz/normalize-answer";
 import { speechService } from "@/services/speech/speech-service";
 import { recordPracticeResult } from "@/services/session/practice";
@@ -27,8 +30,15 @@ interface AnswerRecord {
 export default function ListeningPage() {
   const targetLanguage = useSettingsStore((s) => s.settings.targetLanguage);
   const speechEnabled = useSettingsStore((s) => s.settings.speechEnabled);
+  const contentReviewLevel = useSettingsStore(
+    (s) => s.settings.contentReviewLevel,
+  );
   const { allItems, loading, loadLanguage, toggleWeak } = useLearningStore();
   const lang = LANGUAGES[targetLanguage];
+  const pool = useMemo(
+    () => filterByReviewLevel(allItems, contentReviewLevel),
+    [allItems, contentReviewLevel],
+  );
 
   const [phase, setPhase] = useState<Phase>("setup");
   const [mode, setMode] = useState<Mode>("choose");
@@ -92,7 +102,7 @@ export default function ListeningPage() {
   };
 
   const begin = () => {
-    const q = shuffle(allItems).slice(0, count);
+    const q = shuffle(pool).slice(0, count);
     setQueue(q);
     setIndex(0);
     setSelected(null);
@@ -164,7 +174,7 @@ export default function ListeningPage() {
       <div>
         <PageHeader
           title="Luyện nghe"
-          subtitle={`${lang.labelVi} · ${allItems.length} từ`}
+          subtitle={`${lang.labelVi} · ${pool.length} từ khả dụng`}
         />
         <GlassPanel className="mx-auto max-w-md">
           <h2 className="mb-3 font-semibold">Chế độ</h2>
@@ -207,7 +217,7 @@ export default function ListeningPage() {
           <button
             type="button"
             onClick={begin}
-            disabled={allItems.length < 4 || !speechEnabled}
+            disabled={pool.length < 4 || !speechEnabled}
             className="w-full rounded-full bg-corgi px-5 py-2.5 font-medium text-night disabled:opacity-40"
           >
             Bắt đầu

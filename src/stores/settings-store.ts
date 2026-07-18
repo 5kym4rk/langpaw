@@ -9,6 +9,7 @@ export const DEFAULT_SETTINGS: UserSettings = {
   interfaceLanguage: "vi",
   targetLanguage: "en",
   dailyGoal: 10,
+  contentReviewLevel: "all",
 
   showMeaning: true,
   showReading: true,

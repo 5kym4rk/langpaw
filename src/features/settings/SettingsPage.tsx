@@ -8,6 +8,10 @@ import { DAILY_GOALS, type DailyGoal } from "@/config/learning";
 import { MUSIC_TRACKS, MUSIC_AVAILABLE } from "@/services/background/music";
 import { loadBackgroundManifest } from "@/services/background/background-manifest";
 import {
+  REVIEW_LEVEL_LABELS,
+  type ReviewLevel,
+} from "@/services/data/vocabulary-filters";
+import {
   buildBackup,
   downloadBackup,
   parseBackup,
@@ -135,6 +139,38 @@ export default function SettingsPage() {
               </button>
             ))}
           </div>
+        </GlassPanel>
+
+        <GlassPanel>
+          <h2 className="mb-2 text-lg font-semibold">
+            Mức kiểm duyệt nội dung
+          </h2>
+          <p className="mb-3 text-sm text-ivory/60">
+            Chọn mức kiểm duyệt tối thiểu áp dụng cho Học, Kiểm tra và Luyện
+            nghe.
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {(["all", "reviewed", "verified"] as ReviewLevel[]).map((lv) => (
+              <button
+                key={lv}
+                type="button"
+                onClick={() => update({ contentReviewLevel: lv })}
+                aria-pressed={settings.contentReviewLevel === lv}
+                className={cn(
+                  "rounded-full px-4 py-2 text-sm font-medium",
+                  settings.contentReviewLevel === lv
+                    ? "bg-corgi text-night"
+                    : "glass text-ivory/80",
+                )}
+              >
+                {REVIEW_LEVEL_LABELS[lv]}
+              </button>
+            ))}
+          </div>
+          <p className="mt-2 text-xs text-ivory/40">
+            Dữ liệu hiện tại phần lớn ở trạng thái “nháp”. Chọn mức cao có thể
+            khiến chưa đủ từ để học.
+          </p>
         </GlassPanel>
 
         <GlassPanel>

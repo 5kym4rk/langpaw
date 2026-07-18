@@ -1,6 +1,8 @@
 import { describe, it, expect } from "vitest";
 import {
   filterVocabulary,
+  filterByReviewLevel,
+  meetsReviewLevel,
   shuffle,
   uniqueLevels,
   uniqueTopics,
@@ -98,5 +100,38 @@ describe("unique helpers", () => {
   it("liệt kê cấp độ và chủ đề không trùng", () => {
     expect(uniqueLevels(items)).toEqual(["A1", "A2"]);
     expect(uniqueTopics(items)).toEqual(["Chào hỏi", "Gia đình"]);
+  });
+});
+
+describe("lọc theo mức kiểm duyệt", () => {
+  const graded = [
+    makeItem({ id: "d", reviewStatus: "draft" }),
+    makeItem({ id: "r", reviewStatus: "reviewed" }),
+    makeItem({ id: "v", reviewStatus: "verified" }),
+  ];
+
+  it("meetsReviewLevel so sánh đúng thứ hạng", () => {
+    expect(meetsReviewLevel(graded[0], "all")).toBe(true);
+    expect(meetsReviewLevel(graded[0], "reviewed")).toBe(false);
+    expect(meetsReviewLevel(graded[1], "reviewed")).toBe(true);
+    expect(meetsReviewLevel(graded[1], "verified")).toBe(false);
+    expect(meetsReviewLevel(graded[2], "verified")).toBe(true);
+  });
+
+  it("filterByReviewLevel lọc theo mức tối thiểu", () => {
+    expect(filterByReviewLevel(graded, "all")).toHaveLength(3);
+    expect(filterByReviewLevel(graded, "reviewed").map((i) => i.id)).toEqual([
+      "r",
+      "v",
+    ]);
+    expect(filterByReviewLevel(graded, "verified").map((i) => i.id)).toEqual([
+      "v",
+    ]);
+  });
+
+  it("filterVocabulary tôn trọng reviewLevel", () => {
+    const empty = new Map<string, VocabularyProgress>();
+    const result = filterVocabulary(graded, { reviewLevel: "verified" }, empty);
+    expect(result.map((i) => i.id)).toEqual(["v"]);
   });
 });

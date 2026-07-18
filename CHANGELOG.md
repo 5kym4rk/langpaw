@@ -2,6 +2,27 @@
 
 Định dạng theo tinh thần [Keep a Changelog](https://keepachangelog.com/).
 
+## [1.3.0] — Vòng sửa Batch 3 (nguồn và kiểm duyệt)
+
+### Added / Changed
+
+- **Metadata nguồn mở rộng** (schema + Zod): `sourceEntryUrl`, `sourceEntryId`,
+  `definitionSourceLanguage`, `exampleSelfAuthored`, `verificationNote`.
+- **P1.9** `SourceDrawer` + nút "Xem nguồn" trên `VocabularyCard`: hiển thị
+  nguồn, đơn vị, giấy phép, ngày truy cập, URL entry (nếu có), trạng thái kiểm
+  duyệt và ghi chú tự biên soạn.
+- **P0.4** Bộ lọc mức kiểm duyệt (`ReviewLevel`: all/reviewed/verified) trong
+  `filterVocabulary` + thiết lập `contentReviewLevel`; áp dụng cho Học, Kiểm tra,
+  Luyện nghe và Phỏng vấn; có cảnh báo khi không đủ dữ liệu ở mức đã chọn.
+- **P1.10** Trang Nguồn dữ liệu: bảng chất lượng theo ngôn ngữ
+  (Nháp/Rà soát/Xác minh/%/thiếu entry) qua `computeQuality()`.
+- Không tự đổi `draft`→`verified`; giữ nguyên toàn bộ dữ liệu.
+
+### Added (tests)
+
+- `data-quality.test.ts`, mở rộng `vocabulary-filters.test.ts` (reviewLevel).
+  Tổng 83 unit + 6 E2E test.
+
 ## [1.2.0] — Vòng sửa Batch 2 (đồng bộ tiến độ)
 
 ### Added / Changed

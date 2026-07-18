@@ -59,9 +59,14 @@ export const vocabularyItemSchema = z
     interviewAnswerSample: z.string().optional(),
 
     sourceIds: z.array(z.string().min(1)).min(1),
+    sourceEntryUrl: z.string().url().optional(),
+    sourceEntryId: z.string().optional(),
+    definitionSourceLanguage: z.string().optional(),
+    exampleSelfAuthored: z.boolean().optional(),
     reviewStatus: reviewStatusSchema,
     reviewedBy: z.string().optional(),
     reviewedAt: z.string().optional(),
+    verificationNote: z.string().optional(),
   })
   .refine(
     (item) =>

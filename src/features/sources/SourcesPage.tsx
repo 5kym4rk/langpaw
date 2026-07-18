@@ -4,8 +4,12 @@ import { GlassPanel } from "@/components/common/GlassPanel";
 import { LoadingState } from "@/components/common/LoadingState";
 import { ReviewStatusBadge } from "@/components/vocabulary/ReviewStatusBadge";
 import { loadVocabulary, loadSources } from "@/services/data/vocabulary-loader";
+import {
+  computeQuality,
+  type QualitySummary,
+} from "@/services/data/data-quality";
 import { LANGUAGE_ORDER, LANGUAGES } from "@/config/languages";
-import type { VocabularySource } from "@/types";
+import type { LanguageCode, VocabularySource } from "@/types";
 
 interface SourceWithCount extends VocabularySource {
   itemCount: number;
@@ -13,6 +17,9 @@ interface SourceWithCount extends VocabularySource {
 
 export default function SourcesPage() {
   const [sources, setSources] = useState<SourceWithCount[]>([]);
+  const [quality, setQuality] = useState<
+    { language: LanguageCode; q: QualitySummary }[]
+  >([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -20,6 +27,7 @@ export default function SourcesPage() {
     void (async () => {
       const counts = new Map<string, number>();
       const byId = new Map<string, VocabularySource>();
+      const qualityRows: { language: LanguageCode; q: QualitySummary }[] = [];
       for (const code of LANGUAGE_ORDER) {
         const [items, srcs] = await Promise.all([
           loadVocabulary(code),
@@ -31,6 +39,7 @@ export default function SourcesPage() {
             counts.set(sid, (counts.get(sid) ?? 0) + 1);
           }
         }
+        qualityRows.push({ language: code, q: computeQuality(items) });
       }
       if (!active) return;
       setSources(
@@ -39,6 +48,7 @@ export default function SourcesPage() {
           itemCount: counts.get(s.id) ?? 0,
         })),
       );
+      setQuality(qualityRows);
       setLoading(false);
     })();
     return () => {
@@ -47,6 +57,16 @@ export default function SourcesPage() {
   }, []);
 
   if (loading) return <LoadingState label="Đang tải nguồn dữ liệu…" />;
+
+  const totals = quality.reduce(
+    (acc, { q }) => ({
+      draft: acc.draft + q.draft,
+      reviewed: acc.reviewed + q.reviewed,
+      verified: acc.verified + q.verified,
+      total: acc.total + q.total,
+    }),
+    { draft: 0, reviewed: 0, verified: 0, total: 0 },
+  );
 
   return (
     <div>
@@ -70,6 +90,57 @@ export default function SourcesPage() {
             và thời điểm kiểm duyệt.
           </li>
         </ul>
+      </GlassPanel>
+
+      <GlassPanel className="mb-6 overflow-x-auto">
+        <h2 className="mb-3 font-semibold">Chất lượng dữ liệu theo ngôn ngữ</h2>
+        <table className="w-full min-w-[28rem] text-sm">
+          <thead>
+            <tr className="text-left text-ivory/50">
+              <th className="pb-2">Ngôn ngữ</th>
+              <th className="pb-2 text-right">Nháp</th>
+              <th className="pb-2 text-right">Rà soát</th>
+              <th className="pb-2 text-right">Xác minh</th>
+              <th className="pb-2 text-right">Tổng</th>
+              <th className="pb-2 text-right">% xác minh</th>
+              <th className="pb-2 text-right">Thiếu nguồn entry</th>
+            </tr>
+          </thead>
+          <tbody>
+            {quality.map(({ language, q }) => (
+              <tr
+                key={language}
+                className="border-t border-ivory/10 text-ivory/85"
+              >
+                <td className="py-1.5">{LANGUAGES[language].labelVi}</td>
+                <td className="py-1.5 text-right">{q.draft}</td>
+                <td className="py-1.5 text-right">{q.reviewed}</td>
+                <td className="py-1.5 text-right">{q.verified}</td>
+                <td className="py-1.5 text-right">{q.total}</td>
+                <td className="py-1.5 text-right">{q.verifiedPct}%</td>
+                <td className="py-1.5 text-right">{q.missingSourceEntry}</td>
+              </tr>
+            ))}
+            <tr className="border-t border-ivory/20 font-medium text-ivory">
+              <td className="py-1.5">Tổng</td>
+              <td className="py-1.5 text-right">{totals.draft}</td>
+              <td className="py-1.5 text-right">{totals.reviewed}</td>
+              <td className="py-1.5 text-right">{totals.verified}</td>
+              <td className="py-1.5 text-right">{totals.total}</td>
+              <td className="py-1.5 text-right">
+                {totals.total > 0
+                  ? Math.round((totals.verified / totals.total) * 100)
+                  : 0}
+                %
+              </td>
+              <td className="py-1.5 text-right">—</td>
+            </tr>
+          </tbody>
+        </table>
+        <p className="mt-3 text-xs text-ivory/40">
+          Dữ liệu hiện ở trạng thái nháp và chưa được kiểm duyệt chuyên môn.
+          Không tự động gắn nhãn “đã xác minh”.
+        </p>
       </GlassPanel>
 
       <div className="flex flex-col gap-4">

@@ -1,11 +1,50 @@
-import type { VocabularyItem, VocabularyProgress } from "@/types";
+import type { ReviewStatus, VocabularyItem, VocabularyProgress } from "@/types";
+
+/** Mức kiểm duyệt tối thiểu được phép hiển thị. */
+export type ReviewLevel = "all" | "reviewed" | "verified";
 
 export interface VocabularyFilter {
   level?: string;
   topic?: string;
   /** Chỉ lấy nhóm từ: mới / yếu / yêu thích / tất cả. */
   scope?: "all" | "new" | "weak" | "favorite";
+  /** Lọc theo trạng thái kiểm duyệt tối thiểu (mặc định "all"). */
+  reviewLevel?: ReviewLevel;
 }
+
+const REVIEW_RANK: Record<ReviewStatus, number> = {
+  draft: 0,
+  reviewed: 1,
+  verified: 2,
+};
+
+const REVIEW_LEVEL_MIN: Record<ReviewLevel, number> = {
+  all: 0,
+  reviewed: 1,
+  verified: 2,
+};
+
+/** Kiểm tra một mục có đạt mức kiểm duyệt tối thiểu hay không. Pure. */
+export function meetsReviewLevel(
+  item: VocabularyItem,
+  level: ReviewLevel = "all",
+): boolean {
+  return REVIEW_RANK[item.reviewStatus] >= REVIEW_LEVEL_MIN[level];
+}
+
+/** Lọc danh sách theo mức kiểm duyệt tối thiểu. Pure. */
+export function filterByReviewLevel(
+  items: VocabularyItem[],
+  level: ReviewLevel = "all",
+): VocabularyItem[] {
+  return items.filter((item) => meetsReviewLevel(item, level));
+}
+
+export const REVIEW_LEVEL_LABELS: Record<ReviewLevel, string> = {
+  all: "Gồm cả bản nháp",
+  reviewed: "Đã rà soát trở lên",
+  verified: "Chỉ nội dung đã xác minh",
+};
 
 export function uniqueLevels(items: VocabularyItem[]): string[] {
   return Array.from(new Set(items.map((i) => i.level))).sort();
@@ -23,6 +62,7 @@ export function filterVocabulary(
   return items.filter((item) => {
     if (filter.level && item.level !== filter.level) return false;
     if (filter.topic && item.topic !== filter.topic) return false;
+    if (!meetsReviewLevel(item, filter.reviewLevel)) return false;
 
     const progress = progressMap.get(item.id);
     switch (filter.scope) {

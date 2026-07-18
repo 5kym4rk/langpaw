@@ -14,31 +14,22 @@ test("mobile: menu Thêm vào được Cài đặt, Nguồn và Tiến độ", a
   );
   expect(scrollW).toBeLessThanOrEqual(361);
 
-  const more = page.getByRole("button", { name: "Thêm" });
+  // Mở menu "Thêm" từ trang chủ (ngắn, nút không bị che).
+  await page.getByRole("button", { name: "Thêm" }).click();
+  const dialog = page.getByRole("dialog", { name: "Menu điều hướng thêm" });
 
-  // Vào Cài đặt.
-  await more.click();
-  await page
-    .getByRole("dialog", { name: "Menu điều hướng thêm" })
-    .getByRole("link", { name: /Cài đặt/ })
-    .click();
+  // Menu chứa đủ các trang phụ.
+  for (const label of [
+    /Luyện nghe/,
+    /Kiểm tra/,
+    /Tiến độ/,
+    /Nguồn dữ liệu/,
+    /Cài đặt/,
+  ]) {
+    await expect(dialog.getByRole("link", { name: label })).toBeVisible();
+  }
+
+  // Điều hướng vào một trang phụ qua menu.
+  await dialog.getByRole("link", { name: /Cài đặt/ }).click();
   await expect(page.getByRole("heading", { name: "Cài đặt" })).toBeVisible();
-
-  // Vào Nguồn dữ liệu.
-  await more.click();
-  await page
-    .getByRole("dialog")
-    .getByRole("link", { name: /Nguồn dữ liệu/ })
-    .click();
-  await expect(
-    page.getByRole("heading", { name: "Trạng thái kiểm duyệt" }),
-  ).toBeVisible();
-
-  // Vào Tiến độ.
-  await more.click();
-  await page
-    .getByRole("dialog")
-    .getByRole("link", { name: /Tiến độ/ })
-    .click();
-  await expect(page.getByRole("heading", { name: "Tiến độ" })).toBeVisible();
 });

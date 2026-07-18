@@ -9,6 +9,7 @@ import { useSettingsStore } from "@/stores/settings-store";
 import { LANGUAGES } from "@/config/languages";
 import { generateQuiz, type QuizQuestion } from "@/services/quiz/quiz-engine";
 import { isAnswerCorrect } from "@/services/quiz/normalize-answer";
+import { filterByReviewLevel } from "@/services/data/vocabulary-filters";
 import { recordPracticeResult } from "@/services/session/practice";
 import { speechService } from "@/services/speech/speech-service";
 import { cn } from "@/utils/cn";
@@ -25,8 +26,15 @@ const COUNTS = [5, 10, 20, 30] as const;
 
 export default function QuizPage() {
   const targetLanguage = useSettingsStore((s) => s.settings.targetLanguage);
+  const contentReviewLevel = useSettingsStore(
+    (s) => s.settings.contentReviewLevel,
+  );
   const { allItems, loading, loadLanguage, toggleWeak } = useLearningStore();
   const lang = LANGUAGES[targetLanguage];
+  const pool = useMemo(
+    () => filterByReviewLevel(allItems, contentReviewLevel),
+    [allItems, contentReviewLevel],
+  );
 
   const [phase, setPhase] = useState<Phase>("setup");
   const [count, setCount] = useState<number>(10);
@@ -48,7 +56,7 @@ export default function QuizPage() {
   useEffect(() => () => speechService.cancel(), [targetLanguage]);
 
   const begin = () => {
-    const quiz = generateQuiz(allItems, { count, withAudio });
+    const quiz = generateQuiz(pool, { count, withAudio });
     setQuestions(quiz);
     setAnswers([]);
     setCurrent(0);
@@ -116,7 +124,7 @@ export default function QuizPage() {
       <div>
         <PageHeader
           title="Kiểm tra"
-          subtitle={`${lang.labelVi} · ${allItems.length} từ`}
+          subtitle={`${lang.labelVi} · ${pool.length} từ khả dụng`}
         />
         <GlassPanel className="mx-auto max-w-md">
           <h2 className="mb-3 font-semibold">Số câu hỏi</h2>
@@ -147,11 +155,17 @@ export default function QuizPage() {
           <button
             type="button"
             onClick={begin}
-            disabled={allItems.length < 4}
+            disabled={pool.length < 4}
             className="w-full rounded-full bg-corgi px-5 py-2.5 font-medium text-night disabled:opacity-40"
           >
             Bắt đầu kiểm tra
           </button>
+          {pool.length < 4 ? (
+            <p className="mt-2 text-xs text-danger">
+              Chưa đủ từ đạt mức kiểm duyệt đã chọn. Đổi mức lọc nội dung trong
+              Cài đặt.
+            </p>
+          ) : null}
         </GlassPanel>
       </div>
     );

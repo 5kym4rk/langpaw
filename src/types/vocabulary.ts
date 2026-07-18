@@ -55,9 +55,19 @@ export interface VocabularyItem {
   interviewAnswerSample?: string;
 
   sourceIds: string[];
+  /** URL trỏ tới entry cụ thể trong nguồn (không chỉ trang chủ từ điển). */
+  sourceEntryUrl?: string;
+  /** Mã entry trong nguồn gốc (vd ID trong WordNet/JMdict). */
+  sourceEntryId?: string;
+  /** Ngôn ngữ của định nghĩa gốc (nếu nghĩa dịch từ nguồn khác). */
+  definitionSourceLanguage?: string;
+  /** Đánh dấu câu ví dụ do dự án tự biên soạn (không trích từ nguồn). */
+  exampleSelfAuthored?: boolean;
+
   reviewStatus: ReviewStatus;
   reviewedBy?: string;
   reviewedAt?: string;
+  verificationNote?: string;
 }
 
 export interface VocabularyDataset {

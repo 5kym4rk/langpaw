@@ -1,8 +1,11 @@
+import { useState } from "react";
+import { BookMarked } from "lucide-react";
 import type { VocabularyItem } from "@/types";
 import { LANGUAGES } from "@/config/languages";
 import { useSettingsStore } from "@/stores/settings-store";
 import { SpeechButton } from "./SpeechButton";
 import { ReviewStatusBadge } from "./ReviewStatusBadge";
+import { SourceDrawer } from "./SourceDrawer";
 import { GlassPanel } from "@/components/common/GlassPanel";
 
 interface VocabularyCardProps {
@@ -15,6 +18,7 @@ export function VocabularyCard({ item, flipped, onFlip }: VocabularyCardProps) {
   const settings = useSettingsStore((s) => s.settings);
   const lang = LANGUAGES[item.language];
   const reading = item.reading ?? item.ipa;
+  const [sourceOpen, setSourceOpen] = useState(false);
 
   return (
     <GlassPanel
@@ -85,8 +89,21 @@ export function VocabularyCard({ item, flipped, onFlip }: VocabularyCardProps) {
           <span aria-hidden>·</span>
           <span>{item.topic}</span>
           <ReviewStatusBadge status={item.reviewStatus} />
+          <button
+            type="button"
+            onClick={() => setSourceOpen(true)}
+            className="inline-flex items-center gap-1 rounded-full bg-ivory/10 px-2 py-0.5 text-ivory/70 hover:bg-ivory/20"
+          >
+            <BookMarked size={12} aria-hidden /> Xem nguồn
+          </button>
         </div>
       </div>
+
+      <SourceDrawer
+        item={item}
+        open={sourceOpen}
+        onClose={() => setSourceOpen(false)}
+      />
     </GlassPanel>
   );
 }

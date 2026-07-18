@@ -25,7 +25,13 @@ import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
 import { useAutoLearn } from "./useAutoLearn";
 import { speechService } from "@/services/speech/speech-service";
 import { LANGUAGES } from "@/config/languages";
-import { uniqueLevels, uniqueTopics } from "@/services/data/vocabulary-filters";
+import {
+  uniqueLevels,
+  uniqueTopics,
+  filterByReviewLevel,
+  REVIEW_LEVEL_LABELS,
+  type ReviewLevel,
+} from "@/services/data/vocabulary-filters";
 import { cn } from "@/utils/cn";
 
 type Scope = "all" | "new" | "weak" | "favorite";
@@ -45,6 +51,9 @@ export default function LearningPage() {
   const navigate = useNavigate();
   const targetLanguage = useSettingsStore((s) => s.settings.targetLanguage);
   const dailyGoal = useSettingsStore((s) => s.settings.dailyGoal);
+  const contentReviewLevel = useSettingsStore(
+    (s) => s.settings.contentReviewLevel,
+  );
   const {
     allItems,
     sessionItems,
@@ -68,6 +77,8 @@ export default function LearningPage() {
   const [level, setLevel] = useState<string>("");
   const [topic, setTopic] = useState<string>("");
   const [scope, setScope] = useState<Scope>("all");
+  const [reviewLevel, setReviewLevel] =
+    useState<ReviewLevel>(contentReviewLevel);
   const [shuffleOrder, setShuffleOrder] = useState(false);
   const [sessionSize, setSessionSize] = useState<number>(dailyGoal);
   const [flipped, setFlipped] = useState(false);
@@ -92,6 +103,10 @@ export default function LearningPage() {
 
   const levels = useMemo(() => uniqueLevels(allItems), [allItems]);
   const topics = useMemo(() => uniqueTopics(allItems), [allItems]);
+  const reviewAvailable = useMemo(
+    () => filterByReviewLevel(allItems, reviewLevel).length,
+    [allItems, reviewLevel],
+  );
 
   const current = sessionItems[currentIndex];
   const lang = LANGUAGES[targetLanguage];
@@ -115,6 +130,7 @@ export default function LearningPage() {
       level: level || undefined,
       topic: topic || undefined,
       scope,
+      reviewLevel,
       shuffleOrder,
       sessionSize: sessionSize || undefined,
     });
@@ -309,6 +325,19 @@ export default function LearningPage() {
               ))}
             </select>
           </Field>
+          <Field label="Nguồn">
+            <select
+              value={reviewLevel}
+              onChange={(e) => setReviewLevel(e.target.value as ReviewLevel)}
+              className="rounded-lg bg-night/60 px-3 py-2 text-sm text-ivory"
+            >
+              {(["all", "reviewed", "verified"] as ReviewLevel[]).map((lv) => (
+                <option key={lv} value={lv}>
+                  {REVIEW_LEVEL_LABELS[lv]}
+                </option>
+              ))}
+            </select>
+          </Field>
           <label className="flex items-center gap-2 text-sm text-ivory/80">
             <input
               type="checkbox"
@@ -320,16 +349,25 @@ export default function LearningPage() {
           <button
             type="button"
             onClick={begin}
-            className="ml-auto rounded-full bg-corgi px-5 py-2 font-medium text-night"
+            disabled={reviewAvailable === 0}
+            className="ml-auto rounded-full bg-corgi px-5 py-2 font-medium text-night disabled:opacity-40"
           >
             Bắt đầu học
           </button>
         </div>
-        <EmptyState
-          title="Chưa có phiên học"
-          description="Chọn bộ lọc và nhấn “Bắt đầu học” để bắt đầu."
-          icon={<Volume2 size={40} />}
-        />
+        {reviewLevel !== "all" && reviewAvailable === 0 ? (
+          <EmptyState
+            title="Chưa có nội dung ở mức này"
+            description={`Chưa có từ nào đạt mức “${REVIEW_LEVEL_LABELS[reviewLevel]}”. Hãy chọn “Gồm cả bản nháp” để học dữ liệu chưa kiểm duyệt.`}
+            icon={<AlertTriangle size={40} />}
+          />
+        ) : (
+          <EmptyState
+            title="Chưa có phiên học"
+            description="Chọn bộ lọc và nhấn “Bắt đầu học” để bắt đầu."
+            icon={<Volume2 size={40} />}
+          />
+        )}
       </div>
     );
   }
