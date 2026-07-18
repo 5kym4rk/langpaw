@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-cream: #fff7e8;
+  --color-corgi: #d9823b;
+  --color-brown: #68452e;
+  --color-night: #172033;
+  --color-ivory: #fffdf7;
+  --color-success: #287a4b;
+  --color-danger: #b84242;
+
+  --font-sans:
+    "Noto Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans SC", "Noto Sans KR", "Noto Sans JP", sans-serif;
+
+  color-scheme: light dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--color-night);
+  color: var(--color-ivory);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Glassmorphism nhẹ dùng lại nhiều nơi */
+.glass {
+  background: rgba(255, 253, 247, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 253, 247, 0.14);
+}
+
+.glass-strong {
+  background: rgba(23, 32, 51, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 253, 247, 0.16);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-corgi);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

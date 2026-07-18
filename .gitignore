@@ -1,0 +1,29 @@
+# dependencies
+node_modules/
+
+# build output
+dist/
+dev-dist/
+
+# env & secrets
+.env
+.env.local
+.env.*.local
+*.apikey
+
+# test artifacts
+coverage/
+playwright-report/
+test-results/
+
+# unverified / unlicensed source assets
+scripts/.cache/
+data-import-tmp/
+public/backgrounds/*.webm
+public/backgrounds/*.mp4
+
+# editor / OS
+.DS_Store
+*.log
+.vscode/*
+!.vscode/extensions.json
