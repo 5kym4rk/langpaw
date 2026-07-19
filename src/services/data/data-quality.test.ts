@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { computeQuality } from "./data-quality";
+import { computeQuality, qualityToCsv } from "./data-quality";
 import type { ReviewStatus, VocabularyItem } from "@/types";
 
 function item(over: Partial<VocabularyItem>): VocabularyItem {
@@ -48,5 +48,30 @@ describe("computeQuality", () => {
     const q = computeQuality([]);
     expect(q.total).toBe(0);
     expect(q.verifiedPct).toBe(0);
+  });
+
+  it("đếm thiếu reviewer/reviewedAt (chỉ với mục không phải draft) và self-authored", () => {
+    const q = computeQuality([
+      item({ id: "a", reviewStatus: "draft", exampleSelfAuthored: true }),
+      item({ id: "b", reviewStatus: "reviewed" }), // thiếu reviewer + reviewedAt
+      item({
+        id: "c",
+        reviewStatus: "verified",
+        reviewedBy: "an",
+        reviewedAt: "2026-01-01",
+      }),
+    ]);
+    expect(q.missingReviewer).toBe(1); // chỉ "b"
+    expect(q.missingReviewedAt).toBe(1);
+    expect(q.selfAuthored).toBe(1);
+  });
+
+  it("qualityToCsv có header và một dòng mỗi ngôn ngữ", () => {
+    const csv = qualityToCsv([
+      { language: "en", q: computeQuality([item({ id: "a", reading: "r" })]) },
+    ]);
+    const lines = csv.trim().split("\n");
+    expect(lines[0]).toContain("language,total");
+    expect(lines[1]).toMatch(/^en,1,/);
   });
 });

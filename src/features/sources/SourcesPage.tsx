@@ -6,6 +6,7 @@ import { ReviewStatusBadge } from "@/components/vocabulary/ReviewStatusBadge";
 import { loadVocabulary, loadSources } from "@/services/data/vocabulary-loader";
 import {
   computeQuality,
+  qualityToCsv,
   type QualitySummary,
 } from "@/services/data/data-quality";
 import { LANGUAGE_ORDER, LANGUAGES } from "@/config/languages";
@@ -58,6 +59,17 @@ export default function SourcesPage() {
 
   if (loading) return <LoadingState label="Đang tải nguồn dữ liệu…" />;
 
+  const exportCsv = () => {
+    const csv = qualityToCsv(quality);
+    const blob = new Blob([csv], { type: "text/csv;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `langpaw-data-quality-${new Date().toISOString().slice(0, 10)}.csv`;
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+
   const totals = quality.reduce(
     (acc, { q }) => ({
       draft: acc.draft + q.draft,
@@ -93,7 +105,16 @@ export default function SourcesPage() {
       </GlassPanel>
 
       <GlassPanel className="mb-6 overflow-x-auto">
-        <h2 className="mb-3 font-semibold">Chất lượng dữ liệu theo ngôn ngữ</h2>
+        <div className="mb-3 flex items-center justify-between gap-2">
+          <h2 className="font-semibold">Chất lượng dữ liệu theo ngôn ngữ</h2>
+          <button
+            type="button"
+            onClick={exportCsv}
+            className="rounded-full bg-ivory/10 px-3 py-1.5 text-xs font-medium text-ivory hover:bg-ivory/20"
+          >
+            Export CSV
+          </button>
+        </div>
         <table className="w-full min-w-[28rem] text-sm">
           <thead>
             <tr className="text-left text-ivory/50">
@@ -148,7 +169,7 @@ export default function SourcesPage() {
           <GlassPanel key={s.id}>
             <div className="flex flex-wrap items-baseline justify-between gap-2">
               <h3 className="text-lg font-semibold text-ivory">{s.title}</h3>
-              <span className="text-sm text-corgi">{s.itemCount} mục</span>
+              <span className="text-sm text-corgi-text">{s.itemCount} mục</span>
             </div>
             <dl className="mt-2 grid gap-x-6 gap-y-1 text-sm sm:grid-cols-2">
               <Row label="Đơn vị phát hành" value={s.authority} />
@@ -164,7 +185,7 @@ export default function SourcesPage() {
                 href={s.url}
                 target="_blank"
                 rel="noreferrer noopener"
-                className="mt-2 inline-block text-sm text-corgi underline"
+                className="mt-2 inline-block text-sm text-corgi-text underline"
               >
                 {s.url}
               </a>

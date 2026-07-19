@@ -72,6 +72,15 @@ for (const file of files) {
       warnings.push(`[${rel}] source.id trùng: ${source.id}`);
     }
     allSourceIds.add(source.id);
+    // §11: nguồn nên khai báo giấy phép.
+    if (!source.license) {
+      warnings.push(`[${rel}] nguồn "${source.id}" thiếu license`);
+    }
+  }
+
+  // §11: dataset nên có phiên bản syllabus/dataset để không trộn tiêu chuẩn.
+  if (!dataset.syllabusVersion) {
+    warnings.push(`[${rel}] dataset thiếu syllabusVersion (phiên bản dataset)`);
   }
 }
 
@@ -118,6 +127,17 @@ for (const dataset of datasets) {
       !hasKana(item.reading ?? "")
     ) {
       errors.push(`[${item.id}] Tiếng Nhật thiếu Kana trong reading`);
+    }
+
+    // §4.1/§11: verified bắt buộc có nguồn entry cụ thể.
+    if (
+      item.reviewStatus === "verified" &&
+      !item.sourceEntryUrl &&
+      !item.sourceEntryId
+    ) {
+      errors.push(
+        `[${item.id}] reviewStatus=verified nhưng thiếu sourceEntryUrl/sourceEntryId`,
+      );
     }
   }
 }
