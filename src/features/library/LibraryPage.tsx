@@ -22,6 +22,8 @@ import { cn } from "@/utils/cn";
 const SESSION_SIZE_OPTIONS = [5, 10, 20, 30] as const;
 /** Trên ngưỡng này, phiên "tất cả" cần xác nhận (§3.7). */
 const CONFIRM_ALL_THRESHOLD = 30;
+/** Số mục hiển thị tối đa cùng lúc để không treo với bộ từ rất lớn. */
+const RENDER_LIMIT = 300;
 
 const STATUS_TABS: { id: LibraryStatus; label: string }[] = [
   { id: "all", label: "Tất cả" },
@@ -210,7 +212,7 @@ export default function LibraryPage() {
         />
       ) : (
         <ul className="flex flex-col gap-2">
-          {filtered.map((item) => {
+          {filtered.slice(0, RENDER_LIMIT).map((item) => {
             const p = progressMap.get(item.id);
             return (
               <li key={item.id}>
@@ -251,6 +253,12 @@ export default function LibraryPage() {
           })}
         </ul>
       )}
+      {filtered.length > RENDER_LIMIT ? (
+        <p className="mt-3 text-center text-xs text-ivory/40">
+          Hiển thị {RENDER_LIMIT}/{filtered.length} từ. Dùng tìm kiếm hoặc bộ
+          lọc để thu hẹp kết quả.
+        </p>
+      ) : null}
     </div>
   );
 }

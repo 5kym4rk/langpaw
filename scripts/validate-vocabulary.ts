@@ -41,6 +41,7 @@ const files = findJsonFiles(dataDir).filter(
   (f) => !f.endsWith("manifest.json"),
 );
 
+let emptyExampleCount = 0;
 const allItemIds = new Set<string>();
 const allSourceIds = new Set<string>();
 const termKeys = new Map<string, string>(); // lang|level|topic|term -> itemId
@@ -129,6 +130,9 @@ for (const dataset of datasets) {
       errors.push(`[${item.id}] Tiếng Nhật thiếu Kana trong reading`);
     }
 
+    // §11: ví dụ trống là cờ chất lượng (không chặn) — đếm gộp để tránh ồn.
+    if (!item.example || !item.exampleVi) emptyExampleCount += 1;
+
     // §4.1/§11: verified bắt buộc có nguồn entry cụ thể.
     if (
       item.reviewStatus === "verified" &&
@@ -143,6 +147,11 @@ for (const dataset of datasets) {
 }
 
 console.log(`Đã quét ${files.length} file, ${allItemIds.size} mục từ vựng.`);
+if (emptyExampleCount > 0) {
+  console.log(
+    `ℹ️  ${emptyExampleCount} mục chưa có câu ví dụ (draft, chờ bổ sung).`,
+  );
+}
 
 if (warnings.length) {
   console.warn(`\n⚠️  ${warnings.length} cảnh báo:`);

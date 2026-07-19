@@ -45,8 +45,10 @@ export const vocabularyItemSchema = z
     meaningVi: z.string().min(1),
     explanationVi: z.string().optional(),
 
-    example: z.string().min(1),
-    exampleVi: z.string().min(1),
+    // Cho phép rỗng: nhiều mục từ điển (vd krdict) chưa có câu ví dụ; trạng thái
+    // thiếu ví dụ được dashboard chất lượng và validate-vocabulary gắn cờ.
+    example: z.string(),
+    exampleVi: z.string(),
 
     level: z.string().min(1),
     syllabusVersion: z.string().optional(),
