@@ -15,7 +15,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:e2e": "playwright test",
-    "validate:data": "tsx scripts/validate-vocabulary.ts"
+    "validate:data": "tsx scripts/validate-vocabulary.ts",
+    "gen:icons": "tsx scripts/generate-icons.ts"
   },
   "overrides": {
     "vite": "^6.0.5"

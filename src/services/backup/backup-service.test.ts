@@ -3,6 +3,7 @@ import {
   parseBackup,
   serializeBackup,
   mergeProgressLists,
+  computeImportSummary,
   backupFileName,
   type LangPawBackup,
 } from "./backup-service";
@@ -73,6 +74,27 @@ describe("mergeProgressLists", () => {
     expect(merged).toHaveLength(2);
     expect(merged.find((p) => p.vocabularyId === "a")?.correctCount).toBe(9);
     expect(merged.find((p) => p.vocabularyId === "b")?.correctCount).toBe(2);
+  });
+});
+
+describe("computeImportSummary", () => {
+  it("đếm bản ghi thêm mới và ghi đè", () => {
+    const existing = [createInitialProgress("a"), createInitialProgress("b")];
+    const incoming = [
+      createInitialProgress("b"), // ghi đè
+      createInitialProgress("c"), // thêm mới
+    ];
+    const summary = computeImportSummary(existing, incoming);
+    expect(summary).toEqual({ added: 1, overwritten: 1, total: 2 });
+  });
+
+  it("chế độ thay thế (existing rỗng) coi mọi bản ghi là thêm mới", () => {
+    const incoming = [createInitialProgress("a"), createInitialProgress("b")];
+    expect(computeImportSummary([], incoming)).toEqual({
+      added: 2,
+      overwritten: 0,
+      total: 2,
+    });
   });
 });
 

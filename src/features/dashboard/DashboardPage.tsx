@@ -11,11 +11,13 @@ import { getStatsForLanguage } from "@/db/repositories/stats-repository";
 import { computeStreak } from "@/services/session/streak";
 import { summarizeProgress } from "@/services/session/stats";
 import { inferLanguageFromId } from "@/utils/vocabulary-id";
+import { useDataRevision } from "@/stores/data-revision";
 import type { DailyStat, VocabularyProgress } from "@/types";
 
 export default function DashboardPage() {
   const targetLanguage = useSettingsStore((s) => s.settings.targetLanguage);
   const dailyGoal = useSettingsStore((s) => s.settings.dailyGoal);
+  const revision = useDataRevision((s) => s.revision);
   const lang = LANGUAGES[targetLanguage];
 
   const [progress, setProgress] = useState<VocabularyProgress[]>([]);
@@ -35,7 +37,7 @@ export default function DashboardPage() {
     return () => {
       active = false;
     };
-  }, [targetLanguage]);
+  }, [targetLanguage, revision]);
 
   // Chỉ tính tiến độ của ngôn ngữ đang chọn.
   const langProgress = useMemo(

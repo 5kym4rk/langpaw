@@ -22,9 +22,10 @@ import {
 import type { BackupInput } from "@/services/backup/backup-schema";
 import { clearAllProgress } from "@/db/repositories/progress-repository";
 import { clearAllStats } from "@/db/repositories/stats-repository";
+import { useDataRevision } from "@/stores/data-revision";
 import { cn } from "@/utils/cn";
 
-type ConfirmKind = "clear" | "reset" | null;
+type ConfirmKind = "clear" | "reset" | "replace" | null;
 
 export default function SettingsPage() {
   const settings = useSettingsStore((s) => s.settings);
@@ -67,20 +68,27 @@ export default function SettingsPage() {
     setImportPreview(result.data);
   };
 
+  const bumpRevision = useDataRevision((s) => s.bump);
+
   const doImport = async (mode: ImportMode) => {
     if (!importPreview) return;
-    await applyBackup(importPreview, mode);
+    const summary = await applyBackup(importPreview, mode);
     if (importPreview.settings) {
       update(importPreview.settings as Partial<typeof settings>);
     }
     setImportPreview(null);
-    setMessage("Đã nhập dữ liệu. Tải lại trang để cập nhật thống kê.");
+    setConfirmKind(null);
+    bumpRevision(); // Cập nhật UI ngay, không cần tải lại trang.
+    setMessage(
+      `Đã nhập dữ liệu: thêm ${summary.added}, ghi đè ${summary.overwritten} bản ghi.`,
+    );
   };
 
   const doClear = async () => {
     await clearAllProgress();
     await clearAllStats();
     setConfirmKind(null);
+    bumpRevision();
     setMessage("Đã xóa toàn bộ tiến độ.");
   };
 
@@ -242,6 +250,27 @@ export default function SettingsPage() {
               onChange={(v) => update({ backgroundBlurPx: v })}
               unit="px"
             />
+            <div className="flex items-center justify-between gap-4">
+              <span className="text-sm text-ivory/85">Chu kỳ đổi nền</span>
+              <div className="flex gap-1">
+                {[5, 10, 20, 30].map((m) => (
+                  <button
+                    key={m}
+                    type="button"
+                    onClick={() => update({ backgroundCycleMinutes: m })}
+                    aria-pressed={settings.backgroundCycleMinutes === m}
+                    className={cn(
+                      "rounded-full px-3 py-1 text-xs font-medium",
+                      settings.backgroundCycleMinutes === m
+                        ? "bg-corgi text-night"
+                        : "glass text-ivory/80",
+                    )}
+                  >
+                    {m}′
+                  </button>
+                ))}
+              </div>
+            </div>
           </div>
           {!hasBackgroundResource ? (
             <p className="mt-2 text-xs text-ivory/40">
@@ -371,7 +400,7 @@ export default function SettingsPage() {
                 </button>
                 <button
                   type="button"
-                  onClick={() => void doImport("replace")}
+                  onClick={() => setConfirmKind("replace")}
                   className="rounded-full bg-danger/80 px-4 py-1.5 text-xs font-medium text-white"
                 >
                   Thay thế
@@ -404,6 +433,15 @@ export default function SettingsPage() {
         message="Các tùy chọn sẽ trở về mặc định. Tiến độ học không bị ảnh hưởng."
         confirmLabel="Khôi phục"
         onConfirm={doReset}
+        onCancel={() => setConfirmKind(null)}
+      />
+      <ConfirmDialog
+        open={confirmKind === "replace"}
+        title="Thay thế toàn bộ dữ liệu?"
+        message="Tiến độ hiện tại sẽ bị xóa và thay bằng dữ liệu trong file backup. Thao tác không thể hoàn tác."
+        confirmLabel="Thay thế"
+        danger
+        onConfirm={() => void doImport("replace")}
         onCancel={() => setConfirmKind(null)}
       />
     </div>

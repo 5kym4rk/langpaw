@@ -92,26 +92,58 @@ export function mergeProgressLists(
   return Array.from(map.values());
 }
 
-/** Áp dụng backup vào cơ sở dữ liệu theo chế độ hợp nhất hoặc thay thế. */
+export interface ImportSummary {
+  added: number;
+  overwritten: number;
+  total: number;
+}
+
+/**
+ * Tính số bản ghi tiến độ được thêm mới / ghi đè khi nhập. Pure function.
+ */
+export function computeImportSummary(
+  existing: VocabularyProgress[],
+  incoming: VocabularyProgress[],
+): ImportSummary {
+  const existingIds = new Set(existing.map((p) => p.vocabularyId));
+  let overwritten = 0;
+  for (const p of incoming) {
+    if (existingIds.has(p.vocabularyId)) overwritten += 1;
+  }
+  return {
+    added: incoming.length - overwritten,
+    overwritten,
+    total: incoming.length,
+  };
+}
+
+/**
+ * Áp dụng backup vào cơ sở dữ liệu theo chế độ hợp nhất hoặc thay thế.
+ * Trả về tóm tắt số bản ghi thêm/ghi đè.
+ */
 export async function applyBackup(
   data: BackupInput,
   mode: ImportMode,
-): Promise<void> {
+): Promise<ImportSummary> {
   const incomingProgress = data.progress as VocabularyProgress[];
   const incomingStats = (data.dailyStats ?? []) as DailyStat[];
+  const existing = await getAllProgress();
+  const summary = computeImportSummary(
+    mode === "replace" ? [] : existing,
+    incomingProgress,
+  );
 
   if (mode === "replace") {
     await clearAllProgress();
     await clearAllStats();
     await bulkPutProgress(incomingProgress);
     await bulkPutStats(incomingStats);
-    return;
+    return summary;
   }
 
-  // merge
-  const existing = await getAllProgress();
   await bulkPutProgress(mergeProgressLists(existing, incomingProgress));
   await bulkPutStats(incomingStats);
+  return summary;
 }
 
 /** Tạo và tải file backup (chỉ chạy trong trình duyệt). */

@@ -26,6 +26,7 @@ export const DEFAULT_SETTINGS: UserSettings = {
   pauseMs: DEFAULT_SPEECH.pauseMs,
 
   dynamicBackgroundEnabled: true,
+  backgroundCycleMinutes: 10,
   staticBackgroundMode: false,
   backgroundDarkness: 0.45,
   backgroundBlurPx: 2,

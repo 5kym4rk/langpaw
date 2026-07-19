@@ -6,6 +6,7 @@ import { getAllProgress } from "@/db/repositories/progress-repository";
 import { getAllStats } from "@/db/repositories/stats-repository";
 import { computeStreak } from "@/services/session/streak";
 import { inferLanguageFromId } from "@/utils/vocabulary-id";
+import { useDataRevision } from "@/stores/data-revision";
 import { LANGUAGES, LANGUAGE_ORDER } from "@/config/languages";
 import type {
   DailyStat,
@@ -33,6 +34,7 @@ export default function ProgressPage() {
   const [progress, setProgress] = useState<VocabularyProgress[]>([]);
   const [stats, setStats] = useState<DailyStat[]>([]);
   const [tab, setTab] = useState<Tab>("all");
+  const revision = useDataRevision((s) => s.revision);
 
   useEffect(() => {
     let active = true;
@@ -44,7 +46,7 @@ export default function ProgressPage() {
     return () => {
       active = false;
     };
-  }, []);
+  }, [revision]);
 
   // Lọc theo tab ngôn ngữ.
   const scopedProgress = useMemo(

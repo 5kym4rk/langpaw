@@ -19,11 +19,17 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: "prompt",
-      includeAssets: ["icons/favicon.svg", "robots.txt"],
+      includeAssets: [
+        "icons/favicon.svg",
+        "icons/apple-touch-icon.png",
+        "robots.txt",
+      ],
       manifest: {
-        name: "LangPaw",
+        name: "LangPaw — Học ngoại ngữ",
         short_name: "LangPaw",
-        description: "Ứng dụng học ngoại ngữ dành cho người Việt",
+        description:
+          "Ứng dụng học ngoại ngữ dành cho người Việt (Anh, Trung, Hàn, Nhật)",
+        lang: "vi",
         theme_color: "#d9823b",
         background_color: "#172033",
         display: "standalone",
@@ -31,10 +37,22 @@ export default defineConfig({
         scope: "./",
         icons: [
           {
-            src: "icons/favicon.svg",
-            sizes: "any",
-            type: "image/svg+xml",
-            purpose: "any maskable",
+            src: "icons/icon-192.png",
+            sizes: "192x192",
+            type: "image/png",
+            purpose: "any",
+          },
+          {
+            src: "icons/icon-512.png",
+            sizes: "512x512",
+            type: "image/png",
+            purpose: "any",
+          },
+          {
+            src: "icons/maskable-512.png",
+            sizes: "512x512",
+            type: "image/png",
+            purpose: "maskable",
           },
         ],
       },

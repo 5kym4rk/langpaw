@@ -27,6 +27,8 @@ export interface UserSettings {
   pauseMs: number;
 
   dynamicBackgroundEnabled: boolean;
+  /** Chu kỳ đổi nền (phút): 5 / 10 / 20 / 30. */
+  backgroundCycleMinutes: number;
   staticBackgroundMode: boolean;
   backgroundDarkness: number;
   backgroundBlurPx: number;

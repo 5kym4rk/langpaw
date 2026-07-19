@@ -2,6 +2,22 @@
 
 Định dạng theo tinh thần [Keep a Changelog](https://keepachangelog.com/).
 
+## [1.6.0] — Vòng sửa Batch 6 (backup live-update, PWA icons, chu kỳ nền)
+
+### Added / Changed
+
+- **P1.13** Nhập backup cập nhật giao diện **ngay lập tức** (không cần tải lại
+  trang) qua store `data-revision`; hiển thị tóm tắt **thêm / ghi đè** bản ghi;
+  **xác nhận** trước khi Thay thế (ConfirmDialog).
+- **PWA icons** PNG 192/512 + maskable 512 + apple-touch 180, sinh bằng script
+  thuần Node (`scripts/generate-icons.ts`, lệnh `npm run gen:icons`); manifest có
+  `lang: vi`, tên/mô tả đầy đủ; thêm `apple-touch-icon` vào index.html.
+- Thiết lập **chu kỳ đổi nền** 5/10/20/30 phút, áp vào bộ đổi nền.
+
+### Added (tests)
+
+- `computeImportSummary` (thêm/ghi đè). Tổng 91 unit + 6 E2E test.
+
 ## [1.5.0] — Vòng sửa Batch 5 (TTS và auto-learn)
 
 ### Added / Changed

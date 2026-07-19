@@ -68,7 +68,9 @@ export function DynamicBackground() {
 
     const rotator = createBackgroundRotator({
       backgrounds,
-      intervalMs: APP_CONFIG.backgroundRotationMs,
+      intervalMs:
+        (settings.backgroundCycleMinutes || 10) * 60_000 ||
+        APP_CONFIG.backgroundRotationMs,
       initialId,
       onChange: (entry) => {
         setCurrent(entry);
@@ -92,7 +94,7 @@ export function DynamicBackground() {
     return () => {
       rotator.stop();
     };
-  }, [backgrounds, allowVideo]);
+  }, [backgrounds, allowVideo, settings.backgroundCycleMinutes]);
 
   // Tạm dừng khi tab ẩn, tiếp tục khi hiện lại (không tạo nhiều timer).
   useEffect(() => {
