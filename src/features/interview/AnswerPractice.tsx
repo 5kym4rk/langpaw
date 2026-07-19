@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { Mic, Square, Play, Trash2, Timer } from "lucide-react";
 import { GlassPanel } from "@/components/common/GlassPanel";
+import { useSettingsStore } from "@/stores/settings-store";
+import { recordActivity } from "@/db/repositories/stats-repository";
 import type { InterviewQuestion } from "@/config/interview";
 
 type Stage = "idle" | "prep" | "answer" | "done";
@@ -23,8 +25,10 @@ function supportsRecording(): boolean {
 }
 
 export function AnswerPractice({ question }: { question: InterviewQuestion }) {
+  const targetLanguage = useSettingsStore((s) => s.settings.targetLanguage);
   const [stage, setStage] = useState<Stage>("idle");
   const [seconds, setSeconds] = useState(0);
+  const answerStartRef = useRef(0); // Mốc bắt đầu trả lời để đo studyMs (§3.6).
   const [recordings, setRecordings] = useState<Recording[]>([]);
   const [error, setError] = useState<string | null>(null);
 
@@ -32,7 +36,16 @@ export function AnswerPractice({ question }: { question: InterviewQuestion }) {
   const recorderRef = useRef<MediaRecorder | null>(null);
   const streamRef = useRef<MediaStream | null>(null);
   const chunksRef = useRef<Blob[]>([]);
+  // Token yêu cầu micro: bỏ stream đến muộn khi đã đổi câu hỏi (§3.5).
+  const requestIdRef = useRef(0);
+  // Gương của recordings để cleanup revoke được URL khi unmount.
+  const recordingsRef = useRef<Recording[]>([]);
+  recordingsRef.current = recordings;
   const canRecord = supportsRecording();
+
+  const revokeAll = () => {
+    for (const r of recordingsRef.current) URL.revokeObjectURL(r.url);
+  };
 
   const clearTimer = () => {
     if (timerRef.current !== null) {
@@ -52,32 +65,43 @@ export function AnswerPractice({ question }: { question: InterviewQuestion }) {
     }
   };
 
-  // Cleanup khi unmount hoặc đổi câu hỏi.
+  // Cleanup khi unmount hoặc đổi câu hỏi: hủy timer, recorder, stream, token
+  // và revoke mọi object URL để không rò bộ nhớ (§3.5).
   useEffect(() => {
     return () => {
+      requestIdRef.current += 1;
       clearTimer();
       stopRecording();
       stopStream();
+      revokeAll();
     };
   }, [question.id]);
 
-  // Đổi câu hỏi → về trạng thái đầu.
+  // Đổi câu hỏi → về trạng thái đầu và tách bản ghi theo câu hỏi (§3.5).
   useEffect(() => {
     setStage("idle");
     setSeconds(0);
     setError(null);
+    setRecordings([]);
   }, [question.id]);
 
   const startAnswer = async () => {
     clearTimer();
     setStage("answer");
     setSeconds(ANSWER_SECONDS);
+    answerStartRef.current = Date.now();
 
     if (canRecord) {
+      const reqId = ++requestIdRef.current;
       try {
         const stream = await navigator.mediaDevices.getUserMedia({
           audio: true,
         });
+        // Đã đổi câu hỏi/hủy trong lúc chờ cấp quyền → bỏ stream này.
+        if (reqId !== requestIdRef.current) {
+          stream.getTracks().forEach((t) => t.stop());
+          return;
+        }
         streamRef.current = stream;
         chunksRef.current = [];
         const recorder = new MediaRecorder(stream);
@@ -136,6 +160,12 @@ export function AnswerPractice({ question }: { question: InterviewQuestion }) {
   const finishAnswer = () => {
     clearTimer();
     stopRecording();
+    // Ghi thời gian luyện phỏng vấn thật cho ngôn ngữ đang học (§3.6).
+    if (answerStartRef.current > 0) {
+      const studyMs = Date.now() - answerStartRef.current;
+      answerStartRef.current = 0;
+      if (studyMs > 0) void recordActivity(targetLanguage, { studyMs });
+    }
     setStage("done");
   };
 
@@ -158,7 +188,7 @@ export function AnswerPractice({ question }: { question: InterviewQuestion }) {
       <p className="text-sm text-ivory/60">{question.questionVi}</p>
 
       <div className="mt-4 flex items-center gap-3">
-        <Timer size={18} className="text-corgi" aria-hidden />
+        <Timer size={18} className="text-corgi-text" aria-hidden />
         <span
           className="text-2xl font-bold tabular-nums text-ivory"
           aria-live="polite"
@@ -201,7 +231,7 @@ export function AnswerPractice({ question }: { question: InterviewQuestion }) {
         ) : null}
       </div>
 
-      {error ? <p className="mt-3 text-sm text-danger">{error}</p> : null}
+      {error ? <p className="mt-3 text-sm text-danger-text">{error}</p> : null}
       {!canRecord ? (
         <p className="mt-3 text-xs text-ivory/40">
           Trình duyệt không hỗ trợ ghi âm; bạn vẫn luyện được theo đồng hồ. Bản
@@ -220,7 +250,7 @@ export function AnswerPractice({ question }: { question: InterviewQuestion }) {
               key={r.id}
               className="flex items-center gap-3 rounded-xl bg-night/40 p-2"
             >
-              <Play size={16} className="text-corgi" aria-hidden />
+              <Play size={16} className="text-corgi-text" aria-hidden />
               <audio controls src={r.url} className="h-8 flex-1" />
               <button
                 type="button"
@@ -236,7 +266,7 @@ export function AnswerPractice({ question }: { question: InterviewQuestion }) {
       ) : null}
 
       <details className="mt-4">
-        <summary className="cursor-pointer text-sm text-corgi">
+        <summary className="cursor-pointer text-sm text-corgi-text">
           Xem gợi ý trả lời
         </summary>
         <div className="mt-2 rounded-xl bg-night/40 p-3 text-sm">

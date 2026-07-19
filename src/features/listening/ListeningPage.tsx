@@ -52,6 +52,7 @@ export default function ListeningPage() {
   const [revealed, setRevealed] = useState(false);
   const [answers, setAnswers] = useState<AnswerRecord[]>([]);
   const startedAtRef = useRef(0);
+  const questionStartRef = useRef(0); // Mốc thời gian câu hiện tại (§3.6).
   const savingRef = useRef(false);
   const playTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -123,6 +124,7 @@ export default function ListeningPage() {
     setRevealed(false);
     setAnswers([]);
     startedAtRef.current = Date.now();
+    questionStartRef.current = Date.now();
     setPhase("running");
     schedulePlay(q[0], 300);
   };
@@ -147,6 +149,7 @@ export default function ListeningPage() {
       language: current.language,
       activityType: "listening",
       correct,
+      durationMs: Date.now() - questionStartRef.current,
     }).finally(() => {
       savingRef.current = false;
     });
@@ -164,6 +167,7 @@ export default function ListeningPage() {
     setSelected(null);
     setTextAnswer("");
     setRevealed(false);
+    questionStartRef.current = Date.now();
     schedulePlay(queue[nextIndex], 200);
   };
 
@@ -175,6 +179,7 @@ export default function ListeningPage() {
     setRevealed(false);
     setAnswers([]);
     startedAtRef.current = Date.now();
+    questionStartRef.current = Date.now();
     setPhase("running");
     schedulePlay(items[0], 300);
   };
@@ -240,7 +245,7 @@ export default function ListeningPage() {
             ))}
           </div>
           {!speechEnabled ? (
-            <p className="mb-4 text-sm text-danger">
+            <p className="mb-4 text-sm text-danger-text">
               Phát âm đang tắt. Bật lại trong Cài đặt để luyện nghe.
             </p>
           ) : null}
@@ -280,7 +285,7 @@ export default function ListeningPage() {
 
         {wrong.length > 0 ? (
           <GlassPanel className="mt-4">
-            <h2 className="mb-3 flex items-center gap-2 font-semibold text-danger">
+            <h2 className="mb-3 flex items-center gap-2 font-semibold text-danger-text">
               <AlertTriangle size={18} /> Từ nghe sai ({wrong.length})
             </h2>
             <ul className="flex flex-col gap-2">
@@ -306,7 +311,7 @@ export default function ListeningPage() {
           </GlassPanel>
         ) : (
           <GlassPanel className="mt-4 text-center">
-            <p className="flex items-center justify-center gap-2 text-success">
+            <p className="flex items-center justify-center gap-2 text-success-text">
               <Check /> Bạn nghe đúng tất cả!
             </p>
           </GlassPanel>
@@ -349,7 +354,7 @@ export default function ListeningPage() {
             type="button"
             onClick={() => playCurrent(current)}
             aria-label="Nghe lại"
-            className="flex h-20 w-20 items-center justify-center rounded-full bg-corgi/25 text-corgi hover:bg-corgi/35"
+            className="flex h-20 w-20 items-center justify-center rounded-full bg-corgi/25 text-corgi-text hover:bg-corgi/35"
           >
             <Volume2 size={36} />
           </button>
@@ -361,7 +366,7 @@ export default function ListeningPage() {
             <button
               type="button"
               onClick={() => playExample(current)}
-              className="rounded-full bg-corgi/20 px-3 py-1.5 text-sm text-corgi hover:bg-corgi/30"
+              className="rounded-full bg-corgi/20 px-3 py-1.5 text-sm text-corgi-text hover:bg-corgi/30"
             >
               Nghe câu ví dụ
             </button>
@@ -406,7 +411,7 @@ export default function ListeningPage() {
               onChange={(e) => setTextAnswer(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && check()}
               placeholder="Nhập từ bạn nghe được…"
-              className="w-full rounded-xl bg-night/60 px-4 py-3 text-ivory outline-none"
+              className="w-full rounded-xl bg-night px-4 py-3 text-ivory outline-none"
             />
           </div>
         )}
@@ -415,15 +420,15 @@ export default function ListeningPage() {
           <div className="mt-4 rounded-xl bg-night/40 p-4">
             <div className="flex items-center gap-2">
               {answers[answers.length - 1]?.correct ? (
-                <Check className="text-success" />
+                <Check className="text-success-text" />
               ) : (
-                <X className="text-danger" />
+                <X className="text-danger-text" />
               )}
               <span className="text-lg font-bold text-ivory">
                 {current.term}
               </span>
               {current.reading ? (
-                <span className="text-corgi">{current.reading}</span>
+                <span className="text-corgi-text">{current.reading}</span>
               ) : null}
             </div>
             <p className="mt-1 text-ivory/80">{current.meaningVi}</p>
@@ -459,7 +464,7 @@ function StatCard({ label, value }: { label: string; value: string }) {
   return (
     <GlassPanel>
       <p className="text-sm text-ivory/60">{label}</p>
-      <p className="mt-1 text-3xl font-bold text-corgi">{value}</p>
+      <p className="mt-1 text-3xl font-bold text-corgi-text">{value}</p>
     </GlassPanel>
   );
 }

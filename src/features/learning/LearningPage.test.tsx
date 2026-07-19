@@ -133,4 +133,37 @@ describe("LearningPage — hoàn thành phiên (P0.1)", () => {
       screen.getByRole("button", { name: /Học lại từ sai \(1\)/ }),
     ).toBeInTheDocument();
   });
+
+  it("bỏ qua: không ghi đúng/sai, hiện nhóm Bỏ qua và nút học lại", async () => {
+    ITEMS = [makeItem("en-0001"), makeItem("en-0002")];
+    const user = userEvent.setup();
+    renderPage();
+
+    await screen.findByRole("button", { name: "Bắt đầu học" });
+    await user.click(screen.getByRole("button", { name: "Bắt đầu học" }));
+
+    // Thẻ đầu: bỏ qua → chuyển sang thẻ 2, chưa hoàn thành.
+    await screen.findByText("en-0001");
+    await user.click(
+      screen.getByRole("button", { name: /Bỏ qua \(để lại cuối phiên\)/ }),
+    );
+    await screen.findByText("en-0002");
+    expect(
+      screen.queryByText("Hoàn thành phiên học 🎉"),
+    ).not.toBeInTheDocument();
+
+    // Đánh giá thẻ 2 → mọi thẻ đã được xử lý → hoàn thành.
+    await user.click(screen.getByRole("button", { name: /Đã biết/ }));
+    await screen.findByText("Hoàn thành phiên học 🎉");
+
+    // Bỏ qua không ghi đúng/sai vào tiến độ en-0001.
+    const p1 = useLearningStore.getState().progressMap.get("en-0001");
+    expect(p1?.correctCount ?? 0).toBe(0);
+    expect(p1?.incorrectCount ?? 0).toBe(0);
+
+    // Kết quả có nút học lại thẻ bỏ qua với 1 thẻ.
+    expect(
+      screen.getByRole("button", { name: /Học thẻ bỏ qua \(1\)/ }),
+    ).toBeInTheDocument();
+  });
 });

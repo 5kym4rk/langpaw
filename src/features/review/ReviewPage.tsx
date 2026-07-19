@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { PartyPopper } from "lucide-react";
 import { PageHeader } from "@/components/common/PageHeader";
 import { LoadingState } from "@/components/common/LoadingState";
@@ -31,6 +31,7 @@ export default function ReviewPage() {
   const [index, setIndex] = useState(0);
   const [flipped, setFlipped] = useState(false);
   const [started, setStarted] = useState(false);
+  const cardStartRef = useRef(0); // Mốc thời gian thẻ hiện tại (§3.6).
 
   useEffect(() => {
     void loadLanguage(targetLanguage);
@@ -45,6 +46,7 @@ export default function ReviewPage() {
     setIndex(0);
     setFlipped(false);
     setStarted(true);
+    cardStartRef.current = Date.now();
   };
 
   const currentItem = useMemo(() => {
@@ -66,9 +68,10 @@ export default function ReviewPage() {
   const grade = async (g: ReviewGrade) => {
     if (!currentItem) return;
     speechService.cancel();
-    await review(currentItem.id, g);
+    await review(currentItem.id, g, Date.now() - cardStartRef.current);
     setFlipped(false);
     setIndex((i) => i + 1);
+    cardStartRef.current = Date.now();
   };
 
   if (loading) return <LoadingState label="Đang tải bộ từ…" />;
@@ -87,8 +90,8 @@ export default function ReviewPage() {
         ) : (
           <div className="glass mx-auto max-w-md rounded-xl2 p-6 text-center">
             <p className="mb-4 text-ivory/80">
-              Có <span className="font-bold text-corgi">{available}</span> từ
-              cần ôn hôm nay.
+              Có <span className="font-bold text-corgi-text">{available}</span>{" "}
+              từ cần ôn hôm nay.
             </p>
             <button
               type="button"

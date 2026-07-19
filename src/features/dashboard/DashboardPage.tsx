@@ -11,6 +11,7 @@ import { getStatsForLanguage } from "@/db/repositories/stats-repository";
 import { computeStreak } from "@/services/session/streak";
 import { summarizeProgress } from "@/services/session/stats";
 import { inferLanguageFromId } from "@/utils/vocabulary-id";
+import { localDateKey } from "@/utils/date";
 import { useDataRevision } from "@/stores/data-revision";
 import type { DailyStat, VocabularyProgress } from "@/types";
 
@@ -56,7 +57,7 @@ export default function DashboardPage() {
     [stats],
   );
   const todayStudied = useMemo(() => {
-    const today = new Date().toISOString().slice(0, 10);
+    const today = localDateKey();
     return stats.find((s) => s.date === today)?.wordsStudied ?? 0;
   }, [stats]);
 
@@ -102,7 +103,7 @@ export default function DashboardPage() {
           <h2 className="text-lg font-semibold">
             Bảy ngày gần nhất · {lang.labelVi}
           </h2>
-          <Link to="/progress" className="text-sm text-corgi">
+          <Link to="/progress" className="text-sm text-corgi-text">
             Xem chi tiết
           </Link>
         </div>
@@ -132,7 +133,7 @@ function StatCard({
   return (
     <GlassPanel>
       <p className="text-sm text-ivory/60">{label}</p>
-      <p className="mt-1 text-3xl font-bold text-corgi">
+      <p className="mt-1 text-3xl font-bold text-corgi-text">
         {value}
         <span className="ml-1 text-base font-normal text-ivory/50">{unit}</span>
       </p>
@@ -155,7 +156,7 @@ function ActionCard({
       to={to}
       className="glass flex items-center gap-3 rounded-xl2 px-5 py-4 font-medium text-ivory transition-transform hover:-translate-y-0.5"
     >
-      <span className="text-corgi" aria-hidden>
+      <span className="text-corgi-text" aria-hidden>
         {icon}
       </span>
       {label}

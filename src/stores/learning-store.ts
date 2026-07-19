@@ -42,7 +42,11 @@ interface LearningState {
   goTo: (index: number) => void;
   markKnown: (id: string) => Promise<void>;
   markUnknown: (id: string) => Promise<void>;
-  review: (id: string, grade: ReviewGrade) => Promise<void>;
+  review: (
+    id: string,
+    grade: ReviewGrade,
+    durationMs?: number,
+  ) => Promise<void>;
   toggleFavorite: (id: string) => Promise<void>;
   toggleWeak: (id: string) => Promise<void>;
 }
@@ -173,7 +177,7 @@ export const useLearningStore = create<LearningState>((set, get) => ({
     }
   },
 
-  review: async (id, grade) => {
+  review: async (id, grade, durationMs) => {
     const current = await getOrCreateProgress(id);
     const { progress } = schedule(current, grade, new Date());
     await saveProgress(progress);
@@ -187,6 +191,7 @@ export const useLearningStore = create<LearningState>((set, get) => ({
         reviewsDone: 1,
         correct: correct ? 1 : 0,
         incorrect: correct ? 0 : 1,
+        studyMs: durationMs ?? 0,
       });
     }
   },

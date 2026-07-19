@@ -22,6 +22,8 @@ import { VocabularyCard } from "@/components/vocabulary/VocabularyCard";
 import { useLearningStore } from "@/stores/learning-store";
 import { useSettingsStore } from "@/stores/settings-store";
 import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
+import { useStudyTimer } from "@/hooks/useStudyTimer";
+import { recordActivity } from "@/db/repositories/stats-repository";
 import { useAutoLearn } from "./useAutoLearn";
 import { speechService } from "@/services/speech/speech-service";
 import { LANGUAGES } from "@/config/languages";
@@ -36,14 +38,19 @@ import { cn } from "@/utils/cn";
 
 type Scope = "all" | "new" | "weak" | "favorite";
 type Phase = "setup" | "running" | "completed";
+type Outcome = "known" | "unknown" | "skipped";
 
 const SESSION_SIZES = [5, 10, 20, 30, 0] as const; // 0 = tất cả
+/** Trần số lần bỏ qua trong một phiên (§3.2 — giới hạn số lần bỏ qua). */
+const SKIP_LIMIT = 20;
 
 interface SessionSummary {
   total: number;
   known: number;
   unknown: number;
+  skipped: number;
   wrongIds: string[];
+  skippedIds: string[];
   elapsedMs: number;
 }
 
@@ -65,7 +72,6 @@ export default function LearningPage() {
     startSession,
     startSessionFromIds,
     consumePendingRun,
-    next,
     previous,
     goTo,
     markKnown,
@@ -84,13 +90,25 @@ export default function LearningPage() {
   const [sessionSize, setSessionSize] = useState<number>(dailyGoal);
   const [flipped, setFlipped] = useState(false);
 
-  // Bộ đếm phiên hiện tại.
-  const [known, setKnown] = useState(0);
-  const [unknown, setUnknown] = useState(0);
-  const wrongIdsRef = useRef<string[]>([]);
+  // Kết quả từng thẻ trong phiên hiện tại (nguồn sự thật cho bộ đếm).
+  const [outcomes, setOutcomes] = useState<Map<string, Outcome>>(new Map());
   const startedAtRef = useRef<number>(0);
   const savingRef = useRef(false);
   const [summary, setSummary] = useState<SessionSummary | null>(null);
+  const studyTimer = useStudyTimer();
+
+  const known = useMemo(
+    () => [...outcomes.values()].filter((o) => o === "known").length,
+    [outcomes],
+  );
+  const unknown = useMemo(
+    () => [...outcomes.values()].filter((o) => o === "unknown").length,
+    [outcomes],
+  );
+  const skipped = useMemo(
+    () => [...outcomes.values()].filter((o) => o === "skipped").length,
+    [outcomes],
+  );
 
   useEffect(() => {
     void loadLanguage(targetLanguage);
@@ -118,10 +136,9 @@ export default function LearningPage() {
   });
 
   const resetCounters = () => {
-    setKnown(0);
-    setUnknown(0);
-    wrongIdsRef.current = [];
+    setOutcomes(new Map());
     startedAtRef.current = Date.now();
+    studyTimer.start();
     setFlipped(false);
     setSummary(null);
   };
@@ -154,51 +171,80 @@ export default function LearningPage() {
     setPhase("running");
   };
 
-  const finish = (finalKnown: number, finalUnknown: number) => {
+  const finishFrom = (map: Map<string, Outcome>) => {
     auto.stop();
     speechService.cancel();
+    const studyMs = studyTimer.stop();
+    let k = 0;
+    let u = 0;
+    let s = 0;
+    const wrongIds: string[] = [];
+    const skippedIds: string[] = [];
+    for (const it of sessionItems) {
+      const o = map.get(it.id);
+      if (o === "known") k += 1;
+      else if (o === "unknown") {
+        u += 1;
+        wrongIds.push(it.id);
+      } else if (o === "skipped") {
+        s += 1;
+        skippedIds.push(it.id);
+      }
+    }
     setSummary({
-      total: finalKnown + finalUnknown,
-      known: finalKnown,
-      unknown: finalUnknown,
-      wrongIds: [...wrongIdsRef.current],
-      elapsedMs: Date.now() - startedAtRef.current,
+      total: sessionItems.length,
+      known: k,
+      unknown: u,
+      skipped: s,
+      wrongIds,
+      skippedIds,
+      elapsedMs: studyMs,
     });
+    // Ghi thời gian học thật (loại trừ tab ẩn) cho ngôn ngữ đang học (§3.6).
+    if (studyMs > 0) void recordActivity(targetLanguage, { studyMs });
     setPhase("completed");
+  };
+
+  /** Chỉ số thẻ chưa đánh giá kế tiếp (cuộn vòng); -1 nếu đã đánh giá hết. */
+  const nextUntouchedIndex = (map: Map<string, Outcome>): number => {
+    const n = sessionItems.length;
+    for (let step = 1; step <= n; step += 1) {
+      const idx = (currentIndex + step) % n;
+      if (!map.has(sessionItems[idx].id)) return idx;
+    }
+    return -1;
+  };
+
+  const applyOutcome = (map: Map<string, Outcome>) => {
+    setOutcomes(map);
+    speechService.cancel();
+    setFlipped(false);
+    // Không cho hoàn thành khi còn thẻ chưa đánh giá (§3.2).
+    const idx = nextUntouchedIndex(map);
+    if (idx === -1) finishFrom(map);
+    else goTo(idx);
   };
 
   const grade = async (isKnown: boolean) => {
     if (savingRef.current || phase !== "running" || !current) return;
     savingRef.current = true;
-    const isLast = currentIndex >= sessionItems.length - 1;
-    const nextKnown = known + (isKnown ? 1 : 0);
-    const nextUnknown = unknown + (isKnown ? 0 : 1);
     try {
-      if (isKnown) {
-        await markKnown(current.id);
-      } else {
-        await markUnknown(current.id);
-        wrongIdsRef.current = [...wrongIdsRef.current, current.id];
-      }
+      if (isKnown) await markKnown(current.id);
+      else await markUnknown(current.id);
     } finally {
       savingRef.current = false;
     }
-    setKnown(nextKnown);
-    setUnknown(nextUnknown);
-    speechService.cancel();
-    setFlipped(false);
-    if (isLast) {
-      finish(nextKnown, nextUnknown);
-    } else {
-      next();
-    }
+    applyOutcome(
+      new Map(outcomes).set(current.id, isKnown ? "known" : "unknown"),
+    );
   };
 
-  const goNext = () => {
-    speechService.cancel();
-    setFlipped(false);
-    next();
+  const skip = () => {
+    if (phase !== "running" || !current) return;
+    // Bỏ qua không ghi đúng/sai và không tính vào số từ đã học (§3.2).
+    applyOutcome(new Map(outcomes).set(current.id, "skipped"));
   };
+
   const goPrev = () => {
     speechService.cancel();
     setFlipped(false);
@@ -210,6 +256,7 @@ export default function LearningPage() {
       " ": () => setFlipped((f) => !f),
       ArrowLeft: () => void grade(false),
       ArrowRight: () => void grade(true),
+      s: () => skipped < SKIP_LIMIT && skip(),
       r: () =>
         current &&
         void speechService.speak(current.term, { lang: lang.speechLocale }),
@@ -230,20 +277,25 @@ export default function LearningPage() {
 
   // ---- Màn hoàn thành ----
   if (phase === "completed" && summary) {
+    const graded = summary.known + summary.unknown;
     const accuracy =
-      summary.total > 0 ? Math.round((summary.known / summary.total) * 100) : 0;
+      graded > 0 ? Math.round((summary.known / graded) * 100) : 0;
     const seconds = Math.round(summary.elapsedMs / 1000);
     return (
       <div className="mx-auto max-w-2xl">
         <PageHeader title="Hoàn thành phiên học 🎉" />
         <div className="grid gap-4 sm:grid-cols-4">
-          <Stat label="Số từ đã học" value={summary.total} />
           <Stat label="Đã biết" value={summary.known} tone="success" />
           <Stat label="Chưa nhớ" value={summary.unknown} tone="danger" />
+          <Stat label="Bỏ qua" value={summary.skipped} />
           <Stat label="Tỷ lệ nhớ" value={`${accuracy}%`} />
         </div>
+        <p className="mt-2 text-center text-sm text-ivory/50">
+          Đã đánh giá {summary.known + summary.unknown}/{summary.total} thẻ
+          {summary.skipped > 0 ? ` · ${summary.skipped} thẻ bỏ qua` : ""}
+        </p>
         <p className="mt-3 text-center text-sm text-ivory/50">
-          Thời gian phiên: {seconds}s
+          Thời gian học thực: {seconds}s
         </p>
         <div className="mt-5 flex flex-wrap justify-center gap-2">
           <button
@@ -254,6 +306,16 @@ export default function LearningPage() {
           >
             <RotateCcw size={18} /> Học lại từ sai ({summary.wrongIds.length})
           </button>
+          {summary.skippedIds.length > 0 ? (
+            <button
+              type="button"
+              onClick={() => relearnWrong(summary.skippedIds)}
+              className="flex items-center gap-2 rounded-full bg-ivory/10 px-5 py-2.5 font-medium text-ivory"
+            >
+              <RotateCcw size={18} /> Học thẻ bỏ qua (
+              {summary.skippedIds.length})
+            </button>
+          ) : null}
           <button
             type="button"
             onClick={() => setPhase("setup")}
@@ -286,7 +348,7 @@ export default function LearningPage() {
             <select
               value={level}
               onChange={(e) => setLevel(e.target.value)}
-              className="rounded-lg bg-night/60 px-3 py-2 text-sm text-ivory"
+              className="rounded-lg bg-night px-3 py-2 text-sm text-ivory"
             >
               <option value="">Tất cả</option>
               {levels.map((l) => (
@@ -300,7 +362,7 @@ export default function LearningPage() {
             <select
               value={topic}
               onChange={(e) => setTopic(e.target.value)}
-              className="rounded-lg bg-night/60 px-3 py-2 text-sm text-ivory"
+              className="rounded-lg bg-night px-3 py-2 text-sm text-ivory"
             >
               <option value="">Tất cả</option>
               {topics.map((t) => (
@@ -314,7 +376,7 @@ export default function LearningPage() {
             <select
               value={scope}
               onChange={(e) => setScope(e.target.value as Scope)}
-              className="rounded-lg bg-night/60 px-3 py-2 text-sm text-ivory"
+              className="rounded-lg bg-night px-3 py-2 text-sm text-ivory"
             >
               <option value="all">Tất cả</option>
               <option value="new">Từ mới</option>
@@ -326,7 +388,7 @@ export default function LearningPage() {
             <select
               value={sessionSize}
               onChange={(e) => setSessionSize(Number(e.target.value))}
-              className="rounded-lg bg-night/60 px-3 py-2 text-sm text-ivory"
+              className="rounded-lg bg-night px-3 py-2 text-sm text-ivory"
             >
               {SESSION_SIZES.map((n) => (
                 <option key={n} value={n}>
@@ -339,7 +401,7 @@ export default function LearningPage() {
             <select
               value={reviewLevel}
               onChange={(e) => setReviewLevel(e.target.value as ReviewLevel)}
-              className="rounded-lg bg-night/60 px-3 py-2 text-sm text-ivory"
+              className="rounded-lg bg-night px-3 py-2 text-sm text-ivory"
             >
               {(["all", "reviewed", "verified"] as ReviewLevel[]).map((lv) => (
                 <option key={lv} value={lv}>
@@ -384,7 +446,7 @@ export default function LearningPage() {
 
   // ---- Màn đang học ----
   const currentProgress = progressMap.get(current.id);
-  const done = known + unknown;
+  const done = known + unknown + skipped;
   const progressPct =
     sessionItems.length > 0 ? (done / sessionItems.length) * 100 : 0;
 
@@ -446,7 +508,7 @@ export default function LearningPage() {
             <ChevronRight size={18} />
           </IconButton>
           {auto.status === "playing" ? (
-            <span className="ml-1 text-xs text-corgi">Đang phát…</span>
+            <span className="ml-1 text-xs text-corgi-text">Đang phát…</span>
           ) : null}
         </div>
 
@@ -473,9 +535,13 @@ export default function LearningPage() {
             <Check size={18} /> Đã biết
           </button>
           <IconButton
-            onClick={goNext}
-            label="Bỏ qua"
-            disabled={currentIndex >= sessionItems.length - 1}
+            onClick={skip}
+            label={
+              skipped >= SKIP_LIMIT
+                ? `Đã đạt giới hạn bỏ qua (${SKIP_LIMIT})`
+                : "Bỏ qua (để lại cuối phiên)"
+            }
+            disabled={skipped >= SKIP_LIMIT}
           >
             <ChevronRight />
           </IconButton>
@@ -497,7 +563,8 @@ export default function LearningPage() {
         </div>
 
         <p className="mt-4 text-center text-xs text-ivory/40">
-          Phím tắt: Space lật · ← chưa nhớ · → đã biết · R phát âm · F yêu thích
+          Phím tắt: Space lật · ← chưa nhớ · → đã biết · S bỏ qua · R phát âm ·
+          F yêu thích
         </p>
       </div>
     </div>
@@ -517,8 +584,8 @@ function Stat({
     tone === "success"
       ? "text-emerald-300"
       : tone === "danger"
-        ? "text-danger"
-        : "text-corgi";
+        ? "text-danger-text"
+        : "text-corgi-text";
   return (
     <GlassPanel>
       <p className="text-sm text-ivory/60">{label}</p>

@@ -33,6 +33,8 @@ export function useAutoLearn(
 
   const runIdRef = useRef(0); // Tăng lên để hủy vòng lặp đang chạy.
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  // Resolve của delay đang chờ, để hủy mà không treo Promise (§3.4).
+  const pendingResolveRef = useRef<(() => void) | null>(null);
   const settingsRef = useRef(settings);
   settingsRef.current = settings;
   const itemsRef = useRef(items);
@@ -43,15 +45,22 @@ export function useAutoLearn(
       clearTimeout(timerRef.current);
       timerRef.current = null;
     }
+    // Giải phóng Promise đang chờ để vòng lặp tiếp tục và thoát qua alive().
+    if (pendingResolveRef.current !== null) {
+      const resolve = pendingResolveRef.current;
+      pendingResolveRef.current = null;
+      resolve();
+    }
   };
 
-  const delay = (ms: number, runId: number) =>
+  const delay = (ms: number) =>
     new Promise<void>((resolve) => {
+      pendingResolveRef.current = resolve;
       timerRef.current = setTimeout(() => {
         timerRef.current = null;
+        pendingResolveRef.current = null;
         resolve();
       }, ms);
-      void runId;
     });
 
   const stopInternal = useCallback(() => {
@@ -82,7 +91,7 @@ export function useAutoLearn(
             );
           }
           if (!alive()) return;
-          await delay(cfg.pauseMs, runId);
+          await delay(cfg.pauseMs);
           if (!alive()) return;
 
           // Đọc câu ví dụ (đúng câu ví dụ, chậm hơn một chút).
@@ -92,7 +101,7 @@ export function useAutoLearn(
               buildSpeakOptions(cfg, item.language, 0.9),
             );
             if (!alive()) return;
-            await delay(Math.floor(cfg.pauseMs / 2), runId);
+            await delay(Math.floor(cfg.pauseMs / 2));
           }
         }
 
@@ -103,7 +112,7 @@ export function useAutoLearn(
             rate: cfg.speechRate,
           });
           if (!alive()) return;
-          await delay(Math.floor(cfg.pauseMs / 2), runId);
+          await delay(Math.floor(cfg.pauseMs / 2));
         }
       }
 

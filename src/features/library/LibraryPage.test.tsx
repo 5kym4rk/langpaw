@@ -74,10 +74,27 @@ describe("LibraryPage — kho từ (P2.2/P2.3)", () => {
     renderPage();
 
     await screen.findByText("voltage");
+    // Mở menu chọn số lượng rồi chọn "Tất cả" (2 từ, dưới ngưỡng xác nhận).
     await user.click(screen.getByRole("button", { name: /Học các từ này/ }));
+    await user.click(screen.getByRole("menuitem", { name: /Tất cả \(2\)/ }));
 
     const state = useLearningStore.getState();
     expect(state.pendingRun).toBe(true);
     expect(state.sessionItems.map((i) => i.id)).toEqual(["en-0001", "en-0002"]);
+  });
+
+  it("chọn số lượng giới hạn số từ đưa vào phiên", async () => {
+    ITEMS = Array.from({ length: 8 }, (_, i) =>
+      makeItem(`en-000${i + 1}`, `term${i + 1}`, `nghĩa ${i + 1}`),
+    );
+    const user = userEvent.setup();
+    renderPage();
+
+    await screen.findByText("term1");
+    await user.click(screen.getByRole("button", { name: /Học các từ này/ }));
+    await user.click(screen.getByRole("menuitem", { name: /5 từ đầu tiên/ }));
+
+    const state = useLearningStore.getState();
+    expect(state.sessionItems).toHaveLength(5);
   });
 });

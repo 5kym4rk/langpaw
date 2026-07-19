@@ -11,7 +11,17 @@ import { useSettingsStore } from "@/stores/settings-store";
 import { useDataRevision } from "@/stores/data-revision";
 import { LANGUAGES } from "@/config/languages";
 import { filterLibrary, type LibraryStatus } from "@/services/data/library";
+import { ConfirmDialog } from "@/components/common/ConfirmDialog";
+import {
+  filterByReviewLevel,
+  REVIEW_LEVEL_LABELS,
+  type ReviewLevel,
+} from "@/services/data/vocabulary-filters";
 import { cn } from "@/utils/cn";
+
+const SESSION_SIZE_OPTIONS = [5, 10, 20, 30] as const;
+/** Trên ngưỡng này, phiên "tất cả" cần xác nhận (§3.7). */
+const CONFIRM_ALL_THRESHOLD = 30;
 
 const STATUS_TABS: { id: LibraryStatus; label: string }[] = [
   { id: "all", label: "Tất cả" },
@@ -39,22 +49,43 @@ export default function LibraryPage() {
   } = useLearningStore();
   const lang = LANGUAGES[targetLanguage];
 
+  const contentReviewLevel = useSettingsStore(
+    (s) => s.settings.contentReviewLevel,
+  );
   const [query, setQuery] = useState("");
   const [status, setStatus] = useState<LibraryStatus>("all");
+  const [reviewLevel, setReviewLevel] =
+    useState<ReviewLevel>(contentReviewLevel);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [confirmAll, setConfirmAll] = useState(false);
 
   useEffect(() => {
     void loadLanguage(targetLanguage);
   }, [targetLanguage, loadLanguage, revision]);
 
+  // Kho từ phải tôn trọng mức kiểm duyệt trước khi lọc trạng thái (§3.7).
   const filtered = useMemo(
-    () => filterLibrary(allItems, progressMap, { query, status }),
-    [allItems, progressMap, query, status],
+    () =>
+      filterLibrary(filterByReviewLevel(allItems, reviewLevel), progressMap, {
+        query,
+        status,
+      }),
+    [allItems, progressMap, query, status, reviewLevel],
   );
 
-  const startLearning = () => {
-    if (filtered.length === 0) return;
-    queueSessionFromIds(filtered.map((i) => i.id));
+  const startWith = (count?: number) => {
+    const ids = (count ? filtered.slice(0, count) : filtered).map((i) => i.id);
+    if (ids.length === 0) return;
+    setMenuOpen(false);
+    setConfirmAll(false);
+    queueSessionFromIds(ids);
     navigate("/learn");
+  };
+
+  const requestAll = () => {
+    setMenuOpen(false);
+    if (filtered.length > CONFIRM_ALL_THRESHOLD) setConfirmAll(true);
+    else startWith();
   };
 
   if (loading) return <LoadingState label="Đang tải kho từ…" />;
@@ -96,17 +127,81 @@ export default function LibraryPage() {
         ))}
       </div>
 
-      <div className="mb-4 flex items-center justify-between">
-        <span className="text-sm text-ivory/50">{filtered.length} kết quả</span>
-        <button
-          type="button"
-          onClick={startLearning}
-          disabled={filtered.length === 0}
-          className="flex items-center gap-2 rounded-full bg-corgi px-4 py-2 text-sm font-medium text-night disabled:opacity-40"
-        >
-          <GraduationCap size={16} /> Học các từ này
-        </button>
+      <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
+        <div className="flex items-center gap-3">
+          <span className="text-sm text-ivory/50">
+            {filtered.length} kết quả
+          </span>
+          <label className="flex items-center gap-1.5 text-xs text-ivory/60">
+            Nguồn
+            <select
+              value={reviewLevel}
+              onChange={(e) => setReviewLevel(e.target.value as ReviewLevel)}
+              className="rounded-lg bg-night px-2 py-1 text-sm text-ivory"
+              aria-label="Lọc theo mức kiểm duyệt"
+            >
+              {(["all", "reviewed", "verified"] as ReviewLevel[]).map((lv) => (
+                <option key={lv} value={lv}>
+                  {REVIEW_LEVEL_LABELS[lv]}
+                </option>
+              ))}
+            </select>
+          </label>
+        </div>
+
+        <div className="relative">
+          <button
+            type="button"
+            onClick={() => setMenuOpen((o) => !o)}
+            disabled={filtered.length === 0}
+            aria-haspopup="menu"
+            aria-expanded={menuOpen}
+            className="flex items-center gap-2 rounded-full bg-corgi px-4 py-2 text-sm font-medium text-night disabled:opacity-40"
+          >
+            <GraduationCap size={16} /> Học các từ này
+          </button>
+          {menuOpen ? (
+            <div
+              role="menu"
+              className="glass-strong absolute right-0 z-20 mt-2 w-52 rounded-xl2 p-2"
+            >
+              <p className="px-2 py-1 text-xs text-ivory/50">
+                Số từ đưa vào phiên
+              </p>
+              {SESSION_SIZE_OPTIONS.map((n) => (
+                <button
+                  key={n}
+                  type="button"
+                  role="menuitem"
+                  disabled={filtered.length < n}
+                  onClick={() => startWith(n)}
+                  className="block w-full rounded-lg px-2 py-1.5 text-left text-sm text-ivory hover:bg-ivory/10 disabled:opacity-30"
+                >
+                  {n} từ đầu tiên
+                </button>
+              ))}
+              <button
+                type="button"
+                role="menuitem"
+                onClick={requestAll}
+                className="block w-full rounded-lg px-2 py-1.5 text-left text-sm text-ivory hover:bg-ivory/10"
+              >
+                Tất cả ({filtered.length})
+              </button>
+            </div>
+          ) : null}
+        </div>
       </div>
+
+      <ConfirmDialog
+        open={confirmAll}
+        title="Học tất cả từ đã lọc?"
+        message={`Phiên sẽ gồm ${filtered.length} từ. Bạn có chắc muốn học toàn bộ trong một phiên không?`}
+        confirmLabel={`Học ${filtered.length} từ`}
+        cancelLabel="Hủy"
+        onConfirm={() => startWith()}
+        onCancel={() => setConfirmAll(false)}
+      />
 
       {filtered.length === 0 ? (
         <EmptyState
@@ -126,7 +221,7 @@ export default function LibraryPage() {
                         {item.term}
                       </span>
                       {item.reading ? (
-                        <span className="text-sm text-corgi">
+                        <span className="text-sm text-corgi-text">
                           {item.reading}
                         </span>
                       ) : null}
