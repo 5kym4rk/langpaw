@@ -121,10 +121,14 @@ export function DynamicBackground() {
     });
     rotatorRef.current = rotator;
 
+    // Phát ngay scene đã khôi phục (nếu có) để nền không biến mất sau refresh.
+    const restored = rotator.getCurrent();
+    if (restored) setCurrent(restored);
+
     if (shouldRotate && pool.length >= 2) {
-      rotator.start();
-    } else {
-      rotator.advance(); // Hiển thị một scene, không tạo timer (khóa/1 scene).
+      rotator.start(); // đặt timer; scene ban đầu đã được phát ở trên
+    } else if (!restored) {
+      rotator.advance(); // chưa có scene nào → chọn một, không tạo timer
     }
 
     return () => rotator.stop();
