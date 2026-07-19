@@ -1,14 +1,33 @@
+/** Tài nguyên desktop cho một scene (§19). */
+export interface BackgroundDesktopAssets {
+  posterAvif4k?: string;
+  posterWebp4k?: string;
+  posterWebp1440?: string;
+  posterWebp1080?: string;
+  videoWebm1080?: string;
+  videoWebm4k?: string;
+}
+
+export interface BackgroundMobileAssets {
+  posterWebp?: string;
+}
+
 export interface BackgroundEntry {
   id: string;
-  title: string;
-  videoSrc: string;
-  posterSrc: string;
+  titleVi: string;
+  descriptionVi?: string;
+  desktop: BackgroundDesktopAssets;
+  mobile: BackgroundMobileAssets;
   author: string;
   sourceUrl: string;
   license: string;
-  resolution?: string;
-  sizeBytes?: number;
+  generatedWith?: string;
+  generatedAt?: string;
   enabled: boolean;
+  hasVideo: boolean;
+  overlayOpacity?: number;
+  overlayBlurPx?: number;
+  sizeBytes?: Record<string, number>;
 }
 
 /**

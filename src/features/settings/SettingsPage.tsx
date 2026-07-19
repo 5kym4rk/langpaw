@@ -273,6 +273,53 @@ export default function SettingsPage() {
                 ))}
               </div>
             </div>
+            <div className="flex items-center justify-between gap-4">
+              <span className="text-sm text-ivory/85">Chất lượng</span>
+              <div className="flex gap-1">
+                {(
+                  [
+                    ["saver", "Tiết kiệm"],
+                    ["auto", "Tự động"],
+                    ["high", "Cao"],
+                  ] as const
+                ).map(([q, label]) => (
+                  <button
+                    key={q}
+                    type="button"
+                    onClick={() => update({ backgroundQuality: q })}
+                    aria-pressed={settings.backgroundQuality === q}
+                    className={cn(
+                      "rounded-full px-3 py-1 text-xs font-medium",
+                      settings.backgroundQuality === q
+                        ? "bg-corgi text-night"
+                        : "glass text-ivory/80",
+                    )}
+                  >
+                    {label}
+                  </button>
+                ))}
+              </div>
+            </div>
+            <Toggle
+              label="Chỉ ảnh tĩnh (không video)"
+              checked={settings.staticBackgroundMode}
+              onChange={(v) => update({ staticBackgroundMode: v })}
+            />
+            <Toggle
+              label="Khóa nền hiện tại (không tự đổi)"
+              checked={settings.backgroundLocked}
+              onChange={(v) => update({ backgroundLocked: v })}
+            />
+            <button
+              type="button"
+              onClick={() =>
+                window.dispatchEvent(new CustomEvent("langpaw:bg-next"))
+              }
+              disabled={!hasBackgroundResource}
+              className="self-start rounded-full bg-ivory/10 px-4 py-1.5 text-sm font-medium text-ivory hover:bg-ivory/20 disabled:opacity-40"
+            >
+              Đổi nền ngay
+            </button>
           </div>
           {!hasBackgroundResource ? (
             <p className="mt-2 text-xs text-ivory/40">
@@ -378,7 +425,7 @@ export default function SettingsPage() {
             }}
           />
           {importError ? (
-            <p className="mt-3 text-sm text-danger">{importError}</p>
+            <p className="mt-3 text-sm text-danger-text">{importError}</p>
           ) : null}
           {importPreview ? (
             <div className="mt-3 rounded-xl bg-night/40 p-3 text-sm">

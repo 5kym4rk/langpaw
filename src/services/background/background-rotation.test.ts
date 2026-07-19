@@ -9,13 +9,14 @@ import { APP_CONFIG } from "@/config/app";
 function bg(id: string, enabled = true): BackgroundEntry {
   return {
     id,
-    title: id,
-    videoSrc: `${id}.webm`,
-    posterSrc: `${id}.jpg`,
+    titleVi: id,
+    desktop: { posterWebp1080: `${id}-1080.webp` },
+    mobile: { posterWebp: `${id}-mobile.webp` },
     author: "test",
     sourceUrl: "",
     license: "test",
     enabled,
+    hasVideo: false,
   };
 }
 

@@ -1,6 +1,7 @@
 import type { LanguageCode } from "./vocabulary";
 import type { DailyGoal } from "@/config/learning";
 import type { ReviewLevel } from "@/services/data/vocabulary-filters";
+import type { BackgroundQuality } from "@/services/background/background-capability";
 
 export interface UserSettings {
   interfaceLanguage: "vi";
@@ -34,6 +35,10 @@ export interface UserSettings {
   staticBackgroundMode: boolean;
   backgroundDarkness: number;
   backgroundBlurPx: number;
+  /** Chất lượng nền: Tiết kiệm / Tự động / Cao (§23). */
+  backgroundQuality: BackgroundQuality;
+  /** Khóa scene hiện tại — không tự đổi (§22). */
+  backgroundLocked: boolean;
   reducedMotion: boolean;
   dataSaver: boolean;
 

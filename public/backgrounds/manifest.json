@@ -1,14 +1,194 @@
 [
   {
-    "id": "corgi-study-morning",
-    "title": "Corgi học bài buổi sáng",
-    "videoSrc": "backgrounds/corgi-study-morning.webm",
-    "posterSrc": "backgrounds/corgi-study-morning.jpg",
+    "id": "corgi-morning-study",
+    "titleVi": "Corgi học bài buổi sáng",
+    "descriptionVi": "Bàn học nắng sáng, cây xanh, laptop và cốc trà.",
+    "desktop": {
+      "posterAvif4k": "backgrounds/corgi-morning-study/poster-4k.avif",
+      "posterWebp4k": "backgrounds/corgi-morning-study/poster-4k.webp",
+      "posterWebp1440": "backgrounds/corgi-morning-study/poster-1440.webp",
+      "posterWebp1080": "backgrounds/corgi-morning-study/poster-1080.webp",
+      "videoWebm1080": "backgrounds/corgi-morning-study/loop-1080.webm",
+      "videoWebm4k": "backgrounds/corgi-morning-study/loop-4k.webm"
+    },
+    "mobile": {
+      "posterWebp": "backgrounds/corgi-morning-study/poster-mobile.webp"
+    },
     "author": "LangPaw project",
     "sourceUrl": "",
     "license": "Project-owned",
-    "resolution": "1920x1080",
-    "sizeBytes": 0,
-    "enabled": false
+    "generatedWith": "",
+    "generatedAt": "",
+    "enabled": false,
+    "hasVideo": false,
+    "overlayOpacity": 0.45,
+    "overlayBlurPx": 2,
+    "sizeBytes": {
+      "posterAvif4k": 0,
+      "posterWebp4k": 0,
+      "posterMobile": 0,
+      "videoWebm1080": 0,
+      "videoWebm4k": 0
+    }
+  },
+  {
+    "id": "corgi-rainy-night",
+    "titleVi": "Corgi học bài đêm mưa",
+    "descriptionVi": "Căn phòng ấm áp, mưa nhẹ ngoài cửa sổ, tông xanh tím và vàng.",
+    "desktop": {
+      "posterAvif4k": "backgrounds/corgi-rainy-night/poster-4k.avif",
+      "posterWebp4k": "backgrounds/corgi-rainy-night/poster-4k.webp",
+      "posterWebp1440": "backgrounds/corgi-rainy-night/poster-1440.webp",
+      "posterWebp1080": "backgrounds/corgi-rainy-night/poster-1080.webp",
+      "videoWebm1080": "backgrounds/corgi-rainy-night/loop-1080.webm",
+      "videoWebm4k": "backgrounds/corgi-rainy-night/loop-4k.webm"
+    },
+    "mobile": {
+      "posterWebp": "backgrounds/corgi-rainy-night/poster-mobile.webp"
+    },
+    "author": "LangPaw project",
+    "sourceUrl": "",
+    "license": "Project-owned",
+    "generatedWith": "",
+    "generatedAt": "",
+    "enabled": false,
+    "hasVideo": false,
+    "overlayOpacity": 0.48,
+    "overlayBlurPx": 2,
+    "sizeBytes": {
+      "posterAvif4k": 0,
+      "posterWebp4k": 0,
+      "posterMobile": 0,
+      "videoWebm1080": 0,
+      "videoWebm4k": 0
+    }
+  },
+  {
+    "id": "corgi-cozy-library",
+    "titleVi": "Corgi trong thư viện ấm cúng",
+    "descriptionVi": "Kệ sách, ghế êm, ánh sáng vàng dịu.",
+    "desktop": {
+      "posterAvif4k": "backgrounds/corgi-cozy-library/poster-4k.avif",
+      "posterWebp4k": "backgrounds/corgi-cozy-library/poster-4k.webp",
+      "posterWebp1440": "backgrounds/corgi-cozy-library/poster-1440.webp",
+      "posterWebp1080": "backgrounds/corgi-cozy-library/poster-1080.webp",
+      "videoWebm1080": "backgrounds/corgi-cozy-library/loop-1080.webm",
+      "videoWebm4k": "backgrounds/corgi-cozy-library/loop-4k.webm"
+    },
+    "mobile": {
+      "posterWebp": "backgrounds/corgi-cozy-library/poster-mobile.webp"
+    },
+    "author": "LangPaw project",
+    "sourceUrl": "",
+    "license": "Project-owned",
+    "generatedWith": "",
+    "generatedAt": "",
+    "enabled": false,
+    "hasVideo": false,
+    "overlayOpacity": 0.45,
+    "overlayBlurPx": 2,
+    "sizeBytes": {
+      "posterAvif4k": 0,
+      "posterWebp4k": 0,
+      "posterMobile": 0,
+      "videoWebm1080": 0,
+      "videoWebm4k": 0
+    }
+  },
+  {
+    "id": "corgi-cafe-study",
+    "titleVi": "Corgi học ở quán cà phê",
+    "descriptionVi": "Quán cà phê, thành phố mờ, ánh chiều.",
+    "desktop": {
+      "posterAvif4k": "backgrounds/corgi-cafe-study/poster-4k.avif",
+      "posterWebp4k": "backgrounds/corgi-cafe-study/poster-4k.webp",
+      "posterWebp1440": "backgrounds/corgi-cafe-study/poster-1440.webp",
+      "posterWebp1080": "backgrounds/corgi-cafe-study/poster-1080.webp",
+      "videoWebm1080": "backgrounds/corgi-cafe-study/loop-1080.webm",
+      "videoWebm4k": "backgrounds/corgi-cafe-study/loop-4k.webm"
+    },
+    "mobile": {
+      "posterWebp": "backgrounds/corgi-cafe-study/poster-mobile.webp"
+    },
+    "author": "LangPaw project",
+    "sourceUrl": "",
+    "license": "Project-owned",
+    "generatedWith": "",
+    "generatedAt": "",
+    "enabled": false,
+    "hasVideo": false,
+    "overlayOpacity": 0.46,
+    "overlayBlurPx": 2,
+    "sizeBytes": {
+      "posterAvif4k": 0,
+      "posterWebp4k": 0,
+      "posterMobile": 0,
+      "videoWebm1080": 0,
+      "videoWebm4k": 0
+    }
+  },
+  {
+    "id": "corgi-moonlit-bedroom",
+    "titleVi": "Corgi phòng ngủ dưới trăng",
+    "descriptionVi": "Trăng, đèn dây, phòng ngủ học tập.",
+    "desktop": {
+      "posterAvif4k": "backgrounds/corgi-moonlit-bedroom/poster-4k.avif",
+      "posterWebp4k": "backgrounds/corgi-moonlit-bedroom/poster-4k.webp",
+      "posterWebp1440": "backgrounds/corgi-moonlit-bedroom/poster-1440.webp",
+      "posterWebp1080": "backgrounds/corgi-moonlit-bedroom/poster-1080.webp",
+      "videoWebm1080": "backgrounds/corgi-moonlit-bedroom/loop-1080.webm",
+      "videoWebm4k": "backgrounds/corgi-moonlit-bedroom/loop-4k.webm"
+    },
+    "mobile": {
+      "posterWebp": "backgrounds/corgi-moonlit-bedroom/poster-mobile.webp"
+    },
+    "author": "LangPaw project",
+    "sourceUrl": "",
+    "license": "Project-owned",
+    "generatedWith": "",
+    "generatedAt": "",
+    "enabled": false,
+    "hasVideo": false,
+    "overlayOpacity": 0.5,
+    "overlayBlurPx": 2,
+    "sizeBytes": {
+      "posterAvif4k": 0,
+      "posterWebp4k": 0,
+      "posterMobile": 0,
+      "videoWebm1080": 0,
+      "videoWebm4k": 0
+    }
+  },
+  {
+    "id": "corgi-sakura-study",
+    "titleVi": "Corgi học mùa hoa anh đào",
+    "descriptionVi": "Cửa sổ, hoa anh đào, tông hồng nhẹ.",
+    "desktop": {
+      "posterAvif4k": "backgrounds/corgi-sakura-study/poster-4k.avif",
+      "posterWebp4k": "backgrounds/corgi-sakura-study/poster-4k.webp",
+      "posterWebp1440": "backgrounds/corgi-sakura-study/poster-1440.webp",
+      "posterWebp1080": "backgrounds/corgi-sakura-study/poster-1080.webp",
+      "videoWebm1080": "backgrounds/corgi-sakura-study/loop-1080.webm",
+      "videoWebm4k": "backgrounds/corgi-sakura-study/loop-4k.webm"
+    },
+    "mobile": {
+      "posterWebp": "backgrounds/corgi-sakura-study/poster-mobile.webp"
+    },
+    "author": "LangPaw project",
+    "sourceUrl": "",
+    "license": "Project-owned",
+    "generatedWith": "",
+    "generatedAt": "",
+    "enabled": false,
+    "hasVideo": false,
+    "overlayOpacity": 0.44,
+    "overlayBlurPx": 2,
+    "sizeBytes": {
+      "posterAvif4k": 0,
+      "posterWebp4k": 0,
+      "posterMobile": 0,
+      "videoWebm1080": 0,
+      "videoWebm4k": 0
+    }
   }
 ]

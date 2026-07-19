@@ -31,6 +31,8 @@ export const DEFAULT_SETTINGS: UserSettings = {
   staticBackgroundMode: false,
   backgroundDarkness: 0.45,
   backgroundBlurPx: 2,
+  backgroundQuality: "auto",
+  backgroundLocked: false,
   reducedMotion: false,
   dataSaver: false,
 
