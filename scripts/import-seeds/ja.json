@@ -1,0 +1,62 @@
+[
+  {
+    "term": "電圧",
+    "meaningVi": "điện áp",
+    "reading": "でんあつ",
+    "example": "この回路の電圧は高いです。",
+    "exampleVi": "Điện áp của mạch này cao.",
+    "level": "N3",
+    "topic": "Điện – Điện tử",
+    "tags": ["electronics"]
+  },
+  {
+    "term": "電流",
+    "meaningVi": "dòng điện",
+    "reading": "でんりゅう",
+    "example": "電流が導線を流れます。",
+    "exampleVi": "Dòng điện chạy qua dây dẫn.",
+    "level": "N3",
+    "topic": "Điện – Điện tử",
+    "tags": ["electronics"]
+  },
+  {
+    "term": "抵抗",
+    "meaningVi": "điện trở; sự kháng cự",
+    "reading": "ていこう",
+    "example": "抵抗が電流を制限します。",
+    "exampleVi": "Điện trở hạn chế dòng điện.",
+    "level": "N2",
+    "topic": "Điện – Điện tử",
+    "tags": ["electronics"]
+  },
+  {
+    "term": "周波数",
+    "meaningVi": "tần số",
+    "reading": "しゅうはすう",
+    "example": "信号の周波数は一キロヘルツです。",
+    "exampleVi": "Tần số của tín hiệu là một kilôhéc.",
+    "level": "N2",
+    "topic": "Viễn thông",
+    "tags": ["telecom"]
+  },
+  {
+    "term": "信号",
+    "meaningVi": "tín hiệu",
+    "reading": "しんごう",
+    "example": "信号が弱いです。",
+    "exampleVi": "Tín hiệu yếu.",
+    "level": "N3",
+    "topic": "Viễn thông",
+    "tags": ["telecom"]
+  },
+  {
+    "term": "電子",
+    "meaningVi": "điện tử",
+    "reading": "でんし",
+    "example": "電子部品を作ります。",
+    "exampleVi": "Sản xuất linh kiện điện tử.",
+    "level": "N3",
+    "topic": "Điện – Điện tử",
+    "tags": ["electronics"]
+  }
+]

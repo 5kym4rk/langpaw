@@ -1,0 +1,82 @@
+[
+  {
+    "term": "电压",
+    "meaningVi": "điện áp",
+    "reading": "diànyā",
+    "example": "这个电路的电压很高。",
+    "exampleVi": "Điện áp của mạch này rất cao.",
+    "level": "HSK4",
+    "topic": "Điện – Điện tử",
+    "tags": ["electronics"]
+  },
+  {
+    "term": "电流",
+    "meaningVi": "dòng điện",
+    "reading": "diànliú",
+    "example": "电流通过导线。",
+    "exampleVi": "Dòng điện chạy qua dây dẫn.",
+    "level": "HSK4",
+    "topic": "Điện – Điện tử",
+    "tags": ["electronics"]
+  },
+  {
+    "term": "电阻",
+    "meaningVi": "điện trở",
+    "reading": "diànzǔ",
+    "example": "电阻可以限制电流。",
+    "exampleVi": "Điện trở có thể hạn chế dòng điện.",
+    "level": "HSK5",
+    "topic": "Điện – Điện tử",
+    "tags": ["electronics"]
+  },
+  {
+    "term": "电容",
+    "meaningVi": "điện dung; tụ điện",
+    "reading": "diànróng",
+    "example": "电容器可以储存电荷。",
+    "exampleVi": "Tụ điện có thể tích trữ điện tích.",
+    "level": "HSK5",
+    "topic": "Điện – Điện tử",
+    "tags": ["electronics"]
+  },
+  {
+    "term": "频率",
+    "meaningVi": "tần số",
+    "reading": "pínlǜ",
+    "example": "信号的频率是五十赫兹。",
+    "exampleVi": "Tần số của tín hiệu là năm mươi héc.",
+    "level": "HSK5",
+    "topic": "Viễn thông",
+    "tags": ["telecom"]
+  },
+  {
+    "term": "信号",
+    "meaningVi": "tín hiệu",
+    "reading": "xìnhào",
+    "example": "手机的信号很弱。",
+    "exampleVi": "Tín hiệu điện thoại rất yếu.",
+    "level": "HSK4",
+    "topic": "Viễn thông",
+    "tags": ["telecom"]
+  },
+  {
+    "term": "网络",
+    "meaningVi": "mạng (lưới)",
+    "reading": "wǎngluò",
+    "example": "网络连接不稳定。",
+    "exampleVi": "Kết nối mạng không ổn định.",
+    "level": "HSK4",
+    "topic": "Mạng",
+    "tags": ["network"]
+  },
+  {
+    "term": "电子",
+    "meaningVi": "điện tử",
+    "reading": "diànzǐ",
+    "example": "这是一家电子公司。",
+    "exampleVi": "Đây là một công ty điện tử.",
+    "level": "HSK4",
+    "topic": "Điện – Điện tử",
+    "tags": ["electronics"]
+  }
+]

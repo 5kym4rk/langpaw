@@ -16,6 +16,11 @@
     "test:watch": "vitest",
     "test:e2e": "playwright test",
     "validate:data": "tsx scripts/validate-vocabulary.ts",
+    "validate:backgrounds": "tsx scripts/validate-background-assets.ts",
+    "import:en": "tsx scripts/import-english-wordnet.ts",
+    "import:zh": "tsx scripts/import-cc-cedict.ts",
+    "import:ja": "tsx scripts/import-jmdict.ts",
+    "import:ko": "tsx scripts/import-korean-dictionary.ts",
     "gen:icons": "tsx scripts/generate-icons.ts"
   },
   "overrides": {
@@ -31,7 +36,9 @@
     "zustand": "^5.0.2"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.12.1",
     "@eslint/js": "^9.39.5",
+    "@lhci/cli": "^0.15.1",
     "@playwright/test": "^1.49.1",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.1.0",

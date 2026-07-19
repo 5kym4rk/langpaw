@@ -1,0 +1,74 @@
+[
+  {
+    "term": "voltage",
+    "meaningVi": "điện áp; hiệu điện thế",
+    "example": "The voltage across the resistor is five volts.",
+    "exampleVi": "Điện áp trên điện trở là năm vôn.",
+    "level": "B1",
+    "topic": "Điện – Điện tử",
+    "tags": ["electronics"]
+  },
+  {
+    "term": "current",
+    "meaningVi": "dòng điện; hiện tại",
+    "example": "A large current flows through the wire.",
+    "exampleVi": "Một dòng điện lớn chạy qua dây.",
+    "level": "B1",
+    "topic": "Điện – Điện tử",
+    "tags": ["electronics"]
+  },
+  {
+    "term": "resistor",
+    "meaningVi": "điện trở (linh kiện)",
+    "example": "The resistor limits the current.",
+    "exampleVi": "Điện trở hạn chế dòng điện.",
+    "level": "B2",
+    "topic": "Điện – Điện tử",
+    "tags": ["electronics"]
+  },
+  {
+    "term": "capacitor",
+    "meaningVi": "tụ điện",
+    "example": "The capacitor smooths the output voltage.",
+    "exampleVi": "Tụ điện làm phẳng điện áp đầu ra.",
+    "level": "B2",
+    "topic": "Điện – Điện tử",
+    "tags": ["electronics"]
+  },
+  {
+    "term": "frequency",
+    "meaningVi": "tần số",
+    "example": "The signal has a frequency of one kilohertz.",
+    "exampleVi": "Tín hiệu có tần số một kilôhéc.",
+    "level": "B1",
+    "topic": "Viễn thông",
+    "tags": ["telecom"]
+  },
+  {
+    "term": "signal",
+    "meaningVi": "tín hiệu",
+    "example": "The receiver detects a weak signal.",
+    "exampleVi": "Bộ thu phát hiện một tín hiệu yếu.",
+    "level": "B1",
+    "topic": "Viễn thông",
+    "tags": ["telecom"]
+  },
+  {
+    "term": "bandwidth",
+    "meaningVi": "băng thông",
+    "example": "This link has limited bandwidth.",
+    "exampleVi": "Đường truyền này có băng thông hạn chế.",
+    "level": "B2",
+    "topic": "Mạng",
+    "tags": ["network"]
+  },
+  {
+    "term": "latency",
+    "meaningVi": "độ trễ",
+    "example": "Low latency is important for video calls.",
+    "exampleVi": "Độ trễ thấp rất quan trọng với cuộc gọi video.",
+    "level": "B2",
+    "topic": "Mạng",
+    "tags": ["network"]
+  }
+]

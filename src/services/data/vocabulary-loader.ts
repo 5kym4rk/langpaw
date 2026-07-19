@@ -5,7 +5,7 @@ import type { LanguageCode, VocabularyDataset, VocabularyItem } from "@/types";
  * nhờ import.meta.glob (không bundle toàn bộ dữ liệu lúc khởi động — §23.2).
  */
 const datasetModules = import.meta.glob<{ default: VocabularyDataset }>(
-  "@/data/*/*.json",
+  "@/data/**/*.json",
 );
 
 // Map: "en" -> danh sách đường dẫn glob của ngôn ngữ đó.

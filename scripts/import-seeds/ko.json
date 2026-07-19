@@ -1,0 +1,62 @@
+[
+  {
+    "term": "전압",
+    "meaningVi": "điện áp",
+    "reading": "전ː압",
+    "example": "이 회로의 전압이 높습니다.",
+    "exampleVi": "Điện áp của mạch này cao.",
+    "level": "TOPIK-reference",
+    "topic": "Điện – Điện tử",
+    "tags": ["electronics"]
+  },
+  {
+    "term": "전류",
+    "meaningVi": "dòng điện",
+    "reading": "절ː류",
+    "example": "전류가 도선을 흐릅니다.",
+    "exampleVi": "Dòng điện chạy qua dây dẫn.",
+    "level": "TOPIK-reference",
+    "topic": "Điện – Điện tử",
+    "tags": ["electronics"]
+  },
+  {
+    "term": "저항",
+    "meaningVi": "điện trở; sự kháng cự",
+    "reading": "저ː항",
+    "example": "저항이 전류를 제한합니다.",
+    "exampleVi": "Điện trở hạn chế dòng điện.",
+    "level": "TOPIK-reference",
+    "topic": "Điện – Điện tử",
+    "tags": ["electronics"]
+  },
+  {
+    "term": "주파수",
+    "meaningVi": "tần số",
+    "reading": "주파수",
+    "example": "신호의 주파수는 일 킬로헤르츠입니다.",
+    "exampleVi": "Tần số của tín hiệu là một kilôhéc.",
+    "level": "TOPIK-reference",
+    "topic": "Viễn thông",
+    "tags": ["telecom"]
+  },
+  {
+    "term": "신호",
+    "meaningVi": "tín hiệu",
+    "reading": "신호",
+    "example": "신호가 약합니다.",
+    "exampleVi": "Tín hiệu yếu.",
+    "level": "TOPIK-reference",
+    "topic": "Viễn thông",
+    "tags": ["telecom"]
+  },
+  {
+    "term": "전자",
+    "meaningVi": "điện tử",
+    "reading": "전ː자",
+    "example": "전자 부품을 만듭니다.",
+    "exampleVi": "Sản xuất linh kiện điện tử.",
+    "level": "TOPIK-reference",
+    "topic": "Điện – Điện tử",
+    "tags": ["electronics"]
+  }
+]
