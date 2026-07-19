@@ -2,6 +2,22 @@
 
 Định dạng theo tinh thần [Keep a Changelog](https://keepachangelog.com/).
 
+## [1.8.0] — Vòng P2 (đợt 2): tiến độ, toast, accessibility
+
+### Added / Changed
+
+- **P2.4** Trang Tiến độ bổ sung: **lịch nhiệt 90 ngày** (`Heatmap`), **chủ đề
+  mạnh / cần cải thiện** (độ chính xác theo chủ đề), **từ sai nhiều nhất** — qua
+  `computeTopicStats` và `topWrongWords` (pure, có test).
+- **P2.5** Hệ thống **Toast** dùng chung (`useToast` + `Toaster`): thông báo tự
+  đóng sau 4s, có nút đóng, `aria-live`; trang Cài đặt dùng toast thay banner.
+- **P2.6** Thêm thuộc tính `lang` cho từ/ví dụ ngoại ngữ trên thẻ từ (screen
+  reader phát âm đúng); biểu đồ/lịch nhiệt có bảng dữ liệu ẩn.
+
+### Added (tests)
+
+- `progress-insights.test.ts` (chủ đề, từ sai nhiều). Tổng 101 unit + 6 E2E test.
+
 ## [1.7.0] — Vòng P2 (onboarding, kho từ, tìm kiếm)
 
 ### Added

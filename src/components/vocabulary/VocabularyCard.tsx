@@ -34,7 +34,10 @@ export function VocabularyCard({ item, flipped, onFlip }: VocabularyCardProps) {
       >
         {!flipped ? (
           <>
-            <span className="text-4xl font-bold text-ivory sm:text-5xl">
+            <span
+              lang={lang.speechLocale}
+              className="text-4xl font-bold text-ivory sm:text-5xl"
+            >
               {item.term}
             </span>
             {settings.showReading && reading ? (
@@ -64,7 +67,9 @@ export function VocabularyCard({ item, flipped, onFlip }: VocabularyCardProps) {
             ) : null}
             {settings.showExample ? (
               <div className="mt-2 max-w-md rounded-xl bg-night/40 p-3 text-left">
-                <p className="text-base text-ivory">{item.example}</p>
+                <p lang={lang.speechLocale} className="text-base text-ivory">
+                  {item.example}
+                </p>
                 {settings.showExampleTranslation ? (
                   <p className="mt-1 text-sm text-ivory/60">{item.exampleVi}</p>
                 ) : null}

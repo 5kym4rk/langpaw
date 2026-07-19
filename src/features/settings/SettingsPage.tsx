@@ -23,6 +23,7 @@ import type { BackupInput } from "@/services/backup/backup-schema";
 import { clearAllProgress } from "@/db/repositories/progress-repository";
 import { clearAllStats } from "@/db/repositories/stats-repository";
 import { useDataRevision } from "@/stores/data-revision";
+import { useToast } from "@/stores/toast";
 import { cn } from "@/utils/cn";
 
 type ConfirmKind = "clear" | "reset" | "replace" | null;
@@ -47,13 +48,13 @@ export default function SettingsPage() {
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [importPreview, setImportPreview] = useState<BackupInput | null>(null);
   const [importError, setImportError] = useState<string | null>(null);
-  const [message, setMessage] = useState<string | null>(null);
   const [confirmKind, setConfirmKind] = useState<ConfirmKind>(null);
+  const toast = useToast((s) => s.push);
 
   const handleExport = async () => {
     const backup = await buildBackup(settings);
     downloadBackup(backup);
-    setMessage("Đã xuất file backup.");
+    toast("Đã xuất file backup.", "success");
   };
 
   const handleFile = async (file: File) => {
@@ -79,8 +80,9 @@ export default function SettingsPage() {
     setImportPreview(null);
     setConfirmKind(null);
     bumpRevision(); // Cập nhật UI ngay, không cần tải lại trang.
-    setMessage(
+    toast(
       `Đã nhập dữ liệu: thêm ${summary.added}, ghi đè ${summary.overwritten} bản ghi.`,
+      "success",
     );
   };
 
@@ -89,13 +91,13 @@ export default function SettingsPage() {
     await clearAllStats();
     setConfirmKind(null);
     bumpRevision();
-    setMessage("Đã xóa toàn bộ tiến độ.");
+    toast("Đã xóa toàn bộ tiến độ.", "success");
   };
 
   const doReset = () => {
     reset();
     setConfirmKind(null);
-    setMessage("Đã khôi phục thiết lập mặc định.");
+    toast("Đã khôi phục thiết lập mặc định.", "success");
   };
 
   return (
@@ -334,11 +336,6 @@ export default function SettingsPage() {
 
         <GlassPanel>
           <h2 className="mb-3 text-lg font-semibold">Dữ liệu</h2>
-          {message ? (
-            <p className="mb-3 rounded-lg bg-success/20 px-3 py-2 text-sm text-emerald-200">
-              {message}
-            </p>
-          ) : null}
           <div className="flex flex-wrap gap-2">
             <button
               type="button"
