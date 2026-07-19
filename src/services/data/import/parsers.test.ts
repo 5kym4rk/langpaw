@@ -3,8 +3,10 @@ import {
   pinyinNumbersToMarks,
   parseCcCedict,
   parseWordNetJson,
+  parseWordNet2025,
   parseJmdict,
   parseKrdict,
+  parseKrdictLmf,
   buildDatasetFromSeeds,
   type VocabularySeed,
 } from "./parsers";
@@ -75,6 +77,69 @@ describe("parseJmdict", () => {
     expect(map.get("でんあつ")?.term).toBe("電圧");
     // Entry thiếu gloss bị bỏ.
     expect(map.has("なまえ")).toBe(false);
+  });
+});
+
+describe("parseWordNet2025", () => {
+  it("gộp entries + synset, lấy pos/ipa/definition/synset id", () => {
+    const entries = {
+      voltage: {
+        n: {
+          pronunciation: [{ value: "voʊltɪdʒ" }],
+          sense: [{ id: "s1", synset: "11543971-n" }],
+        },
+      },
+    };
+    const synsets = {
+      "11543971-n": {
+        definition: ["the rate at which energy is drawn"],
+        partOfSpeech: "n",
+        members: ["voltage"],
+      },
+    };
+    const map = parseWordNet2025(entries, synsets);
+    const v = map.get("voltage");
+    expect(v?.partOfSpeech).toBe("noun");
+    expect(v?.ipa).toBe("voʊltɪdʒ");
+    expect(v?.glossEn).toContain("energy");
+    expect(v?.entryId).toBe("11543971-n");
+  });
+});
+
+describe("parseKrdictLmf", () => {
+  it("rút writtenForm, phát âm, pos, nghĩa Anh, id từ LMF", () => {
+    const entries = [
+      {
+        att: "id",
+        val: "74720",
+        feat: [{ att: "partOfSpeech", val: "명사" }],
+        Lemma: { feat: { att: "writtenForm", val: "전압" } },
+        WordForm: [
+          {
+            feat: [
+              { att: "type", val: "발음" },
+              { att: "pronunciation", val: "저ː납" },
+            ],
+          },
+        ],
+        Sense: {
+          Equivalent: [
+            {
+              feat: [
+                { att: "language", val: "영어" },
+                { att: "lemma", val: "voltage" },
+              ],
+            },
+          ],
+        },
+      },
+    ];
+    const map = parseKrdictLmf(entries);
+    const v = map.get("전압");
+    expect(v?.reading).toBe("저ː납");
+    expect(v?.partOfSpeech).toBe("noun");
+    expect(v?.glossEn).toBe("voltage");
+    expect(v?.entryId).toBe("74720");
   });
 });
 

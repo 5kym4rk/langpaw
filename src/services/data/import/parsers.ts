@@ -17,6 +17,7 @@ export interface RawEntry {
   term: string;
   reading?: string; // kana / Hangul đọc
   romanization?: string; // pinyin số / romaja
+  ipa?: string; // phiên âm IPA (vd WordNet)
   partOfSpeech?: string;
   glossEn?: string; // định nghĩa/nghĩa tiếng Anh ở nguồn
   entryId?: string; // id entry trong nguồn (synset, ent_seq…)
@@ -159,6 +160,56 @@ export function parseWordNetJson(json: unknown): Map<string, RawEntry> {
   return map;
 }
 
+/** Nhãn POS đầy đủ từ mã một ký tự của WordNet. */
+const WN_POS: Record<string, string> = {
+  n: "noun",
+  v: "verb",
+  a: "adjective",
+  r: "adverb",
+  s: "adjective",
+};
+
+interface WN2025Entry {
+  [pos: string]: {
+    pronunciation?: { value: string }[];
+    sense?: { id: string; synset: string }[];
+  };
+}
+
+interface WN2025Synset {
+  definition?: string[];
+  partOfSpeech?: string;
+  members?: string[];
+}
+
+/**
+ * Định dạng Open English WordNet 2025 (nhiều file): `entries-*.json` ánh xạ
+ * lemma → pos → {pronunciation, sense[{synset}]}; định nghĩa nằm ở các file
+ * synset (`noun.*`, `verb.*`…). Hàm nhận hai bảng đã gộp và trả Map lemma →
+ * RawEntry (lấy nghĩa đầu tiên). Pure function.
+ */
+export function parseWordNet2025(
+  entries: Record<string, WN2025Entry>,
+  synsets: Record<string, WN2025Synset>,
+): Map<string, RawEntry> {
+  const map = new Map<string, RawEntry>();
+  for (const [lemma, byPos] of Object.entries(entries)) {
+    const pos = Object.keys(byPos)[0];
+    if (!pos) continue;
+    const block = byPos[pos];
+    const synsetId = block.sense?.[0]?.synset;
+    const def = synsetId ? synsets[synsetId]?.definition?.[0] : undefined;
+    map.set(lemma.toLowerCase(), {
+      term: lemma,
+      ipa: block.pronunciation?.[0]?.value,
+      partOfSpeech: WN_POS[pos] ?? pos,
+      glossEn: def,
+      entryId: synsetId,
+    });
+  }
+  return map;
+}
+
 // ---------------------------------------------------------------------------
 // JMdict (§8.1) — CC BY-SA 4.0. XML lớn; ta rút gọn bằng regex theo <entry>.
 // ---------------------------------------------------------------------------
@@ -228,6 +279,73 @@ export function parseKrdict(items: KrdictItem[]): Map<string, RawEntry> {
   return map;
 }
 
+/** Nhãn POS tiếng Hàn → nhãn ngắn dùng chung. */
+const KO_POS: Record<string, string> = {
+  명사: "noun",
+  동사: "verb",
+  형용사: "adjective",
+  부사: "adverb",
+  대명사: "pronoun",
+  관형사: "determiner",
+  감탄사: "interjection",
+};
+
+// Cấu trúc LMF của krdict (bản tải JSON đầy đủ) rất linh hoạt: `feat` có thể là
+// object hoặc mảng; nhiều phần tử có thể là object hoặc mảng object.
+type LmfNode = Record<string, unknown>;
+const asArray = (x: unknown): LmfNode[] =>
+  Array.isArray(x) ? (x as LmfNode[]) : x ? [x as LmfNode] : [];
+const feats = (node: unknown): LmfNode[] =>
+  node && typeof node === "object" ? asArray((node as LmfNode).feat) : [];
+const featVal = (node: unknown, att: string): string | undefined => {
+  for (const f of feats(node)) if (f.att === att) return f.val as string;
+  return undefined;
+};
+
+/**
+ * Phân tích Korean Basic Dictionary (krdict) định dạng LMF JSON (§7.1). Trả về
+ * Map writtenForm → RawEntry: cách đọc (phát âm), POS, nghĩa tiếng Anh
+ * (Equivalent 영어), gốc Hán (origin), và id entry. Pure function.
+ */
+export function parseKrdictLmf(
+  lexicalEntries: unknown[],
+): Map<string, RawEntry> {
+  const map = new Map<string, RawEntry>();
+  for (const entryRaw of lexicalEntries) {
+    const entry = entryRaw as LmfNode;
+    const lemmaNode = asArray(entry.Lemma)[0];
+    const term = featVal(lemmaNode, "writtenForm");
+    if (!term || map.has(term)) continue;
+
+    const pos = featVal(entry, "partOfSpeech");
+    // Phát âm: WordForm có type=발음.
+    let reading: string | undefined;
+    for (const wf of asArray(entry.WordForm)) {
+      if (featVal(wf, "type") === "발음") {
+        reading = featVal(wf, "pronunciation");
+        break;
+      }
+    }
+    // Nghĩa tiếng Anh: Equivalent có language=영어 ở Sense đầu.
+    const sense = asArray(entry.Sense)[0];
+    let glossEn: string | undefined;
+    for (const eq of asArray(sense?.Equivalent)) {
+      if (featVal(eq, "language") === "영어") {
+        glossEn = featVal(eq, "lemma") ?? featVal(eq, "definition");
+        break;
+      }
+    }
+    map.set(term, {
+      term,
+      reading,
+      partOfSpeech: pos ? (KO_POS[pos] ?? pos) : undefined,
+      glossEn,
+      entryId: entry.val as string, // att=id → val=<mã>
+    });
+  }
+  return map;
+}
+
 // ---------------------------------------------------------------------------
 // Bộ dựng dataset draft từ seed + bản ghi thô của nguồn.
 // ---------------------------------------------------------------------------
@@ -277,6 +395,7 @@ export function buildDatasetFromSeeds(
       term: seed.term,
       reading: seed.reading ?? entry.reading,
       romanization: entry.romanization,
+      ipa: entry.ipa,
       partOfSpeech: seed.partOfSpeech ?? entry.partOfSpeech,
       meaningVi: seed.meaningVi,
       explanationVi: entry.glossEn
