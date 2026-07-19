@@ -86,4 +86,15 @@ Mỗi asset khi bổ sung phải điền một khối dưới đây và cập nh
 - Files:
 ```
 
-Không hotlink YouTube/thumbnail; không dùng ảnh không rõ quyền sử dụng.
+### Nền Corgi động (6 scene đang bật)
+
+- **Author:** 도기코기 (Doggie Corgi)
+- **License:** Được tác giả cho phép sử dụng (qua email, 2026-07-19).
+- **Original page:** _cần bổ sung URL kênh/clip gốc chính xác của tác giả._
+- **Modifications:** cắt đoạn loop ~10 giây, tắt tiếng (muted), chuyển WebM VP9
+  1080p + poster WebP (desktop 1080 và mobile 9:16) bằng ffmpeg.
+- **Files:** `public/backgrounds/corgi-{warmth,good-things,waiting,endless-road,knock,missed-cat}/`
+  gồm `loop-1080.webm`, `poster-1080.webp`, `poster-mobile.webp`.
+
+> Giữ nguyên phần media chưa dùng chỉ để tham khảo thẩm mỹ (WallpaperCave,
+> Pinterest) — KHÔNG đóng gói. Không hotlink; không dùng ảnh không rõ quyền.

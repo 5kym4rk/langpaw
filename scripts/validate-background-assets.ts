@@ -99,7 +99,13 @@ for (const e of entries) {
       warnings.push(`[${tag}] license Project-owned nhưng author khác dự án`);
     }
     if (e.license !== "Project-owned" && !e.sourceUrl) {
-      errors.push(`[${tag}] tài nguyên bên ngoài phải có sourceUrl cụ thể`);
+      // Asset "tác giả cho phép" có thể chưa có URL trang cụ thể; chỉ cảnh báo
+      // nếu đã ghi rõ tác giả, còn thiếu cả tác giả thì là lỗi.
+      if (e.author) {
+        warnings.push(`[${tag}] tài nguyên ngoài nên bổ sung sourceUrl cụ thể`);
+      } else {
+        errors.push(`[${tag}] tài nguyên bên ngoài phải có sourceUrl/tác giả`);
+      }
     }
     if (e.hasVideo) {
       const v = e.desktop?.videoWebm1080;
