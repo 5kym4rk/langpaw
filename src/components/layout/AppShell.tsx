@@ -33,7 +33,7 @@ export function AppShell({ children }: AppShellProps) {
         {/* Sidebar desktop */}
         <aside className="sticky top-0 hidden h-screen w-60 shrink-0 flex-col gap-2 p-4 lg:flex">
           <div className="mb-4 flex items-center gap-2 px-2">
-            <PawPrint className="text-corgi" aria-hidden />
+            <PawPrint className="text-corgi-text" aria-hidden />
             <span className="text-xl font-bold text-ivory">
               {APP_CONFIG.name}
             </span>
@@ -52,7 +52,7 @@ export function AppShell({ children }: AppShellProps) {
         <div className="flex min-h-screen flex-1 flex-col">
           <header className="flex items-center justify-between gap-3 p-4 lg:justify-end">
             <div className="flex items-center gap-2 lg:hidden">
-              <PawPrint className="text-corgi" aria-hidden />
+              <PawPrint className="text-corgi-text" aria-hidden />
               <span className="text-lg font-bold text-ivory">
                 {APP_CONFIG.name}
               </span>
@@ -83,7 +83,7 @@ export function AppShell({ children }: AppShellProps) {
             className={({ isActive }) =>
               cn(
                 "flex min-h-[44px] min-w-0 flex-col items-center justify-center gap-0.5 rounded-lg px-2 py-1 text-[11px]",
-                isActive ? "text-corgi" : "text-ivory/70",
+                isActive ? "text-corgi-text" : "text-ivory/70",
               )
             }
           >
@@ -99,7 +99,7 @@ export function AppShell({ children }: AppShellProps) {
           aria-controls={MORE_MENU_ID}
           className={cn(
             "flex min-h-[44px] min-w-0 flex-col items-center justify-center gap-0.5 rounded-lg px-2 py-1 text-[11px]",
-            isSecondaryActive ? "text-corgi" : "text-ivory/70",
+            isSecondaryActive ? "text-corgi-text" : "text-ivory/70",
           )}
         >
           <MoreHorizontal size={20} aria-hidden />
@@ -124,7 +124,7 @@ function NavItem({ to, children }: { to: string; children: ReactNode }) {
         cn(
           "flex items-center gap-3 rounded-xl px-3 py-2 text-sm font-medium transition-colors",
           isActive
-            ? "bg-corgi/20 text-corgi"
+            ? "bg-corgi/20 text-corgi-text"
             : "text-ivory/75 hover:bg-ivory/5 hover:text-ivory",
         )
       }

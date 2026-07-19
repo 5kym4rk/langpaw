@@ -41,7 +41,7 @@ export function VocabularyCard({ item, flipped, onFlip }: VocabularyCardProps) {
               {item.term}
             </span>
             {settings.showReading && reading ? (
-              <span className="text-lg text-corgi">{reading}</span>
+              <span className="text-lg text-corgi-text">{reading}</span>
             ) : null}
             {settings.showRomanization &&
             lang.hasRomanization &&

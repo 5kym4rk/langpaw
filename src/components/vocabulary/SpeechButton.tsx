@@ -68,7 +68,7 @@ export function SpeechButton({
         "inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-sm font-medium transition-colors",
         disabled
           ? "cursor-not-allowed bg-ivory/10 text-ivory/40"
-          : "bg-corgi/20 text-corgi hover:bg-corgi/30",
+          : "bg-corgi/20 text-corgi-text hover:bg-corgi/30",
         className,
       )}
     >

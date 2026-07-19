@@ -16,7 +16,7 @@ export function EmptyState({
 }: EmptyStateProps) {
   return (
     <div className="glass flex flex-col items-center gap-3 rounded-xl2 px-6 py-12 text-center">
-      <div className="text-corgi" aria-hidden>
+      <div className="text-corgi-text" aria-hidden>
         {icon ?? <Inbox size={40} />}
       </div>
       <h2 className="text-lg font-semibold text-ivory">{title}</h2>

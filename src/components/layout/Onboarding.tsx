@@ -29,7 +29,7 @@ export function Onboarding() {
       >
         <div className="mb-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <PawPrint className="text-corgi" aria-hidden />
+            <PawPrint className="text-corgi-text" aria-hidden />
             <span className="text-xl font-bold text-ivory">LangPaw</span>
           </div>
           <button

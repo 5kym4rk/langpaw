@@ -53,11 +53,11 @@ export function VoiceSettings() {
       </p>
 
       {!supported ? (
-        <p className="text-sm text-danger">
+        <p className="text-sm text-danger-text">
           Trình duyệt không hỗ trợ phát âm (Speech Synthesis).
         </p>
       ) : noVoice ? (
-        <p className="text-sm text-danger">
+        <p className="text-sm text-danger-text">
           Không tìm thấy giọng {lang.labelVi} trên thiết bị này. Cài thêm gói
           giọng đọc của hệ điều hành để dùng.
         </p>
@@ -68,7 +68,7 @@ export function VoiceSettings() {
             <select
               value={selectedVoice}
               onChange={(e) => setVoice(e.target.value)}
-              className="rounded-lg bg-night/60 px-3 py-2 text-sm text-ivory"
+              className="rounded-lg bg-night px-3 py-2 text-sm text-ivory"
             >
               <option value="">Giọng mặc định của trình duyệt</option>
               {voices.map((v) => (

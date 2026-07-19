@@ -12,6 +12,9 @@ export default {
         ivory: "var(--color-ivory)",
         success: "var(--color-success)",
         danger: "var(--color-danger)",
+        "success-text": "var(--color-success-text)",
+        "danger-text": "var(--color-danger-text)",
+        "corgi-text": "var(--color-corgi-text)",
       },
       borderRadius: {
         xl2: "1.5rem",

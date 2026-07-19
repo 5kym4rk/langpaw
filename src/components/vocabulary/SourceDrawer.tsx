@@ -87,7 +87,7 @@ export function SourceDrawer({ item, open, onClose }: SourceDrawerProps) {
                   href={item.sourceEntryUrl || s.url}
                   target="_blank"
                   rel="noreferrer noopener"
-                  className="mt-2 inline-flex items-center gap-1 text-corgi underline"
+                  className="mt-2 inline-flex items-center gap-1 text-corgi-text underline"
                 >
                   <ExternalLink size={12} />
                   {item.sourceEntryUrl ? "Xem entry cụ thể" : "Xem nguồn"}

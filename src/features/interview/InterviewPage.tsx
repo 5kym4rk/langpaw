@@ -160,7 +160,7 @@ function TermsTab({
   return (
     <>
       <div className="glass mb-6 flex flex-wrap items-end gap-3 rounded-xl2 p-4">
-        <label className="flex flex-1 items-center gap-2 rounded-lg bg-night/60 px-3 py-2">
+        <label className="flex flex-1 items-center gap-2 rounded-lg bg-night px-3 py-2">
           <Search size={16} className="text-ivory/40" aria-hidden />
           <input
             type="text"
@@ -175,7 +175,7 @@ function TermsTab({
           <select
             value={role}
             onChange={(e) => setRole(e.target.value as InterviewRole | "")}
-            className="rounded-lg bg-night/60 px-3 py-2 text-sm text-ivory"
+            className="rounded-lg bg-night px-3 py-2 text-sm text-ivory"
           >
             <option value="">Tất cả vị trí</option>
             {availableRoles.map((r) => (
@@ -189,7 +189,7 @@ function TermsTab({
           <select
             value={group}
             onChange={(e) => setGroup(e.target.value)}
-            className="rounded-lg bg-night/60 px-3 py-2 text-sm text-ivory"
+            className="rounded-lg bg-night px-3 py-2 text-sm text-ivory"
           >
             <option value="">Tất cả nhóm</option>
             {INTERVIEW_GROUPS.map((g) => (
@@ -214,7 +214,7 @@ function TermsTab({
                 className={cn(
                   "flex w-full flex-col rounded-xl px-3 py-2 text-left",
                   selected?.id === item.id
-                    ? "bg-corgi/20 text-corgi"
+                    ? "bg-corgi/20 text-corgi-text"
                     : "text-ivory/80 hover:bg-ivory/5",
                 )}
               >
@@ -257,7 +257,9 @@ function InterviewDetail({
     <GlassPanel strong className="h-fit">
       <div className="flex flex-wrap items-center gap-3">
         <h2 className="text-3xl font-bold text-ivory">{item.term}</h2>
-        {reading ? <span className="text-lg text-corgi">{reading}</span> : null}
+        {reading ? (
+          <span className="text-lg text-corgi-text">{reading}</span>
+        ) : null}
         <SpeechButton text={item.term} locale={lang.speechLocale} />
         <ReviewStatusBadge status={item.reviewStatus} />
       </div>
@@ -443,7 +445,7 @@ function PracticeTab() {
         <select
           value={questionId}
           onChange={(e) => setQuestionId(e.target.value)}
-          className="rounded-lg bg-night/60 px-3 py-2 text-sm text-ivory"
+          className="rounded-lg bg-night px-3 py-2 text-sm text-ivory"
         >
           {INTERVIEW_QUESTIONS.map((q) => (
             <option key={q.id} value={q.id}>

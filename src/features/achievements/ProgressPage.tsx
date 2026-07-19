@@ -214,7 +214,7 @@ export default function ProgressPage() {
             )}
           </GlassPanel>
           <GlassPanel>
-            <h2 className="mb-3 font-semibold text-danger">
+            <h2 className="mb-3 font-semibold text-danger-text">
               Chủ đề cần cải thiện
             </h2>
             {weakTopics.length > 0 ? (
@@ -247,7 +247,7 @@ export default function ProgressPage() {
                   <p className="font-medium text-ivory">{w.term}</p>
                   <p className="text-sm text-ivory/60">{w.meaningVi}</p>
                 </div>
-                <span className="rounded-full bg-danger/20 px-2 py-0.5 text-xs text-danger">
+                <span className="rounded-full bg-danger/20 px-2 py-0.5 text-xs text-danger-text">
                   sai {w.incorrectCount} lần
                 </span>
               </li>
@@ -265,7 +265,7 @@ function TopicRow({ topic, accuracy }: { topic: string; accuracy: number }) {
       <span className="min-w-0 flex-1 truncate text-sm text-ivory/85">
         {topic}
       </span>
-      <span className="text-sm font-medium text-corgi">{accuracy}%</span>
+      <span className="text-sm font-medium text-corgi-text">{accuracy}%</span>
     </li>
   );
 }
@@ -286,7 +286,7 @@ function Stat({
         className={
           muted
             ? "mt-1 text-2xl font-bold text-ivory"
-            : "mt-1 text-3xl font-bold text-corgi"
+            : "mt-1 text-3xl font-bold text-corgi-text"
         }
       >
         {value}

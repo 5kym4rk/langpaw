@@ -10,6 +10,11 @@
   --color-ivory: #fffdf7;
   --color-success: #287a4b;
   --color-danger: #b84242;
+  /* Biến thể sáng cho CHỮ trên nền tối để đạt tương phản ≥ 4.5:1 (WCAG AA).
+     Nút nền đỏ/xanh vẫn dùng --color-danger/--color-success đậm với chữ trắng. */
+  --color-success-text: #4ade80;
+  --color-danger-text: #f28b82;
+  --color-corgi-text: #e89a52;
 
   --font-sans:
     "Noto Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",

@@ -11,7 +11,7 @@ export function LoadingState({ label = "Đang tải…" }: LoadingStateProps) {
       role="status"
       aria-live="polite"
     >
-      <Loader2 className="animate-spin text-corgi" aria-hidden />
+      <Loader2 className="animate-spin text-corgi-text" aria-hidden />
       <span>{label}</span>
     </div>
   );

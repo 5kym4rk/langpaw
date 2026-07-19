@@ -161,7 +161,7 @@ export default function QuizPage() {
             Bắt đầu kiểm tra
           </button>
           {pool.length < 4 ? (
-            <p className="mt-2 text-xs text-danger">
+            <p className="mt-2 text-xs text-danger-text">
               Chưa đủ từ đạt mức kiểm duyệt đã chọn. Đổi mức lọc nội dung trong
               Cài đặt.
             </p>
@@ -247,12 +247,12 @@ export default function QuizPage() {
               onChange={(e) => setTextAnswer(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && submit()}
               placeholder="Nhập đáp án…"
-              className="w-full rounded-xl bg-night/60 px-4 py-3 text-ivory outline-none"
+              className="w-full rounded-xl bg-night px-4 py-3 text-ivory outline-none"
             />
             {revealed ? (
               <p className="mt-2 text-sm">
                 Đáp án đúng:{" "}
-                <span className="font-semibold text-success">
+                <span className="font-semibold text-success-text">
                   {q.item.term}
                 </span>
               </p>
@@ -310,15 +310,15 @@ function QuizResult({
       <div className="grid gap-4 sm:grid-cols-3">
         <GlassPanel>
           <p className="text-sm text-ivory/60">Điểm</p>
-          <p className="text-3xl font-bold text-corgi">
+          <p className="text-3xl font-bold text-corgi-text">
             {answers.length ? Math.round((correct / answers.length) * 100) : 0}%
           </p>
         </GlassPanel>
         <GlassPanel>
           <p className="text-sm text-ivory/60">Đúng / Sai</p>
           <p className="text-3xl font-bold text-ivory">
-            <span className="text-success">{correct}</span> /{" "}
-            <span className="text-danger">{wrong.length}</span>
+            <span className="text-success-text">{correct}</span> /{" "}
+            <span className="text-danger-text">{wrong.length}</span>
           </p>
         </GlassPanel>
         <GlassPanel>
@@ -329,7 +329,7 @@ function QuizResult({
 
       {wrong.length > 0 ? (
         <GlassPanel className="mt-4">
-          <h2 className="mb-3 flex items-center gap-2 font-semibold text-danger">
+          <h2 className="mb-3 flex items-center gap-2 font-semibold text-danger-text">
             <AlertTriangle size={18} /> Câu sai ({wrong.length})
           </h2>
           <ul className="flex flex-col gap-2">
@@ -359,7 +359,7 @@ function QuizResult({
         </GlassPanel>
       ) : (
         <GlassPanel className="mt-4 text-center">
-          <p className="flex items-center justify-center gap-2 text-success">
+          <p className="flex items-center justify-center gap-2 text-success-text">
             <Check /> Tuyệt vời! Bạn trả lời đúng tất cả.
           </p>
         </GlassPanel>

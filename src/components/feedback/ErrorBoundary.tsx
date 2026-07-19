@@ -29,7 +29,9 @@ export class ErrorBoundary extends Component<
       return (
         this.props.fallback ?? (
           <div className="glass mx-auto mt-16 max-w-md rounded-xl2 p-6 text-center">
-            <h2 className="text-lg font-semibold text-danger">Đã xảy ra lỗi</h2>
+            <h2 className="text-lg font-semibold text-danger-text">
+              Đã xảy ra lỗi
+            </h2>
             <p className="mt-2 text-sm text-ivory/70">
               Ứng dụng gặp sự cố không mong muốn. Vui lòng tải lại trang.
             </p>

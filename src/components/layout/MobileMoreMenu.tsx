@@ -81,7 +81,7 @@ export function MobileMoreMenu({ open, onClose, id }: MobileMoreMenuProps) {
                 cn(
                   "flex min-h-[44px] items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium",
                   isActive
-                    ? "bg-corgi/20 text-corgi"
+                    ? "bg-corgi/20 text-corgi-text"
                     : "bg-ivory/5 text-ivory/85 hover:bg-ivory/10",
                 )
               }
