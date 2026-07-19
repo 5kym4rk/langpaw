@@ -1,7 +1,8 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { VocabularyItem } from "@/types";
-import { LANGUAGES, VIETNAMESE_SPEECH_LOCALE } from "@/config/languages";
+import { VIETNAMESE_SPEECH_LOCALE } from "@/config/languages";
 import { speechService } from "@/services/speech/speech-service";
+import { buildSpeakOptions } from "@/services/speech/speak-options";
 import { useSettingsStore } from "@/stores/settings-store";
 
 export type AutoLearnStatus = "idle" | "playing" | "paused";
@@ -70,29 +71,26 @@ export function useAutoLearn(
         onIndexChange?.(i);
         const item = itemsRef.current[i];
         const cfg = settingsRef.current;
-        const locale = LANGUAGES[item.language].speechLocale;
 
         for (let rep = 0; rep < Math.max(1, cfg.repeatCount); rep += 1) {
           if (!alive()) return;
           speechService.cancel();
           if (cfg.speechEnabled) {
-            await speechService.speak(item.term, {
-              lang: locale,
-              rate: cfg.speechRate,
-              pitch: cfg.speechPitch,
-              volume: cfg.speechVolume,
-              voiceURI: cfg.speechVoiceURI,
-            });
+            await speechService.speak(
+              item.term,
+              buildSpeakOptions(cfg, item.language),
+            );
           }
           if (!alive()) return;
           await delay(cfg.pauseMs, runId);
           if (!alive()) return;
 
+          // Đọc câu ví dụ (đúng câu ví dụ, chậm hơn một chút).
           if (cfg.speechEnabled && cfg.showExample && item.example) {
-            await speechService.speak(item.term, {
-              lang: locale,
-              rate: cfg.speechRate * 0.9,
-            });
+            await speechService.speak(
+              item.example,
+              buildSpeakOptions(cfg, item.language, 0.9),
+            );
             if (!alive()) return;
             await delay(Math.floor(cfg.pauseMs / 2), runId);
           }

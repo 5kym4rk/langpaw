@@ -1,8 +1,17 @@
 import { useEffect, useState } from "react";
 import { Volume2, VolumeX } from "lucide-react";
 import { speechService } from "@/services/speech/speech-service";
+import { buildSpeakOptions } from "@/services/speech/speak-options";
 import { useSettingsStore } from "@/stores/settings-store";
+import type { LanguageCode } from "@/types";
 import { cn } from "@/utils/cn";
+
+const LOCALE_TO_LANG: Record<string, LanguageCode> = {
+  en: "en",
+  zh: "zh",
+  ko: "ko",
+  ja: "ja",
+};
 
 interface SpeechButtonProps {
   text: string;
@@ -31,13 +40,21 @@ export function SpeechButton({
 
   const handleClick = () => {
     if (disabled) return;
-    void speechService.speak(text, {
-      lang: locale,
-      voiceURI: settings.speechVoiceURI,
-      rate: settings.speechRate * rateFactor,
-      pitch: settings.speechPitch,
-      volume: settings.speechVolume,
-    });
+    const langCode = LOCALE_TO_LANG[locale.toLowerCase().split("-")[0]];
+    if (langCode) {
+      void speechService.speak(
+        text,
+        buildSpeakOptions(settings, langCode, rateFactor),
+      );
+    } else {
+      void speechService.speak(text, {
+        lang: locale,
+        voiceURI: settings.speechVoiceURI,
+        rate: settings.speechRate * rateFactor,
+        pitch: settings.speechPitch,
+        volume: settings.speechVolume,
+      });
+    }
   };
 
   return (

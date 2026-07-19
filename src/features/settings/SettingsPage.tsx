@@ -7,6 +7,7 @@ import { LANGUAGES, LANGUAGE_ORDER } from "@/config/languages";
 import { DAILY_GOALS, type DailyGoal } from "@/config/learning";
 import { MUSIC_TRACKS, MUSIC_AVAILABLE } from "@/services/background/music";
 import { loadBackgroundManifest } from "@/services/background/background-manifest";
+import { VoiceSettings } from "./VoiceSettings";
 import {
   REVIEW_LEVEL_LABELS,
   type ReviewLevel,
@@ -203,6 +204,8 @@ export default function SettingsPage() {
             />
           </div>
         </GlassPanel>
+
+        <VoiceSettings />
 
         <GlassPanel>
           <div className="mb-3 flex items-center justify-between">

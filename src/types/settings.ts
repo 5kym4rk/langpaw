@@ -16,7 +16,10 @@ export interface UserSettings {
   showExampleTranslation: boolean;
 
   speechEnabled: boolean;
+  /** Giọng đọc mặc định (dùng khi ngôn ngữ chưa chọn giọng riêng). */
   speechVoiceURI?: string;
+  /** Giọng đọc riêng cho từng ngôn ngữ (voiceURI). */
+  speechVoiceByLanguage: Partial<Record<LanguageCode, string>>;
   speechRate: number;
   speechPitch: number;
   speechVolume: number;

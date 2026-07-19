@@ -13,6 +13,7 @@ import {
 } from "@/services/data/vocabulary-filters";
 import { isAnswerCorrect } from "@/services/quiz/normalize-answer";
 import { speechService } from "@/services/speech/speech-service";
+import { buildSpeakOptions } from "@/services/speech/speak-options";
 import { recordPracticeResult } from "@/services/session/practice";
 import type { VocabularyItem } from "@/types";
 import { cn } from "@/utils/cn";
@@ -21,6 +22,7 @@ type Mode = "choose" | "type";
 type Phase = "setup" | "running" | "result";
 
 const COUNTS = [5, 10, 20] as const;
+const SPEEDS = [0.6, 0.8, 1, 1.2] as const;
 
 interface AnswerRecord {
   item: VocabularyItem;
@@ -28,11 +30,10 @@ interface AnswerRecord {
 }
 
 export default function ListeningPage() {
-  const targetLanguage = useSettingsStore((s) => s.settings.targetLanguage);
-  const speechEnabled = useSettingsStore((s) => s.settings.speechEnabled);
-  const contentReviewLevel = useSettingsStore(
-    (s) => s.settings.contentReviewLevel,
-  );
+  const settings = useSettingsStore((s) => s.settings);
+  const targetLanguage = settings.targetLanguage;
+  const speechEnabled = settings.speechEnabled;
+  const contentReviewLevel = settings.contentReviewLevel;
   const { allItems, loading, loadLanguage, toggleWeak } = useLearningStore();
   const lang = LANGUAGES[targetLanguage];
   const pool = useMemo(
@@ -43,6 +44,7 @@ export default function ListeningPage() {
   const [phase, setPhase] = useState<Phase>("setup");
   const [mode, setMode] = useState<Mode>("choose");
   const [count, setCount] = useState<number>(10);
+  const [speed, setSpeed] = useState<number>(1);
   const [queue, setQueue] = useState<VocabularyItem[]>([]);
   const [index, setIndex] = useState(0);
   const [selected, setSelected] = useState<string | null>(null);
@@ -89,7 +91,18 @@ export default function ListeningPage() {
 
   const playCurrent = (item: VocabularyItem) => {
     if (!speechEnabled) return;
-    void speechService.speak(item.term, { lang: lang.speechLocale });
+    void speechService.speak(
+      item.term,
+      buildSpeakOptions(settings, targetLanguage, speed),
+    );
+  };
+
+  const playExample = (item: VocabularyItem) => {
+    if (!speechEnabled || !item.example) return;
+    void speechService.speak(
+      item.example,
+      buildSpeakOptions(settings, targetLanguage, speed),
+    );
   };
 
   const schedulePlay = (item: VocabularyItem | undefined, delay: number) => {
@@ -209,6 +222,23 @@ export default function ListeningPage() {
               </button>
             ))}
           </div>
+          <h2 className="mb-2 font-semibold">Tốc độ phát</h2>
+          <div className="mb-5 flex gap-2">
+            {SPEEDS.map((sp) => (
+              <button
+                key={sp}
+                type="button"
+                onClick={() => setSpeed(sp)}
+                aria-pressed={speed === sp}
+                className={cn(
+                  "rounded-full px-4 py-2 text-sm font-medium",
+                  speed === sp ? "bg-corgi text-night" : "glass text-ivory/80",
+                )}
+              >
+                {sp}×
+              </button>
+            ))}
+          </div>
           {!speechEnabled ? (
             <p className="mb-4 text-sm text-danger">
               Phát âm đang tắt. Bật lại trong Cài đặt để luyện nghe.
@@ -323,7 +353,19 @@ export default function ListeningPage() {
           >
             <Volume2 size={36} />
           </button>
-          <span className="text-sm text-ivory/50">Nhấn để nghe lại</span>
+          <div className="flex items-center gap-2">
+            <span className="text-sm text-ivory/50">Nhấn để nghe lại</span>
+            <span className="text-xs text-ivory/40">· {speed}×</span>
+          </div>
+          {revealed ? (
+            <button
+              type="button"
+              onClick={() => playExample(current)}
+              className="rounded-full bg-corgi/20 px-3 py-1.5 text-sm text-corgi hover:bg-corgi/30"
+            >
+              Nghe câu ví dụ
+            </button>
+          ) : null}
         </div>
 
         {mode === "choose" ? (

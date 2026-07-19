@@ -2,6 +2,25 @@
 
 Định dạng theo tinh thần [Keep a Changelog](https://keepachangelog.com/).
 
+## [1.5.0] — Vòng sửa Batch 5 (TTS và auto-learn)
+
+### Added / Changed
+
+- **P1.4** Giọng đọc riêng theo từng ngôn ngữ (`speechVoiceByLanguage`) + panel
+  Cài đặt "Giọng đọc": chọn giọng theo ngôn ngữ hiện tại, thanh trượt tốc độ/cao
+  độ/âm lượng/số lần lặp/khoảng nghỉ, nút **Nghe thử**, cảnh báo khi thiếu giọng.
+- Helper thuần `buildSpeakOptions()` dùng chung cho SpeechButton, Luyện nghe và
+  chế độ tự động; hook `useVoices()` liệt kê giọng theo locale.
+- **P1.5** Luyện nghe: chọn **tốc độ phát 0.6/0.8/1/1.2×**, nút **Nghe câu ví dụ**
+  khi đã lộ đáp án; dùng giọng theo ngôn ngữ.
+- **P1.6** Chế độ tự động: sửa lỗi đọc lại từ thay vì đọc câu ví dụ (nay đọc đúng
+  câu ví dụ), dùng giọng/tốc độ theo thiết lập; vẫn không tự đánh dấu "đã biết".
+
+### Added (tests)
+
+- `speak-options.test.ts` — locale đúng, ưu tiên giọng theo ngôn ngữ, hệ số tốc
+  độ. Tổng 89 unit + 6 E2E test.
+
 ## [1.4.0] — Vòng sửa Batch 4 (phỏng vấn)
 
 ### Added / Changed (P1.8)

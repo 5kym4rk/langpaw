@@ -18,6 +18,7 @@ export const DEFAULT_SETTINGS: UserSettings = {
   showExampleTranslation: true,
 
   speechEnabled: true,
+  speechVoiceByLanguage: {},
   speechRate: DEFAULT_SPEECH.rate,
   speechPitch: DEFAULT_SPEECH.pitch,
   speechVolume: DEFAULT_SPEECH.volume,
