@@ -3,6 +3,15 @@ import { test, expect } from "@playwright/test";
 // P0.3 — điều hướng mobile: truy cập các trang phụ qua menu "Thêm".
 test.use({ viewport: { width: 360, height: 800 } });
 
+test.beforeEach(async ({ page }) => {
+  await page.addInitScript(() => {
+    localStorage.setItem(
+      "langpaw.settings.v1",
+      JSON.stringify({ onboardingDone: true, targetLanguage: "en" }),
+    );
+  });
+});
+
 test("mobile: menu Thêm vào được Cài đặt, Nguồn và Tiến độ", async ({
   page,
 }) => {

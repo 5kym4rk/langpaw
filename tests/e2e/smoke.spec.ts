@@ -1,5 +1,14 @@
 import { test, expect } from "@playwright/test";
 
+test.beforeEach(async ({ page }) => {
+  await page.addInitScript(() => {
+    localStorage.setItem(
+      "langpaw.settings.v1",
+      JSON.stringify({ onboardingDone: true, targetLanguage: "en" }),
+    );
+  });
+});
+
 test("mở app và điều hướng cơ bản", async ({ page }) => {
   await page.goto("/");
   await expect(page.getByRole("heading", { name: /Xin chào/ })).toBeVisible();

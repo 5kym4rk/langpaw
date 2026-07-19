@@ -1,5 +1,14 @@
 import { test, expect } from "@playwright/test";
 
+test.beforeEach(async ({ page }) => {
+  await page.addInitScript(() => {
+    localStorage.setItem(
+      "langpaw.settings.v1",
+      JSON.stringify({ onboardingDone: true, targetLanguage: "en" }),
+    );
+  });
+});
+
 // Luồng cốt lõi: học từ → hoàn thành phiên → tiến độ → phỏng vấn → nguồn → backup.
 test("học từ, hoàn thành phiên, phỏng vấn, backup", async ({ page }) => {
   await page.goto("/#/settings");

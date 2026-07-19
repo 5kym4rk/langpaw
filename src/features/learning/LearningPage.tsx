@@ -64,6 +64,7 @@ export default function LearningPage() {
     loadLanguage,
     startSession,
     startSessionFromIds,
+    consumePendingRun,
     next,
     previous,
     goTo,
@@ -124,6 +125,15 @@ export default function LearningPage() {
     setFlipped(false);
     setSummary(null);
   };
+
+  // Phiên "học các từ này" xếp từ trang Kho từ → chạy ngay.
+  useEffect(() => {
+    if (consumePendingRun()) {
+      resetCounters();
+      setPhase("running");
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const begin = () => {
     startSession({

@@ -6,6 +6,8 @@ export interface UserSettings {
   interfaceLanguage: "vi";
   targetLanguage: LanguageCode;
   dailyGoal: DailyGoal;
+  /** Đã hoàn tất (hoặc bỏ qua) hướng dẫn lần đầu. */
+  onboardingDone: boolean;
   /** Lọc nội dung theo mức kiểm duyệt tối thiểu trong các chế độ học. */
   contentReviewLevel: ReviewLevel;
 

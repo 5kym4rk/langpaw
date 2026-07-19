@@ -2,6 +2,25 @@
 
 Định dạng theo tinh thần [Keep a Changelog](https://keepachangelog.com/).
 
+## [1.7.0] — Vòng P2 (onboarding, kho từ, tìm kiếm)
+
+### Added
+
+- **P2.1** Hướng dẫn lần đầu (`Onboarding`): chọn ngôn ngữ, mục tiêu ngày, giải
+  thích dữ liệu lưu trên máy; có thể bỏ qua (`onboardingDone`).
+- **P2.2 + P2.3** Trang **Kho từ** (`/library`, vào qua menu Thêm): tìm kiếm
+  (từ/nghĩa/cách đọc/chủ đề), lọc theo trạng thái (mới/đang học/đang ôn/đã
+  thuộc/đến hạn/yêu thích/yếu), đánh dấu yêu thích & từ yếu ngay tại chỗ, nút
+  **Học các từ này** tạo phiên học từ danh sách đang lọc.
+- Learning store: cơ chế `queueSessionFromIds`/`consumePendingRun` để bắt đầu
+  phiên từ trang khác.
+
+### Added (tests)
+
+- `library.test.ts` (lọc theo từ khóa/trạng thái), `LibraryPage.test.tsx`
+  (tìm kiếm + xếp phiên học). E2E seed `onboardingDone` để bỏ qua hướng dẫn.
+  Tổng 97 unit + 6 E2E test.
+
 ## [1.6.0] — Vòng sửa Batch 6 (backup live-update, PWA icons, chu kỳ nền)
 
 ### Added / Changed

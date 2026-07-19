@@ -10,6 +10,7 @@ const QuizPage = lazy(() => import("@/features/quiz/QuizPage"));
 const ReviewPage = lazy(() => import("@/features/review/ReviewPage"));
 const InterviewPage = lazy(() => import("@/features/interview/InterviewPage"));
 const ProgressPage = lazy(() => import("@/features/achievements/ProgressPage"));
+const LibraryPage = lazy(() => import("@/features/library/LibraryPage"));
 const SourcesPage = lazy(() => import("@/features/sources/SourcesPage"));
 const SettingsPage = lazy(() => import("@/features/settings/SettingsPage"));
 const NotFoundPage = lazy(() => import("@/features/dashboard/NotFoundPage"));
@@ -27,6 +28,7 @@ export function AppRouter() {
             <Route path="/review" element={<ReviewPage />} />
             <Route path="/interview" element={<InterviewPage />} />
             <Route path="/progress" element={<ProgressPage />} />
+            <Route path="/library" element={<LibraryPage />} />
             <Route path="/sources" element={<SourcesPage />} />
             <Route path="/settings" element={<SettingsPage />} />
             <Route path="*" element={<NotFoundPage />} />

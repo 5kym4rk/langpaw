@@ -8,6 +8,7 @@ import {
   Briefcase,
   BarChart3,
   BookMarked,
+  Library,
   Settings,
 } from "lucide-react";
 
@@ -26,6 +27,7 @@ export const ROUTES: RouteMeta[] = [
   { path: "/interview", labelVi: "Phỏng vấn", icon: Briefcase, primary: true },
   { path: "/listen", labelVi: "Luyện nghe", icon: Headphones, primary: false },
   { path: "/quiz", labelVi: "Kiểm tra", icon: ListChecks, primary: false },
+  { path: "/library", labelVi: "Kho từ", icon: Library, primary: false },
   { path: "/progress", labelVi: "Tiến độ", icon: BarChart3, primary: false },
   {
     path: "/sources",

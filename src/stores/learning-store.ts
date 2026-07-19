@@ -29,10 +29,14 @@ interface LearningState {
   progressMap: Map<string, VocabularyProgress>;
   loading: boolean;
   error: string | null;
+  /** Có phiên đã xếp hàng từ trang khác (vd Kho từ) cần tự chạy. */
+  pendingRun: boolean;
 
   loadLanguage: (language: LanguageCode) => Promise<void>;
   startSession: (options: SessionOptions) => void;
   startSessionFromIds: (ids: string[]) => void;
+  queueSessionFromIds: (ids: string[]) => void;
+  consumePendingRun: () => boolean;
   next: () => void;
   previous: () => void;
   goTo: (index: number) => void;
@@ -67,6 +71,7 @@ export const useLearningStore = create<LearningState>((set, get) => ({
   progressMap: new Map(),
   loading: false,
   error: null,
+  pendingRun: false,
 
   loadLanguage: async (language) => {
     if (get().language === language && get().allItems.length > 0) return;
@@ -108,6 +113,17 @@ export const useLearningStore = create<LearningState>((set, get) => ({
       .map((id) => byId.get(id))
       .filter((i): i is VocabularyItem => Boolean(i));
     set({ sessionItems: items, currentIndex: 0 });
+  },
+
+  queueSessionFromIds: (ids) => {
+    get().startSessionFromIds(ids);
+    set({ pendingRun: true });
+  },
+
+  consumePendingRun: () => {
+    const pending = get().pendingRun;
+    if (pending) set({ pendingRun: false });
+    return pending;
   },
 
   next: () =>
