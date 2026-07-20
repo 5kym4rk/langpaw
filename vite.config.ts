@@ -59,13 +59,22 @@ export default defineConfig({
       workbox: {
         // Không precache video nền và các gói dữ liệu rất lớn (vd bộ từ Hàn
         // ~7MB) — chúng được nạp theo yêu cầu và cache runtime để vẫn offline.
+        // Nâng ngưỡng an toàn nhưng vẫn loại các gói dữ liệu lớn khỏi precache.
+        maximumFileSizeToCacheInBytes: 3 * 1024 * 1024,
         globPatterns: ["**/*.{js,css,html,svg,png,ico,woff2}"],
-        globIgnores: ["**/backgrounds/*.{webm,mp4}", "**/krdict-basic-*.js"],
+        globIgnores: [
+          "**/backgrounds/*.{webm,mp4}",
+          "**/krdict-basic-*.js",
+          "**/cvdict-*.js",
+          "**/en-vi-*.js",
+          "**/ja-vi-*.js",
+        ],
         navigateFallback: "index.html",
         runtimeCaching: [
           {
-            // Gói dữ liệu từ vựng nạp động (assets/*.js data chunks).
-            urlPattern: ({ url }) => /krdict-basic-.*\.js$/.test(url.pathname),
+            // Gói dữ liệu từ vựng nạp động (assets/*.js data chunks lớn).
+            urlPattern: ({ url }) =>
+              /(krdict-basic|cvdict|en-vi|ja-vi)-.*\.js$/.test(url.pathname),
             handler: "StaleWhileRevalidate",
             options: { cacheName: "langpaw-data-chunks" },
           },

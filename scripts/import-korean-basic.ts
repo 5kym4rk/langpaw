@@ -47,8 +47,27 @@ const KO_POS: Record<string, string> = {
   조사: "particle",
 };
 const LEVEL_LABEL: Record<string, string> = {
-  초급: "Sơ cấp (krdict)",
-  중급: "Trung cấp (krdict)",
+  초급: "Sơ cấp",
+  중급: "Trung cấp",
+};
+/** Dịch nhóm chủ đề cấp cao của krdict sang tiếng Việt cho gọn/thống nhất. */
+const TOPIC_MAP: Record<string, string> = {
+  개념: "Khái niệm",
+  "경제 생활": "Kinh tế",
+  과학: "Khoa học – Kỹ thuật",
+  교육: "Giáo dục",
+  동식물: "Động – Thực vật",
+  문화: "Văn hóa",
+  "사회 생활": "Đời sống xã hội",
+  삶: "Đời sống",
+  스포츠: "Thể thao",
+  식생활: "Ẩm thực",
+  의생활: "Trang phục",
+  인간: "Con người",
+  자연: "Tự nhiên",
+  "정치와 행정": "Chính trị – Hành chính",
+  종교: "Tôn giáo",
+  주생활: "Nhà ở",
 };
 
 const items: VocabularyItem[] = [];
@@ -121,7 +140,7 @@ for (const file of readdirSync(dir).filter((f) => f.endsWith(".json"))) {
       exampleVi: "",
       level: LEVEL_LABEL[level],
       syllabusVersion: "krdict-reference",
-      topic: category || "Chung",
+      topic: TOPIC_MAP[(category || "").split(" > ")[0]] || "Chung",
       tags: enLemma ? [`en:${enLemma}`] : [],
       isInterviewVocabulary: false,
       sourceIds: ["krdict"],

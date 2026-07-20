@@ -8,7 +8,11 @@ import {
   parseKrdict,
   parseKrdictLmf,
   buildDatasetFromSeeds,
+  cleanViMeaning,
+  extractKanaReading,
+  buildDictionaryDataset,
   type VocabularySeed,
+  type DictCandidate,
 } from "./parsers";
 
 describe("pinyinNumbersToMarks", () => {
@@ -157,6 +161,50 @@ describe("parseKrdict", () => {
     ]);
     expect(map.get("전압")?.glossEn).toBe("voltage");
     expect(map.get("전압")?.entryId).toBe("12345");
+  });
+});
+
+describe("cleanViMeaning", () => {
+  it("bỏ dòng cách đọc/IPA, lấy nghĩa Việt", () => {
+    expect(cleanViMeaning("- {にっぽん}\n- Nhật Bản")).toBe("Nhật Bản");
+    expect(cleanViMeaning("@あい\n- tình yêu, lòng thương mến.")).toBe(
+      "tình yêu, lòng thương mến.",
+    );
+    expect(cleanViMeaning("- /æd/\n- quảng cáo")).toBe("quảng cáo");
+    expect(cleanViMeaning("- {うし}")).toBe(""); // không có nghĩa Việt
+  });
+});
+
+describe("extractKanaReading", () => {
+  it("lấy kana trong {..} hoặc sau @", () => {
+    expect(extractKanaReading("- {みず}\n- nước")).toBe("みず");
+    expect(extractKanaReading("@あい\n- tình yêu")).toBe("あい");
+  });
+});
+
+describe("buildDictionaryDataset", () => {
+  it("chia tầng theo độ dài và cắt ở cap", () => {
+    const cands: DictCandidate[] = [
+      { term: "aaa", meaningVi: "ba a" },
+      { term: "a", meaningVi: "một a" },
+      { term: "aa", meaningVi: "hai a" },
+      { term: "aaaa", meaningVi: "bốn a" },
+    ];
+    const ds = buildDictionaryDataset(cands, {
+      language: "en",
+      sourceId: "envi-stardict",
+      idPrefix: "en-vi-",
+      baseLevel: "Từ điển Anh–Việt",
+      advancedLevel: "Nâng cao (Anh–Việt)",
+      baseCount: 2,
+      cap: 3,
+      topic: "Từ điển",
+    });
+    expect(ds.items).toHaveLength(3); // cắt ở cap
+    expect(ds.items[0].term).toBe("a"); // ngắn nhất trước
+    expect(ds.items[0].level).toBe("Từ điển Anh–Việt");
+    expect(ds.items[2].level).toBe("Nâng cao (Anh–Việt)");
+    expect(ds.items[0].reviewStatus).toBe("draft");
   });
 });
 

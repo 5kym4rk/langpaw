@@ -22,6 +22,9 @@
     "import:ja": "tsx scripts/import-jmdict.ts",
     "import:ko": "tsx scripts/import-korean-dictionary.ts",
     "import:ko-basic": "tsx scripts/import-korean-basic.ts",
+    "import:zh-vi": "tsx scripts/import-cvdict.ts",
+    "import:en-vi": "tsx scripts/import-en-vi.ts",
+    "import:ja-vi": "tsx scripts/import-ja-vi.ts",
     "gen:icons": "tsx scripts/generate-icons.ts"
   },
   "overrides": {

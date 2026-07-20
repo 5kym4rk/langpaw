@@ -347,6 +347,114 @@ export function parseKrdictLmf(
 }
 
 // ---------------------------------------------------------------------------
+// Từ điển song ngữ Việt lớn (CVDICT, StarDict Anh–Việt, Nhật–Việt).
+// ---------------------------------------------------------------------------
+
+export interface DictCandidate {
+  term: string;
+  meaningVi: string;
+  reading?: string;
+  romanization?: string;
+  partOfSpeech?: string;
+}
+
+export interface DictBuildOptions {
+  language: LanguageCode;
+  sourceId: string;
+  idPrefix: string;
+  baseLevel: string; // vd "Từ điển Anh–Việt"
+  advancedLevel: string; // vd "Nâng cao (Anh–Việt)"
+  baseCount: number; // số từ "cơ bản" (ngắn nhất) trước khi sang nâng cao
+  cap: number; // tổng trần để app không quá nặng
+  topic: string;
+}
+
+const VI_LETTERS =
+  /[a-zàáảãạăắằẳẵặâấầẩẫậđèéẻẽẹêếềểễệìíỉĩịòóỏõọôốồổỗộơớờởỡợùúủũụưứừửữựỳýỷỹỵ]/i;
+
+/**
+ * Làm sạch nghĩa Việt từ định dạng từ điển (StarDict Anh–Việt/Nhật–Việt,
+ * CVDICT): bỏ HTML, bỏ dòng cách đọc `{kana}`/`@kana`, bỏ câu ví dụ (`=...`),
+ * lấy dòng đầu tiên thực sự là nghĩa. Trả chuỗi rỗng nếu không có nghĩa.
+ */
+export function cleanViMeaning(raw: string): string {
+  const lines = raw
+    .replace(/<[^>]+>/g, " ")
+    .split(/\n/)
+    .map((l) => l.trim())
+    .filter(Boolean);
+  for (let line of lines) {
+    if (line.startsWith("=")) continue; // câu ví dụ
+    line = line.replace(/^[-•*]\s*/, ""); // gạch đầu dòng
+    line = line.replace(/^@\S+\s*/, ""); // @kana
+    line = line.replace(/^\{[^}]*\}\s*[,，]?\s*/, ""); // {kana}/{english} đầu
+    line = line.replace(/\s+/g, " ").trim();
+    if (/^\/.*\/$/.test(line)) continue; // dòng phiên âm IPA /.../
+    if (line && VI_LETTERS.test(line)) return line.slice(0, 200);
+  }
+  // Không có dòng nào là nghĩa tiếng Việt → bỏ (importer sẽ loại mục này).
+  return "";
+}
+
+/** Trích cách đọc kana (từ `{kana}` hoặc `@kana`) trong định nghĩa Nhật–Việt. */
+export function extractKanaReading(raw: string): string | undefined {
+  const m =
+    raw.match(/\{([぀-ヿー]+)\}/) ||
+    raw.match(/@\s*([぀-ヿー]+)/) ||
+    raw.match(/^-\s*([぀-ヿー]+)\s*$/m);
+  return m ? m[1] : undefined;
+}
+
+/**
+ * Dựng dataset từ điển song ngữ, chia tầng theo độ dài từ: những từ ngắn nhất
+ * (thường thông dụng hơn) vào `baseLevel`, phần còn lại vào `advancedLevel`,
+ * cắt ở `cap` để giữ hiệu năng. Nghĩa Việt là thật (từ từ điển) nhưng vẫn
+ * reviewStatus=draft cho tới khi rà soát.
+ */
+export function buildDictionaryDataset(
+  candidates: DictCandidate[],
+  opts: DictBuildOptions,
+): VocabularyDataset {
+  const seen = new Set<string>();
+  const uniq = candidates.filter((c) => {
+    if (!c.term || !c.meaningVi || seen.has(c.term)) return false;
+    seen.add(c.term);
+    return true;
+  });
+  // Sắp theo độ dài rồi bảng chữ để chọn từ ngắn/thông dụng trước.
+  uniq.sort(
+    (a, b) => a.term.length - b.term.length || a.term.localeCompare(b.term),
+  );
+  const chosen = uniq.slice(0, opts.cap);
+
+  const items: VocabularyItem[] = chosen.map((c, i) => ({
+    id: `${opts.idPrefix}${String(i + 1).padStart(5, "0")}`,
+    language: opts.language,
+    term: c.term,
+    reading: c.reading,
+    romanization: c.romanization,
+    partOfSpeech: c.partOfSpeech,
+    meaningVi: c.meaningVi,
+    example: "",
+    exampleVi: "",
+    level: i < opts.baseCount ? opts.baseLevel : opts.advancedLevel,
+    topic: opts.topic,
+    tags: [],
+    isInterviewVocabulary: false,
+    sourceIds: [opts.sourceId],
+    definitionSourceLanguage: "vi",
+    reviewStatus: "draft",
+  }));
+
+  return {
+    language: opts.language,
+    level: opts.baseLevel,
+    sources: [],
+    items,
+  };
+}
+
+// ---------------------------------------------------------------------------
 // Bộ dựng dataset draft từ seed + bản ghi thô của nguồn.
 // ---------------------------------------------------------------------------
 

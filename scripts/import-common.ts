@@ -53,6 +53,34 @@ export const SOURCES: Record<string, VocabularySource> = {
     usageNote:
       "Kanji/kana/pos/gloss/ent_seq cho tập từ chọn lọc; nghĩa Việt do dự án biên soạn (draft). Không nhập proper names.",
   },
+  cvdict: {
+    id: "cvdict",
+    authority: "Phong Phan",
+    title: "CVDICT — Từ điển Hán Việt (Chinese-Vietnamese)",
+    url: "https://github.com/ph0ngp/CVDICT",
+    license: "CC BY-SA 4.0",
+    retrievedAt: new Date().toISOString().slice(0, 10),
+    usageNote:
+      "Giản/phồn thể + pinyin + nghĩa tiếng Việt; nghĩa Việt là thật nhưng để draft tới khi rà soát.",
+  },
+  "envi-stardict": {
+    id: "envi-stardict",
+    authority: "StarDict en_vi",
+    title: "Từ điển Anh–Việt (StarDict)",
+    url: "",
+    license: "Xem giấy phép gói StarDict đã tải",
+    retrievedAt: new Date().toISOString().slice(0, 10),
+    usageNote: "Nghĩa tiếng Việt cho từ tiếng Anh; draft tới khi rà soát.",
+  },
+  "javi-stardict": {
+    id: "javi-stardict",
+    authority: "StarDict Nhật–Việt",
+    title: "Từ điển Nhật–Việt (StarDict)",
+    url: "",
+    license: "Xem giấy phép gói StarDict đã tải",
+    retrievedAt: new Date().toISOString().slice(0, 10),
+    usageNote: "Nghĩa tiếng Việt cho từ tiếng Nhật; draft tới khi rà soát.",
+  },
   krdict: {
     id: "krdict",
     authority: "National Institute of Korean Language",
