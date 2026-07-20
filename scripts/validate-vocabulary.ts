@@ -38,7 +38,10 @@ function findJsonFiles(dir: string): string[] {
 }
 
 const files = findJsonFiles(dataDir).filter(
-  (f) => !f.endsWith("manifest.json"),
+  (f) =>
+    !f.endsWith("manifest.json") &&
+    // certification/ chứa index + assignments, không phải dataset từ vựng.
+    !f.includes(`${path.sep}certification${path.sep}`),
 );
 
 let emptyExampleCount = 0;

@@ -68,6 +68,34 @@ export interface VocabularyItem {
   reviewedBy?: string;
   reviewedAt?: string;
   verificationNote?: string;
+
+  /** Lộ trình chứng chỉ — chỉ gán khi exact-match với certificate index (§cert). */
+  certificateScheme?: CertificateScheme;
+  /** Cấp hiển thị (vd "A1", "HSK 3", "N4", "A"); null/vắng = chưa phân loại. */
+  certificateLevel?: string | null;
+  certificateStatus?: CertificateStatus;
+  /** Cần người rà soát (nhiều POS/reading mâu thuẫn…). */
+  certificateRequiresReview?: boolean;
+}
+
+export type CertificateScheme =
+  "CEFR-J" | "HSK-3.0" | "JLPT-REFERENCE" | "NIKL-LEARNING";
+
+export type CertificateStatus = "official" | "reference" | "unclassified";
+
+/** Bản ghi gán chứng chỉ cho một từ (xuất ra assignments-<lang>.json). */
+export interface CertificateAssignment {
+  dictionaryItemId: string;
+  routeId: string;
+  scheme: CertificateScheme;
+  sourceLevel: string;
+  displayLevel: string;
+  sourceId: string;
+  sourceVersion: string;
+  matchType: "lemma-pos" | "exact-term" | "term-reading" | "manual";
+  status: "official" | "reference";
+  confidence: number;
+  requiresReview: boolean;
 }
 
 export interface VocabularyDataset {

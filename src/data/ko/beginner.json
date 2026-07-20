@@ -22,12 +22,14 @@
       "meaningVi": "xin chào",
       "example": "안녕하세요, 만나서 반가워요.",
       "exampleVi": "Xin chào, rất vui được gặp bạn.",
-      "level": "Sơ cấp",
+      "level": "Chưa phân loại",
       "topic": "Chào hỏi",
       "tags": ["greeting"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateLevel": null,
+      "certificateStatus": "unclassified"
     },
     {
       "id": "ko-0002",
@@ -38,12 +40,14 @@
       "meaningVi": "tạm biệt (nói với người đi)",
       "example": "안녕히 가세요, 내일 봐요.",
       "exampleVi": "Tạm biệt, hẹn gặp lại ngày mai.",
-      "level": "Sơ cấp",
+      "level": "Chưa phân loại",
       "topic": "Chào hỏi",
       "tags": ["greeting"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateLevel": null,
+      "certificateStatus": "unclassified"
     },
     {
       "id": "ko-0003",
@@ -54,12 +58,14 @@
       "meaningVi": "cảm ơn",
       "example": "도와주셔서 감사합니다.",
       "exampleVi": "Cảm ơn vì đã giúp đỡ.",
-      "level": "Sơ cấp",
+      "level": "Chưa phân loại",
       "topic": "Chào hỏi",
       "tags": ["greeting", "polite"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateLevel": null,
+      "certificateStatus": "unclassified"
     },
     {
       "id": "ko-0004",
@@ -70,12 +76,14 @@
       "meaningVi": "xin hãy cho (làm ơn)",
       "example": "물 좀 주세요.",
       "exampleVi": "Làm ơn cho tôi ít nước.",
-      "level": "Sơ cấp",
+      "level": "Chưa phân loại",
       "topic": "Chào hỏi",
       "tags": ["polite"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateLevel": null,
+      "certificateStatus": "unclassified"
     },
     {
       "id": "ko-0005",
@@ -86,12 +94,14 @@
       "meaningVi": "xin lỗi",
       "example": "죄송합니다, 늦었어요.",
       "exampleVi": "Xin lỗi, tôi đến muộn.",
-      "level": "Sơ cấp",
+      "level": "Chưa phân loại",
       "topic": "Chào hỏi",
       "tags": ["polite"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateLevel": null,
+      "certificateStatus": "unclassified"
     },
     {
       "id": "ko-0006",
@@ -102,12 +112,15 @@
       "meaningVi": "mẹ",
       "example": "우리 어머니는 선생님이에요.",
       "exampleVi": "Mẹ tôi là giáo viên.",
-      "level": "Sơ cấp",
+      "level": "A",
       "topic": "Gia đình",
       "tags": ["family"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "NIKL-LEARNING",
+      "certificateLevel": "A",
+      "certificateStatus": "reference"
     },
     {
       "id": "ko-0007",
@@ -118,12 +131,15 @@
       "meaningVi": "bố",
       "example": "아버지는 공장에서 일해요.",
       "exampleVi": "Bố làm việc ở nhà máy.",
-      "level": "Sơ cấp",
+      "level": "A",
       "topic": "Gia đình",
       "tags": ["family"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "NIKL-LEARNING",
+      "certificateLevel": "A",
+      "certificateStatus": "reference"
     },
     {
       "id": "ko-0008",
@@ -134,12 +150,15 @@
       "meaningVi": "anh trai (em trai gọi)",
       "example": "저는 형이 한 명 있어요.",
       "exampleVi": "Tôi có một anh trai.",
-      "level": "Sơ cấp",
+      "level": "A",
       "topic": "Gia đình",
       "tags": ["family"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "NIKL-LEARNING",
+      "certificateLevel": "A",
+      "certificateStatus": "reference"
     },
     {
       "id": "ko-0009",
@@ -150,12 +169,15 @@
       "meaningVi": "chị gái (em gái gọi)",
       "example": "언니는 음악을 좋아해요.",
       "exampleVi": "Chị tôi thích âm nhạc.",
-      "level": "Sơ cấp",
+      "level": "A",
       "topic": "Gia đình",
       "tags": ["family"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "NIKL-LEARNING",
+      "certificateLevel": "A",
+      "certificateStatus": "reference"
     },
     {
       "id": "ko-0010",
@@ -166,12 +188,15 @@
       "meaningVi": "bạn bè",
       "example": "그녀는 제 친한 친구예요.",
       "exampleVi": "Cô ấy là bạn thân của tôi.",
-      "level": "Sơ cấp",
+      "level": "A",
       "topic": "Gia đình",
       "tags": ["people"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "NIKL-LEARNING",
+      "certificateLevel": "A",
+      "certificateStatus": "reference"
     },
     {
       "id": "ko-0011",
@@ -182,12 +207,15 @@
       "meaningVi": "trường học",
       "example": "학교는 집에서 가까워요.",
       "exampleVi": "Trường học gần nhà tôi.",
-      "level": "Sơ cấp",
+      "level": "A",
       "topic": "Trường học",
       "tags": ["education"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "NIKL-LEARNING",
+      "certificateLevel": "A",
+      "certificateStatus": "reference"
     },
     {
       "id": "ko-0012",
@@ -198,12 +226,15 @@
       "meaningVi": "giáo viên",
       "example": "선생님이 수업을 해요.",
       "exampleVi": "Giáo viên đang giảng bài.",
-      "level": "Sơ cấp",
+      "level": "A",
       "topic": "Trường học",
       "tags": ["education"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "NIKL-LEARNING",
+      "certificateLevel": "A",
+      "certificateStatus": "reference"
     },
     {
       "id": "ko-0013",
@@ -214,12 +245,15 @@
       "meaningVi": "học sinh, sinh viên",
       "example": "그는 좋은 학생이에요.",
       "exampleVi": "Cậu ấy là một sinh viên giỏi.",
-      "level": "Sơ cấp",
+      "level": "A",
       "topic": "Trường học",
       "tags": ["education"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "NIKL-LEARNING",
+      "certificateLevel": "A",
+      "certificateStatus": "reference"
     },
     {
       "id": "ko-0014",
@@ -230,12 +264,15 @@
       "meaningVi": "quyển sách",
       "example": "저는 매일 밤 책을 읽어요.",
       "exampleVi": "Tôi đọc sách mỗi tối.",
-      "level": "Sơ cấp",
+      "level": "A",
       "topic": "Trường học",
       "tags": ["education"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "NIKL-LEARNING",
+      "certificateLevel": "A",
+      "certificateStatus": "reference"
     },
     {
       "id": "ko-0015",
@@ -246,12 +283,15 @@
       "meaningVi": "học tập",
       "example": "저는 한국어를 공부하고 싶어요.",
       "exampleVi": "Tôi muốn học tiếng Hàn.",
-      "level": "Sơ cấp",
+      "level": "A",
       "topic": "Trường học",
       "tags": ["education"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "NIKL-LEARNING",
+      "certificateLevel": "A",
+      "certificateStatus": "reference"
     },
     {
       "id": "ko-0016",
@@ -262,12 +302,15 @@
       "meaningVi": "công việc, việc",
       "example": "저는 사무실에서 일해요.",
       "exampleVi": "Tôi làm việc trong văn phòng.",
-      "level": "Sơ cấp",
+      "level": "A",
       "topic": "Công việc",
       "tags": ["job"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "NIKL-LEARNING",
+      "certificateLevel": "A",
+      "certificateStatus": "reference"
     },
     {
       "id": "ko-0017",
@@ -278,12 +321,15 @@
       "meaningVi": "công ty",
       "example": "이 회사는 전자제품을 만들어요.",
       "exampleVi": "Công ty này sản xuất sản phẩm điện tử.",
-      "level": "Sơ cấp",
+      "level": "A",
       "topic": "Công việc",
       "tags": ["job"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "NIKL-LEARNING",
+      "certificateLevel": "A",
+      "certificateStatus": "reference"
     },
     {
       "id": "ko-0018",
@@ -294,12 +340,15 @@
       "meaningVi": "tiền",
       "example": "돈이 조금 필요해요.",
       "exampleVi": "Tôi cần một ít tiền.",
-      "level": "Sơ cấp",
+      "level": "A",
       "topic": "Công việc",
       "tags": ["finance"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "NIKL-LEARNING",
+      "certificateLevel": "A",
+      "certificateStatus": "reference"
     },
     {
       "id": "ko-0019",
@@ -310,12 +359,15 @@
       "meaningVi": "bận",
       "example": "저는 오늘 바빠요.",
       "exampleVi": "Hôm nay tôi bận.",
-      "level": "Sơ cấp",
+      "level": "A",
       "topic": "Công việc",
       "tags": ["job"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "NIKL-LEARNING",
+      "certificateLevel": "A",
+      "certificateStatus": "reference"
     },
     {
       "id": "ko-0020",
@@ -326,12 +378,15 @@
       "meaningVi": "thời gian",
       "example": "지금 몇 시예요?",
       "exampleVi": "Bây giờ là mấy giờ?",
-      "level": "Sơ cấp",
+      "level": "A",
       "topic": "Thời gian",
       "tags": ["time"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "NIKL-LEARNING",
+      "certificateLevel": "A",
+      "certificateStatus": "reference"
     },
     {
       "id": "ko-0021",
@@ -342,12 +397,15 @@
       "meaningVi": "hôm nay",
       "example": "오늘은 월요일이에요.",
       "exampleVi": "Hôm nay là thứ Hai.",
-      "level": "Sơ cấp",
+      "level": "A",
       "topic": "Thời gian",
       "tags": ["time"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "NIKL-LEARNING",
+      "certificateLevel": "A",
+      "certificateStatus": "reference"
     },
     {
       "id": "ko-0022",
@@ -358,12 +416,15 @@
       "meaningVi": "ngày mai",
       "example": "내일 봐요.",
       "exampleVi": "Hẹn gặp lại ngày mai.",
-      "level": "Sơ cấp",
+      "level": "A",
       "topic": "Thời gian",
       "tags": ["time"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "NIKL-LEARNING",
+      "certificateLevel": "A",
+      "certificateStatus": "reference"
     },
     {
       "id": "ko-0023",
@@ -374,12 +435,15 @@
       "meaningVi": "tuần",
       "example": "일주일은 칠 일이에요.",
       "exampleVi": "Một tuần có bảy ngày.",
-      "level": "Sơ cấp",
+      "level": "A",
       "topic": "Thời gian",
       "tags": ["time"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "NIKL-LEARNING",
+      "certificateLevel": "A",
+      "certificateStatus": "reference"
     },
     {
       "id": "ko-0024",
@@ -390,12 +454,15 @@
       "meaningVi": "một",
       "example": "펜이 하나 있어요.",
       "exampleVi": "Tôi có một cây bút.",
-      "level": "Sơ cấp",
+      "level": "A",
       "topic": "Số đếm",
       "tags": ["number"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "NIKL-LEARNING",
+      "certificateLevel": "A",
+      "certificateStatus": "reference"
     },
     {
       "id": "ko-0025",
@@ -406,12 +473,15 @@
       "meaningVi": "hai",
       "example": "그녀는 아이가 둘 있어요.",
       "exampleVi": "Cô ấy có hai con.",
-      "level": "Sơ cấp",
+      "level": "A",
       "topic": "Số đếm",
       "tags": ["number"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "NIKL-LEARNING",
+      "certificateLevel": "A",
+      "certificateStatus": "reference"
     },
     {
       "id": "ko-0026",
@@ -422,12 +492,15 @@
       "meaningVi": "ba",
       "example": "버스는 세 시에 와요.",
       "exampleVi": "Xe buýt đến lúc ba giờ.",
-      "level": "Sơ cấp",
+      "level": "A",
       "topic": "Số đếm",
       "tags": ["number"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "NIKL-LEARNING",
+      "certificateLevel": "A",
+      "certificateStatus": "reference"
     },
     {
       "id": "ko-0027",
@@ -438,12 +511,15 @@
       "meaningVi": "nước",
       "example": "물 좀 마실 수 있을까요?",
       "exampleVi": "Tôi uống chút nước được không?",
-      "level": "Sơ cấp",
+      "level": "A",
       "topic": "Ăn uống",
       "tags": ["food"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "NIKL-LEARNING",
+      "certificateLevel": "A",
+      "certificateStatus": "reference"
     },
     {
       "id": "ko-0028",
@@ -454,12 +530,15 @@
       "meaningVi": "cơm, bữa ăn",
       "example": "밥 먹을 시간이에요.",
       "exampleVi": "Đến giờ ăn cơm rồi.",
-      "level": "Sơ cấp",
+      "level": "A",
       "topic": "Ăn uống",
       "tags": ["food"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "NIKL-LEARNING",
+      "certificateLevel": "A",
+      "certificateStatus": "reference"
     },
     {
       "id": "ko-0029",
@@ -470,12 +549,15 @@
       "meaningVi": "thức ăn",
       "example": "음식이 맛있어요.",
       "exampleVi": "Món ăn rất ngon.",
-      "level": "Sơ cấp",
+      "level": "A",
       "topic": "Ăn uống",
       "tags": ["food"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "NIKL-LEARNING",
+      "certificateLevel": "A",
+      "certificateStatus": "reference"
     },
     {
       "id": "ko-0030",
@@ -486,12 +568,15 @@
       "meaningVi": "cà phê",
       "example": "저는 아침에 커피를 마셔요.",
       "exampleVi": "Tôi uống cà phê vào buổi sáng.",
-      "level": "Sơ cấp",
+      "level": "A",
       "topic": "Ăn uống",
       "tags": ["food"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "NIKL-LEARNING",
+      "certificateLevel": "A",
+      "certificateStatus": "reference"
     },
     {
       "id": "ko-0031",
@@ -502,12 +587,15 @@
       "meaningVi": "mua",
       "example": "휴대폰을 사고 싶어요.",
       "exampleVi": "Tôi muốn mua một chiếc điện thoại.",
-      "level": "Sơ cấp",
+      "level": "A",
       "topic": "Mua sắm",
       "tags": ["shopping"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "NIKL-LEARNING",
+      "certificateLevel": "A",
+      "certificateStatus": "reference"
     },
     {
       "id": "ko-0032",
@@ -518,12 +606,15 @@
       "meaningVi": "giá cả",
       "example": "가격이 얼마예요?",
       "exampleVi": "Giá bao nhiêu?",
-      "level": "Sơ cấp",
+      "level": "A",
       "topic": "Mua sắm",
       "tags": ["shopping"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "NIKL-LEARNING",
+      "certificateLevel": "A",
+      "certificateStatus": "reference"
     },
     {
       "id": "ko-0033",
@@ -534,12 +625,15 @@
       "meaningVi": "cửa hàng",
       "example": "가게가 열려 있어요.",
       "exampleVi": "Cửa hàng đang mở cửa.",
-      "level": "Sơ cấp",
+      "level": "A",
       "topic": "Mua sắm",
       "tags": ["shopping"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "NIKL-LEARNING",
+      "certificateLevel": "A",
+      "certificateStatus": "reference"
     },
     {
       "id": "ko-0034",
@@ -550,12 +644,15 @@
       "meaningVi": "xe hơi",
       "example": "그는 차를 운전해요.",
       "exampleVi": "Anh ấy lái xe hơi.",
-      "level": "Sơ cấp",
+      "level": "A",
       "topic": "Giao thông",
       "tags": ["transport"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "NIKL-LEARNING",
+      "certificateLevel": "A",
+      "certificateStatus": "reference"
     },
     {
       "id": "ko-0035",
@@ -566,12 +663,15 @@
       "meaningVi": "xe buýt",
       "example": "저는 버스로 출근해요.",
       "exampleVi": "Tôi đi xe buýt đi làm.",
-      "level": "Sơ cấp",
+      "level": "A",
       "topic": "Giao thông",
       "tags": ["transport"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "NIKL-LEARNING",
+      "certificateLevel": "A",
+      "certificateStatus": "reference"
     },
     {
       "id": "ko-0036",
@@ -582,12 +682,15 @@
       "meaningVi": "tàu hỏa",
       "example": "기차가 빨라요.",
       "exampleVi": "Tàu hỏa chạy nhanh.",
-      "level": "Sơ cấp",
+      "level": "A",
       "topic": "Giao thông",
       "tags": ["transport"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "NIKL-LEARNING",
+      "certificateLevel": "A",
+      "certificateStatus": "reference"
     },
     {
       "id": "ko-0037",
@@ -598,12 +701,15 @@
       "meaningVi": "du lịch",
       "example": "저는 여행을 좋아해요.",
       "exampleVi": "Tôi thích đi du lịch.",
-      "level": "Sơ cấp",
+      "level": "A",
       "topic": "Du lịch",
       "tags": ["travel"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "NIKL-LEARNING",
+      "certificateLevel": "A",
+      "certificateStatus": "reference"
     },
     {
       "id": "ko-0038",
@@ -614,12 +720,15 @@
       "meaningVi": "khách sạn",
       "example": "우리는 호텔에 묵었어요.",
       "exampleVi": "Chúng tôi ở một khách sạn.",
-      "level": "Sơ cấp",
+      "level": "A",
       "topic": "Du lịch",
       "tags": ["travel"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "NIKL-LEARNING",
+      "certificateLevel": "A",
+      "certificateStatus": "reference"
     },
     {
       "id": "ko-0039",
@@ -630,12 +739,15 @@
       "meaningVi": "bản đồ",
       "example": "도시 지도가 필요해요.",
       "exampleVi": "Tôi cần một bản đồ thành phố.",
-      "level": "Sơ cấp",
+      "level": "A",
       "topic": "Du lịch",
       "tags": ["travel"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "NIKL-LEARNING",
+      "certificateLevel": "A",
+      "certificateStatus": "reference"
     },
     {
       "id": "ko-0040",
@@ -646,12 +758,15 @@
       "meaningVi": "bác sĩ",
       "example": "의사에게 가 보세요.",
       "exampleVi": "Bạn nên đi khám bác sĩ.",
-      "level": "Sơ cấp",
+      "level": "A",
       "topic": "Sức khỏe",
       "tags": ["health"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "NIKL-LEARNING",
+      "certificateLevel": "A",
+      "certificateStatus": "reference"
     },
     {
       "id": "ko-0041",
@@ -662,12 +777,15 @@
       "meaningVi": "thuốc",
       "example": "이 약을 하루에 두 번 드세요.",
       "exampleVi": "Uống thuốc này hai lần một ngày.",
-      "level": "Sơ cấp",
+      "level": "A",
       "topic": "Sức khỏe",
       "tags": ["health"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "NIKL-LEARNING",
+      "certificateLevel": "A",
+      "certificateStatus": "reference"
     },
     {
       "id": "ko-0042",
@@ -678,12 +796,15 @@
       "meaningVi": "hạnh phúc, vui",
       "example": "저는 오늘 행복해요.",
       "exampleVi": "Hôm nay tôi hạnh phúc.",
-      "level": "Sơ cấp",
+      "level": "A",
       "topic": "Cảm xúc",
       "tags": ["emotion"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "NIKL-LEARNING",
+      "certificateLevel": "A",
+      "certificateStatus": "reference"
     },
     {
       "id": "ko-0043",
@@ -694,12 +815,15 @@
       "meaningVi": "mệt mỏi",
       "example": "그녀는 매우 피곤해요.",
       "exampleVi": "Cô ấy rất mệt.",
-      "level": "Sơ cấp",
+      "level": "A",
       "topic": "Cảm xúc",
       "tags": ["emotion"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "NIKL-LEARNING",
+      "certificateLevel": "A",
+      "certificateStatus": "reference"
     },
     {
       "id": "ko-0044",
@@ -710,12 +834,15 @@
       "meaningVi": "tức giận",
       "example": "화내지 마세요.",
       "exampleVi": "Đừng tức giận.",
-      "level": "Sơ cấp",
+      "level": "A",
       "topic": "Cảm xúc",
       "tags": ["emotion"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "NIKL-LEARNING",
+      "certificateLevel": "A",
+      "certificateStatus": "reference"
     },
     {
       "id": "ko-0045",
@@ -726,12 +853,15 @@
       "meaningVi": "cuộc họp",
       "example": "우리는 열 시에 회의가 있어요.",
       "exampleVi": "Chúng ta có cuộc họp lúc mười giờ.",
-      "level": "Sơ cấp",
+      "level": "A",
       "topic": "Văn phòng",
       "tags": ["office"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "NIKL-LEARNING",
+      "certificateLevel": "A",
+      "certificateStatus": "reference"
     },
     {
       "id": "ko-0046",
@@ -742,12 +872,15 @@
       "meaningVi": "thư điện tử",
       "example": "이메일을 보내 드릴게요.",
       "exampleVi": "Tôi sẽ gửi cho bạn một email.",
-      "level": "Sơ cấp",
+      "level": "B",
       "topic": "Văn phòng",
       "tags": ["office"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "NIKL-LEARNING",
+      "certificateLevel": "B",
+      "certificateStatus": "reference"
     },
     {
       "id": "ko-0047",
@@ -758,12 +891,15 @@
       "meaningVi": "máy tính",
       "example": "제 컴퓨터가 느려요.",
       "exampleVi": "Máy tính của tôi chạy chậm.",
-      "level": "Sơ cấp",
+      "level": "A",
       "topic": "Công nghệ",
       "tags": ["technology"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "NIKL-LEARNING",
+      "certificateLevel": "A",
+      "certificateStatus": "reference"
     },
     {
       "id": "ko-0048",
@@ -774,12 +910,15 @@
       "meaningVi": "điện thoại",
       "example": "전화를 꺼 주세요.",
       "exampleVi": "Vui lòng tắt điện thoại.",
-      "level": "Sơ cấp",
+      "level": "A",
       "topic": "Công nghệ",
       "tags": ["technology"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "NIKL-LEARNING",
+      "certificateLevel": "A",
+      "certificateStatus": "reference"
     },
     {
       "id": "ko-0049",
@@ -790,12 +929,15 @@
       "meaningVi": "giúp đỡ",
       "example": "저를 도와줄 수 있어요?",
       "exampleVi": "Bạn giúp tôi được không?",
-      "level": "Sơ cấp",
+      "level": "A",
       "topic": "Giao tiếp công sở",
       "tags": ["communication"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "NIKL-LEARNING",
+      "certificateLevel": "A",
+      "certificateStatus": "reference"
     },
     {
       "id": "ko-0050",
@@ -806,12 +948,15 @@
       "meaningVi": "hiểu",
       "example": "저는 그 질문을 이해해요.",
       "exampleVi": "Tôi hiểu câu hỏi đó.",
-      "level": "Sơ cấp",
+      "level": "A",
       "topic": "Giao tiếp công sở",
       "tags": ["communication"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "NIKL-LEARNING",
+      "certificateLevel": "A",
+      "certificateStatus": "reference"
     }
   ]
 }

@@ -28,7 +28,10 @@
       "tags": ["greeting"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-en"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "CEFR-J",
+      "certificateLevel": "A1",
+      "certificateStatus": "reference"
     },
     {
       "id": "en-0002",
@@ -39,12 +42,14 @@
       "meaningVi": "tạm biệt",
       "example": "Goodbye, see you tomorrow.",
       "exampleVi": "Tạm biệt, hẹn gặp lại ngày mai.",
-      "level": "A1",
+      "level": "Chưa phân loại",
       "topic": "Chào hỏi",
       "tags": ["greeting"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-en"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateLevel": null,
+      "certificateStatus": "unclassified"
     },
     {
       "id": "en-0003",
@@ -55,12 +60,14 @@
       "meaningVi": "cảm ơn",
       "example": "Thank you for your help.",
       "exampleVi": "Cảm ơn vì đã giúp đỡ.",
-      "level": "A1",
+      "level": "Chưa phân loại",
       "topic": "Chào hỏi",
       "tags": ["greeting", "polite"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-en"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateLevel": null,
+      "certificateStatus": "unclassified"
     },
     {
       "id": "en-0004",
@@ -76,7 +83,10 @@
       "tags": ["polite"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-en"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "CEFR-J",
+      "certificateLevel": "A1",
+      "certificateStatus": "reference"
     },
     {
       "id": "en-0005",
@@ -92,7 +102,10 @@
       "tags": ["polite"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-en"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "CEFR-J",
+      "certificateLevel": "A1",
+      "certificateStatus": "reference"
     },
     {
       "id": "en-0006",
@@ -108,7 +121,10 @@
       "tags": ["family"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-en"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "CEFR-J",
+      "certificateLevel": "A1",
+      "certificateStatus": "reference"
     },
     {
       "id": "en-0007",
@@ -124,7 +140,10 @@
       "tags": ["family"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-en"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "CEFR-J",
+      "certificateLevel": "A1",
+      "certificateStatus": "reference"
     },
     {
       "id": "en-0008",
@@ -140,7 +159,10 @@
       "tags": ["family"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-en"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "CEFR-J",
+      "certificateLevel": "A1",
+      "certificateStatus": "reference"
     },
     {
       "id": "en-0009",
@@ -156,7 +178,10 @@
       "tags": ["family"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-en"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "CEFR-J",
+      "certificateLevel": "A1",
+      "certificateStatus": "reference"
     },
     {
       "id": "en-0010",
@@ -172,7 +197,10 @@
       "tags": ["people"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-en"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "CEFR-J",
+      "certificateLevel": "A1",
+      "certificateStatus": "reference"
     },
     {
       "id": "en-0011",
@@ -188,7 +216,10 @@
       "tags": ["education"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-en"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "CEFR-J",
+      "certificateLevel": "A1",
+      "certificateStatus": "reference"
     },
     {
       "id": "en-0012",
@@ -204,7 +235,10 @@
       "tags": ["education"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-en"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "CEFR-J",
+      "certificateLevel": "A1",
+      "certificateStatus": "reference"
     },
     {
       "id": "en-0013",
@@ -220,7 +254,10 @@
       "tags": ["education"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-en"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "CEFR-J",
+      "certificateLevel": "A1",
+      "certificateStatus": "reference"
     },
     {
       "id": "en-0014",
@@ -236,7 +273,10 @@
       "tags": ["education"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-en"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "CEFR-J",
+      "certificateLevel": "A1",
+      "certificateStatus": "reference"
     },
     {
       "id": "en-0015",
@@ -252,7 +292,10 @@
       "tags": ["education"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-en"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "CEFR-J",
+      "certificateLevel": "A1",
+      "certificateStatus": "reference"
     },
     {
       "id": "en-0016",
@@ -268,7 +311,10 @@
       "tags": ["job"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-en"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "CEFR-J",
+      "certificateLevel": "A1",
+      "certificateStatus": "reference"
     },
     {
       "id": "en-0017",
@@ -284,7 +330,10 @@
       "tags": ["job"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-en"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "CEFR-J",
+      "certificateLevel": "A1",
+      "certificateStatus": "reference"
     },
     {
       "id": "en-0018",
@@ -295,12 +344,15 @@
       "meaningVi": "công ty",
       "example": "The company makes electronics.",
       "exampleVi": "Công ty sản xuất đồ điện tử.",
-      "level": "A1",
+      "level": "A2",
       "topic": "Công việc",
       "tags": ["job"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-en"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "CEFR-J",
+      "certificateLevel": "A2",
+      "certificateStatus": "reference"
     },
     {
       "id": "en-0019",
@@ -316,7 +368,10 @@
       "tags": ["finance"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-en"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "CEFR-J",
+      "certificateLevel": "A1",
+      "certificateStatus": "reference"
     },
     {
       "id": "en-0020",
@@ -332,7 +387,10 @@
       "tags": ["time"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-en"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "CEFR-J",
+      "certificateLevel": "A1",
+      "certificateStatus": "reference"
     },
     {
       "id": "en-0021",
@@ -348,7 +406,10 @@
       "tags": ["time"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-en"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "CEFR-J",
+      "certificateLevel": "A1",
+      "certificateStatus": "reference"
     },
     {
       "id": "en-0022",
@@ -364,7 +425,10 @@
       "tags": ["time"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-en"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "CEFR-J",
+      "certificateLevel": "A1",
+      "certificateStatus": "reference"
     },
     {
       "id": "en-0023",
@@ -380,7 +444,10 @@
       "tags": ["time"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-en"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "CEFR-J",
+      "certificateLevel": "A1",
+      "certificateStatus": "reference"
     },
     {
       "id": "en-0024",
@@ -396,7 +463,10 @@
       "tags": ["number"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-en"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "CEFR-J",
+      "certificateLevel": "A1",
+      "certificateStatus": "reference"
     },
     {
       "id": "en-0025",
@@ -412,7 +482,10 @@
       "tags": ["number"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-en"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "CEFR-J",
+      "certificateLevel": "A1",
+      "certificateStatus": "reference"
     },
     {
       "id": "en-0026",
@@ -428,7 +501,10 @@
       "tags": ["number"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-en"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "CEFR-J",
+      "certificateLevel": "A1",
+      "certificateStatus": "reference"
     },
     {
       "id": "en-0027",
@@ -444,7 +520,10 @@
       "tags": ["food"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-en"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "CEFR-J",
+      "certificateLevel": "A1",
+      "certificateStatus": "reference"
     },
     {
       "id": "en-0028",
@@ -460,7 +539,10 @@
       "tags": ["food"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-en"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "CEFR-J",
+      "certificateLevel": "A1",
+      "certificateStatus": "reference"
     },
     {
       "id": "en-0029",
@@ -476,7 +558,10 @@
       "tags": ["food"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-en"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "CEFR-J",
+      "certificateLevel": "A1",
+      "certificateStatus": "reference"
     },
     {
       "id": "en-0030",
@@ -492,7 +577,10 @@
       "tags": ["food"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-en"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "CEFR-J",
+      "certificateLevel": "A1",
+      "certificateStatus": "reference"
     },
     {
       "id": "en-0031",
@@ -508,7 +596,10 @@
       "tags": ["shopping"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-en"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "CEFR-J",
+      "certificateLevel": "A1",
+      "certificateStatus": "reference"
     },
     {
       "id": "en-0032",
@@ -524,7 +615,10 @@
       "tags": ["shopping"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-en"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "CEFR-J",
+      "certificateLevel": "A1",
+      "certificateStatus": "reference"
     },
     {
       "id": "en-0033",
@@ -540,7 +634,10 @@
       "tags": ["shopping"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-en"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "CEFR-J",
+      "certificateLevel": "A1",
+      "certificateStatus": "reference"
     },
     {
       "id": "en-0034",
@@ -556,7 +653,10 @@
       "tags": ["transport"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-en"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "CEFR-J",
+      "certificateLevel": "A1",
+      "certificateStatus": "reference"
     },
     {
       "id": "en-0035",
@@ -572,7 +672,10 @@
       "tags": ["transport"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-en"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "CEFR-J",
+      "certificateLevel": "A1",
+      "certificateStatus": "reference"
     },
     {
       "id": "en-0036",
@@ -588,7 +691,10 @@
       "tags": ["transport"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-en"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "CEFR-J",
+      "certificateLevel": "A1",
+      "certificateStatus": "reference"
     },
     {
       "id": "en-0037",
@@ -604,7 +710,10 @@
       "tags": ["travel"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-en"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "CEFR-J",
+      "certificateLevel": "A1",
+      "certificateStatus": "reference"
     },
     {
       "id": "en-0038",
@@ -620,7 +729,10 @@
       "tags": ["travel"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-en"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "CEFR-J",
+      "certificateLevel": "A1",
+      "certificateStatus": "reference"
     },
     {
       "id": "en-0039",
@@ -636,7 +748,10 @@
       "tags": ["travel"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-en"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "CEFR-J",
+      "certificateLevel": "A1",
+      "certificateStatus": "reference"
     },
     {
       "id": "en-0040",
@@ -652,7 +767,10 @@
       "tags": ["health"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-en"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "CEFR-J",
+      "certificateLevel": "A1",
+      "certificateStatus": "reference"
     },
     {
       "id": "en-0041",
@@ -668,7 +786,10 @@
       "tags": ["health"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-en"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "CEFR-J",
+      "certificateLevel": "A1",
+      "certificateStatus": "reference"
     },
     {
       "id": "en-0042",
@@ -684,7 +805,10 @@
       "tags": ["emotion"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-en"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "CEFR-J",
+      "certificateLevel": "A1",
+      "certificateStatus": "reference"
     },
     {
       "id": "en-0043",
@@ -700,7 +824,10 @@
       "tags": ["emotion"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-en"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "CEFR-J",
+      "certificateLevel": "A1",
+      "certificateStatus": "reference"
     },
     {
       "id": "en-0044",
@@ -716,7 +843,10 @@
       "tags": ["emotion"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-en"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "CEFR-J",
+      "certificateLevel": "A1",
+      "certificateStatus": "reference"
     },
     {
       "id": "en-0045",
@@ -732,7 +862,10 @@
       "tags": ["office"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-en"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "CEFR-J",
+      "certificateLevel": "A1",
+      "certificateStatus": "reference"
     },
     {
       "id": "en-0046",
@@ -748,7 +881,10 @@
       "tags": ["office"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-en"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "CEFR-J",
+      "certificateLevel": "A1",
+      "certificateStatus": "reference"
     },
     {
       "id": "en-0047",
@@ -764,7 +900,10 @@
       "tags": ["technology"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-en"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "CEFR-J",
+      "certificateLevel": "A1",
+      "certificateStatus": "reference"
     },
     {
       "id": "en-0048",
@@ -780,7 +919,10 @@
       "tags": ["technology"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-en"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "CEFR-J",
+      "certificateLevel": "A1",
+      "certificateStatus": "reference"
     },
     {
       "id": "en-0049",
@@ -796,7 +938,10 @@
       "tags": ["communication"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-en"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "CEFR-J",
+      "certificateLevel": "A1",
+      "certificateStatus": "reference"
     },
     {
       "id": "en-0050",
@@ -807,12 +952,15 @@
       "meaningVi": "hiểu",
       "example": "I understand the question.",
       "exampleVi": "Tôi hiểu câu hỏi.",
-      "level": "A1",
+      "level": "A2",
       "topic": "Giao tiếp công sở",
       "tags": ["communication"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-en"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "CEFR-J",
+      "certificateLevel": "A2",
+      "certificateStatus": "reference"
     }
   ]
 }

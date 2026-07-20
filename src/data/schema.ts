@@ -69,6 +69,15 @@ export const vocabularyItemSchema = z
     reviewedBy: z.string().optional(),
     reviewedAt: z.string().optional(),
     verificationNote: z.string().optional(),
+
+    certificateScheme: z
+      .enum(["CEFR-J", "HSK-3.0", "JLPT-REFERENCE", "NIKL-LEARNING"])
+      .optional(),
+    certificateLevel: z.string().nullable().optional(),
+    certificateStatus: z
+      .enum(["official", "reference", "unclassified"])
+      .optional(),
+    certificateRequiresReview: z.boolean().optional(),
   })
   .refine(
     (item) =>

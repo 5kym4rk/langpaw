@@ -18,6 +18,10 @@ function makeItem(id: string): VocabularyItem {
     isInterviewVocabulary: false,
     sourceIds: ["s"],
     reviewStatus: "draft",
+    // Fixture thuộc lộ trình chứng chỉ (route mặc định của màn thiết lập).
+    certificateScheme: "CEFR-J",
+    certificateLevel: "A1",
+    certificateStatus: "reference",
   };
 }
 
@@ -75,8 +79,8 @@ describe("LearningPage — hoàn thành phiên (P0.1)", () => {
     const user = userEvent.setup();
     renderPage();
 
-    await screen.findByRole("button", { name: "Bắt đầu học" });
-    await user.click(screen.getByRole("button", { name: "Bắt đầu học" }));
+    await screen.findByRole("button", { name: /Bắt đầu học/ });
+    await user.click(screen.getByRole("button", { name: /Bắt đầu học/ }));
 
     await screen.findByText("en-0001");
     await user.click(screen.getByRole("button", { name: /Đã biết/ }));
@@ -91,8 +95,8 @@ describe("LearningPage — hoàn thành phiên (P0.1)", () => {
     const user = userEvent.setup();
     renderPage();
 
-    await screen.findByRole("button", { name: "Bắt đầu học" });
-    await user.click(screen.getByRole("button", { name: "Bắt đầu học" }));
+    await screen.findByRole("button", { name: /Bắt đầu học/ });
+    await user.click(screen.getByRole("button", { name: /Bắt đầu học/ }));
     await screen.findByText("en-0001");
 
     const knownBtn = screen.getByRole("button", { name: /Đã biết/ });
@@ -110,8 +114,8 @@ describe("LearningPage — hoàn thành phiên (P0.1)", () => {
     const user = userEvent.setup();
     renderPage();
 
-    await screen.findByRole("button", { name: "Bắt đầu học" });
-    await user.click(screen.getByRole("button", { name: "Bắt đầu học" }));
+    await screen.findByRole("button", { name: /Bắt đầu học/ });
+    await user.click(screen.getByRole("button", { name: /Bắt đầu học/ }));
 
     await screen.findByText("en-0001");
     await user.click(screen.getByRole("button", { name: /Đã biết/ }));
@@ -139,8 +143,8 @@ describe("LearningPage — hoàn thành phiên (P0.1)", () => {
     const user = userEvent.setup();
     renderPage();
 
-    await screen.findByRole("button", { name: "Bắt đầu học" });
-    await user.click(screen.getByRole("button", { name: "Bắt đầu học" }));
+    await screen.findByRole("button", { name: /Bắt đầu học/ });
+    await user.click(screen.getByRole("button", { name: /Bắt đầu học/ }));
 
     // Thẻ đầu: bỏ qua → chuyển sang thẻ 2, chưa hoàn thành.
     await screen.findByText("en-0001");

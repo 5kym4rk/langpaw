@@ -1,0 +1,2812 @@
+[
+  {
+    "id": "en-vi-00010",
+    "term": "as",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-00066",
+    "term": "go",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-00081",
+    "term": "in",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-00084",
+    "term": "it",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-00132",
+    "term": "on",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-00182",
+    "term": "so",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-00200",
+    "term": "up",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-00226",
+    "term": "act",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-00247",
+    "term": "aim",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-00255",
+    "term": "all",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-00275",
+    "term": "arm",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-00290",
+    "term": "awe",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-00302",
+    "term": "bar",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-00303",
+    "term": "bat",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-00335",
+    "term": "bow",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-00355",
+    "term": "but",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-00364",
+    "term": "can",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-00421",
+    "term": "cry",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-00432",
+    "term": "cut",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-00464",
+    "term": "dig",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-00485",
+    "term": "dry",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-00532",
+    "term": "end",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-00571",
+    "term": "far",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-00572",
+    "term": "fat",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-00584",
+    "term": "few",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-00593",
+    "term": "fit",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-00594",
+    "term": "fix",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-00601",
+    "term": "for",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-00608",
+    "term": "fry",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-00690",
+    "term": "hit",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-00709",
+    "term": "hug",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-00759",
+    "term": "jam",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-00774",
+    "term": "jog",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-00792",
+    "term": "kid",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-00813",
+    "term": "lap",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-00835",
+    "term": "lie",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-00844",
+    "term": "lot",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-00866",
+    "term": "man",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-00894",
+    "term": "mix",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-00927",
+    "term": "net",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-00939",
+    "term": "nod",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-00946",
+    "term": "now",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-00969",
+    "term": "off",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-00977",
+    "term": "one",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-00996",
+    "term": "own",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-01036",
+    "term": "pin",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-01053",
+    "term": "pop",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-01095",
+    "term": "rap",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-01101",
+    "term": "red",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-01132",
+    "term": "row",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-01160",
+    "term": "saw",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-01162",
+    "term": "say",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-01172",
+    "term": "set",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-01190",
+    "term": "ski",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-01233",
+    "term": "tap",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-01252",
+    "term": "tie",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-01256",
+    "term": "tip",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-01268",
+    "term": "top",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-01277",
+    "term": "try",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-01308",
+    "term": "use",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-01346",
+    "term": "wax",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-01360",
+    "term": "win",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-01390",
+    "term": "yet",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-01417",
+    "term": "ache",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-01459",
+    "term": "ally",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-01542",
+    "term": "back",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-01548",
+    "term": "bald",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-01556",
+    "term": "bank",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-01559",
+    "term": "bare",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-01561",
+    "term": "bark",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-01564",
+    "term": "base",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-01581",
+    "term": "bear",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-01582",
+    "term": "beat",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-01598",
+    "term": "bend",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-01617",
+    "term": "bill",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-01628",
+    "term": "bite",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-01641",
+    "term": "blow",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-01657",
+    "term": "bold",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-01670",
+    "term": "book",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-01686",
+    "term": "bowl",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-01729",
+    "term": "burn",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-01751",
+    "term": "calf",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-01753",
+    "term": "call",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-01757",
+    "term": "camp",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-01766",
+    "term": "care",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-01773",
+    "term": "cast",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-01794",
+    "term": "chat",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-01862",
+    "term": "comb",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-01872",
+    "term": "cool",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-01879",
+    "term": "copy",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-01925",
+    "term": "cure",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-01959",
+    "term": "date",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-01969",
+    "term": "deal",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-01971",
+    "term": "dear",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-01978",
+    "term": "deep",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02026",
+    "term": "dive",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02067",
+    "term": "down",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02075",
+    "term": "draw",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02082",
+    "term": "drop",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02154",
+    "term": "envy",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02173",
+    "term": "even",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02189",
+    "term": "face",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02195",
+    "term": "fair",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02197",
+    "term": "fall",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02216",
+    "term": "fear",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02219",
+    "term": "feed",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02220",
+    "term": "feel",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02238",
+    "term": "file",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02240",
+    "term": "film",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02243",
+    "term": "fine",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02246",
+    "term": "fire",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02247",
+    "term": "firm",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02250",
+    "term": "fish",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02261",
+    "term": "flat",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02295",
+    "term": "fool",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02301",
+    "term": "form",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02311",
+    "term": "free",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02423",
+    "term": "gold",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02428",
+    "term": "good",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02490",
+    "term": "half",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02496",
+    "term": "hand",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02497",
+    "term": "hang",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02503",
+    "term": "harm",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02509",
+    "term": "hate",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02516",
+    "term": "head",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02520",
+    "term": "heat",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02530",
+    "term": "help",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02548",
+    "term": "high",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02568",
+    "term": "hold",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02575",
+    "term": "home",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02587",
+    "term": "hope",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02613",
+    "term": "hurt",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02640",
+    "term": "idle",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02655",
+    "term": "inch",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02711",
+    "term": "joke",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02723",
+    "term": "jump",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02780",
+    "term": "kind",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02788",
+    "term": "kiss",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02823",
+    "term": "lack",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02837",
+    "term": "land",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02841",
+    "term": "lark",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02845",
+    "term": "last",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02854",
+    "term": "lead",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02858",
+    "term": "lean",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02859",
+    "term": "leap",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02865",
+    "term": "left",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02891",
+    "term": "like",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02901",
+    "term": "line",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02913",
+    "term": "list",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02915",
+    "term": "live",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02916",
+    "term": "load",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02924",
+    "term": "lock",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02936",
+    "term": "long",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02992",
+    "term": "mail",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02995",
+    "term": "make",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-02996",
+    "term": "male",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03012",
+    "term": "mass",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03028",
+    "term": "mean",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03041",
+    "term": "mere",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03045",
+    "term": "mess",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03065",
+    "term": "mind",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03066",
+    "term": "mine",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03093",
+    "term": "mold",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03105",
+    "term": "more",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03111",
+    "term": "most",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03114",
+    "term": "move",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03143",
+    "term": "name",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03157",
+    "term": "near",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03161",
+    "term": "need",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03166",
+    "term": "next",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03242",
+    "term": "once",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03259",
+    "term": "oral",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03280",
+    "term": "over",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03291",
+    "term": "pace",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03313",
+    "term": "park",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03316",
+    "term": "part",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03320",
+    "term": "past",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03370",
+    "term": "pick",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03382",
+    "term": "pink",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03397",
+    "term": "plan",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03409",
+    "term": "plug",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03410",
+    "term": "plum",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03412",
+    "term": "plus",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03447",
+    "term": "pose",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03449",
+    "term": "post",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03498",
+    "term": "push",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03517",
+    "term": "quit",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03547",
+    "term": "rate",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03586",
+    "term": "rich",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03600",
+    "term": "ring",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03606",
+    "term": "risk",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03617",
+    "term": "rock",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03622",
+    "term": "roll",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03628",
+    "term": "room",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03652",
+    "term": "ruin",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03653",
+    "term": "rule",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03660",
+    "term": "rush",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03703",
+    "term": "scan",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03752",
+    "term": "shed",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03758",
+    "term": "ship",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03764",
+    "term": "shop",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03766",
+    "term": "show",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03768",
+    "term": "shut",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03776",
+    "term": "sigh",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03777",
+    "term": "sign",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03788",
+    "term": "sink",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03800",
+    "term": "skim",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03824",
+    "term": "slow",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03845",
+    "term": "snow",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03857",
+    "term": "soil",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03877",
+    "term": "sort",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03899",
+    "term": "spot",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03907",
+    "term": "star",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03908",
+    "term": "stay",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03911",
+    "term": "step",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03946",
+    "term": "sure",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03947",
+    "term": "surf",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03977",
+    "term": "take",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03982",
+    "term": "talk",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-03989",
+    "term": "tape",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-04004",
+    "term": "tear",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-04021",
+    "term": "test",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-04025",
+    "term": "that",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-04051",
+    "term": "till",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-04053",
+    "term": "time",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-04073",
+    "term": "tomb",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-04075",
+    "term": "tone",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-04096",
+    "term": "tour",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-04111",
+    "term": "trip",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-04130",
+    "term": "tune",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-04149",
+    "term": "type",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-04177",
+    "term": "urge",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-04215",
+    "term": "very",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-04222",
+    "term": "view",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-04244",
+    "term": "vote",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-04255",
+    "term": "wait",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-04256",
+    "term": "wake",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-04263",
+    "term": "want",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-04266",
+    "term": "warm",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-04276",
+    "term": "wave",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-04324",
+    "term": "will",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-04328",
+    "term": "wind",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-04330",
+    "term": "wing",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-04336",
+    "term": "wire",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-04339",
+    "term": "wish",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-04383",
+    "term": "yell",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-04453",
+    "term": "above",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-04488",
+    "term": "adorn",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-04508",
+    "term": "after",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-04539",
+    "term": "alarm",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-04575",
+    "term": "alone",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-04576",
+    "term": "along",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-04624",
+    "term": "angle",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-04737",
+    "term": "audit",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-04759",
+    "term": "award",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-04933",
+    "term": "blame",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-04946",
+    "term": "blend",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-04957",
+    "term": "block",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-04961",
+    "term": "bloom",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-04973",
+    "term": "blush",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-04974",
+    "term": "board",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-04976",
+    "term": "boast",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-05040",
+    "term": "brake",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-05052",
+    "term": "break",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-05054",
+    "term": "breed",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-05061",
+    "term": "brief",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-05078",
+    "term": "brown",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-05119",
+    "term": "burst",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-05198",
+    "term": "cause",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-05233",
+    "term": "chart",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-05235",
+    "term": "chase",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-05240",
+    "term": "check",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-05252",
+    "term": "chief",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-05305",
+    "term": "claim",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-05312",
+    "term": "class",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-05317",
+    "term": "clear",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-05324",
+    "term": "click",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-05326",
+    "term": "climb",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-05347",
+    "term": "coach",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-05349",
+    "term": "coast",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-05419",
+    "term": "cough",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-05421",
+    "term": "count",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-05426",
+    "term": "cover",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-05437",
+    "term": "craft",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-05453",
+    "term": "cream",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-05562",
+    "term": "daunt",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-05599",
+    "term": "delay",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-05711",
+    "term": "doubt",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-05739",
+    "term": "dream",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-05742",
+    "term": "dress",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-05747",
+    "term": "drill",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-05750",
+    "term": "drive",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-05795",
+    "term": "dwarf",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-05803",
+    "term": "early",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-05854",
+    "term": "email",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-05891",
+    "term": "equal",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-05925",
+    "term": "exact",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-05936",
+    "term": "extra",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-05955",
+    "term": "faint",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-05964",
+    "term": "fancy",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-06025",
+    "term": "fight",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-06063",
+    "term": "flash",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-06080",
+    "term": "float",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-06083",
+    "term": "flood",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-06107",
+    "term": "focus",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-06121",
+    "term": "force",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-06140",
+    "term": "frame",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-06163",
+    "term": "front",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-06166",
+    "term": "frost",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-06301",
+    "term": "glint",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-06353",
+    "term": "grade",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-06355",
+    "term": "graft",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-06375",
+    "term": "green",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-06396",
+    "term": "group",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-06409",
+    "term": "guard",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-06411",
+    "term": "guess",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-06478",
+    "term": "haunt",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-06479",
+    "term": "haven",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-06558",
+    "term": "honor",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-06580",
+    "term": "house",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-06582",
+    "term": "hover",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-06590",
+    "term": "human",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-06603",
+    "term": "hurry",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-06668",
+    "term": "inert",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-06703",
+    "term": "issue",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-06746",
+    "term": "joint",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-06760",
+    "term": "judge",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-06840",
+    "term": "knock",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-06918",
+    "term": "later",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-06925",
+    "term": "laugh",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-06943",
+    "term": "least",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-06944",
+    "term": "leave",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-06965",
+    "term": "level",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-06981",
+    "term": "light",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-07028",
+    "term": "lodge",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-07121",
+    "term": "major",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-07149",
+    "term": "march",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-07160",
+    "term": "match",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-07247",
+    "term": "model",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-07269",
+    "term": "moral",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-07284",
+    "term": "mould",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-07287",
+    "term": "mount",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-07455",
+    "term": "nurse",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-07535",
+    "term": "order",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-07553",
+    "term": "other",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-07610",
+    "term": "panic",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-07707",
+    "term": "phase",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-07768",
+    "term": "place",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-07774",
+    "term": "plane",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-07776",
+    "term": "plant",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-07795",
+    "term": "pluck",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-07815",
+    "term": "point",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-07816",
+    "term": "poise",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-07857",
+    "term": "pound",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-07873",
+    "term": "price",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-07883",
+    "term": "print",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-07938",
+    "term": "pupil",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-07976",
+    "term": "query",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-07978",
+    "term": "queue",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-07980",
+    "term": "quiet",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-07988",
+    "term": "quirk",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-08012",
+    "term": "rally",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-08022",
+    "term": "range",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-08048",
+    "term": "reach",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-08104",
+    "term": "reply",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-08110",
+    "term": "resin",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-08140",
+    "term": "right",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-08161",
+    "term": "roast",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-08187",
+    "term": "round",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-08345",
+    "term": "screw",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-08380",
+    "term": "sense",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-08414",
+    "term": "shake",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-08424",
+    "term": "shape",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-08426",
+    "term": "share",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-08428",
+    "term": "sharp",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-08440",
+    "term": "shell",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-08446",
+    "term": "shift",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-08459",
+    "term": "shock",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-08465",
+    "term": "short",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-08467",
+    "term": "shout",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-08495",
+    "term": "since",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-08518",
+    "term": "skate",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-08557",
+    "term": "sleep",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-08560",
+    "term": "slice",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-08562",
+    "term": "slide",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-08596",
+    "term": "smell",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-08599",
+    "term": "smile",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-08604",
+    "term": "smoke",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-08677",
+    "term": "sound",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-08699",
+    "term": "speed",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-08701",
+    "term": "spell",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-08727",
+    "term": "split",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-08778",
+    "term": "stamp",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-08779",
+    "term": "stand",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-08788",
+    "term": "state",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-08809",
+    "term": "stick",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-08813",
+    "term": "still",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-08823",
+    "term": "stock",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-08839",
+    "term": "store",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-08855",
+    "term": "strip",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-08861",
+    "term": "study",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-08862",
+    "term": "stuff",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-08902",
+    "term": "surge",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-08922",
+    "term": "sweat",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-08925",
+    "term": "sweet",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-09013",
+    "term": "tease",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-09089",
+    "term": "throw",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-09100",
+    "term": "tight",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-09167",
+    "term": "touch",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-09176",
+    "term": "trace",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-09177",
+    "term": "track",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-09179",
+    "term": "trade",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-09181",
+    "term": "trail",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-09182",
+    "term": "train",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-09190",
+    "term": "tread",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-09192",
+    "term": "treat",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-09201",
+    "term": "trick",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-09230",
+    "term": "trust",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-09354",
+    "term": "until",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-09361",
+    "term": "upset",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-09367",
+    "term": "usher",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-09374",
+    "term": "utter",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-09386",
+    "term": "value",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-09471",
+    "term": "voice",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-09516",
+    "term": "water",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-09553",
+    "term": "while",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-09565",
+    "term": "whole",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-09604",
+    "term": "worry",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-09605",
+    "term": "worse",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-09606",
+    "term": "worst",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-09609",
+    "term": "wound",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-09621",
+    "term": "wrong",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-09697",
+    "term": "aboard",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-09721",
+    "term": "access",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-09824",
+    "term": "agency",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-09943",
+    "term": "anchor",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-10015",
+    "term": "appeal",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-10066",
+    "term": "around",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-10333",
+    "term": "before",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-10344",
+    "term": "behind",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-10384",
+    "term": "better",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-10542",
+    "term": "bother",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-10544",
+    "term": "bottle",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-10549",
+    "term": "bounce",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-10581",
+    "term": "branch",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-10645",
+    "term": "budget",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-10674",
+    "term": "burden",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-11032",
+    "term": "circle",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-11348",
+    "term": "cruise",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-11551",
+    "term": "defeat",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-11630",
+    "term": "desert",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-11631",
+    "term": "design",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-11632",
+    "term": "desire",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-11711",
+    "term": "direct",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-11733",
+    "term": "divide",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-11794",
+    "term": "double",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-11927",
+    "term": "either",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-12069",
+    "term": "escape",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-12122",
+    "term": "excuse",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-12136",
+    "term": "exotic",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-12140",
+    "term": "expert",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-12241",
+    "term": "fellow",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-12243",
+    "term": "female",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-12536",
+    "term": "future",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-12774",
+    "term": "gossip",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-12831",
+    "term": "ground",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-12924",
+    "term": "hammer",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-12928",
+    "term": "handle",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-12938",
+    "term": "harbor",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-12961",
+    "term": "hazard",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-13095",
+    "term": "honour",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-13149",
+    "term": "humble",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-13314",
+    "term": "inside",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-13570",
+    "term": "kindly",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-13685",
+    "term": "latter",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-13687",
+    "term": "launch",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-13830",
+    "term": "little",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-13835",
+    "term": "living",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-13936",
+    "term": "luxury",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-14039",
+    "term": "market",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-14052",
+    "term": "marvel",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-14070",
+    "term": "matter",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-14130",
+    "term": "merger",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-14153",
+    "term": "middle",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-14216",
+    "term": "mobile",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-14315",
+    "term": "murder",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-14379",
+    "term": "nature",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-14470",
+    "term": "notice",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-14524",
+    "term": "object",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-14676",
+    "term": "orphan",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-14769",
+    "term": "paddle",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-14829",
+    "term": "pardon",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-15116",
+    "term": "plague",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-15139",
+    "term": "please",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-15143",
+    "term": "plenty",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-15186",
+    "term": "poison",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-15271",
+    "term": "powder",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-15273",
+    "term": "praise",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-15299",
+    "term": "pretty",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-15351",
+    "term": "public",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-15405",
+    "term": "purple",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-15421",
+    "term": "puzzle",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-15618",
+    "term": "recall",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-15625",
+    "term": "recite",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-15634",
+    "term": "record",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-15676",
+    "term": "regard",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-15685",
+    "term": "regret",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-15712",
+    "term": "remark",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-15752",
+    "term": "report",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-15755",
+    "term": "repute",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-15784",
+    "term": "resort",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-15786",
+    "term": "result",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-15817",
+    "term": "review",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-15823",
+    "term": "reward",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-15859",
+    "term": "riddle",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-16153",
+    "term": "scream",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-16155",
+    "term": "screen",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-16184",
+    "term": "search",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-16191",
+    "term": "second",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-16192",
+    "term": "secret",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-16195",
+    "term": "secure",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-16212",
+    "term": "select",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-16285",
+    "term": "shadow",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-16345",
+    "term": "shower",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-16374",
+    "term": "signal",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-16404",
+    "term": "single",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-16431",
+    "term": "sketch",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-16465",
+    "term": "slight",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-16521",
+    "term": "sneeze",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-16645",
+    "term": "splash",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-16668",
+    "term": "spread",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-16796",
+    "term": "strain",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-16797",
+    "term": "strait",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-16811",
+    "term": "stress",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-16817",
+    "term": "strike",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-16917",
+    "term": "supply",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-17059",
+    "term": "tedium",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-17073",
+    "term": "temper",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-17133",
+    "term": "thirst",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-17141",
+    "term": "though",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-17318",
+    "term": "travel",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-17592",
+    "term": "unlike",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-17689",
+    "term": "update",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-18064",
+    "term": "wither",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-18076",
+    "term": "wonder",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-18203",
+    "term": "abolish",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-18244",
+    "term": "account",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-18315",
+    "term": "address",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-18348",
+    "term": "advance",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-18350",
+    "term": "adverse",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-18400",
+    "term": "agonize",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-18623",
+    "term": "another",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-18637",
+    "term": "antique",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-18852",
+    "term": "attempt",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-18954",
+    "term": "balance",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-18997",
+    "term": "bargain",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-19029",
+    "term": "battery",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-19097",
+    "term": "benefit",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-19117",
+    "term": "besides",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-19562",
+    "term": "butcher",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-vi-19763",
+    "term": "cascade",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  },
+  {
+    "id": "en-oewn-0006",
+    "term": "signal",
+    "reason": "POS không khớp / nhiều cấp CEFR"
+  }
+]

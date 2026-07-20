@@ -4,9 +4,12 @@ import type { LanguageCode, VocabularyDataset, VocabularyItem } from "@/types";
  * Tải động dataset từ vựng theo ngôn ngữ. Mỗi file JSON được code-split riêng
  * nhờ import.meta.glob (không bundle toàn bộ dữ liệu lúc khởi động — §23.2).
  */
-const datasetModules = import.meta.glob<{ default: VocabularyDataset }>(
-  "@/data/**/*.json",
-);
+// Chỉ nạp dataset từ vựng; KHÔNG gom src/data/certification (index/assignments
+// là artefact phân loại, không phải dữ liệu chạy app).
+const datasetModules = import.meta.glob<{ default: VocabularyDataset }>([
+  "@/data/{en,zh,ja,ko}/*.json",
+  "@/data/{en,zh,ja,ko}/generated/*.json",
+]);
 
 // Map: "en" -> danh sách đường dẫn glob của ngôn ngữ đó.
 function pathsForLanguage(language: LanguageCode): string[] {

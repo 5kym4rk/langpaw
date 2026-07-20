@@ -24,7 +24,7 @@
       "explanationVi": "Định nghĩa nguồn (EN): voltage",
       "example": "这个电路的电压很高。",
       "exampleVi": "Điện áp của mạch này rất cao.",
-      "level": "HSK4",
+      "level": "Chưa phân loại",
       "syllabusVersion": "GF0025-2021",
       "topic": "Điện – Điện tử",
       "tags": ["electronics"],
@@ -34,7 +34,9 @@
       "sourceEntryUrl": "https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb=%E7%94%B5%E5%8E%8B",
       "definitionSourceLanguage": "en",
       "exampleSelfAuthored": true,
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateLevel": null,
+      "certificateStatus": "unclassified"
     },
     {
       "id": "zh-cedict-0002",
@@ -46,7 +48,7 @@
       "explanationVi": "Định nghĩa nguồn (EN): an electric current; (old) current intensity",
       "example": "电流通过导线。",
       "exampleVi": "Dòng điện chạy qua dây dẫn.",
-      "level": "HSK4",
+      "level": "Chưa phân loại",
       "syllabusVersion": "GF0025-2021",
       "topic": "Điện – Điện tử",
       "tags": ["electronics"],
@@ -56,7 +58,9 @@
       "sourceEntryUrl": "https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb=%E7%94%B5%E6%B5%81",
       "definitionSourceLanguage": "en",
       "exampleSelfAuthored": true,
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateLevel": null,
+      "certificateStatus": "unclassified"
     },
     {
       "id": "zh-cedict-0003",
@@ -68,7 +72,7 @@
       "explanationVi": "Định nghĩa nguồn (EN): (electrical) resistance; resistor",
       "example": "电阻可以限制电流。",
       "exampleVi": "Điện trở có thể hạn chế dòng điện.",
-      "level": "HSK5",
+      "level": "Chưa phân loại",
       "syllabusVersion": "GF0025-2021",
       "topic": "Điện – Điện tử",
       "tags": ["electronics"],
@@ -78,7 +82,9 @@
       "sourceEntryUrl": "https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb=%E7%94%B5%E9%98%BB",
       "definitionSourceLanguage": "en",
       "exampleSelfAuthored": true,
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateLevel": null,
+      "certificateStatus": "unclassified"
     },
     {
       "id": "zh-cedict-0004",
@@ -90,7 +96,7 @@
       "explanationVi": "Định nghĩa nguồn (EN): capacitance; capacitor",
       "example": "电容器可以储存电荷。",
       "exampleVi": "Tụ điện có thể tích trữ điện tích.",
-      "level": "HSK5",
+      "level": "Chưa phân loại",
       "syllabusVersion": "GF0025-2021",
       "topic": "Điện – Điện tử",
       "tags": ["electronics"],
@@ -100,7 +106,9 @@
       "sourceEntryUrl": "https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb=%E7%94%B5%E5%AE%B9",
       "definitionSourceLanguage": "en",
       "exampleSelfAuthored": true,
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateLevel": null,
+      "certificateStatus": "unclassified"
     },
     {
       "id": "zh-cedict-0005",
@@ -112,7 +120,7 @@
       "explanationVi": "Định nghĩa nguồn (EN): frequency",
       "example": "信号的频率是五十赫兹。",
       "exampleVi": "Tần số của tín hiệu là năm mươi héc.",
-      "level": "HSK5",
+      "level": "HSK 6",
       "syllabusVersion": "GF0025-2021",
       "topic": "Viễn thông",
       "tags": ["telecom"],
@@ -122,7 +130,10 @@
       "sourceEntryUrl": "https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb=%E9%A2%91%E7%8E%87",
       "definitionSourceLanguage": "en",
       "exampleSelfAuthored": true,
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 6",
+      "certificateStatus": "official"
     },
     {
       "id": "zh-cedict-0006",
@@ -134,7 +145,7 @@
       "explanationVi": "Định nghĩa nguồn (EN): signal",
       "example": "手机的信号很弱。",
       "exampleVi": "Tín hiệu điện thoại rất yếu.",
-      "level": "HSK4",
+      "level": "HSK 2",
       "syllabusVersion": "GF0025-2021",
       "topic": "Viễn thông",
       "tags": ["telecom"],
@@ -144,7 +155,10 @@
       "sourceEntryUrl": "https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb=%E4%BF%A1%E5%8F%B7",
       "definitionSourceLanguage": "en",
       "exampleSelfAuthored": true,
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 2",
+      "certificateStatus": "official"
     },
     {
       "id": "zh-cedict-0007",
@@ -156,7 +170,7 @@
       "explanationVi": "Định nghĩa nguồn (EN): Internet",
       "example": "网络连接不稳定。",
       "exampleVi": "Kết nối mạng không ổn định.",
-      "level": "HSK4",
+      "level": "HSK 4",
       "syllabusVersion": "GF0025-2021",
       "topic": "Mạng",
       "tags": ["network"],
@@ -166,7 +180,10 @@
       "sourceEntryUrl": "https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb=%E7%BD%91%E7%BB%9C",
       "definitionSourceLanguage": "en",
       "exampleSelfAuthored": true,
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 4",
+      "certificateStatus": "official"
     },
     {
       "id": "zh-cedict-0008",
@@ -178,7 +195,7 @@
       "explanationVi": "Định nghĩa nguồn (EN): electronic; electron (particle physics)",
       "example": "这是一家电子公司。",
       "exampleVi": "Đây là một công ty điện tử.",
-      "level": "HSK4",
+      "level": "Chưa phân loại",
       "syllabusVersion": "GF0025-2021",
       "topic": "Điện – Điện tử",
       "tags": ["electronics"],
@@ -188,7 +205,9 @@
       "sourceEntryUrl": "https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb=%E7%94%B5%E5%AD%90",
       "definitionSourceLanguage": "en",
       "exampleSelfAuthored": true,
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateLevel": null,
+      "certificateStatus": "unclassified"
     }
   ]
 }

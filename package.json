@@ -25,7 +25,9 @@
     "import:zh-vi": "tsx scripts/import-cvdict.ts",
     "import:en-vi": "tsx scripts/import-en-vi.ts",
     "import:ja-vi": "tsx scripts/import-ja-vi.ts",
-    "gen:icons": "tsx scripts/generate-icons.ts"
+    "gen:icons": "tsx scripts/generate-icons.ts",
+    "import:certs": "tsx scripts/import-cert-indexes.ts",
+    "build:certs": "tsx scripts/build-certificates.ts"
   },
   "overrides": {
     "vite": "^6.0.5"

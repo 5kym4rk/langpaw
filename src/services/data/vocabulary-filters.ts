@@ -3,13 +3,18 @@ import type { ReviewStatus, VocabularyItem, VocabularyProgress } from "@/types";
 /** Mức kiểm duyệt tối thiểu được phép hiển thị. */
 export type ReviewLevel = "all" | "reviewed" | "verified";
 
+export type VocabularyScope =
+  "all" | "new" | "due" | "weak" | "favorite" | "learned";
+
 export interface VocabularyFilter {
   level?: string;
   topic?: string;
-  /** Chỉ lấy nhóm từ: mới / yếu / yêu thích / tất cả. */
-  scope?: "all" | "new" | "weak" | "favorite";
+  /** Nhóm từ: mới / đến hạn ôn / yếu / yêu thích / đã học / tất cả. */
+  scope?: VocabularyScope;
   /** Lọc theo trạng thái kiểm duyệt tối thiểu (mặc định "all"). */
   reviewLevel?: ReviewLevel;
+  /** Lộ trình: certificate = đã gán cấp chứng chỉ; dictionary = chưa phân loại. */
+  route?: "certificate" | "dictionary";
 }
 
 const REVIEW_RANK: Record<ReviewStatus, number> = {
@@ -58,8 +63,15 @@ export function filterVocabulary(
   items: VocabularyItem[],
   filter: VocabularyFilter,
   progressMap: Map<string, VocabularyProgress>,
+  nowMs: number = Date.now(),
 ): VocabularyItem[] {
   return items.filter((item) => {
+    if (filter.route) {
+      const certified =
+        item.certificateStatus === "official" ||
+        item.certificateStatus === "reference";
+      if ((filter.route === "certificate") !== certified) return false;
+    }
     if (filter.level && item.level !== filter.level) return false;
     if (filter.topic && item.topic !== filter.topic) return false;
     if (!meetsReviewLevel(item, filter.reviewLevel)) return false;
@@ -68,10 +80,17 @@ export function filterVocabulary(
     switch (filter.scope) {
       case "new":
         return !progress || progress.state === "new";
+      case "due":
+        return Boolean(
+          progress?.nextReviewAt &&
+          new Date(progress.nextReviewAt).getTime() <= nowMs,
+        );
       case "weak":
         return Boolean(progress?.markedWeak);
       case "favorite":
         return Boolean(progress?.favorite);
+      case "learned":
+        return Boolean(progress && progress.state !== "new");
       default:
         return true;
     }

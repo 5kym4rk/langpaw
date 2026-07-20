@@ -24,13 +24,15 @@
       "meaningVi": "xin chào",
       "example": "你好，很高兴认识你。",
       "exampleVi": "Xin chào, rất vui được gặp bạn.",
-      "level": "HSK1",
+      "level": "Chưa phân loại",
       "syllabusVersion": "HSK2.0-old",
       "topic": "Chào hỏi",
       "tags": ["greeting"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateLevel": null,
+      "certificateStatus": "unclassified"
     },
     {
       "id": "zh-0002",
@@ -42,13 +44,16 @@
       "meaningVi": "tạm biệt",
       "example": "再见，明天见。",
       "exampleVi": "Tạm biệt, hẹn gặp lại ngày mai.",
-      "level": "HSK1",
+      "level": "HSK 1",
       "syllabusVersion": "HSK2.0-old",
       "topic": "Chào hỏi",
       "tags": ["greeting"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 1",
+      "certificateStatus": "official"
     },
     {
       "id": "zh-0003",
@@ -60,13 +65,16 @@
       "meaningVi": "cảm ơn",
       "example": "谢谢你的帮助。",
       "exampleVi": "Cảm ơn sự giúp đỡ của bạn.",
-      "level": "HSK1",
+      "level": "HSK 1",
       "syllabusVersion": "HSK2.0-old",
       "topic": "Chào hỏi",
       "tags": ["greeting", "polite"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 1",
+      "certificateStatus": "official"
     },
     {
       "id": "zh-0004",
@@ -78,13 +86,16 @@
       "meaningVi": "mời, xin",
       "example": "请坐。",
       "exampleVi": "Mời ngồi.",
-      "level": "HSK1",
+      "level": "HSK 1",
       "syllabusVersion": "HSK2.0-old",
       "topic": "Chào hỏi",
       "tags": ["polite"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 1",
+      "certificateStatus": "official"
     },
     {
       "id": "zh-0005",
@@ -96,13 +107,16 @@
       "meaningVi": "xin lỗi",
       "example": "对不起，我来晚了。",
       "exampleVi": "Xin lỗi, tôi đến muộn.",
-      "level": "HSK1",
+      "level": "HSK 1",
       "syllabusVersion": "HSK2.0-old",
       "topic": "Chào hỏi",
       "tags": ["polite"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 1",
+      "certificateStatus": "official"
     },
     {
       "id": "zh-0006",
@@ -114,13 +128,16 @@
       "meaningVi": "mẹ",
       "example": "我妈妈是老师。",
       "exampleVi": "Mẹ tôi là giáo viên.",
-      "level": "HSK1",
+      "level": "HSK 1",
       "syllabusVersion": "HSK2.0-old",
       "topic": "Gia đình",
       "tags": ["family"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 1",
+      "certificateStatus": "official"
     },
     {
       "id": "zh-0007",
@@ -132,13 +149,16 @@
       "meaningVi": "bố",
       "example": "他爸爸在工厂工作。",
       "exampleVi": "Bố anh ấy làm việc ở nhà máy.",
-      "level": "HSK1",
+      "level": "HSK 1",
       "syllabusVersion": "HSK2.0-old",
       "topic": "Gia đình",
       "tags": ["family"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 1",
+      "certificateStatus": "official"
     },
     {
       "id": "zh-0008",
@@ -150,13 +170,16 @@
       "meaningVi": "anh trai",
       "example": "我有一个哥哥。",
       "exampleVi": "Tôi có một anh trai.",
-      "level": "HSK1",
+      "level": "HSK 1",
       "syllabusVersion": "HSK2.0-old",
       "topic": "Gia đình",
       "tags": ["family"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 1",
+      "certificateStatus": "official"
     },
     {
       "id": "zh-0009",
@@ -168,13 +191,16 @@
       "meaningVi": "chị gái",
       "example": "我姐姐喜欢音乐。",
       "exampleVi": "Chị tôi thích âm nhạc.",
-      "level": "HSK1",
+      "level": "HSK 1",
       "syllabusVersion": "HSK2.0-old",
       "topic": "Gia đình",
       "tags": ["family"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 1",
+      "certificateStatus": "official"
     },
     {
       "id": "zh-0010",
@@ -186,13 +212,16 @@
       "meaningVi": "bạn bè",
       "example": "她是我的好朋友。",
       "exampleVi": "Cô ấy là bạn thân của tôi.",
-      "level": "HSK1",
+      "level": "HSK 1",
       "syllabusVersion": "HSK2.0-old",
       "topic": "Gia đình",
       "tags": ["people"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 1",
+      "certificateStatus": "official"
     },
     {
       "id": "zh-0011",
@@ -204,13 +233,16 @@
       "meaningVi": "trường học",
       "example": "学校离我家很近。",
       "exampleVi": "Trường học gần nhà tôi.",
-      "level": "HSK1",
+      "level": "HSK 1",
       "syllabusVersion": "HSK2.0-old",
       "topic": "Trường học",
       "tags": ["education"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 1",
+      "certificateStatus": "official"
     },
     {
       "id": "zh-0012",
@@ -222,13 +254,16 @@
       "meaningVi": "giáo viên",
       "example": "老师在讲课。",
       "exampleVi": "Giáo viên đang giảng bài.",
-      "level": "HSK1",
+      "level": "HSK 1",
       "syllabusVersion": "HSK2.0-old",
       "topic": "Trường học",
       "tags": ["education"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 1",
+      "certificateStatus": "official"
     },
     {
       "id": "zh-0013",
@@ -240,13 +275,16 @@
       "meaningVi": "học sinh, sinh viên",
       "example": "他是一个好学生。",
       "exampleVi": "Cậu ấy là một sinh viên giỏi.",
-      "level": "HSK1",
+      "level": "HSK 1",
       "syllabusVersion": "HSK2.0-old",
       "topic": "Trường học",
       "tags": ["education"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 1",
+      "certificateStatus": "official"
     },
     {
       "id": "zh-0014",
@@ -258,13 +296,16 @@
       "meaningVi": "quyển sách",
       "example": "我每天晚上看书。",
       "exampleVi": "Tôi đọc sách mỗi tối.",
-      "level": "HSK1",
+      "level": "HSK 1",
       "syllabusVersion": "HSK2.0-old",
       "topic": "Trường học",
       "tags": ["education"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 1",
+      "certificateStatus": "official"
     },
     {
       "id": "zh-0015",
@@ -276,13 +317,16 @@
       "meaningVi": "học tập",
       "example": "我想学习汉语。",
       "exampleVi": "Tôi muốn học tiếng Trung.",
-      "level": "HSK1",
+      "level": "HSK 1",
       "syllabusVersion": "HSK2.0-old",
       "topic": "Trường học",
       "tags": ["education"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 1",
+      "certificateStatus": "official"
     },
     {
       "id": "zh-0016",
@@ -294,13 +338,16 @@
       "meaningVi": "làm việc, công việc",
       "example": "我在办公室工作。",
       "exampleVi": "Tôi làm việc trong văn phòng.",
-      "level": "HSK1",
+      "level": "HSK 1",
       "syllabusVersion": "HSK2.0-old",
       "topic": "Công việc",
       "tags": ["job"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 1",
+      "certificateStatus": "official"
     },
     {
       "id": "zh-0017",
@@ -312,13 +359,16 @@
       "meaningVi": "công ty",
       "example": "这家公司生产电子产品。",
       "exampleVi": "Công ty này sản xuất sản phẩm điện tử.",
-      "level": "HSK1",
+      "level": "HSK 2",
       "syllabusVersion": "HSK2.0-old",
       "topic": "Công việc",
       "tags": ["job"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 2",
+      "certificateStatus": "official"
     },
     {
       "id": "zh-0018",
@@ -330,13 +380,16 @@
       "meaningVi": "tiền",
       "example": "我需要一些钱。",
       "exampleVi": "Tôi cần một ít tiền.",
-      "level": "HSK1",
+      "level": "HSK 1",
       "syllabusVersion": "HSK2.0-old",
       "topic": "Công việc",
       "tags": ["finance"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 1",
+      "certificateStatus": "official"
     },
     {
       "id": "zh-0019",
@@ -348,13 +401,16 @@
       "meaningVi": "bận",
       "example": "我今天很忙。",
       "exampleVi": "Hôm nay tôi rất bận.",
-      "level": "HSK1",
+      "level": "HSK 1",
       "syllabusVersion": "HSK2.0-old",
       "topic": "Công việc",
       "tags": ["job"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 1",
+      "certificateStatus": "official"
     },
     {
       "id": "zh-0020",
@@ -366,13 +422,16 @@
       "meaningVi": "thời gian",
       "example": "现在几点了？",
       "exampleVi": "Bây giờ là mấy giờ?",
-      "level": "HSK1",
+      "level": "HSK 1",
       "syllabusVersion": "HSK2.0-old",
       "topic": "Thời gian",
       "tags": ["time"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 1",
+      "certificateStatus": "official"
     },
     {
       "id": "zh-0021",
@@ -384,13 +443,16 @@
       "meaningVi": "hôm nay",
       "example": "今天是星期一。",
       "exampleVi": "Hôm nay là thứ Hai.",
-      "level": "HSK1",
+      "level": "HSK 1",
       "syllabusVersion": "HSK2.0-old",
       "topic": "Thời gian",
       "tags": ["time"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 1",
+      "certificateStatus": "official"
     },
     {
       "id": "zh-0022",
@@ -402,13 +464,16 @@
       "meaningVi": "ngày mai",
       "example": "明天见。",
       "exampleVi": "Hẹn gặp lại ngày mai.",
-      "level": "HSK1",
+      "level": "HSK 1",
       "syllabusVersion": "HSK2.0-old",
       "topic": "Thời gian",
       "tags": ["time"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 1",
+      "certificateStatus": "official"
     },
     {
       "id": "zh-0023",
@@ -420,13 +485,16 @@
       "meaningVi": "tuần lễ",
       "example": "一个星期有七天。",
       "exampleVi": "Một tuần có bảy ngày.",
-      "level": "HSK1",
+      "level": "HSK 1",
       "syllabusVersion": "HSK2.0-old",
       "topic": "Thời gian",
       "tags": ["time"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 1",
+      "certificateStatus": "official"
     },
     {
       "id": "zh-0024",
@@ -438,13 +506,16 @@
       "meaningVi": "một",
       "example": "我有一支笔。",
       "exampleVi": "Tôi có một cây bút.",
-      "level": "HSK1",
+      "level": "HSK 1",
       "syllabusVersion": "HSK2.0-old",
       "topic": "Số đếm",
       "tags": ["number"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 1",
+      "certificateStatus": "official"
     },
     {
       "id": "zh-0025",
@@ -456,13 +527,16 @@
       "meaningVi": "hai",
       "example": "她有两个孩子。",
       "exampleVi": "Cô ấy có hai con.",
-      "level": "HSK1",
+      "level": "HSK 1",
       "syllabusVersion": "HSK2.0-old",
       "topic": "Số đếm",
       "tags": ["number"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 1",
+      "certificateStatus": "official"
     },
     {
       "id": "zh-0026",
@@ -474,13 +548,16 @@
       "meaningVi": "ba",
       "example": "公共汽车三点到。",
       "exampleVi": "Xe buýt đến lúc ba giờ.",
-      "level": "HSK1",
+      "level": "HSK 1",
       "syllabusVersion": "HSK2.0-old",
       "topic": "Số đếm",
       "tags": ["number"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 1",
+      "certificateStatus": "official"
     },
     {
       "id": "zh-0027",
@@ -492,13 +569,16 @@
       "meaningVi": "nước",
       "example": "我可以要一点水吗？",
       "exampleVi": "Cho tôi xin ít nước được không?",
-      "level": "HSK1",
+      "level": "HSK 1",
       "syllabusVersion": "HSK2.0-old",
       "topic": "Ăn uống",
       "tags": ["food"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 1",
+      "certificateStatus": "official"
     },
     {
       "id": "zh-0028",
@@ -510,13 +590,16 @@
       "meaningVi": "cơm, bữa ăn",
       "example": "该吃饭了。",
       "exampleVi": "Đến giờ ăn cơm rồi.",
-      "level": "HSK1",
+      "level": "HSK 1",
       "syllabusVersion": "HSK2.0-old",
       "topic": "Ăn uống",
       "tags": ["food"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 1",
+      "certificateStatus": "official"
     },
     {
       "id": "zh-0029",
@@ -528,13 +611,16 @@
       "meaningVi": "cơm (gạo nấu)",
       "example": "我们每天吃米饭。",
       "exampleVi": "Chúng tôi ăn cơm mỗi ngày.",
-      "level": "HSK1",
+      "level": "HSK 1",
       "syllabusVersion": "HSK2.0-old",
       "topic": "Ăn uống",
       "tags": ["food"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 1",
+      "certificateStatus": "official"
     },
     {
       "id": "zh-0030",
@@ -546,13 +632,16 @@
       "meaningVi": "cà phê",
       "example": "我早上喝咖啡。",
       "exampleVi": "Tôi uống cà phê vào buổi sáng.",
-      "level": "HSK1",
+      "level": "HSK 3",
       "syllabusVersion": "HSK2.0-old",
       "topic": "Ăn uống",
       "tags": ["food"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 3",
+      "certificateStatus": "official"
     },
     {
       "id": "zh-0031",
@@ -564,13 +653,16 @@
       "meaningVi": "mua",
       "example": "我想买一部手机。",
       "exampleVi": "Tôi muốn mua một chiếc điện thoại.",
-      "level": "HSK1",
+      "level": "HSK 1",
       "syllabusVersion": "HSK2.0-old",
       "topic": "Mua sắm",
       "tags": ["shopping"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 1",
+      "certificateStatus": "official"
     },
     {
       "id": "zh-0032",
@@ -582,13 +674,16 @@
       "meaningVi": "giá cả",
       "example": "价格是多少？",
       "exampleVi": "Giá bao nhiêu?",
-      "level": "HSK1",
+      "level": "HSK 3",
       "syllabusVersion": "HSK2.0-old",
       "topic": "Mua sắm",
       "tags": ["shopping"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 3",
+      "certificateStatus": "official"
     },
     {
       "id": "zh-0033",
@@ -600,13 +695,16 @@
       "meaningVi": "cửa hàng",
       "example": "商店开门了。",
       "exampleVi": "Cửa hàng đã mở cửa.",
-      "level": "HSK1",
+      "level": "HSK 1",
       "syllabusVersion": "HSK2.0-old",
       "topic": "Mua sắm",
       "tags": ["shopping"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 1",
+      "certificateStatus": "official"
     },
     {
       "id": "zh-0034",
@@ -618,13 +716,16 @@
       "meaningVi": "xe",
       "example": "他开车上班。",
       "exampleVi": "Anh ấy lái xe đi làm.",
-      "level": "HSK1",
+      "level": "HSK 1",
       "syllabusVersion": "HSK2.0-old",
       "topic": "Giao thông",
       "tags": ["transport"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 1",
+      "certificateStatus": "official"
     },
     {
       "id": "zh-0035",
@@ -636,13 +737,16 @@
       "meaningVi": "xe buýt",
       "example": "我坐公共汽车上班。",
       "exampleVi": "Tôi đi xe buýt đi làm.",
-      "level": "HSK1",
+      "level": "HSK 2",
       "syllabusVersion": "HSK2.0-old",
       "topic": "Giao thông",
       "tags": ["transport"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 2",
+      "certificateStatus": "official"
     },
     {
       "id": "zh-0036",
@@ -654,13 +758,16 @@
       "meaningVi": "tàu hỏa",
       "example": "火车很快。",
       "exampleVi": "Tàu hỏa chạy nhanh.",
-      "level": "HSK1",
+      "level": "HSK 1",
       "syllabusVersion": "HSK2.0-old",
       "topic": "Giao thông",
       "tags": ["transport"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 1",
+      "certificateStatus": "official"
     },
     {
       "id": "zh-0037",
@@ -672,13 +779,16 @@
       "meaningVi": "du lịch",
       "example": "我喜欢旅行。",
       "exampleVi": "Tôi thích đi du lịch.",
-      "level": "HSK1",
+      "level": "HSK 2",
       "syllabusVersion": "HSK2.0-old",
       "topic": "Du lịch",
       "tags": ["travel"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 2",
+      "certificateStatus": "official"
     },
     {
       "id": "zh-0038",
@@ -690,13 +800,16 @@
       "meaningVi": "khách sạn",
       "example": "我们住在一家酒店。",
       "exampleVi": "Chúng tôi ở một khách sạn.",
-      "level": "HSK1",
+      "level": "HSK 2",
       "syllabusVersion": "HSK2.0-old",
       "topic": "Du lịch",
       "tags": ["travel"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 2",
+      "certificateStatus": "official"
     },
     {
       "id": "zh-0039",
@@ -708,13 +821,16 @@
       "meaningVi": "bản đồ",
       "example": "我需要一张城市地图。",
       "exampleVi": "Tôi cần một bản đồ thành phố.",
-      "level": "HSK1",
+      "level": "HSK 1",
       "syllabusVersion": "HSK2.0-old",
       "topic": "Du lịch",
       "tags": ["travel"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 1",
+      "certificateStatus": "official"
     },
     {
       "id": "zh-0040",
@@ -726,13 +842,16 @@
       "meaningVi": "bác sĩ",
       "example": "你应该去看医生。",
       "exampleVi": "Bạn nên đi khám bác sĩ.",
-      "level": "HSK1",
+      "level": "HSK 1",
       "syllabusVersion": "HSK2.0-old",
       "topic": "Sức khỏe",
       "tags": ["health"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 1",
+      "certificateStatus": "official"
     },
     {
       "id": "zh-0041",
@@ -744,13 +863,16 @@
       "meaningVi": "thuốc",
       "example": "这种药一天吃两次。",
       "exampleVi": "Loại thuốc này uống hai lần một ngày.",
-      "level": "HSK1",
+      "level": "HSK 2",
       "syllabusVersion": "HSK2.0-old",
       "topic": "Sức khỏe",
       "tags": ["health"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 2",
+      "certificateStatus": "official"
     },
     {
       "id": "zh-0042",
@@ -762,13 +884,16 @@
       "meaningVi": "vui, vui vẻ",
       "example": "我今天很高兴。",
       "exampleVi": "Hôm nay tôi rất vui.",
-      "level": "HSK1",
+      "level": "HSK 1",
       "syllabusVersion": "HSK2.0-old",
       "topic": "Cảm xúc",
       "tags": ["emotion"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 1",
+      "certificateStatus": "official"
     },
     {
       "id": "zh-0043",
@@ -780,13 +905,16 @@
       "meaningVi": "mệt",
       "example": "她非常累。",
       "exampleVi": "Cô ấy rất mệt.",
-      "level": "HSK1",
+      "level": "HSK 1",
       "syllabusVersion": "HSK2.0-old",
       "topic": "Cảm xúc",
       "tags": ["emotion"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 1",
+      "certificateStatus": "official"
     },
     {
       "id": "zh-0044",
@@ -798,13 +926,16 @@
       "meaningVi": "tức giận",
       "example": "别生气。",
       "exampleVi": "Đừng tức giận.",
-      "level": "HSK1",
+      "level": "HSK 1",
       "syllabusVersion": "HSK2.0-old",
       "topic": "Cảm xúc",
       "tags": ["emotion"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 1",
+      "certificateStatus": "official"
     },
     {
       "id": "zh-0045",
@@ -816,13 +947,16 @@
       "meaningVi": "cuộc họp",
       "example": "我们十点有一个会议。",
       "exampleVi": "Chúng ta có cuộc họp lúc mười giờ.",
-      "level": "HSK1",
+      "level": "HSK 3",
       "syllabusVersion": "HSK2.0-old",
       "topic": "Văn phòng",
       "tags": ["office"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 3",
+      "certificateStatus": "official"
     },
     {
       "id": "zh-0046",
@@ -834,13 +968,16 @@
       "meaningVi": "thư điện tử",
       "example": "我会给你发一封电子邮件。",
       "exampleVi": "Tôi sẽ gửi cho bạn một email.",
-      "level": "HSK1",
+      "level": "HSK 3",
       "syllabusVersion": "HSK2.0-old",
       "topic": "Văn phòng",
       "tags": ["office"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 3",
+      "certificateStatus": "official"
     },
     {
       "id": "zh-0047",
@@ -852,13 +989,16 @@
       "meaningVi": "máy tính",
       "example": "我的电脑很慢。",
       "exampleVi": "Máy tính của tôi chạy chậm.",
-      "level": "HSK1",
+      "level": "HSK 1",
       "syllabusVersion": "HSK2.0-old",
       "topic": "Công nghệ",
       "tags": ["technology"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 1",
+      "certificateStatus": "official"
     },
     {
       "id": "zh-0048",
@@ -870,13 +1010,16 @@
       "meaningVi": "điện thoại",
       "example": "请关掉电话。",
       "exampleVi": "Vui lòng tắt điện thoại.",
-      "level": "HSK1",
+      "level": "HSK 1",
       "syllabusVersion": "HSK2.0-old",
       "topic": "Công nghệ",
       "tags": ["technology"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 1",
+      "certificateStatus": "official"
     },
     {
       "id": "zh-0049",
@@ -888,13 +1031,16 @@
       "meaningVi": "giúp đỡ",
       "example": "你能帮助我吗？",
       "exampleVi": "Bạn giúp tôi được không?",
-      "level": "HSK1",
+      "level": "HSK 2",
       "syllabusVersion": "HSK2.0-old",
       "topic": "Giao tiếp công sở",
       "tags": ["communication"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 2",
+      "certificateStatus": "official"
     },
     {
       "id": "zh-0050",
@@ -906,13 +1052,16 @@
       "meaningVi": "hiểu, hiểu rõ",
       "example": "我明白这个问题。",
       "exampleVi": "Tôi hiểu câu hỏi này.",
-      "level": "HSK1",
+      "level": "HSK 1",
       "syllabusVersion": "HSK2.0-old",
       "topic": "Giao tiếp công sở",
       "tags": ["communication"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 1",
+      "certificateStatus": "official"
     }
   ]
 }

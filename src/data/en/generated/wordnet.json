@@ -25,7 +25,7 @@
       "explanationVi": "Định nghĩa nguồn (EN): the rate at which energy is drawn from a source that produces a flow of electricity in a circuit; expressed in volts",
       "example": "The voltage across the resistor is five volts.",
       "exampleVi": "Điện áp trên điện trở là năm vôn.",
-      "level": "B1",
+      "level": "Chưa phân loại",
       "syllabusVersion": "CEFR-reference",
       "topic": "Điện – Điện tử",
       "tags": ["electronics"],
@@ -35,7 +35,9 @@
       "sourceEntryUrl": "https://en-word.net/id/oewn-11543971-n",
       "definitionSourceLanguage": "en",
       "exampleSelfAuthored": true,
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateLevel": null,
+      "certificateStatus": "unclassified"
     },
     {
       "id": "en-oewn-0002",
@@ -57,7 +59,10 @@
       "sourceEntryUrl": "https://en-word.net/id/oewn-00669281-a",
       "definitionSourceLanguage": "en",
       "exampleSelfAuthored": true,
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "CEFR-J",
+      "certificateLevel": "B1",
+      "certificateStatus": "reference"
     },
     {
       "id": "en-oewn-0003",
@@ -69,7 +74,7 @@
       "explanationVi": "Định nghĩa nguồn (EN): an electrical device that resists the flow of electrical current",
       "example": "The resistor limits the current.",
       "exampleVi": "Điện trở hạn chế dòng điện.",
-      "level": "B2",
+      "level": "Chưa phân loại",
       "syllabusVersion": "CEFR-reference",
       "topic": "Điện – Điện tử",
       "tags": ["electronics"],
@@ -79,7 +84,9 @@
       "sourceEntryUrl": "https://en-word.net/id/oewn-04087045-n",
       "definitionSourceLanguage": "en",
       "exampleSelfAuthored": true,
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateLevel": null,
+      "certificateStatus": "unclassified"
     },
     {
       "id": "en-oewn-0004",
@@ -90,7 +97,7 @@
       "explanationVi": "Định nghĩa nguồn (EN): an electrical device characterized by its capacity to store an electric charge",
       "example": "The capacitor smooths the output voltage.",
       "exampleVi": "Tụ điện làm phẳng điện áp đầu ra.",
-      "level": "B2",
+      "level": "Chưa phân loại",
       "syllabusVersion": "CEFR-reference",
       "topic": "Điện – Điện tử",
       "tags": ["electronics"],
@@ -100,7 +107,9 @@
       "sourceEntryUrl": "https://en-word.net/id/oewn-02958683-n",
       "definitionSourceLanguage": "en",
       "exampleSelfAuthored": true,
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateLevel": null,
+      "certificateStatus": "unclassified"
     },
     {
       "id": "en-oewn-0005",
@@ -122,7 +131,10 @@
       "sourceEntryUrl": "https://en-word.net/id/oewn-15303267-n",
       "definitionSourceLanguage": "en",
       "exampleSelfAuthored": true,
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "CEFR-J",
+      "certificateLevel": "B1",
+      "certificateStatus": "reference"
     },
     {
       "id": "en-oewn-0006",
@@ -144,7 +156,11 @@
       "sourceEntryUrl": "https://en-word.net/id/oewn-01289243-s",
       "definitionSourceLanguage": "en",
       "exampleSelfAuthored": true,
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "CEFR-J",
+      "certificateLevel": "B1",
+      "certificateStatus": "reference",
+      "certificateRequiresReview": true
     },
     {
       "id": "en-oewn-0007",
@@ -156,7 +172,7 @@
       "explanationVi": "Định nghĩa nguồn (EN): a data transmission rate; the maximum amount of information (bits/second) that can be transmitted along a channel",
       "example": "This link has limited bandwidth.",
       "exampleVi": "Đường truyền này có băng thông hạn chế.",
-      "level": "B2",
+      "level": "Chưa phân loại",
       "syllabusVersion": "CEFR-reference",
       "topic": "Mạng",
       "tags": ["network"],
@@ -166,7 +182,9 @@
       "sourceEntryUrl": "https://en-word.net/id/oewn-13600713-n",
       "definitionSourceLanguage": "en",
       "exampleSelfAuthored": true,
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateLevel": null,
+      "certificateStatus": "unclassified"
     },
     {
       "id": "en-oewn-0008",
@@ -178,7 +196,7 @@
       "explanationVi": "Định nghĩa nguồn (EN): (computer science) the time it takes for a specific block of data on a data track to rotate around to the read/write head",
       "example": "Low latency is important for video calls.",
       "exampleVi": "Độ trễ thấp rất quan trọng với cuộc gọi video.",
-      "level": "B2",
+      "level": "Chưa phân loại",
       "syllabusVersion": "CEFR-reference",
       "topic": "Mạng",
       "tags": ["network"],
@@ -188,7 +206,9 @@
       "sourceEntryUrl": "https://en-word.net/id/oewn-15322312-n",
       "definitionSourceLanguage": "en",
       "exampleSelfAuthored": true,
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateLevel": null,
+      "certificateStatus": "unclassified"
     }
   ]
 }

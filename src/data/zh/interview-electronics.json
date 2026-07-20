@@ -26,7 +26,7 @@
       "explanationVi": "Chênh lệch điện thế giữa hai điểm.",
       "example": "请测量电阻两端的电压。",
       "exampleVi": "Hãy đo điện áp trên điện trở.",
-      "level": "Cơ bản",
+      "level": "Chưa phân loại",
       "topic": "B. Điện tử cơ bản",
       "tags": ["electronics"],
       "isInterviewVocabulary": true,
@@ -34,7 +34,9 @@
       "interviewQuestion": "Điện áp là gì?",
       "interviewAnswerSample": "电压是驱动电流的电位差。",
       "sourceIds": ["interview-terminology-ref-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateLevel": null,
+      "certificateStatus": "unclassified"
     },
     {
       "id": "iv-zh-0002",
@@ -48,7 +50,7 @@
       "explanationVi": "Dòng chuyển động của điện tích, đo bằng ampe.",
       "example": "这根导线的电流是两安培。",
       "exampleVi": "Dòng điện qua dây này là 2 ampe.",
-      "level": "Cơ bản",
+      "level": "Chưa phân loại",
       "topic": "B. Điện tử cơ bản",
       "tags": ["electronics"],
       "isInterviewVocabulary": true,
@@ -56,7 +58,9 @@
       "interviewQuestion": "Làm sao đo dòng điện?",
       "interviewAnswerSample": "把电流表串联在电路中来测量电流。",
       "sourceIds": ["interview-terminology-ref-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateLevel": null,
+      "certificateStatus": "unclassified"
     },
     {
       "id": "iv-zh-0003",
@@ -70,7 +74,7 @@
       "explanationVi": "Mức cản trở dòng điện, đo bằng ôm.",
       "example": "电阻越大，电流越小。",
       "exampleVi": "Điện trở càng lớn, dòng điện càng nhỏ.",
-      "level": "Cơ bản",
+      "level": "Chưa phân loại",
       "topic": "B. Điện tử cơ bản",
       "tags": ["electronics"],
       "isInterviewVocabulary": true,
@@ -78,7 +82,9 @@
       "interviewQuestion": "Định luật Ohm phát biểu thế nào?",
       "interviewAnswerSample": "欧姆定律：电压等于电流乘以电阻。",
       "sourceIds": ["interview-terminology-ref-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateLevel": null,
+      "certificateStatus": "unclassified"
     },
     {
       "id": "iv-zh-0004",
@@ -92,7 +98,7 @@
       "explanationVi": "Khả năng tích trữ điện tích.",
       "example": "电容可以稳定输出电压。",
       "exampleVi": "Tụ điện giúp ổn định điện áp đầu ra.",
-      "level": "Trung bình",
+      "level": "Chưa phân loại",
       "topic": "B. Điện tử cơ bản",
       "tags": ["electronics"],
       "isInterviewVocabulary": true,
@@ -100,7 +106,9 @@
       "interviewQuestion": "Tụ điện dùng để làm gì?",
       "interviewAnswerSample": "电容存储电荷并滤除电源纹波。",
       "sourceIds": ["interview-terminology-ref-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateLevel": null,
+      "certificateStatus": "unclassified"
     },
     {
       "id": "iv-zh-0005",
@@ -114,7 +122,7 @@
       "explanationVi": "Linh kiện chỉ cho dòng đi qua một chiều.",
       "example": "二极管阻止反向电流。",
       "exampleVi": "Điốt chặn dòng điện ngược.",
-      "level": "Cơ bản",
+      "level": "Chưa phân loại",
       "topic": "B. Điện tử cơ bản",
       "tags": ["electronics", "component"],
       "isInterviewVocabulary": true,
@@ -122,7 +130,9 @@
       "interviewQuestion": "Điốt hoạt động thế nào?",
       "interviewAnswerSample": "二极管只允许电流单向通过。",
       "sourceIds": ["interview-terminology-ref-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateLevel": null,
+      "certificateStatus": "unclassified"
     },
     {
       "id": "iv-zh-0006",
@@ -136,7 +146,7 @@
       "explanationVi": "Linh kiện bán dẫn khuếch đại hoặc chuyển mạch.",
       "example": "晶体管可以放大信号。",
       "exampleVi": "Tranzito có thể khuếch đại tín hiệu.",
-      "level": "Trung bình",
+      "level": "Chưa phân loại",
       "topic": "B. Điện tử cơ bản",
       "tags": ["electronics", "component"],
       "isInterviewVocabulary": true,
@@ -144,7 +154,9 @@
       "interviewQuestion": "Tranzito có công dụng gì?",
       "interviewAnswerSample": "晶体管可用于放大信号或作为开关。",
       "sourceIds": ["interview-terminology-ref-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateLevel": null,
+      "certificateStatus": "unclassified"
     },
     {
       "id": "iv-zh-0007",
@@ -158,7 +170,7 @@
       "explanationVi": "Nhiều linh kiện tích hợp trên một chip.",
       "example": "这个集成电路包含许多晶体管。",
       "exampleVi": "Mạch tích hợp này chứa nhiều tranzito.",
-      "level": "Trung bình",
+      "level": "Chưa phân loại",
       "topic": "B. Điện tử cơ bản",
       "tags": ["electronics"],
       "isInterviewVocabulary": true,
@@ -166,7 +178,9 @@
       "interviewQuestion": "IC là gì?",
       "interviewAnswerSample": "集成电路把许多元件集成在一块芯片上。",
       "sourceIds": ["interview-terminology-ref-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateLevel": null,
+      "certificateStatus": "unclassified"
     },
     {
       "id": "iv-zh-0008",
@@ -180,7 +194,7 @@
       "explanationVi": "Số chu kỳ trong một giây, đo bằng héc.",
       "example": "信号频率是二点四吉赫。",
       "exampleVi": "Tần số tín hiệu là 2,4 GHz.",
-      "level": "Cơ bản",
+      "level": "HSK 6",
       "topic": "E. Viễn thông và mạng",
       "tags": ["rf"],
       "isInterviewVocabulary": true,
@@ -188,7 +202,10 @@
       "interviewQuestion": "Tần số là gì?",
       "interviewAnswerSample": "频率是每秒的周期数，单位是赫兹。",
       "sourceIds": ["interview-terminology-ref-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 6",
+      "certificateStatus": "official"
     },
     {
       "id": "iv-zh-0009",
@@ -202,7 +219,7 @@
       "explanationVi": "Thiết bị phát và thu sóng điện từ.",
       "example": "天线发射无线信号。",
       "exampleVi": "Ăng-ten phát tín hiệu vô tuyến.",
-      "level": "Cơ bản",
+      "level": "HSK 6",
       "topic": "E. Viễn thông và mạng",
       "tags": ["rf"],
       "isInterviewVocabulary": true,
@@ -210,7 +227,10 @@
       "interviewQuestion": "Ăng-ten có vai trò gì?",
       "interviewAnswerSample": "天线把电信号转换为无线电波。",
       "sourceIds": ["interview-terminology-ref-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 6",
+      "certificateStatus": "official"
     },
     {
       "id": "iv-zh-0010",
@@ -224,7 +244,7 @@
       "explanationVi": "Lượng dữ liệu truyền trong một đơn vị thời gian.",
       "example": "这条链路带宽有限。",
       "exampleVi": "Đường truyền này có băng thông hạn chế.",
-      "level": "Trung bình",
+      "level": "Chưa phân loại",
       "topic": "E. Viễn thông và mạng",
       "tags": ["network"],
       "isInterviewVocabulary": true,
@@ -232,7 +252,9 @@
       "interviewQuestion": "Băng thông là gì?",
       "interviewAnswerSample": "带宽是单位时间内能传输的数据量。",
       "sourceIds": ["interview-terminology-ref-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateLevel": null,
+      "certificateStatus": "unclassified"
     },
     {
       "id": "iv-zh-0011",
@@ -246,7 +268,7 @@
       "explanationVi": "Tập quy tắc để thiết bị trao đổi dữ liệu.",
       "example": "TCP 是一种可靠的传输协议。",
       "exampleVi": "TCP là giao thức truyền tải tin cậy.",
-      "level": "Trung bình",
+      "level": "HSK 5",
       "topic": "E. Viễn thông và mạng",
       "tags": ["network"],
       "isInterviewVocabulary": true,
@@ -254,7 +276,10 @@
       "interviewQuestion": "Giao thức mạng là gì?",
       "interviewAnswerSample": "协议是设备之间交换数据的规则集合。",
       "sourceIds": ["interview-terminology-ref-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "HSK-3.0",
+      "certificateLevel": "HSK 5",
+      "certificateStatus": "official"
     },
     {
       "id": "iv-zh-0012",
@@ -268,7 +293,7 @@
       "explanationVi": "Điều chỉnh thiết bị đo theo chuẩn.",
       "example": "仪器每年需要校准一次。",
       "exampleVi": "Thiết bị cần hiệu chuẩn mỗi năm một lần.",
-      "level": "Trung bình",
+      "level": "Chưa phân loại",
       "topic": "C. Đo lường, kiểm thử và chất lượng",
       "tags": ["quality"],
       "isInterviewVocabulary": true,
@@ -276,7 +301,9 @@
       "interviewQuestion": "Vì sao cần hiệu chuẩn?",
       "interviewAnswerSample": "校准使测量保持准确并可追溯。",
       "sourceIds": ["interview-terminology-ref-zh"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateLevel": null,
+      "certificateStatus": "unclassified"
     }
   ]
 }

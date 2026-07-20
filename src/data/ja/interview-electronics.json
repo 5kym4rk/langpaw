@@ -26,7 +26,7 @@
       "explanationVi": "Chênh lệch điện thế giữa hai điểm.",
       "example": "抵抗の両端の電圧を測ってください。",
       "exampleVi": "Hãy đo điện áp trên điện trở.",
-      "level": "Cơ bản",
+      "level": "Chưa phân loại",
       "topic": "B. Điện tử cơ bản",
       "tags": ["electronics"],
       "isInterviewVocabulary": true,
@@ -34,7 +34,9 @@
       "interviewQuestion": "Điện áp là gì?",
       "interviewAnswerSample": "電圧は電流を流す電位差です。",
       "sourceIds": ["interview-terminology-ref-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateLevel": null,
+      "certificateStatus": "unclassified"
     },
     {
       "id": "iv-ja-0002",
@@ -48,7 +50,7 @@
       "explanationVi": "Dòng chuyển động của điện tích.",
       "example": "この導線の電流は二アンペアです。",
       "exampleVi": "Dòng điện qua dây này là 2 ampe.",
-      "level": "Cơ bản",
+      "level": "N2",
       "topic": "B. Điện tử cơ bản",
       "tags": ["electronics"],
       "isInterviewVocabulary": true,
@@ -56,7 +58,10 @@
       "interviewQuestion": "Đo dòng điện thế nào?",
       "interviewAnswerSample": "電流計を直列につないで電流を測ります。",
       "sourceIds": ["interview-terminology-ref-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "JLPT-REFERENCE",
+      "certificateLevel": "N2",
+      "certificateStatus": "reference"
     },
     {
       "id": "iv-ja-0003",
@@ -70,7 +75,7 @@
       "explanationVi": "Mức cản trở dòng điện.",
       "example": "抵抗が大きいほど電流は小さくなります。",
       "exampleVi": "Điện trở càng lớn, dòng điện càng nhỏ.",
-      "level": "Cơ bản",
+      "level": "N3",
       "topic": "B. Điện tử cơ bản",
       "tags": ["electronics"],
       "isInterviewVocabulary": true,
@@ -78,7 +83,10 @@
       "interviewQuestion": "Định luật Ohm là gì?",
       "interviewAnswerSample": "オームの法則では、電圧は電流かける抵抗です。",
       "sourceIds": ["interview-terminology-ref-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "JLPT-REFERENCE",
+      "certificateLevel": "N3",
+      "certificateStatus": "reference"
     },
     {
       "id": "iv-ja-0004",
@@ -92,7 +100,7 @@
       "explanationVi": "Khả năng tích trữ điện tích của tụ điện.",
       "example": "コンデンサは出力電圧を安定させます。",
       "exampleVi": "Tụ điện giúp ổn định điện áp đầu ra.",
-      "level": "Trung bình",
+      "level": "Chưa phân loại",
       "topic": "B. Điện tử cơ bản",
       "tags": ["electronics"],
       "isInterviewVocabulary": true,
@@ -100,7 +108,9 @@
       "interviewQuestion": "Tụ điện dùng để làm gì?",
       "interviewAnswerSample": "コンデンサは電荷を蓄え、電源のリップルを除去します。",
       "sourceIds": ["interview-terminology-ref-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateLevel": null,
+      "certificateStatus": "unclassified"
     },
     {
       "id": "iv-ja-0005",
@@ -114,7 +124,7 @@
       "explanationVi": "Linh kiện chỉ cho dòng đi qua một chiều.",
       "example": "ダイオードは逆電流を防ぎます。",
       "exampleVi": "Điốt chặn dòng điện ngược.",
-      "level": "Cơ bản",
+      "level": "Chưa phân loại",
       "topic": "B. Điện tử cơ bản",
       "tags": ["electronics", "component"],
       "isInterviewVocabulary": true,
@@ -122,7 +132,9 @@
       "interviewQuestion": "Điốt hoạt động thế nào?",
       "interviewAnswerSample": "ダイオードは電流を一方向にだけ流します。",
       "sourceIds": ["interview-terminology-ref-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateLevel": null,
+      "certificateStatus": "unclassified"
     },
     {
       "id": "iv-ja-0006",
@@ -136,7 +148,7 @@
       "explanationVi": "Linh kiện bán dẫn khuếch đại hoặc chuyển mạch.",
       "example": "トランジスタは信号を増幅できます。",
       "exampleVi": "Tranzito có thể khuếch đại tín hiệu.",
-      "level": "Trung bình",
+      "level": "Chưa phân loại",
       "topic": "B. Điện tử cơ bản",
       "tags": ["electronics", "component"],
       "isInterviewVocabulary": true,
@@ -144,7 +156,9 @@
       "interviewQuestion": "Tranzito có công dụng gì?",
       "interviewAnswerSample": "トランジスタは信号の増幅やスイッチに使えます。",
       "sourceIds": ["interview-terminology-ref-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateLevel": null,
+      "certificateStatus": "unclassified"
     },
     {
       "id": "iv-ja-0007",
@@ -158,7 +172,7 @@
       "explanationVi": "Nhiều linh kiện tích hợp trên một chip.",
       "example": "この集積回路は多くのトランジスタを含みます。",
       "exampleVi": "Mạch tích hợp này chứa nhiều tranzito.",
-      "level": "Trung bình",
+      "level": "Chưa phân loại",
       "topic": "B. Điện tử cơ bản",
       "tags": ["electronics"],
       "isInterviewVocabulary": true,
@@ -166,7 +180,9 @@
       "interviewQuestion": "IC là gì?",
       "interviewAnswerSample": "集積回路は多くの素子を一つのチップにまとめたものです。",
       "sourceIds": ["interview-terminology-ref-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateLevel": null,
+      "certificateStatus": "unclassified"
     },
     {
       "id": "iv-ja-0008",
@@ -180,7 +196,7 @@
       "explanationVi": "Số chu kỳ trong một giây.",
       "example": "信号の周波数は二点四ギガヘルツです。",
       "exampleVi": "Tần số tín hiệu là 2,4 GHz.",
-      "level": "Cơ bản",
+      "level": "Chưa phân loại",
       "topic": "E. Viễn thông và mạng",
       "tags": ["rf"],
       "isInterviewVocabulary": true,
@@ -188,7 +204,9 @@
       "interviewQuestion": "Tần số là gì?",
       "interviewAnswerSample": "周波数は一秒あたりの周期の数で、単位はヘルツです。",
       "sourceIds": ["interview-terminology-ref-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateLevel": null,
+      "certificateStatus": "unclassified"
     },
     {
       "id": "iv-ja-0009",
@@ -202,7 +220,7 @@
       "explanationVi": "Thiết bị phát và thu sóng điện từ.",
       "example": "アンテナは無線信号を送信します。",
       "exampleVi": "Ăng-ten phát tín hiệu vô tuyến.",
-      "level": "Cơ bản",
+      "level": "N2",
       "topic": "E. Viễn thông và mạng",
       "tags": ["rf"],
       "isInterviewVocabulary": true,
@@ -210,7 +228,10 @@
       "interviewQuestion": "Ăng-ten có vai trò gì?",
       "interviewAnswerSample": "アンテナは電気信号を電波に変換します。",
       "sourceIds": ["interview-terminology-ref-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "JLPT-REFERENCE",
+      "certificateLevel": "N2",
+      "certificateStatus": "reference"
     },
     {
       "id": "iv-ja-0010",
@@ -224,7 +245,7 @@
       "explanationVi": "Lượng dữ liệu truyền trong một đơn vị thời gian.",
       "example": "この回線の帯域幅は限られています。",
       "exampleVi": "Đường truyền này có băng thông hạn chế.",
-      "level": "Trung bình",
+      "level": "Chưa phân loại",
       "topic": "E. Viễn thông và mạng",
       "tags": ["network"],
       "isInterviewVocabulary": true,
@@ -232,7 +253,9 @@
       "interviewQuestion": "Băng thông là gì?",
       "interviewAnswerSample": "帯域幅は単位時間に転送できるデータ量です。",
       "sourceIds": ["interview-terminology-ref-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateLevel": null,
+      "certificateStatus": "unclassified"
     },
     {
       "id": "iv-ja-0011",
@@ -246,7 +269,7 @@
       "explanationVi": "Tập quy tắc để thiết bị trao đổi dữ liệu.",
       "example": "TCP は信頼性のある通信プロトコルです。",
       "exampleVi": "TCP là giao thức truyền tải tin cậy.",
-      "level": "Trung bình",
+      "level": "Chưa phân loại",
       "topic": "E. Viễn thông và mạng",
       "tags": ["network"],
       "isInterviewVocabulary": true,
@@ -254,7 +277,9 @@
       "interviewQuestion": "Giao thức mạng là gì?",
       "interviewAnswerSample": "プロトコルは機器がデータを交換するための規則です。",
       "sourceIds": ["interview-terminology-ref-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateLevel": null,
+      "certificateStatus": "unclassified"
     },
     {
       "id": "iv-ja-0012",
@@ -268,7 +293,7 @@
       "explanationVi": "Điều chỉnh thiết bị đo theo chuẩn.",
       "example": "計器は毎年校正が必要です。",
       "exampleVi": "Thiết bị cần hiệu chuẩn mỗi năm.",
-      "level": "Trung bình",
+      "level": "Chưa phân loại",
       "topic": "C. Đo lường, kiểm thử và chất lượng",
       "tags": ["quality"],
       "isInterviewVocabulary": true,
@@ -276,7 +301,9 @@
       "interviewQuestion": "Vì sao cần hiệu chuẩn?",
       "interviewAnswerSample": "校正は測定を正確に保ち、トレーサビリティを確保します。",
       "sourceIds": ["interview-terminology-ref-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateLevel": null,
+      "certificateStatus": "unclassified"
     }
   ]
 }

@@ -28,19 +28,34 @@ import { useAutoLearn } from "./useAutoLearn";
 import { speechService } from "@/services/speech/speech-service";
 import { LANGUAGES } from "@/config/languages";
 import {
-  uniqueLevels,
-  uniqueTopics,
-  filterByReviewLevel,
+  filterVocabulary,
   REVIEW_LEVEL_LABELS,
   type ReviewLevel,
+  type VocabularyScope,
 } from "@/services/data/vocabulary-filters";
+import {
+  CERT_ROUTES,
+  filterByRoute,
+  levelOptions,
+  topicOptions,
+  type RouteKind,
+} from "@/services/certification/routes";
 import { cn } from "@/utils/cn";
 
-type Scope = "all" | "new" | "weak" | "favorite";
 type Phase = "setup" | "running" | "completed";
 type Outcome = "known" | "unknown" | "skipped";
 
-const SESSION_SIZES = [5, 10, 20, 30, 0] as const; // 0 = tất cả
+// Không có lựa chọn "Tất cả" (spec giao diện lộ trình chứng chỉ).
+const SESSION_SIZES = [5, 10, 15, 20, 30] as const;
+
+const SCOPE_OPTIONS: { id: VocabularyScope; label: string }[] = [
+  { id: "new", label: "Từ mới" },
+  { id: "due", label: "Đến hạn ôn" },
+  { id: "weak", label: "Từ yếu" },
+  { id: "favorite", label: "Yêu thích" },
+  { id: "learned", label: "Đã học" },
+  { id: "all", label: "Tất cả phù hợp" },
+];
 /** Trần số lần bỏ qua trong một phiên (§3.2 — giới hạn số lần bỏ qua). */
 const SKIP_LIMIT = 20;
 
@@ -81,13 +96,17 @@ export default function LearningPage() {
   } = useLearningStore();
 
   const [phase, setPhase] = useState<Phase>("setup");
+  // Thứ tự thiết lập bắt buộc: lộ trình → cấp độ → chủ đề → nhóm từ → số từ.
+  const [route, setRoute] = useState<RouteKind>("certificate");
   const [level, setLevel] = useState<string>("");
   const [topic, setTopic] = useState<string>("");
-  const [scope, setScope] = useState<Scope>("all");
+  const [scope, setScope] = useState<VocabularyScope>("all");
   const [reviewLevel, setReviewLevel] =
     useState<ReviewLevel>(contentReviewLevel);
   const [shuffleOrder, setShuffleOrder] = useState(false);
-  const [sessionSize, setSessionSize] = useState<number>(dailyGoal);
+  const [sessionSize, setSessionSize] = useState<number>(
+    (SESSION_SIZES as readonly number[]).includes(dailyGoal) ? dailyGoal : 20,
+  );
   const [flipped, setFlipped] = useState(false);
 
   // Kết quả từng thẻ trong phiên hiện tại (nguồn sự thật cho bộ đếm).
@@ -120,11 +139,40 @@ export default function LearningPage() {
     return () => speechService.cancel();
   }, [targetLanguage]);
 
-  const levels = useMemo(() => uniqueLevels(allItems), [allItems]);
-  const topics = useMemo(() => uniqueTopics(allItems), [allItems]);
+  // Menu phụ thuộc lựa chọn trước: route → cấp độ (từ certificate index) →
+  // chủ đề (chỉ trong tập đã lọc) → nhóm từ → số từ.
+  const certMeta = CERT_ROUTES[targetLanguage];
+  const routeItems = useMemo(
+    () => filterByRoute(allItems, route),
+    [allItems, route],
+  );
+  const certCount = useMemo(
+    () => filterByRoute(allItems, "certificate").length,
+    [allItems],
+  );
+  const lvlOpts = useMemo(
+    () => (route === "certificate" ? levelOptions(routeItems, certMeta) : []),
+    [route, routeItems, certMeta],
+  );
+  const afterLevel = useMemo(
+    () => (level ? routeItems.filter((i) => i.level === level) : routeItems),
+    [routeItems, level],
+  );
+  const topicOpts = useMemo(() => topicOptions(afterLevel), [afterLevel]);
   const reviewAvailable = useMemo(
-    () => filterByReviewLevel(allItems, reviewLevel).length,
-    [allItems, reviewLevel],
+    () =>
+      filterVocabulary(
+        allItems,
+        {
+          route,
+          level: level || undefined,
+          topic: topic || undefined,
+          scope,
+          reviewLevel,
+        },
+        progressMap,
+      ).length,
+    [allItems, route, level, topic, scope, reviewLevel, progressMap],
   );
 
   const current = sessionItems[currentIndex];
@@ -154,12 +202,13 @@ export default function LearningPage() {
 
   const begin = () => {
     startSession({
+      route,
       level: level || undefined,
       topic: topic || undefined,
       scope,
       reviewLevel,
       shuffleOrder,
-      sessionSize: sessionSize || undefined,
+      sessionSize,
     });
     resetCounters();
     setPhase("running");
@@ -343,89 +392,149 @@ export default function LearningPage() {
           title="Học từ"
           subtitle={`${lang.labelVi} · ${allItems.length} từ trong bộ`}
         />
-        <div className="glass mb-6 flex flex-wrap items-end gap-3 rounded-xl2 p-4">
-          <Field label="Cấp độ">
-            <select
-              value={level}
-              onChange={(e) => setLevel(e.target.value)}
-              className="rounded-lg bg-night px-3 py-2 text-sm text-ivory"
-            >
-              <option value="">Tất cả</option>
-              {levels.map((l) => (
-                <option key={l} value={l}>
-                  {l}
-                </option>
-              ))}
-            </select>
+        <div className="glass mb-6 flex flex-col gap-4 rounded-xl2 p-4">
+          {/* 1. Lộ trình */}
+          <Field label="1. Lộ trình">
+            <div className="flex flex-wrap gap-2">
+              <button
+                type="button"
+                aria-pressed={route === "certificate"}
+                onClick={() => {
+                  setRoute("certificate");
+                  setLevel("");
+                  setTopic("");
+                }}
+                className={cn(
+                  "rounded-full px-4 py-2 text-sm font-medium",
+                  route === "certificate"
+                    ? "bg-corgi text-night"
+                    : "glass text-ivory/80",
+                )}
+              >
+                {certMeta.labelVi} ({certCount})
+              </button>
+              <button
+                type="button"
+                aria-pressed={route === "dictionary"}
+                onClick={() => {
+                  setRoute("dictionary");
+                  setLevel("");
+                  setTopic("");
+                }}
+                className={cn(
+                  "rounded-full px-4 py-2 text-sm font-medium",
+                  route === "dictionary"
+                    ? "bg-corgi text-night"
+                    : "glass text-ivory/80",
+                )}
+              >
+                Kho từ điển ({allItems.length - certCount})
+              </button>
+            </div>
+            {route === "certificate" && certMeta.noteVi ? (
+              <p className="mt-1 text-xs text-ivory/40">{certMeta.noteVi}</p>
+            ) : null}
           </Field>
-          <Field label="Chủ đề">
-            <select
-              value={topic}
-              onChange={(e) => setTopic(e.target.value)}
-              className="rounded-lg bg-night px-3 py-2 text-sm text-ivory"
+
+          <div className="flex flex-wrap items-end gap-3">
+            {/* 2. Cấp độ (chỉ có với lộ trình chứng chỉ) */}
+            {route === "certificate" ? (
+              <Field label="2. Cấp độ">
+                <select
+                  value={level}
+                  onChange={(e) => {
+                    setLevel(e.target.value);
+                    setTopic("");
+                  }}
+                  className="rounded-lg bg-night px-3 py-2 text-sm text-ivory"
+                >
+                  <option value="">Tất cả cấp ({routeItems.length})</option>
+                  {lvlOpts.map((o) => (
+                    <option key={o.value} value={o.value}>
+                      {o.value} ({o.count})
+                    </option>
+                  ))}
+                </select>
+              </Field>
+            ) : null}
+            {/* 3. Chủ đề — chỉ các chủ đề có trong tập đã lọc, kèm số lượng */}
+            <Field label={route === "certificate" ? "3. Chủ đề" : "2. Chủ đề"}>
+              <select
+                value={topic}
+                onChange={(e) => setTopic(e.target.value)}
+                className="rounded-lg bg-night px-3 py-2 text-sm text-ivory"
+              >
+                <option value="">Tất cả chủ đề</option>
+                {topicOpts.map((o) => (
+                  <option key={o.value} value={o.value}>
+                    {o.value} ({o.count})
+                  </option>
+                ))}
+              </select>
+            </Field>
+            {/* 4. Nhóm từ */}
+            <Field
+              label={route === "certificate" ? "4. Nhóm từ" : "3. Nhóm từ"}
             >
-              <option value="">Tất cả</option>
-              {topics.map((t) => (
-                <option key={t} value={t}>
-                  {t}
-                </option>
-              ))}
-            </select>
-          </Field>
-          <Field label="Nhóm từ">
-            <select
-              value={scope}
-              onChange={(e) => setScope(e.target.value as Scope)}
-              className="rounded-lg bg-night px-3 py-2 text-sm text-ivory"
+              <select
+                value={scope}
+                onChange={(e) => setScope(e.target.value as VocabularyScope)}
+                className="rounded-lg bg-night px-3 py-2 text-sm text-ivory"
+              >
+                {SCOPE_OPTIONS.map((o) => (
+                  <option key={o.id} value={o.id}>
+                    {o.label}
+                  </option>
+                ))}
+              </select>
+            </Field>
+            {/* 5. Số từ */}
+            <Field label={route === "certificate" ? "5. Số từ" : "4. Số từ"}>
+              <select
+                value={sessionSize}
+                onChange={(e) => setSessionSize(Number(e.target.value))}
+                className="rounded-lg bg-night px-3 py-2 text-sm text-ivory"
+              >
+                {SESSION_SIZES.map((n) => (
+                  <option key={n} value={n}>
+                    {n}
+                  </option>
+                ))}
+              </select>
+            </Field>
+            <Field label="Nguồn">
+              <select
+                value={reviewLevel}
+                onChange={(e) => setReviewLevel(e.target.value as ReviewLevel)}
+                className="rounded-lg bg-night px-3 py-2 text-sm text-ivory"
+              >
+                {(["all", "reviewed", "verified"] as ReviewLevel[]).map(
+                  (lv) => (
+                    <option key={lv} value={lv}>
+                      {REVIEW_LEVEL_LABELS[lv]}
+                    </option>
+                  ),
+                )}
+              </select>
+            </Field>
+            <label className="flex items-center gap-2 text-sm text-ivory/80">
+              <input
+                type="checkbox"
+                checked={shuffleOrder}
+                onChange={(e) => setShuffleOrder(e.target.checked)}
+              />
+              Ngẫu nhiên
+            </label>
+            {/* 6. Bắt đầu học */}
+            <button
+              type="button"
+              onClick={begin}
+              disabled={reviewAvailable === 0}
+              className="ml-auto rounded-full bg-corgi px-5 py-2 font-medium text-night disabled:opacity-40"
             >
-              <option value="all">Tất cả</option>
-              <option value="new">Từ mới</option>
-              <option value="weak">Từ yếu</option>
-              <option value="favorite">Yêu thích</option>
-            </select>
-          </Field>
-          <Field label="Số từ/phiên">
-            <select
-              value={sessionSize}
-              onChange={(e) => setSessionSize(Number(e.target.value))}
-              className="rounded-lg bg-night px-3 py-2 text-sm text-ivory"
-            >
-              {SESSION_SIZES.map((n) => (
-                <option key={n} value={n}>
-                  {n === 0 ? "Tất cả" : n}
-                </option>
-              ))}
-            </select>
-          </Field>
-          <Field label="Nguồn">
-            <select
-              value={reviewLevel}
-              onChange={(e) => setReviewLevel(e.target.value as ReviewLevel)}
-              className="rounded-lg bg-night px-3 py-2 text-sm text-ivory"
-            >
-              {(["all", "reviewed", "verified"] as ReviewLevel[]).map((lv) => (
-                <option key={lv} value={lv}>
-                  {REVIEW_LEVEL_LABELS[lv]}
-                </option>
-              ))}
-            </select>
-          </Field>
-          <label className="flex items-center gap-2 text-sm text-ivory/80">
-            <input
-              type="checkbox"
-              checked={shuffleOrder}
-              onChange={(e) => setShuffleOrder(e.target.checked)}
-            />
-            Ngẫu nhiên
-          </label>
-          <button
-            type="button"
-            onClick={begin}
-            disabled={reviewAvailable === 0}
-            className="ml-auto rounded-full bg-corgi px-5 py-2 font-medium text-night disabled:opacity-40"
-          >
-            Bắt đầu học
-          </button>
+              Bắt đầu học ({Math.min(reviewAvailable, sessionSize)})
+            </button>
+          </div>
         </div>
         {reviewLevel !== "all" && reviewAvailable === 0 ? (
           <EmptyState

@@ -25,7 +25,7 @@
       "explanationVi": "Chênh lệch điện thế giữa hai điểm.",
       "example": "저항 양단의 전압을 측정하세요.",
       "exampleVi": "Hãy đo điện áp trên điện trở.",
-      "level": "Cơ bản",
+      "level": "C",
       "topic": "B. Điện tử cơ bản",
       "tags": ["electronics"],
       "isInterviewVocabulary": true,
@@ -33,7 +33,10 @@
       "interviewQuestion": "Điện áp là gì?",
       "interviewAnswerSample": "전압은 전류를 흐르게 하는 전위차입니다.",
       "sourceIds": ["interview-terminology-ref-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "NIKL-LEARNING",
+      "certificateLevel": "C",
+      "certificateStatus": "reference"
     },
     {
       "id": "iv-ko-0002",
@@ -46,7 +49,7 @@
       "explanationVi": "Dòng chuyển động của điện tích.",
       "example": "이 전선의 전류는 2암페어입니다.",
       "exampleVi": "Dòng điện qua dây này là 2 ampe.",
-      "level": "Cơ bản",
+      "level": "C",
       "topic": "B. Điện tử cơ bản",
       "tags": ["electronics"],
       "isInterviewVocabulary": true,
@@ -54,7 +57,10 @@
       "interviewQuestion": "Đo dòng điện thế nào?",
       "interviewAnswerSample": "전류계를 회로에 직렬로 연결해 전류를 측정합니다.",
       "sourceIds": ["interview-terminology-ref-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "NIKL-LEARNING",
+      "certificateLevel": "C",
+      "certificateStatus": "reference"
     },
     {
       "id": "iv-ko-0003",
@@ -67,7 +73,7 @@
       "explanationVi": "Mức cản trở dòng điện.",
       "example": "저항이 클수록 전류는 작아집니다.",
       "exampleVi": "Điện trở càng lớn, dòng điện càng nhỏ.",
-      "level": "Cơ bản",
+      "level": "C",
       "topic": "B. Điện tử cơ bản",
       "tags": ["electronics"],
       "isInterviewVocabulary": true,
@@ -75,7 +81,10 @@
       "interviewQuestion": "Định luật Ohm là gì?",
       "interviewAnswerSample": "옴의 법칙에서 전압은 전류 곱하기 저항입니다.",
       "sourceIds": ["interview-terminology-ref-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "NIKL-LEARNING",
+      "certificateLevel": "C",
+      "certificateStatus": "reference"
     },
     {
       "id": "iv-ko-0004",
@@ -88,7 +97,7 @@
       "explanationVi": "Khả năng tích trữ điện tích của tụ điện.",
       "example": "커패시터는 출력 전압을 안정시킵니다.",
       "exampleVi": "Tụ điện giúp ổn định điện áp đầu ra.",
-      "level": "Trung bình",
+      "level": "Chưa phân loại",
       "topic": "B. Điện tử cơ bản",
       "tags": ["electronics"],
       "isInterviewVocabulary": true,
@@ -96,7 +105,9 @@
       "interviewQuestion": "Tụ điện dùng để làm gì?",
       "interviewAnswerSample": "커패시터는 전하를 저장하고 전원 리플을 제거합니다.",
       "sourceIds": ["interview-terminology-ref-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateLevel": null,
+      "certificateStatus": "unclassified"
     },
     {
       "id": "iv-ko-0005",
@@ -109,7 +120,7 @@
       "explanationVi": "Linh kiện chỉ cho dòng đi qua một chiều.",
       "example": "다이오드는 역전류를 막습니다.",
       "exampleVi": "Điốt chặn dòng điện ngược.",
-      "level": "Cơ bản",
+      "level": "Chưa phân loại",
       "topic": "B. Điện tử cơ bản",
       "tags": ["electronics", "component"],
       "isInterviewVocabulary": true,
@@ -117,7 +128,9 @@
       "interviewQuestion": "Điốt hoạt động thế nào?",
       "interviewAnswerSample": "다이오드는 전류를 한 방향으로만 흐르게 합니다.",
       "sourceIds": ["interview-terminology-ref-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateLevel": null,
+      "certificateStatus": "unclassified"
     },
     {
       "id": "iv-ko-0006",
@@ -130,7 +143,7 @@
       "explanationVi": "Linh kiện bán dẫn khuếch đại hoặc chuyển mạch.",
       "example": "트랜지스터는 신호를 증폭할 수 있습니다.",
       "exampleVi": "Tranzito có thể khuếch đại tín hiệu.",
-      "level": "Trung bình",
+      "level": "Chưa phân loại",
       "topic": "B. Điện tử cơ bản",
       "tags": ["electronics", "component"],
       "isInterviewVocabulary": true,
@@ -138,7 +151,9 @@
       "interviewQuestion": "Tranzito có công dụng gì?",
       "interviewAnswerSample": "트랜지스터는 신호 증폭이나 스위치로 사용됩니다.",
       "sourceIds": ["interview-terminology-ref-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateLevel": null,
+      "certificateStatus": "unclassified"
     },
     {
       "id": "iv-ko-0007",
@@ -151,7 +166,7 @@
       "explanationVi": "Nhiều linh kiện tích hợp trên một chip.",
       "example": "이 집적회로에는 많은 트랜지스터가 있습니다.",
       "exampleVi": "Mạch tích hợp này chứa nhiều tranzito.",
-      "level": "Trung bình",
+      "level": "Chưa phân loại",
       "topic": "B. Điện tử cơ bản",
       "tags": ["electronics"],
       "isInterviewVocabulary": true,
@@ -159,7 +174,9 @@
       "interviewQuestion": "IC là gì?",
       "interviewAnswerSample": "집적회로는 여러 소자를 하나의 칩에 통합한 것입니다.",
       "sourceIds": ["interview-terminology-ref-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateLevel": null,
+      "certificateStatus": "unclassified"
     },
     {
       "id": "iv-ko-0008",
@@ -172,7 +189,7 @@
       "explanationVi": "Số chu kỳ trong một giây.",
       "example": "신호 주파수는 2.4기가헤르츠입니다.",
       "exampleVi": "Tần số tín hiệu là 2,4 GHz.",
-      "level": "Cơ bản",
+      "level": "C",
       "topic": "E. Viễn thông và mạng",
       "tags": ["rf"],
       "isInterviewVocabulary": true,
@@ -180,7 +197,10 @@
       "interviewQuestion": "Tần số là gì?",
       "interviewAnswerSample": "주파수는 초당 주기 수이며 단위는 헤르츠입니다.",
       "sourceIds": ["interview-terminology-ref-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "NIKL-LEARNING",
+      "certificateLevel": "C",
+      "certificateStatus": "reference"
     },
     {
       "id": "iv-ko-0009",
@@ -193,7 +213,7 @@
       "explanationVi": "Thiết bị phát và thu sóng điện từ.",
       "example": "안테나는 무선 신호를 송신합니다.",
       "exampleVi": "Ăng-ten phát tín hiệu vô tuyến.",
-      "level": "Cơ bản",
+      "level": "B",
       "topic": "E. Viễn thông và mạng",
       "tags": ["rf"],
       "isInterviewVocabulary": true,
@@ -201,7 +221,10 @@
       "interviewQuestion": "Ăng-ten có vai trò gì?",
       "interviewAnswerSample": "안테나는 전기 신호를 전파로 변환합니다.",
       "sourceIds": ["interview-terminology-ref-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "NIKL-LEARNING",
+      "certificateLevel": "B",
+      "certificateStatus": "reference"
     },
     {
       "id": "iv-ko-0010",
@@ -214,7 +237,7 @@
       "explanationVi": "Lượng dữ liệu truyền trong một đơn vị thời gian.",
       "example": "이 회선은 대역폭이 제한적입니다.",
       "exampleVi": "Đường truyền này có băng thông hạn chế.",
-      "level": "Trung bình",
+      "level": "Chưa phân loại",
       "topic": "E. Viễn thông và mạng",
       "tags": ["network"],
       "isInterviewVocabulary": true,
@@ -222,7 +245,9 @@
       "interviewQuestion": "Băng thông là gì?",
       "interviewAnswerSample": "대역폭은 단위 시간에 전송할 수 있는 데이터 양입니다.",
       "sourceIds": ["interview-terminology-ref-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateLevel": null,
+      "certificateStatus": "unclassified"
     },
     {
       "id": "iv-ko-0011",
@@ -235,7 +260,7 @@
       "explanationVi": "Tập quy tắc để thiết bị trao đổi dữ liệu.",
       "example": "TCP는 신뢰할 수 있는 전송 프로토콜입니다.",
       "exampleVi": "TCP là giao thức truyền tải tin cậy.",
-      "level": "Trung bình",
+      "level": "Chưa phân loại",
       "topic": "E. Viễn thông và mạng",
       "tags": ["network"],
       "isInterviewVocabulary": true,
@@ -243,7 +268,9 @@
       "interviewQuestion": "Giao thức mạng là gì?",
       "interviewAnswerSample": "프로토콜은 기기가 데이터를 교환하기 위한 규칙입니다.",
       "sourceIds": ["interview-terminology-ref-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateLevel": null,
+      "certificateStatus": "unclassified"
     },
     {
       "id": "iv-ko-0012",
@@ -256,7 +283,7 @@
       "explanationVi": "Điều chỉnh thiết bị đo theo chuẩn.",
       "example": "계측기는 매년 교정이 필요합니다.",
       "exampleVi": "Thiết bị cần hiệu chuẩn mỗi năm.",
-      "level": "Trung bình",
+      "level": "C",
       "topic": "C. Đo lường, kiểm thử và chất lượng",
       "tags": ["quality"],
       "isInterviewVocabulary": true,
@@ -264,7 +291,10 @@
       "interviewQuestion": "Vì sao cần hiệu chuẩn?",
       "interviewAnswerSample": "교정은 측정을 정확하게 유지하고 추적성을 보장합니다.",
       "sourceIds": ["interview-terminology-ref-ko"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "NIKL-LEARNING",
+      "certificateLevel": "C",
+      "certificateStatus": "reference"
     }
   ]
 }

@@ -24,13 +24,16 @@
       "meaningVi": "xin chào",
       "example": "こんにちは、お元気ですか。",
       "exampleVi": "Xin chào, bạn khỏe không?",
-      "level": "JF-A1",
+      "level": "N3",
       "syllabusVersion": "JF-Standard",
       "topic": "Chào hỏi",
       "tags": ["greeting"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "JLPT-REFERENCE",
+      "certificateLevel": "N3",
+      "certificateStatus": "reference"
     },
     {
       "id": "ja-0002",
@@ -42,13 +45,16 @@
       "meaningVi": "tạm biệt",
       "example": "さようなら、また明日。",
       "exampleVi": "Tạm biệt, hẹn gặp lại ngày mai.",
-      "level": "JF-A1",
+      "level": "N2",
       "syllabusVersion": "JF-Standard",
       "topic": "Chào hỏi",
       "tags": ["greeting"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "JLPT-REFERENCE",
+      "certificateLevel": "N2",
+      "certificateStatus": "reference"
     },
     {
       "id": "ja-0003",
@@ -60,13 +66,16 @@
       "meaningVi": "cảm ơn",
       "example": "手伝ってくれてありがとう。",
       "exampleVi": "Cảm ơn vì đã giúp đỡ.",
-      "level": "JF-A1",
+      "level": "N3",
       "syllabusVersion": "JF-Standard",
       "topic": "Chào hỏi",
       "tags": ["greeting", "polite"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "JLPT-REFERENCE",
+      "certificateLevel": "N3",
+      "certificateStatus": "reference"
     },
     {
       "id": "ja-0004",
@@ -78,13 +87,16 @@
       "meaningVi": "làm ơn, xin nhờ",
       "example": "お水をお願いします。",
       "exampleVi": "Làm ơn cho tôi nước.",
-      "level": "JF-A1",
+      "level": "N2",
       "syllabusVersion": "JF-Standard",
       "topic": "Chào hỏi",
       "tags": ["polite"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "JLPT-REFERENCE",
+      "certificateLevel": "N2",
+      "certificateStatus": "reference"
     },
     {
       "id": "ja-0005",
@@ -96,13 +108,15 @@
       "meaningVi": "xin lỗi",
       "example": "すみません、遅れました。",
       "exampleVi": "Xin lỗi, tôi đến muộn.",
-      "level": "JF-A1",
+      "level": "Chưa phân loại",
       "syllabusVersion": "JF-Standard",
       "topic": "Chào hỏi",
       "tags": ["polite"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateLevel": null,
+      "certificateStatus": "unclassified"
     },
     {
       "id": "ja-0006",
@@ -114,13 +128,16 @@
       "meaningVi": "mẹ (tôi)",
       "example": "母は先生です。",
       "exampleVi": "Mẹ tôi là giáo viên.",
-      "level": "JF-A1",
+      "level": "N5",
       "syllabusVersion": "JF-Standard",
       "topic": "Gia đình",
       "tags": ["family"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "JLPT-REFERENCE",
+      "certificateLevel": "N5",
+      "certificateStatus": "reference"
     },
     {
       "id": "ja-0007",
@@ -132,13 +149,16 @@
       "meaningVi": "bố (tôi)",
       "example": "父は工場で働いています。",
       "exampleVi": "Bố tôi làm việc ở nhà máy.",
-      "level": "JF-A1",
+      "level": "N5",
       "syllabusVersion": "JF-Standard",
       "topic": "Gia đình",
       "tags": ["family"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "JLPT-REFERENCE",
+      "certificateLevel": "N5",
+      "certificateStatus": "reference"
     },
     {
       "id": "ja-0008",
@@ -150,13 +170,16 @@
       "meaningVi": "anh trai (tôi)",
       "example": "兄が一人います。",
       "exampleVi": "Tôi có một anh trai.",
-      "level": "JF-A1",
+      "level": "N5",
       "syllabusVersion": "JF-Standard",
       "topic": "Gia đình",
       "tags": ["family"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "JLPT-REFERENCE",
+      "certificateLevel": "N5",
+      "certificateStatus": "reference"
     },
     {
       "id": "ja-0009",
@@ -168,13 +191,16 @@
       "meaningVi": "chị gái (tôi)",
       "example": "姉は音楽が好きです。",
       "exampleVi": "Chị tôi thích âm nhạc.",
-      "level": "JF-A1",
+      "level": "N5",
       "syllabusVersion": "JF-Standard",
       "topic": "Gia đình",
       "tags": ["family"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "JLPT-REFERENCE",
+      "certificateLevel": "N5",
+      "certificateStatus": "reference"
     },
     {
       "id": "ja-0010",
@@ -186,13 +212,16 @@
       "meaningVi": "bạn bè",
       "example": "彼女は私の親友です。",
       "exampleVi": "Cô ấy là bạn thân của tôi.",
-      "level": "JF-A1",
+      "level": "N5",
       "syllabusVersion": "JF-Standard",
       "topic": "Gia đình",
       "tags": ["people"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "JLPT-REFERENCE",
+      "certificateLevel": "N5",
+      "certificateStatus": "reference"
     },
     {
       "id": "ja-0011",
@@ -204,13 +233,16 @@
       "meaningVi": "trường học",
       "example": "学校は家の近くです。",
       "exampleVi": "Trường học gần nhà tôi.",
-      "level": "JF-A1",
+      "level": "N5",
       "syllabusVersion": "JF-Standard",
       "topic": "Trường học",
       "tags": ["education"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "JLPT-REFERENCE",
+      "certificateLevel": "N5",
+      "certificateStatus": "reference"
     },
     {
       "id": "ja-0012",
@@ -222,13 +254,16 @@
       "meaningVi": "giáo viên",
       "example": "先生が授業をしています。",
       "exampleVi": "Giáo viên đang giảng bài.",
-      "level": "JF-A1",
+      "level": "N5",
       "syllabusVersion": "JF-Standard",
       "topic": "Trường học",
       "tags": ["education"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "JLPT-REFERENCE",
+      "certificateLevel": "N5",
+      "certificateStatus": "reference"
     },
     {
       "id": "ja-0013",
@@ -240,13 +275,16 @@
       "meaningVi": "học sinh, sinh viên",
       "example": "彼はいい学生です。",
       "exampleVi": "Cậu ấy là một sinh viên giỏi.",
-      "level": "JF-A1",
+      "level": "N5",
       "syllabusVersion": "JF-Standard",
       "topic": "Trường học",
       "tags": ["education"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "JLPT-REFERENCE",
+      "certificateLevel": "N5",
+      "certificateStatus": "reference"
     },
     {
       "id": "ja-0014",
@@ -258,13 +296,16 @@
       "meaningVi": "quyển sách",
       "example": "毎晩本を読みます。",
       "exampleVi": "Tôi đọc sách mỗi tối.",
-      "level": "JF-A1",
+      "level": "N5",
       "syllabusVersion": "JF-Standard",
       "topic": "Trường học",
       "tags": ["education"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "JLPT-REFERENCE",
+      "certificateLevel": "N5",
+      "certificateStatus": "reference"
     },
     {
       "id": "ja-0015",
@@ -276,13 +317,15 @@
       "meaningVi": "học tập",
       "example": "日本語を勉強したいです。",
       "exampleVi": "Tôi muốn học tiếng Nhật.",
-      "level": "JF-A1",
+      "level": "Chưa phân loại",
       "syllabusVersion": "JF-Standard",
       "topic": "Trường học",
       "tags": ["education"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateLevel": null,
+      "certificateStatus": "unclassified"
     },
     {
       "id": "ja-0016",
@@ -294,13 +337,16 @@
       "meaningVi": "công việc",
       "example": "オフィスで仕事をします。",
       "exampleVi": "Tôi làm việc trong văn phòng.",
-      "level": "JF-A1",
+      "level": "N5",
       "syllabusVersion": "JF-Standard",
       "topic": "Công việc",
       "tags": ["job"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "JLPT-REFERENCE",
+      "certificateLevel": "N5",
+      "certificateStatus": "reference"
     },
     {
       "id": "ja-0017",
@@ -312,13 +358,16 @@
       "meaningVi": "công ty",
       "example": "この会社は電子製品を作ります。",
       "exampleVi": "Công ty này sản xuất sản phẩm điện tử.",
-      "level": "JF-A1",
+      "level": "N5",
       "syllabusVersion": "JF-Standard",
       "topic": "Công việc",
       "tags": ["job"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "JLPT-REFERENCE",
+      "certificateLevel": "N5",
+      "certificateStatus": "reference"
     },
     {
       "id": "ja-0018",
@@ -330,13 +379,16 @@
       "meaningVi": "tiền",
       "example": "少しお金が必要です。",
       "exampleVi": "Tôi cần một ít tiền.",
-      "level": "JF-A1",
+      "level": "N5",
       "syllabusVersion": "JF-Standard",
       "topic": "Công việc",
       "tags": ["finance"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "JLPT-REFERENCE",
+      "certificateLevel": "N5",
+      "certificateStatus": "reference"
     },
     {
       "id": "ja-0019",
@@ -348,13 +400,16 @@
       "meaningVi": "bận",
       "example": "今日は忙しいです。",
       "exampleVi": "Hôm nay tôi bận.",
-      "level": "JF-A1",
+      "level": "N5",
       "syllabusVersion": "JF-Standard",
       "topic": "Công việc",
       "tags": ["job"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "JLPT-REFERENCE",
+      "certificateLevel": "N5",
+      "certificateStatus": "reference"
     },
     {
       "id": "ja-0020",
@@ -366,13 +421,16 @@
       "meaningVi": "thời gian",
       "example": "今何時ですか。",
       "exampleVi": "Bây giờ là mấy giờ?",
-      "level": "JF-A1",
+      "level": "N5",
       "syllabusVersion": "JF-Standard",
       "topic": "Thời gian",
       "tags": ["time"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "JLPT-REFERENCE",
+      "certificateLevel": "N5",
+      "certificateStatus": "reference"
     },
     {
       "id": "ja-0021",
@@ -384,13 +442,16 @@
       "meaningVi": "hôm nay",
       "example": "今日は月曜日です。",
       "exampleVi": "Hôm nay là thứ Hai.",
-      "level": "JF-A1",
+      "level": "N5",
       "syllabusVersion": "JF-Standard",
       "topic": "Thời gian",
       "tags": ["time"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "JLPT-REFERENCE",
+      "certificateLevel": "N5",
+      "certificateStatus": "reference"
     },
     {
       "id": "ja-0022",
@@ -402,13 +463,16 @@
       "meaningVi": "ngày mai",
       "example": "また明日。",
       "exampleVi": "Hẹn gặp lại ngày mai.",
-      "level": "JF-A1",
+      "level": "N5",
       "syllabusVersion": "JF-Standard",
       "topic": "Thời gian",
       "tags": ["time"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "JLPT-REFERENCE",
+      "certificateLevel": "N5",
+      "certificateStatus": "reference"
     },
     {
       "id": "ja-0023",
@@ -420,13 +484,16 @@
       "meaningVi": "tuần",
       "example": "一週間は七日です。",
       "exampleVi": "Một tuần có bảy ngày.",
-      "level": "JF-A1",
+      "level": "N3",
       "syllabusVersion": "JF-Standard",
       "topic": "Thời gian",
       "tags": ["time"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "JLPT-REFERENCE",
+      "certificateLevel": "N3",
+      "certificateStatus": "reference"
     },
     {
       "id": "ja-0024",
@@ -438,13 +505,16 @@
       "meaningVi": "một",
       "example": "ペンが一本あります。",
       "exampleVi": "Tôi có một cây bút.",
-      "level": "JF-A1",
+      "level": "N5",
       "syllabusVersion": "JF-Standard",
       "topic": "Số đếm",
       "tags": ["number"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "JLPT-REFERENCE",
+      "certificateLevel": "N5",
+      "certificateStatus": "reference"
     },
     {
       "id": "ja-0025",
@@ -456,13 +526,16 @@
       "meaningVi": "hai",
       "example": "彼女は子供が二人います。",
       "exampleVi": "Cô ấy có hai con.",
-      "level": "JF-A1",
+      "level": "N5",
       "syllabusVersion": "JF-Standard",
       "topic": "Số đếm",
       "tags": ["number"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "JLPT-REFERENCE",
+      "certificateLevel": "N5",
+      "certificateStatus": "reference"
     },
     {
       "id": "ja-0026",
@@ -474,13 +547,16 @@
       "meaningVi": "ba",
       "example": "バスは三時に来ます。",
       "exampleVi": "Xe buýt đến lúc ba giờ.",
-      "level": "JF-A1",
+      "level": "N5",
       "syllabusVersion": "JF-Standard",
       "topic": "Số đếm",
       "tags": ["number"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "JLPT-REFERENCE",
+      "certificateLevel": "N5",
+      "certificateStatus": "reference"
     },
     {
       "id": "ja-0027",
@@ -492,13 +568,16 @@
       "meaningVi": "nước",
       "example": "水をもらえますか。",
       "exampleVi": "Cho tôi xin ít nước được không?",
-      "level": "JF-A1",
+      "level": "N5",
       "syllabusVersion": "JF-Standard",
       "topic": "Ăn uống",
       "tags": ["food"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "JLPT-REFERENCE",
+      "certificateLevel": "N5",
+      "certificateStatus": "reference"
     },
     {
       "id": "ja-0028",
@@ -510,13 +589,15 @@
       "meaningVi": "cơm, bữa ăn",
       "example": "ご飯の時間です。",
       "exampleVi": "Đến giờ ăn cơm rồi.",
-      "level": "JF-A1",
+      "level": "Chưa phân loại",
       "syllabusVersion": "JF-Standard",
       "topic": "Ăn uống",
       "tags": ["food"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateLevel": null,
+      "certificateStatus": "unclassified"
     },
     {
       "id": "ja-0029",
@@ -528,13 +609,16 @@
       "meaningVi": "thức ăn",
       "example": "この食べ物はおいしいです。",
       "exampleVi": "Món ăn này ngon.",
-      "level": "JF-A1",
+      "level": "N5",
       "syllabusVersion": "JF-Standard",
       "topic": "Ăn uống",
       "tags": ["food"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "JLPT-REFERENCE",
+      "certificateLevel": "N5",
+      "certificateStatus": "reference"
     },
     {
       "id": "ja-0030",
@@ -546,13 +630,16 @@
       "meaningVi": "cà phê",
       "example": "朝コーヒーを飲みます。",
       "exampleVi": "Tôi uống cà phê vào buổi sáng.",
-      "level": "JF-A1",
+      "level": "N5",
       "syllabusVersion": "JF-Standard",
       "topic": "Ăn uống",
       "tags": ["food"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "JLPT-REFERENCE",
+      "certificateLevel": "N5",
+      "certificateStatus": "reference"
     },
     {
       "id": "ja-0031",
@@ -564,13 +651,16 @@
       "meaningVi": "mua",
       "example": "携帯電話を買いたいです。",
       "exampleVi": "Tôi muốn mua một chiếc điện thoại.",
-      "level": "JF-A1",
+      "level": "N5",
       "syllabusVersion": "JF-Standard",
       "topic": "Mua sắm",
       "tags": ["shopping"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "JLPT-REFERENCE",
+      "certificateLevel": "N5",
+      "certificateStatus": "reference"
     },
     {
       "id": "ja-0032",
@@ -582,13 +672,16 @@
       "meaningVi": "giá cả",
       "example": "値段はいくらですか。",
       "exampleVi": "Giá bao nhiêu?",
-      "level": "JF-A1",
+      "level": "N4",
       "syllabusVersion": "JF-Standard",
       "topic": "Mua sắm",
       "tags": ["shopping"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "JLPT-REFERENCE",
+      "certificateLevel": "N4",
+      "certificateStatus": "reference"
     },
     {
       "id": "ja-0033",
@@ -600,13 +693,16 @@
       "meaningVi": "cửa hàng",
       "example": "店は開いています。",
       "exampleVi": "Cửa hàng đang mở cửa.",
-      "level": "JF-A1",
+      "level": "N5",
       "syllabusVersion": "JF-Standard",
       "topic": "Mua sắm",
       "tags": ["shopping"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "JLPT-REFERENCE",
+      "certificateLevel": "N5",
+      "certificateStatus": "reference"
     },
     {
       "id": "ja-0034",
@@ -618,13 +714,16 @@
       "meaningVi": "xe hơi",
       "example": "彼は車を運転します。",
       "exampleVi": "Anh ấy lái xe hơi.",
-      "level": "JF-A1",
+      "level": "N5",
       "syllabusVersion": "JF-Standard",
       "topic": "Giao thông",
       "tags": ["transport"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "JLPT-REFERENCE",
+      "certificateLevel": "N5",
+      "certificateStatus": "reference"
     },
     {
       "id": "ja-0035",
@@ -636,13 +735,16 @@
       "meaningVi": "xe buýt",
       "example": "バスで会社に行きます。",
       "exampleVi": "Tôi đi xe buýt đến công ty.",
-      "level": "JF-A1",
+      "level": "N5",
       "syllabusVersion": "JF-Standard",
       "topic": "Giao thông",
       "tags": ["transport"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "JLPT-REFERENCE",
+      "certificateLevel": "N5",
+      "certificateStatus": "reference"
     },
     {
       "id": "ja-0036",
@@ -654,13 +756,16 @@
       "meaningVi": "tàu điện",
       "example": "電車は速いです。",
       "exampleVi": "Tàu điện chạy nhanh.",
-      "level": "JF-A1",
+      "level": "N5",
       "syllabusVersion": "JF-Standard",
       "topic": "Giao thông",
       "tags": ["transport"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "JLPT-REFERENCE",
+      "certificateLevel": "N5",
+      "certificateStatus": "reference"
     },
     {
       "id": "ja-0037",
@@ -672,13 +777,16 @@
       "meaningVi": "du lịch",
       "example": "旅行が好きです。",
       "exampleVi": "Tôi thích đi du lịch.",
-      "level": "JF-A1",
+      "level": "N5",
       "syllabusVersion": "JF-Standard",
       "topic": "Du lịch",
       "tags": ["travel"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "JLPT-REFERENCE",
+      "certificateLevel": "N5",
+      "certificateStatus": "reference"
     },
     {
       "id": "ja-0038",
@@ -690,13 +798,16 @@
       "meaningVi": "khách sạn",
       "example": "ホテルに泊まりました。",
       "exampleVi": "Chúng tôi ở một khách sạn.",
-      "level": "JF-A1",
+      "level": "N5",
       "syllabusVersion": "JF-Standard",
       "topic": "Du lịch",
       "tags": ["travel"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "JLPT-REFERENCE",
+      "certificateLevel": "N5",
+      "certificateStatus": "reference"
     },
     {
       "id": "ja-0039",
@@ -708,13 +819,16 @@
       "meaningVi": "bản đồ",
       "example": "町の地図が必要です。",
       "exampleVi": "Tôi cần một bản đồ thành phố.",
-      "level": "JF-A1",
+      "level": "N5",
       "syllabusVersion": "JF-Standard",
       "topic": "Du lịch",
       "tags": ["travel"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "JLPT-REFERENCE",
+      "certificateLevel": "N5",
+      "certificateStatus": "reference"
     },
     {
       "id": "ja-0040",
@@ -726,13 +840,16 @@
       "meaningVi": "bác sĩ",
       "example": "医者に行ったほうがいいです。",
       "exampleVi": "Bạn nên đi khám bác sĩ.",
-      "level": "JF-A1",
+      "level": "N5",
       "syllabusVersion": "JF-Standard",
       "topic": "Sức khỏe",
       "tags": ["health"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "JLPT-REFERENCE",
+      "certificateLevel": "N5",
+      "certificateStatus": "reference"
     },
     {
       "id": "ja-0041",
@@ -744,13 +861,16 @@
       "meaningVi": "thuốc",
       "example": "この薬を一日に二回飲みます。",
       "exampleVi": "Uống thuốc này hai lần một ngày.",
-      "level": "JF-A1",
+      "level": "N5",
       "syllabusVersion": "JF-Standard",
       "topic": "Sức khỏe",
       "tags": ["health"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "JLPT-REFERENCE",
+      "certificateLevel": "N5",
+      "certificateStatus": "reference"
     },
     {
       "id": "ja-0042",
@@ -762,13 +882,15 @@
       "meaningVi": "vui, vui mừng",
       "example": "今日は嬉しいです。",
       "exampleVi": "Hôm nay tôi vui.",
-      "level": "JF-A1",
+      "level": "Chưa phân loại",
       "syllabusVersion": "JF-Standard",
       "topic": "Cảm xúc",
       "tags": ["emotion"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateLevel": null,
+      "certificateStatus": "unclassified"
     },
     {
       "id": "ja-0043",
@@ -780,13 +902,15 @@
       "meaningVi": "mệt",
       "example": "彼女はとても疲れています。",
       "exampleVi": "Cô ấy rất mệt.",
-      "level": "JF-A1",
+      "level": "Chưa phân loại",
       "syllabusVersion": "JF-Standard",
       "topic": "Cảm xúc",
       "tags": ["emotion"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateLevel": null,
+      "certificateStatus": "unclassified"
     },
     {
       "id": "ja-0044",
@@ -798,13 +922,16 @@
       "meaningVi": "tức giận",
       "example": "怒らないでください。",
       "exampleVi": "Đừng tức giận.",
-      "level": "JF-A1",
+      "level": "N4",
       "syllabusVersion": "JF-Standard",
       "topic": "Cảm xúc",
       "tags": ["emotion"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "JLPT-REFERENCE",
+      "certificateLevel": "N4",
+      "certificateStatus": "reference"
     },
     {
       "id": "ja-0045",
@@ -816,13 +943,16 @@
       "meaningVi": "cuộc họp",
       "example": "十時に会議があります。",
       "exampleVi": "Chúng ta có cuộc họp lúc mười giờ.",
-      "level": "JF-A1",
+      "level": "N4",
       "syllabusVersion": "JF-Standard",
       "topic": "Văn phòng",
       "tags": ["office"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "JLPT-REFERENCE",
+      "certificateLevel": "N4",
+      "certificateStatus": "reference"
     },
     {
       "id": "ja-0046",
@@ -834,13 +964,15 @@
       "meaningVi": "thư điện tử",
       "example": "メールを送ります。",
       "exampleVi": "Tôi sẽ gửi cho bạn một email.",
-      "level": "JF-A1",
+      "level": "Chưa phân loại",
       "syllabusVersion": "JF-Standard",
       "topic": "Văn phòng",
       "tags": ["office"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateLevel": null,
+      "certificateStatus": "unclassified"
     },
     {
       "id": "ja-0047",
@@ -852,13 +984,16 @@
       "meaningVi": "máy tính (cá nhân)",
       "example": "私のパソコンは遅いです。",
       "exampleVi": "Máy tính của tôi chạy chậm.",
-      "level": "JF-A1",
+      "level": "N4",
       "syllabusVersion": "JF-Standard",
       "topic": "Công nghệ",
       "tags": ["technology"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "JLPT-REFERENCE",
+      "certificateLevel": "N4",
+      "certificateStatus": "reference"
     },
     {
       "id": "ja-0048",
@@ -870,13 +1005,16 @@
       "meaningVi": "điện thoại",
       "example": "電話を切ってください。",
       "exampleVi": "Vui lòng tắt điện thoại.",
-      "level": "JF-A1",
+      "level": "N5",
       "syllabusVersion": "JF-Standard",
       "topic": "Công nghệ",
       "tags": ["technology"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "JLPT-REFERENCE",
+      "certificateLevel": "N5",
+      "certificateStatus": "reference"
     },
     {
       "id": "ja-0049",
@@ -888,13 +1026,16 @@
       "meaningVi": "giúp đỡ",
       "example": "手伝ってもらえますか。",
       "exampleVi": "Bạn giúp tôi được không?",
-      "level": "JF-A1",
+      "level": "N3",
       "syllabusVersion": "JF-Standard",
       "topic": "Giao tiếp công sở",
       "tags": ["communication"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "JLPT-REFERENCE",
+      "certificateLevel": "N3",
+      "certificateStatus": "reference"
     },
     {
       "id": "ja-0050",
@@ -906,13 +1047,16 @@
       "meaningVi": "hiểu",
       "example": "その質問が分かります。",
       "exampleVi": "Tôi hiểu câu hỏi đó.",
-      "level": "JF-A1",
+      "level": "N5",
       "syllabusVersion": "JF-Standard",
       "topic": "Giao tiếp công sở",
       "tags": ["communication"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-ja"],
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "JLPT-REFERENCE",
+      "certificateLevel": "N5",
+      "certificateStatus": "reference"
     }
   ]
 }

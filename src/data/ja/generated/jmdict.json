@@ -24,7 +24,7 @@
       "explanationVi": "Định nghĩa nguồn (EN): voltage",
       "example": "この回路の電圧は高いです。",
       "exampleVi": "Điện áp của mạch này cao.",
-      "level": "N3",
+      "level": "Chưa phân loại",
       "syllabusVersion": "JF-Standard-reference",
       "topic": "Điện – Điện tử",
       "tags": ["electronics"],
@@ -34,7 +34,9 @@
       "sourceEntryUrl": "https://www.edrdg.org/jmdictdb/cgi-bin/entr.py?svc=jmdict&q=1442850",
       "definitionSourceLanguage": "en",
       "exampleSelfAuthored": true,
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateLevel": null,
+      "certificateStatus": "unclassified"
     },
     {
       "id": "ja-jmdict-0002",
@@ -46,7 +48,7 @@
       "explanationVi": "Định nghĩa nguồn (EN): electric current",
       "example": "電流が導線を流れます。",
       "exampleVi": "Dòng điện chạy qua dây dẫn.",
-      "level": "N3",
+      "level": "N2",
       "syllabusVersion": "JF-Standard-reference",
       "topic": "Điện – Điện tử",
       "tags": ["electronics"],
@@ -56,7 +58,10 @@
       "sourceEntryUrl": "https://www.edrdg.org/jmdictdb/cgi-bin/entr.py?svc=jmdict&q=1443790",
       "definitionSourceLanguage": "en",
       "exampleSelfAuthored": true,
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "JLPT-REFERENCE",
+      "certificateLevel": "N2",
+      "certificateStatus": "reference"
     },
     {
       "id": "ja-jmdict-0003",
@@ -68,7 +73,7 @@
       "explanationVi": "Định nghĩa nguồn (EN): resistance",
       "example": "抵抗が電流を制限します。",
       "exampleVi": "Điện trở hạn chế dòng điện.",
-      "level": "N2",
+      "level": "N3",
       "syllabusVersion": "JF-Standard-reference",
       "topic": "Điện – Điện tử",
       "tags": ["electronics"],
@@ -78,7 +83,10 @@
       "sourceEntryUrl": "https://www.edrdg.org/jmdictdb/cgi-bin/entr.py?svc=jmdict&q=1436260",
       "definitionSourceLanguage": "en",
       "exampleSelfAuthored": true,
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "JLPT-REFERENCE",
+      "certificateLevel": "N3",
+      "certificateStatus": "reference"
     },
     {
       "id": "ja-jmdict-0004",
@@ -90,7 +98,7 @@
       "explanationVi": "Định nghĩa nguồn (EN): frequency (esp. of waveforms)",
       "example": "信号の周波数は一キロヘルツです。",
       "exampleVi": "Tần số của tín hiệu là một kilôhéc.",
-      "level": "N2",
+      "level": "Chưa phân loại",
       "syllabusVersion": "JF-Standard-reference",
       "topic": "Viễn thông",
       "tags": ["telecom"],
@@ -100,7 +108,9 @@
       "sourceEntryUrl": "https://www.edrdg.org/jmdictdb/cgi-bin/entr.py?svc=jmdict&q=1331260",
       "definitionSourceLanguage": "en",
       "exampleSelfAuthored": true,
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateLevel": null,
+      "certificateStatus": "unclassified"
     },
     {
       "id": "ja-jmdict-0005",
@@ -122,7 +132,10 @@
       "sourceEntryUrl": "https://www.edrdg.org/jmdictdb/cgi-bin/entr.py?svc=jmdict&q=1359240",
       "definitionSourceLanguage": "en",
       "exampleSelfAuthored": true,
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "JLPT-REFERENCE",
+      "certificateLevel": "N3",
+      "certificateStatus": "reference"
     },
     {
       "id": "ja-jmdict-0006",
@@ -144,7 +157,10 @@
       "sourceEntryUrl": "https://www.edrdg.org/jmdictdb/cgi-bin/entr.py?svc=jmdict&q=1443320",
       "definitionSourceLanguage": "en",
       "exampleSelfAuthored": true,
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "certificateScheme": "JLPT-REFERENCE",
+      "certificateLevel": "N3",
+      "certificateStatus": "reference"
     }
   ]
 }
