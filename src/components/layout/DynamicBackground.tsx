@@ -184,6 +184,24 @@ function BackgroundLayer({
   layer: Layer | null;
   visible: boolean;
 }) {
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+
+  // Chrome tự pause media "video-only" khi tab bị che để tiết kiệm pin và
+  // KHÔNG tự phát lại. Chủ động play() khi sẵn sàng và mỗi khi tab hiện lại.
+  useEffect(() => {
+    const tryPlay = () => {
+      const v = videoRef.current;
+      if (v && v.paused && !document.hidden) {
+        void v.play().catch(() => {
+          /* trình duyệt chặn — poster bên dưới vẫn hiển thị */
+        });
+      }
+    };
+    tryPlay();
+    document.addEventListener("visibilitychange", tryPlay);
+    return () => document.removeEventListener("visibilitychange", tryPlay);
+  }, [layer?.key, layer?.assets.video]);
+
   if (!layer) return null;
   const { poster, video } = layer.assets;
   return (
@@ -202,12 +220,20 @@ function BackgroundLayer({
       {video ? (
         <video
           key={layer.key}
+          ref={videoRef}
           src={assetUrl(video)}
           poster={poster ? assetUrl(poster) : undefined}
           autoPlay
           muted
           loop
           playsInline
+          onCanPlay={(e) => {
+            const v = e.currentTarget;
+            if (v.paused && !document.hidden)
+              void v.play().catch(() => {
+                /* bỏ qua */
+              });
+          }}
           className="absolute inset-0 h-full w-full object-cover"
         />
       ) : null}
