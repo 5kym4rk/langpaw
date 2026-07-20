@@ -84,6 +84,15 @@ export default defineConfig({
             options: { cacheName: "langpaw-data" },
           },
           {
+            // Nhạc nền — cache sau lần phát đầu để offline.
+            urlPattern: ({ url }) => url.pathname.includes("/audio/"),
+            handler: "CacheFirst",
+            options: {
+              cacheName: "langpaw-audio",
+              expiration: { maxEntries: 8 },
+            },
+          },
+          {
             urlPattern: ({ url }) => url.pathname.includes("/backgrounds/"),
             handler: "CacheFirst",
             options: {

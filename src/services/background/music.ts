@@ -9,17 +9,17 @@ export interface MusicTrack {
 
 export const MUSIC_TRACKS: MusicTrack[] = [
   { id: "none", labelVi: "Không có nhạc", src: "" },
-  { id: "piano", labelVi: "Piano nhẹ", src: "audio/piano.mp3" },
-  { id: "rain", labelVi: "Mưa", src: "audio/rain.mp3" },
-  { id: "cafe", labelVi: "Quán cà phê", src: "audio/cafe.mp3" },
+  { id: "rain", labelVi: "Tiếng mưa", src: "audio/rain.mp3" },
+  { id: "waves", labelVi: "Tiếng sóng", src: "audio/waves.mp3" },
+  { id: "forest", labelVi: "Rừng thu", src: "audio/forest.mp3" },
+  { id: "water", labelVi: "Dưới nước", src: "audio/water.mp3" },
 ];
 
 /**
- * Có gói âm thanh hợp lệ hay chưa. Hiện chưa kèm file nhạc có giấy phép nên
- * phần nhạc bị vô hiệu hóa trong giao diện. Đặt thành true khi đã thêm file
- * âm thanh vào public/audio kèm ghi công trong ATTRIBUTIONS.md.
+ * Có gói âm thanh hợp lệ hay chưa. Đã kèm nhạc nền ASMR (tách từ video của
+ * tác giả 도기코기, được cho phép) — xem ATTRIBUTIONS.md.
  */
-export const MUSIC_AVAILABLE = false;
+export const MUSIC_AVAILABLE = true;
 
 /**
  * Bộ điều khiển nhạc nền. Chỉ phát sau tương tác người dùng (gọi play()).

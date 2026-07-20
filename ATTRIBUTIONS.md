@@ -96,5 +96,15 @@ Mỗi asset khi bổ sung phải điền một khối dưới đây và cập nh
 - **Files:** `public/backgrounds/corgi-{warmth,good-things,waiting,endless-road,knock,missed-cat}/`
   gồm `loop-1080.webm`, `poster-1080.webp`, `poster-mobile.webp`.
 
+### Nhạc nền (ASMR)
+
+- **Author:** 도기코기 (Doggie Corgi)
+- **License:** Được tác giả cho phép sử dụng (qua email, 2026-07-19).
+- **Original page:** _cần bổ sung URL clip gốc chính xác của tác giả._
+- **Modifications:** tách âm thanh đoạn ~90 giây, fade in/out, xuất MP3 96kbps
+  bằng ffmpeg.
+- **Files:** `public/audio/{rain,waves,forest,water}.mp3` (Tiếng mưa / Tiếng
+  sóng / Rừng thu / Dưới nước).
+
 > Giữ nguyên phần media chưa dùng chỉ để tham khảo thẩm mỹ (WallpaperCave,
 > Pinterest) — KHÔNG đóng gói. Không hotlink; không dùng ảnh không rõ quyền.
