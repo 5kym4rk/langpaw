@@ -38,7 +38,8 @@ import {
   filterByRoute,
   levelOptions,
   topicOptions,
-  type RouteKind,
+  routesForLanguage,
+  type LearningRoute,
 } from "@/services/certification/routes";
 import { cn } from "@/utils/cn";
 
@@ -97,7 +98,7 @@ export default function LearningPage() {
 
   const [phase, setPhase] = useState<Phase>("setup");
   // Thứ tự thiết lập bắt buộc: lộ trình → cấp độ → chủ đề → nhóm từ → số từ.
-  const [route, setRoute] = useState<RouteKind>("certificate");
+  const [routeId, setRouteId] = useState<string>("");
   const [level, setLevel] = useState<string>("");
   const [topic, setTopic] = useState<string>("");
   const [scope, setScope] = useState<VocabularyScope>("all");
@@ -142,21 +143,61 @@ export default function LearningPage() {
   // Menu phụ thuộc lựa chọn trước: route → cấp độ (từ certificate index) →
   // chủ đề (chỉ trong tập đã lọc) → nhóm từ → số từ.
   const certMeta = CERT_ROUTES[targetLanguage];
+  const langRoutes = useMemo(
+    () => routesForLanguage(targetLanguage),
+    [targetLanguage],
+  );
+  const activeRoute: LearningRoute | null = useMemo(
+    () =>
+      routeId === "dictionary"
+        ? null
+        : (langRoutes.find((r) => r.id === routeId) ??
+          langRoutes.find((r) => r.kind === "certificate") ??
+          null),
+    [langRoutes, routeId],
+  );
+  const isCertRoute = activeRoute?.kind === "certificate";
+  const baseFilter = useMemo(
+    () => ({
+      route:
+        routeId === "dictionary"
+          ? ("dictionary" as const)
+          : isCertRoute
+            ? ("certificate" as const)
+            : undefined,
+      requiredTopicIds:
+        activeRoute?.kind === "topic-route"
+          ? activeRoute.requiredTopicIds
+          : undefined,
+    }),
+    [routeId, isCertRoute, activeRoute],
+  );
   const routeItems = useMemo(
-    () => filterByRoute(allItems, route),
-    [allItems, route],
+    () => filterVocabulary(allItems, baseFilter, progressMap),
+    [allItems, baseFilter, progressMap],
   );
   const certCount = useMemo(
     () => filterByRoute(allItems, "certificate").length,
     [allItems],
   );
+  const routeCount = (r: LearningRoute): number =>
+    r.kind === "certificate"
+      ? certCount
+      : filterVocabulary(
+          allItems,
+          { requiredTopicIds: r.requiredTopicIds },
+          progressMap,
+        ).length;
   const lvlOpts = useMemo(
-    () => (route === "certificate" ? levelOptions(routeItems, certMeta) : []),
-    [route, routeItems, certMeta],
+    () => (isCertRoute ? levelOptions(routeItems, certMeta) : []),
+    [isCertRoute, routeItems, certMeta],
   );
   const afterLevel = useMemo(
-    () => (level ? routeItems.filter((i) => i.level === level) : routeItems),
-    [routeItems, level],
+    () =>
+      level && isCertRoute
+        ? routeItems.filter((i) => i.level === level)
+        : routeItems,
+    [routeItems, level, isCertRoute],
   );
   const topicOpts = useMemo(() => topicOptions(afterLevel), [afterLevel]);
   const reviewAvailable = useMemo(
@@ -164,15 +205,24 @@ export default function LearningPage() {
       filterVocabulary(
         allItems,
         {
-          route,
-          level: level || undefined,
+          ...baseFilter,
+          level: level && isCertRoute ? level : undefined,
           topic: topic || undefined,
           scope,
           reviewLevel,
         },
         progressMap,
       ).length,
-    [allItems, route, level, topic, scope, reviewLevel, progressMap],
+    [
+      allItems,
+      baseFilter,
+      isCertRoute,
+      level,
+      topic,
+      scope,
+      reviewLevel,
+      progressMap,
+    ],
   );
 
   const current = sessionItems[currentIndex];
@@ -202,8 +252,8 @@ export default function LearningPage() {
 
   const begin = () => {
     startSession({
-      route,
-      level: level || undefined,
+      ...baseFilter,
+      level: level && isCertRoute ? level : undefined,
       topic: topic || undefined,
       scope,
       reviewLevel,
@@ -396,49 +446,62 @@ export default function LearningPage() {
           {/* 1. Lộ trình */}
           <Field label="1. Lộ trình">
             <div className="flex flex-wrap gap-2">
+              {langRoutes.map((r) => {
+                const selected =
+                  routeId !== "dictionary" && activeRoute?.id === r.id;
+                return (
+                  <button
+                    key={r.id}
+                    type="button"
+                    aria-pressed={selected}
+                    disabled={!r.enabled}
+                    onClick={() => {
+                      setRouteId(r.id);
+                      setLevel("");
+                      setTopic("");
+                    }}
+                    className={cn(
+                      "rounded-full px-4 py-2 text-sm font-medium disabled:opacity-35",
+                      selected ? "bg-corgi text-night" : "glass text-ivory/80",
+                    )}
+                  >
+                    {r.labelVi}
+                    {r.enabled ? ` (${routeCount(r)})` : " — chưa có dữ liệu"}
+                  </button>
+                );
+              })}
               <button
                 type="button"
-                aria-pressed={route === "certificate"}
+                aria-pressed={routeId === "dictionary"}
                 onClick={() => {
-                  setRoute("certificate");
+                  setRouteId("dictionary");
                   setLevel("");
                   setTopic("");
                 }}
                 className={cn(
                   "rounded-full px-4 py-2 text-sm font-medium",
-                  route === "certificate"
+                  routeId === "dictionary"
                     ? "bg-corgi text-night"
                     : "glass text-ivory/80",
                 )}
               >
-                {certMeta.labelVi} ({certCount})
-              </button>
-              <button
-                type="button"
-                aria-pressed={route === "dictionary"}
-                onClick={() => {
-                  setRoute("dictionary");
-                  setLevel("");
-                  setTopic("");
-                }}
-                className={cn(
-                  "rounded-full px-4 py-2 text-sm font-medium",
-                  route === "dictionary"
-                    ? "bg-corgi text-night"
-                    : "glass text-ivory/80",
-                )}
-              >
-                Kho từ điển ({allItems.length - certCount})
+                Ngoài lộ trình ({allItems.length - certCount})
               </button>
             </div>
-            {route === "certificate" && certMeta.noteVi ? (
-              <p className="mt-1 text-xs text-ivory/40">{certMeta.noteVi}</p>
+            {routeId !== "dictionary" && activeRoute?.noteVi ? (
+              <p className="mt-1 text-xs text-ivory/40">{activeRoute.noteVi}</p>
+            ) : null}
+            {routeId === "dictionary" ? (
+              <p className="mt-1 text-xs text-ivory/40">
+                Ngoài lộ trình: các mục từ chưa khớp danh sách chứng chỉ hoặc
+                chưa đủ điều kiện học. Kho từ điển đầy đủ nằm ở trang Kho từ.
+              </p>
             ) : null}
           </Field>
 
           <div className="flex flex-wrap items-end gap-3">
             {/* 2. Cấp độ (chỉ có với lộ trình chứng chỉ) */}
-            {route === "certificate" ? (
+            {isCertRoute ? (
               <Field label="2. Cấp độ">
                 <select
                   value={level}
@@ -458,7 +521,7 @@ export default function LearningPage() {
               </Field>
             ) : null}
             {/* 3. Chủ đề — chỉ các chủ đề có trong tập đã lọc, kèm số lượng */}
-            <Field label={route === "certificate" ? "3. Chủ đề" : "2. Chủ đề"}>
+            <Field label={isCertRoute ? "3. Chủ đề" : "2. Chủ đề"}>
               <select
                 value={topic}
                 onChange={(e) => setTopic(e.target.value)}
@@ -473,9 +536,7 @@ export default function LearningPage() {
               </select>
             </Field>
             {/* 4. Nhóm từ */}
-            <Field
-              label={route === "certificate" ? "4. Nhóm từ" : "3. Nhóm từ"}
-            >
+            <Field label={isCertRoute ? "4. Nhóm từ" : "3. Nhóm từ"}>
               <select
                 value={scope}
                 onChange={(e) => setScope(e.target.value as VocabularyScope)}
@@ -489,7 +550,7 @@ export default function LearningPage() {
               </select>
             </Field>
             {/* 5. Số từ */}
-            <Field label={route === "certificate" ? "5. Số từ" : "4. Số từ"}>
+            <Field label={isCertRoute ? "5. Số từ" : "4. Số từ"}>
               <select
                 value={sessionSize}
                 onChange={(e) => setSessionSize(Number(e.target.value))}
@@ -582,6 +643,12 @@ export default function LearningPage() {
           </div>
         </div>
 
+        <div
+          data-testid="learning-card-meta"
+          data-cert-level={current.certificateLevel ?? ""}
+          data-topic={current.topic}
+          data-learning-ready={String(current.learningReady ?? false)}
+        />
         <VocabularyCard
           item={current}
           flipped={flipped}

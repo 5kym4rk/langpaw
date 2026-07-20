@@ -31,7 +31,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "CEFR-J",
       "certificateLevel": "A1",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["greetings"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "en-0002",
@@ -49,7 +53,11 @@
       "sourceIds": ["langpaw-selfauthored-en"],
       "reviewStatus": "draft",
       "certificateLevel": null,
-      "certificateStatus": "unclassified"
+      "certificateStatus": "unclassified",
+      "learningReady": false,
+      "topicIds": ["greetings"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "en-0003",
@@ -67,7 +75,11 @@
       "sourceIds": ["langpaw-selfauthored-en"],
       "reviewStatus": "draft",
       "certificateLevel": null,
-      "certificateStatus": "unclassified"
+      "certificateStatus": "unclassified",
+      "learningReady": false,
+      "topicIds": ["greetings"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "en-0004",
@@ -86,7 +98,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "CEFR-J",
       "certificateLevel": "A1",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["greetings"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "en-0005",
@@ -105,7 +121,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "CEFR-J",
       "certificateLevel": "A1",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["greetings"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "en-0006",
@@ -124,7 +144,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "CEFR-J",
       "certificateLevel": "A1",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["family"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "en-0007",
@@ -143,7 +167,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "CEFR-J",
       "certificateLevel": "A1",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["family"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "en-0008",
@@ -162,7 +190,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "CEFR-J",
       "certificateLevel": "A1",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["family"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "en-0009",
@@ -181,7 +213,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "CEFR-J",
       "certificateLevel": "A1",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["family"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "en-0010",
@@ -200,7 +236,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "CEFR-J",
       "certificateLevel": "A1",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["family"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "en-0011",
@@ -219,7 +259,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "CEFR-J",
       "certificateLevel": "A1",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["school"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "en-0012",
@@ -238,7 +282,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "CEFR-J",
       "certificateLevel": "A1",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["school"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "en-0013",
@@ -257,7 +305,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "CEFR-J",
       "certificateLevel": "A1",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["school"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "en-0014",
@@ -276,7 +328,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "CEFR-J",
       "certificateLevel": "A1",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["school"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "en-0015",
@@ -295,7 +351,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "CEFR-J",
       "certificateLevel": "A1",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["school"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "en-0016",
@@ -314,7 +374,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "CEFR-J",
       "certificateLevel": "A1",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["work"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "en-0017",
@@ -333,7 +397,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "CEFR-J",
       "certificateLevel": "A1",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["work"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "en-0018",
@@ -352,7 +420,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "CEFR-J",
       "certificateLevel": "A2",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["work"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "en-0019",
@@ -371,7 +443,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "CEFR-J",
       "certificateLevel": "A1",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["work"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "en-0020",
@@ -390,7 +466,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "CEFR-J",
       "certificateLevel": "A1",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["time"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "en-0021",
@@ -409,7 +489,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "CEFR-J",
       "certificateLevel": "A1",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["time"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "en-0022",
@@ -428,7 +512,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "CEFR-J",
       "certificateLevel": "A1",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["time"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "en-0023",
@@ -447,7 +535,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "CEFR-J",
       "certificateLevel": "A1",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["time"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "en-0024",
@@ -466,7 +558,12 @@
       "reviewStatus": "draft",
       "certificateScheme": "CEFR-J",
       "certificateLevel": "A1",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "certificateRequiresReview": true,
+      "learningReady": false,
+      "topicIds": ["numbers"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "en-0025",
@@ -485,7 +582,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "CEFR-J",
       "certificateLevel": "A1",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["numbers"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "en-0026",
@@ -504,7 +605,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "CEFR-J",
       "certificateLevel": "A1",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["numbers"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "en-0027",
@@ -523,7 +628,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "CEFR-J",
       "certificateLevel": "A1",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["food"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "en-0028",
@@ -542,7 +651,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "CEFR-J",
       "certificateLevel": "A1",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["food"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "en-0029",
@@ -561,7 +674,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "CEFR-J",
       "certificateLevel": "A1",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["food"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "en-0030",
@@ -580,7 +697,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "CEFR-J",
       "certificateLevel": "A1",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["food"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "en-0031",
@@ -599,7 +720,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "CEFR-J",
       "certificateLevel": "A1",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["shopping"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "en-0032",
@@ -618,7 +743,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "CEFR-J",
       "certificateLevel": "A1",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["shopping"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "en-0033",
@@ -637,7 +766,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "CEFR-J",
       "certificateLevel": "A1",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["shopping"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "en-0034",
@@ -656,7 +789,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "CEFR-J",
       "certificateLevel": "A1",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["transport"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "en-0035",
@@ -675,7 +812,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "CEFR-J",
       "certificateLevel": "A1",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["transport"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "en-0036",
@@ -694,7 +835,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "CEFR-J",
       "certificateLevel": "A1",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["transport"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "en-0037",
@@ -713,7 +858,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "CEFR-J",
       "certificateLevel": "A1",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["travel"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "en-0038",
@@ -732,7 +881,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "CEFR-J",
       "certificateLevel": "A1",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["travel"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "en-0039",
@@ -751,7 +904,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "CEFR-J",
       "certificateLevel": "A1",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["travel"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "en-0040",
@@ -770,7 +927,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "CEFR-J",
       "certificateLevel": "A1",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["health"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "en-0041",
@@ -789,7 +950,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "CEFR-J",
       "certificateLevel": "A1",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["health"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "en-0042",
@@ -808,7 +973,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "CEFR-J",
       "certificateLevel": "A1",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["feelings"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "en-0043",
@@ -827,7 +996,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "CEFR-J",
       "certificateLevel": "A1",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["feelings"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "en-0044",
@@ -846,7 +1019,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "CEFR-J",
       "certificateLevel": "A1",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["feelings"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "en-0045",
@@ -858,14 +1035,18 @@
       "example": "We have a meeting at ten.",
       "exampleVi": "Chúng ta có cuộc họp lúc mười giờ.",
       "level": "A1",
-      "topic": "Văn phòng",
+      "topic": "Công việc",
       "tags": ["office"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-en"],
       "reviewStatus": "draft",
       "certificateScheme": "CEFR-J",
       "certificateLevel": "A1",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["work"],
+      "topicStatus": "rule",
+      "topicConfidence": 0.75
     },
     {
       "id": "en-0046",
@@ -877,14 +1058,18 @@
       "example": "I will send you an email.",
       "exampleVi": "Tôi sẽ gửi cho bạn một email.",
       "level": "A1",
-      "topic": "Văn phòng",
+      "topic": "Chưa phân loại chủ đề",
       "tags": ["office"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-en"],
       "reviewStatus": "draft",
       "certificateScheme": "CEFR-J",
       "certificateLevel": "A1",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": [],
+      "topicStatus": "unclassified",
+      "topicConfidence": 0
     },
     {
       "id": "en-0047",
@@ -903,7 +1088,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "CEFR-J",
       "certificateLevel": "A1",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["technology"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "en-0048",
@@ -922,7 +1111,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "CEFR-J",
       "certificateLevel": "A1",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["technology"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "en-0049",
@@ -934,14 +1127,18 @@
       "example": "Can you help me?",
       "exampleVi": "Bạn giúp tôi được không?",
       "level": "A1",
-      "topic": "Giao tiếp công sở",
+      "topic": "Chưa phân loại chủ đề",
       "tags": ["communication"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-en"],
       "reviewStatus": "draft",
       "certificateScheme": "CEFR-J",
       "certificateLevel": "A1",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": [],
+      "topicStatus": "unclassified",
+      "topicConfidence": 0
     },
     {
       "id": "en-0050",
@@ -953,14 +1150,18 @@
       "example": "I understand the question.",
       "exampleVi": "Tôi hiểu câu hỏi.",
       "level": "A2",
-      "topic": "Giao tiếp công sở",
+      "topic": "Giao tiếp",
       "tags": ["communication"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-en"],
       "reviewStatus": "draft",
       "certificateScheme": "CEFR-J",
       "certificateLevel": "A2",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["communication"],
+      "topicStatus": "rule",
+      "topicConfidence": 0.8
     }
   ]
 }

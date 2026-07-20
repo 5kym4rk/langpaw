@@ -10,6 +10,7 @@ import {
   type QualitySummary,
 } from "@/services/data/data-quality";
 import { LANGUAGE_ORDER, LANGUAGES } from "@/config/languages";
+import certSummary from "@/data/certification/summary.json";
 import type { LanguageCode, VocabularySource } from "@/types";
 
 interface SourceWithCount extends VocabularySource {
@@ -91,8 +92,8 @@ export default function SourcesPage() {
         <h2 className="mb-2 font-semibold">Trạng thái kiểm duyệt</h2>
         <ul className="flex flex-col gap-2 text-sm text-ivory/80">
           <li className="flex items-center gap-2">
-            <ReviewStatusBadge status="draft" /> Nội dung tự biên soạn, chưa đối
-            chiếu nguồn.
+            <ReviewStatusBadge status="draft" /> Dữ liệu đã nhập hoặc tự biên
+            soạn nhưng chưa được người kiểm duyệt của LangPaw rà soát.
           </li>
           <li className="flex items-center gap-2">
             <ReviewStatusBadge status="reviewed" /> Đã có người rà soát.
@@ -102,6 +103,68 @@ export default function SourcesPage() {
             và thời điểm kiểm duyệt.
           </li>
         </ul>
+      </GlassPanel>
+
+      <GlassPanel className="mb-6 overflow-x-auto">
+        <h2 className="mb-3 font-semibold">Nguồn phân cấp chứng chỉ</h2>
+        <p className="mb-3 text-xs text-ivory/50">
+          Vai trò: certificate-level. Tiêu chuẩn chính thức và bản phân phối dữ
+          liệu được ghi tách bạch — bản chép/mirror cộng đồng KHÔNG phải nguồn
+          phát hành chính thức.
+        </p>
+        <table className="w-full min-w-[36rem] text-sm">
+          <thead>
+            <tr className="text-left text-ivory/50">
+              <th className="pb-2">Lộ trình</th>
+              <th className="pb-2">Nguồn/phiên bản</th>
+              <th className="pb-2 text-right">Index</th>
+              <th className="pb-2 text-right">Khớp</th>
+              <th className="pb-2 text-right">Learning-ready</th>
+              <th className="pb-2">Trạng thái</th>
+            </tr>
+          </thead>
+          <tbody>
+            {certSummary.map((c) => (
+              <tr
+                key={c.routeId}
+                className="border-t border-ivory/10 text-ivory/85"
+              >
+                <td className="py-1.5">{c.labelVi}</td>
+                <td className="py-1.5 text-xs">
+                  {c.sourceUrl ? (
+                    <a
+                      href={c.sourceUrl}
+                      className="text-corgi-text underline"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {c.sourceVersion}
+                    </a>
+                  ) : (
+                    c.sourceVersion
+                  )}
+                  {"standardAuthority" in c && c.standardAuthority ? (
+                    <span className="block text-ivory/40">
+                      Tiêu chuẩn: {String(c.standardAuthority)} · Dữ liệu:{" "}
+                      {String(
+                        (c as Record<string, unknown>).dataDistributor ?? "",
+                      )}
+                    </span>
+                  ) : null}
+                </td>
+                <td className="py-1.5 text-right">{c.indexEntries}</td>
+                <td className="py-1.5 text-right">{c.matched}</td>
+                <td className="py-1.5 text-right">{c.learningReady}</td>
+                <td className="py-1.5 text-xs">{c.status}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        <p className="mt-3 text-xs text-danger-text">
+          ⚠ Gói StarDict Anh–Việt và Nhật–Việt chưa xác minh được nguồn phát
+          hành/giấy phép gốc (redistribution: unknown) — không được coi là nguồn
+          đã xác minh; toàn bộ mục liên quan giữ trạng thái draft.
+        </p>
       </GlassPanel>
 
       <GlassPanel className="mb-6 overflow-x-auto">

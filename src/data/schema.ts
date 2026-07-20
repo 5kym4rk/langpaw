@@ -78,6 +78,15 @@ export const vocabularyItemSchema = z
       .enum(["official", "reference", "unclassified"])
       .optional(),
     certificateRequiresReview: z.boolean().optional(),
+
+    learningReady: z.boolean().optional(),
+    senseMismatch: z.boolean().optional(),
+    invalidMeaning: z.boolean().optional(),
+    topicIds: z.array(z.string()).optional(),
+    topicStatus: z
+      .enum(["source", "rule", "manual", "unclassified"])
+      .optional(),
+    topicConfidence: z.number().min(0).max(1).optional(),
   })
   .refine(
     (item) =>

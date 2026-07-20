@@ -26,7 +26,7 @@
       "exampleVi": "Điện áp của mạch này cao.",
       "level": "C",
       "syllabusVersion": "krdict-reference",
-      "topic": "Điện – Điện tử",
+      "topic": "Điện tử",
       "tags": ["electronics"],
       "isInterviewVocabulary": false,
       "sourceIds": ["krdict"],
@@ -37,7 +37,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "NIKL-LEARNING",
       "certificateLevel": "C",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["electronics"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "ko-krdict-0002",
@@ -51,7 +55,7 @@
       "exampleVi": "Dòng điện chạy qua dây dẫn.",
       "level": "C",
       "syllabusVersion": "krdict-reference",
-      "topic": "Điện – Điện tử",
+      "topic": "Điện tử",
       "tags": ["electronics"],
       "isInterviewVocabulary": false,
       "sourceIds": ["krdict"],
@@ -62,7 +66,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "NIKL-LEARNING",
       "certificateLevel": "C",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["electronics"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "ko-krdict-0003",
@@ -76,7 +84,7 @@
       "exampleVi": "Điện trở hạn chế dòng điện.",
       "level": "C",
       "syllabusVersion": "krdict-reference",
-      "topic": "Điện – Điện tử",
+      "topic": "Điện tử",
       "tags": ["electronics"],
       "isInterviewVocabulary": false,
       "sourceIds": ["krdict"],
@@ -87,7 +95,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "NIKL-LEARNING",
       "certificateLevel": "C",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["electronics"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "ko-krdict-0004",
@@ -112,7 +124,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "NIKL-LEARNING",
       "certificateLevel": "C",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["telecommunications"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "ko-krdict-0005",
@@ -137,7 +153,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "NIKL-LEARNING",
       "certificateLevel": "A",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["telecommunications"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "ko-krdict-0006",
@@ -149,9 +169,9 @@
       "explanationVi": "Định nghĩa nguồn (EN): earlier; the other day",
       "example": "전자 부품을 만듭니다.",
       "exampleVi": "Sản xuất linh kiện điện tử.",
-      "level": "B",
+      "level": "C",
       "syllabusVersion": "krdict-reference",
-      "topic": "Điện – Điện tử",
+      "topic": "Điện tử",
       "tags": ["electronics"],
       "isInterviewVocabulary": false,
       "sourceIds": ["krdict"],
@@ -161,8 +181,12 @@
       "exampleSelfAuthored": true,
       "reviewStatus": "draft",
       "certificateScheme": "NIKL-LEARNING",
-      "certificateLevel": "B",
-      "certificateStatus": "reference"
+      "certificateLevel": "C",
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["electronics"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     }
   ]
 }

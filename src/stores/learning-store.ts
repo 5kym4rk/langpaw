@@ -3,9 +3,9 @@ import type { LanguageCode, VocabularyItem, VocabularyProgress } from "@/types";
 import { loadVocabulary } from "@/services/data/vocabulary-loader";
 import {
   filterVocabulary,
-  shuffle,
   type VocabularyFilter,
 } from "@/services/data/vocabulary-filters";
+import { buildLearningSession } from "@/services/learning/session-builder";
 import {
   getProgressMap,
   getOrCreateProgress,
@@ -102,11 +102,15 @@ export const useLearningStore = create<LearningState>((set, get) => ({
   startSession: (options) => {
     const { allItems, progressMap } = get();
     const filtered = filterVocabulary(allItems, options, progressMap);
-    const ordered = options.shuffleOrder ? shuffle(filtered) : filtered;
-    const items =
-      options.sessionSize && options.sessionSize > 0
-        ? ordered.slice(0, options.sessionSize)
-        : ordered;
+    // Ưu tiên SRS (đến hạn → yếu → mới → đang học → đã học) + đa dạng chủ đề;
+    // "Ngẫu nhiên" chỉ xáo trong từng nhóm ưu tiên (spec P1-VII).
+    const items = buildLearningSession(filtered, progressMap, {
+      size:
+        options.sessionSize && options.sessionSize > 0
+          ? options.sessionSize
+          : filtered.length,
+      shuffleWithinGroups: options.shuffleOrder,
+    });
     set({ sessionItems: items, currentIndex: 0 });
   },
 

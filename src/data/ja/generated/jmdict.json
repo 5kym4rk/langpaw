@@ -26,7 +26,7 @@
       "exampleVi": "Điện áp của mạch này cao.",
       "level": "Chưa phân loại",
       "syllabusVersion": "JF-Standard-reference",
-      "topic": "Điện – Điện tử",
+      "topic": "Điện tử",
       "tags": ["electronics"],
       "isInterviewVocabulary": false,
       "sourceIds": ["jmdict"],
@@ -36,7 +36,11 @@
       "exampleSelfAuthored": true,
       "reviewStatus": "draft",
       "certificateLevel": null,
-      "certificateStatus": "unclassified"
+      "certificateStatus": "unclassified",
+      "learningReady": false,
+      "topicIds": ["electronics"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "ja-jmdict-0002",
@@ -50,7 +54,7 @@
       "exampleVi": "Dòng điện chạy qua dây dẫn.",
       "level": "N2",
       "syllabusVersion": "JF-Standard-reference",
-      "topic": "Điện – Điện tử",
+      "topic": "Điện tử",
       "tags": ["electronics"],
       "isInterviewVocabulary": false,
       "sourceIds": ["jmdict"],
@@ -61,7 +65,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "JLPT-REFERENCE",
       "certificateLevel": "N2",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["electronics"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "ja-jmdict-0003",
@@ -75,7 +83,7 @@
       "exampleVi": "Điện trở hạn chế dòng điện.",
       "level": "N3",
       "syllabusVersion": "JF-Standard-reference",
-      "topic": "Điện – Điện tử",
+      "topic": "Điện tử",
       "tags": ["electronics"],
       "isInterviewVocabulary": false,
       "sourceIds": ["jmdict"],
@@ -86,7 +94,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "JLPT-REFERENCE",
       "certificateLevel": "N3",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["electronics"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "ja-jmdict-0004",
@@ -110,7 +122,11 @@
       "exampleSelfAuthored": true,
       "reviewStatus": "draft",
       "certificateLevel": null,
-      "certificateStatus": "unclassified"
+      "certificateStatus": "unclassified",
+      "learningReady": false,
+      "topicIds": ["telecommunications"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "ja-jmdict-0005",
@@ -135,7 +151,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "JLPT-REFERENCE",
       "certificateLevel": "N3",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["telecommunications"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "ja-jmdict-0006",
@@ -149,7 +169,7 @@
       "exampleVi": "Sản xuất linh kiện điện tử.",
       "level": "N3",
       "syllabusVersion": "JF-Standard-reference",
-      "topic": "Điện – Điện tử",
+      "topic": "Điện tử",
       "tags": ["electronics"],
       "isInterviewVocabulary": false,
       "sourceIds": ["jmdict"],
@@ -160,7 +180,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "JLPT-REFERENCE",
       "certificateLevel": "N3",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["electronics"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     }
   ]
 }

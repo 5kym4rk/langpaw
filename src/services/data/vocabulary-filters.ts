@@ -13,8 +13,10 @@ export interface VocabularyFilter {
   scope?: VocabularyScope;
   /** Lọc theo trạng thái kiểm duyệt tối thiểu (mặc định "all"). */
   reviewLevel?: ReviewLevel;
-  /** Lộ trình: certificate = đã gán cấp chứng chỉ; dictionary = chưa phân loại. */
+  /** Lộ trình: certificate = learningReady; dictionary = ngoài lộ trình. */
   route?: "certificate" | "dictionary";
+  /** Lộ trình chủ đề: item phải có topicIds giao với danh sách này. */
+  requiredTopicIds?: string[];
 }
 
 const REVIEW_RANK: Record<ReviewStatus, number> = {
@@ -66,11 +68,24 @@ export function filterVocabulary(
   nowMs: number = Date.now(),
 ): VocabularyItem[] {
   return items.filter((item) => {
-    if (filter.route) {
-      const certified =
-        item.certificateStatus === "official" ||
-        item.certificateStatus === "reference";
-      if ((filter.route === "certificate") !== certified) return false;
+    if (filter.requiredTopicIds && filter.requiredTopicIds.length > 0) {
+      // Lộ trình chủ đề (spec P1-VI): cần chủ đề khớp + nghĩa/cách đọc hợp lệ.
+      if (item.invalidMeaning) return false;
+      if (!item.topicIds?.some((t) => filter.requiredTopicIds!.includes(t)))
+        return false;
+      const needsReading =
+        item.language === "zh" ||
+        item.language === "ko" ||
+        (item.language === "ja" && /[一-鿿]/.test(item.term));
+      if (needsReading && !(item.reading || item.romanization)) return false;
+    }
+    if (filter.route === "certificate") {
+      // Lộ trình chứng chỉ CHỈ nhận mục learningReady (spec P0-II): đã khớp
+      // index + nghĩa hợp lệ + có cách đọc + không chờ rà soát.
+      if (item.learningReady !== true) return false;
+    } else if (filter.route === "dictionary") {
+      // "Ngoài lộ trình": chưa phân cấp HOẶC chưa đủ điều kiện học.
+      if (item.learningReady === true) return false;
     }
     if (filter.level && item.level !== filter.level) return false;
     if (filter.topic && item.topic !== filter.topic) return false;

@@ -65,19 +65,21 @@ export const SOURCES: Record<string, VocabularySource> = {
   },
   "envi-stardict": {
     id: "envi-stardict",
-    authority: "StarDict en_vi",
-    title: "Từ điển Anh–Việt (StarDict)",
+    authority: "StarDict en_vi (chưa xác minh tác giả gốc)",
+    title: "Từ điển Anh–Việt (gói StarDict en_vi, bookname en_vi, 387.517 mục)",
     url: "",
-    license: "Xem giấy phép gói StarDict đã tải",
+    license:
+      "CHƯA XÁC MINH — redistribution: unknown; không coi là nguồn đã xác minh",
     retrievedAt: new Date().toISOString().slice(0, 10),
     usageNote: "Nghĩa tiếng Việt cho từ tiếng Anh; draft tới khi rà soát.",
   },
   "javi-stardict": {
     id: "javi-stardict",
-    authority: "StarDict Nhật–Việt",
-    title: "Từ điển Nhật–Việt (StarDict)",
+    authority: "StarDict star_nhatviet (chưa xác minh tác giả gốc)",
+    title: "Từ điển Nhật–Việt (gói StarDict star_nhatviet, 172.336 mục, 2007)",
     url: "",
-    license: "Xem giấy phép gói StarDict đã tải",
+    license:
+      "CHƯA XÁC MINH — redistribution: unknown; không coi là nguồn đã xác minh",
     retrievedAt: new Date().toISOString().slice(0, 10),
     usageNote: "Nghĩa tiếng Việt cho từ tiếng Nhật; draft tới khi rà soát.",
   },

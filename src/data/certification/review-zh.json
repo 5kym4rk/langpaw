@@ -1,1 +1,2442 @@
-[]
+[
+  {
+    "id": "zh-cedict-0007",
+    "term": "网络",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00002",
+    "term": "丁",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00008",
+    "term": "万",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00010",
+    "term": "三",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00011",
+    "term": "上",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00017",
+    "term": "与",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00020",
+    "term": "丑",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00029",
+    "term": "业",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00031",
+    "term": "东",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00039",
+    "term": "严",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00046",
+    "term": "中",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00059",
+    "term": "为",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00078",
+    "term": "乐",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00086",
+    "term": "乘",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00087",
+    "term": "乙",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00093",
+    "term": "也",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00098",
+    "term": "书",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00121",
+    "term": "了",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00129",
+    "term": "于",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00131",
+    "term": "云",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00135",
+    "term": "井",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00157",
+    "term": "亲",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00175",
+    "term": "仇",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00182",
+    "term": "从",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00191",
+    "term": "付",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00199",
+    "term": "令",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00200",
+    "term": "以",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00206",
+    "term": "仰",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00211",
+    "term": "价",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00212",
+    "term": "任",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00232",
+    "term": "会",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00238",
+    "term": "传",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00275",
+    "term": "余",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00277",
+    "term": "佛",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00278",
+    "term": "作",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00327",
+    "term": "供",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00336",
+    "term": "侧",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00347",
+    "term": "便",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00352",
+    "term": "俊",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00363",
+    "term": "保",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00374",
+    "term": "修",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00391",
+    "term": "倒",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00423",
+    "term": "假",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00525",
+    "term": "元",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00531",
+    "term": "克",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00532",
+    "term": "免",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00540",
+    "term": "党",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00550",
+    "term": "全",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00560",
+    "term": "关",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00585",
+    "term": "冒",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00610",
+    "term": "冲",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00614",
+    "term": "冷",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00624",
+    "term": "凉",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00636",
+    "term": "几",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00650",
+    "term": "凹",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00656",
+    "term": "刀",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00660",
+    "term": "分",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00661",
+    "term": "切",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00668",
+    "term": "划",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00675",
+    "term": "创",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00682",
+    "term": "刨",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00683",
+    "term": "利",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00684",
+    "term": "别",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00695",
+    "term": "刷",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00698",
+    "term": "刺",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00708",
+    "term": "削",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00725",
+    "term": "剥",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00727",
+    "term": "剪",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00740",
+    "term": "劈",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00746",
+    "term": "力",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00750",
+    "term": "加",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00779",
+    "term": "勒",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00793",
+    "term": "勾",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00797",
+    "term": "包",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00809",
+    "term": "化",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00828",
+    "term": "匹",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00829",
+    "term": "区",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00852",
+    "term": "单",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00854",
+    "term": "南",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00862",
+    "term": "占",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00863",
+    "term": "卡",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00876",
+    "term": "印",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00882",
+    "term": "卷",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00888",
+    "term": "厂",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00893",
+    "term": "压",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00908",
+    "term": "原",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00934",
+    "term": "叉",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00937",
+    "term": "双",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00940",
+    "term": "发",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00953",
+    "term": "古",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00954",
+    "term": "句",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00958",
+    "term": "只",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00963",
+    "term": "可",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00964",
+    "term": "台",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00970",
+    "term": "号",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00981",
+    "term": "合",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00985",
+    "term": "同",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00987",
+    "term": "后",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00989",
+    "term": "吐",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00990",
+    "term": "向",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00992",
+    "term": "吓",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-00996",
+    "term": "吗",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-01007",
+    "term": "吧",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-01012",
+    "term": "听",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-01047",
+    "term": "呛",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-01052",
+    "term": "呢",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-01057",
+    "term": "周",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-01084",
+    "term": "和",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-01115",
+    "term": "咱",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-01116",
+    "term": "咳",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-01119",
+    "term": "咸",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-01123",
+    "term": "咽",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-01130",
+    "term": "哄",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-01132",
+    "term": "哇",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-01141",
+    "term": "哑",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-01156",
+    "term": "哦",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-01160",
+    "term": "哪",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-01179",
+    "term": "唉",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-01199",
+    "term": "唯",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-01229",
+    "term": "啦",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-01252",
+    "term": "喂",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-01269",
+    "term": "喝",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-01284",
+    "term": "喷",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-01439",
+    "term": "园",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-01446",
+    "term": "围",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-01454",
+    "term": "国",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-01462",
+    "term": "圈",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-01473",
+    "term": "土",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-01486",
+    "term": "地",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-01491",
+    "term": "场",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-01505",
+    "term": "坐",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-01588",
+    "term": "埋",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-01665",
+    "term": "塞",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-01716",
+    "term": "壮",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-01728",
+    "term": "处",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-01749",
+    "term": "大",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-01758",
+    "term": "头",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-01762",
+    "term": "夹",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-01773",
+    "term": "奔",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-01794",
+    "term": "女",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-01799",
+    "term": "好",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-01847",
+    "term": "姓",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-01853",
+    "term": "姜",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02004",
+    "term": "子",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02019",
+    "term": "季",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02042",
+    "term": "安",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02050",
+    "term": "宗",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02051",
+    "term": "官",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02063",
+    "term": "室",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02069",
+    "term": "宫",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02076",
+    "term": "家",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02079",
+    "term": "宽",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02087",
+    "term": "密",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02089",
+    "term": "富",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02117",
+    "term": "封",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02119",
+    "term": "将",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02127",
+    "term": "少",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02135",
+    "term": "尚",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02153",
+    "term": "尺",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02156",
+    "term": "尽",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02158",
+    "term": "尿",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02181",
+    "term": "属",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02192",
+    "term": "屯",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02193",
+    "term": "山",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02357",
+    "term": "左",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02362",
+    "term": "差",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02377",
+    "term": "帅",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02400",
+    "term": "席",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02407",
+    "term": "常",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02426",
+    "term": "幢",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02435",
+    "term": "干",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02436",
+    "term": "平",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02437",
+    "term": "年",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02447",
+    "term": "广",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02464",
+    "term": "应",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02465",
+    "term": "底",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02476",
+    "term": "度",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02511",
+    "term": "延",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02522",
+    "term": "弄",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02534",
+    "term": "弓",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02541",
+    "term": "张",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02559",
+    "term": "弹",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02560",
+    "term": "强",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02566",
+    "term": "归",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02567",
+    "term": "当",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02568",
+    "term": "录",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02598",
+    "term": "待",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02608",
+    "term": "得",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02622",
+    "term": "德",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02679",
+    "term": "怕",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02741",
+    "term": "恶",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02933",
+    "term": "成",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02956",
+    "term": "戴",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02966",
+    "term": "扁",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02970",
+    "term": "扇",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02977",
+    "term": "扎",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02980",
+    "term": "扒",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02981",
+    "term": "打",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02986",
+    "term": "扛",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02996",
+    "term": "扫",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-02997",
+    "term": "扬",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-03003",
+    "term": "扳",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-03017",
+    "term": "把",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-03027",
+    "term": "折",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-03034",
+    "term": "抡",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-03035",
+    "term": "抢",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-03046",
+    "term": "抹",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-03054",
+    "term": "担",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-03084",
+    "term": "拧",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-03099",
+    "term": "拽",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-03100",
+    "term": "拾",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-03112",
+    "term": "挑",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-03124",
+    "term": "挡",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-03126",
+    "term": "挣",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-03130",
+    "term": "挨",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-03167",
+    "term": "据",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-03212",
+    "term": "掺",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-03224",
+    "term": "提",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-03236",
+    "term": "揣",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-03256",
+    "term": "搁",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-03257",
+    "term": "搂",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-03298",
+    "term": "摇",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-03321",
+    "term": "摸",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-03329",
+    "term": "撇",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-03335",
+    "term": "撒",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-03386",
+    "term": "攒",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-03394",
+    "term": "支",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-03421",
+    "term": "教",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-03428",
+    "term": "散",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-03434",
+    "term": "数",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-03445",
+    "term": "文",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-03456",
+    "term": "斗",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-03476",
+    "term": "新",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-03478",
+    "term": "方",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-03506",
+    "term": "日",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-03520",
+    "term": "时",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-03571",
+    "term": "晃",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-03581",
+    "term": "晕",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-03602",
+    "term": "景",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-03660",
+    "term": "曲",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-03662",
+    "term": "更",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-03667",
+    "term": "曾",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-03676",
+    "term": "服",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-03686",
+    "term": "朝",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-03710",
+    "term": "权",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-03712",
+    "term": "杆",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-03729",
+    "term": "束",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-03751",
+    "term": "松",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-03752",
+    "term": "板",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-03766",
+    "term": "枚",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-03776",
+    "term": "枪",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-03814",
+    "term": "查",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-03893",
+    "term": "档",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-04035",
+    "term": "楼",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-04111",
+    "term": "横",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-04215",
+    "term": "正",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-04217",
+    "term": "步",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-04222",
+    "term": "歪",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-04260",
+    "term": "段",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-04279",
+    "term": "比",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-04285",
+    "term": "毛",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-04335",
+    "term": "水",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-04357",
+    "term": "汗",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-04363",
+    "term": "江",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-04366",
+    "term": "汤",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-04390",
+    "term": "沉",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-04403",
+    "term": "没",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-04445",
+    "term": "法",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-04454",
+    "term": "泡",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-04457",
+    "term": "泥",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-04513",
+    "term": "派",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-04518",
+    "term": "浅",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-04553",
+    "term": "海",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-04557",
+    "term": "涂",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-04563",
+    "term": "涌",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-04583",
+    "term": "涨",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-04605",
+    "term": "淋",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-04630",
+    "term": "混",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-04635",
+    "term": "清",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-04666",
+    "term": "港",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-04671",
+    "term": "游",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-04743",
+    "term": "滑",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-04752",
+    "term": "满",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-04767",
+    "term": "漂",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-04900",
+    "term": "火",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-04938",
+    "term": "炮",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-04946",
+    "term": "炸",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-05006",
+    "term": "焦",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-05052",
+    "term": "熊",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-05065",
+    "term": "熬",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-05125",
+    "term": "片",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-05134",
+    "term": "牛",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-05295",
+    "term": "率",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-05298",
+    "term": "王",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-05324",
+    "term": "环",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-05367",
+    "term": "班",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-05529",
+    "term": "田",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-05565",
+    "term": "番",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-05723",
+    "term": "白",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-05724",
+    "term": "百",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-05730",
+    "term": "的",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-05751",
+    "term": "皮",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-05772",
+    "term": "盖",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-05775",
+    "term": "盛",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-05788",
+    "term": "直",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-05795",
+    "term": "省",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-05803",
+    "term": "看",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-05834",
+    "term": "着",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-06045",
+    "term": "磕",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-06053",
+    "term": "磨",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-06082",
+    "term": "礼",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-06110",
+    "term": "祝",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-06111",
+    "term": "神",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-06119",
+    "term": "祭",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-06136",
+    "term": "福",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-06156",
+    "term": "离",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-06166",
+    "term": "种",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-06177",
+    "term": "秤",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-06185",
+    "term": "称",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-06198",
+    "term": "稍",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-06241",
+    "term": "空",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-06281",
+    "term": "立",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-06349",
+    "term": "筑",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-06351",
+    "term": "答",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-06393",
+    "term": "管",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-06482",
+    "term": "米",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-06501",
+    "term": "粘",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-06510",
+    "term": "粥",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-06531",
+    "term": "糊",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-06552",
+    "term": "系",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-06555",
+    "term": "红",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-06559",
+    "term": "约",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-06591",
+    "term": "累",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-06602",
+    "term": "组",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-06613",
+    "term": "经",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-06628",
+    "term": "结",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-06634",
+    "term": "给",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-06684",
+    "term": "绷",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-06735",
+    "term": "缝",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-06804",
+    "term": "罗",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-06837",
+    "term": "羊",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-06840",
+    "term": "美",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-06877",
+    "term": "翘",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-06899",
+    "term": "老",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-06911",
+    "term": "耍",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-07022",
+    "term": "背",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-07028",
+    "term": "胖",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-07061",
+    "term": "能",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-07067",
+    "term": "脏",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-07075",
+    "term": "脚",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-07183",
+    "term": "臭",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-07257",
+    "term": "色",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-07267",
+    "term": "节",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-07303",
+    "term": "花",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-07330",
+    "term": "苗",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-07411",
+    "term": "草",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-07554",
+    "term": "落",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-07592",
+    "term": "蒙",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-07625",
+    "term": "蓝",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-07703",
+    "term": "薄",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-07739",
+    "term": "藏",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-07802",
+    "term": "虾",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-07852",
+    "term": "蛋",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-08040",
+    "term": "行",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-08185",
+    "term": "西",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-08187",
+    "term": "要",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-08193",
+    "term": "见",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-08204",
+    "term": "觉",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-08218",
+    "term": "角",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-08226",
+    "term": "解",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-08247",
+    "term": "计",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-08275",
+    "term": "许",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-08295",
+    "term": "识",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-08320",
+    "term": "诗",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-08354",
+    "term": "说",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-08365",
+    "term": "读",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-08373",
+    "term": "调",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-08378",
+    "term": "谈",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-08399",
+    "term": "谜",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-08457",
+    "term": "豁",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-08530",
+    "term": "费",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-08565",
+    "term": "赖",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-08570",
+    "term": "赚",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-08601",
+    "term": "越",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-08607",
+    "term": "趟",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-08615",
+    "term": "足",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-08636",
+    "term": "跑",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-08658",
+    "term": "路",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-08676",
+    "term": "踏",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-08768",
+    "term": "车",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-08780",
+    "term": "转",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-08869",
+    "term": "边",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-08882",
+    "term": "过",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-08893",
+    "term": "还",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-08896",
+    "term": "远",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-08898",
+    "term": "连",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-08899",
+    "term": "迟",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-08919",
+    "term": "追",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-08941",
+    "term": "通",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-08951",
+    "term": "逮",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-08967",
+    "term": "遇",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-09013",
+    "term": "那",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-09075",
+    "term": "都",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-09197",
+    "term": "采",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-09201",
+    "term": "里",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-09202",
+    "term": "重",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-09204",
+    "term": "量",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-09205",
+    "term": "金",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-09213",
+    "term": "钉",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-09243",
+    "term": "钟",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-09271",
+    "term": "钱",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-09281",
+    "term": "钻",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-09287",
+    "term": "铁",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-09366",
+    "term": "铺",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-09408",
+    "term": "错",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-09430",
+    "term": "锯",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-09544",
+    "term": "长",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-09546",
+    "term": "门",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-09548",
+    "term": "闪",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-09561",
+    "term": "间",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-09564",
+    "term": "闷",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-09572",
+    "term": "闻",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-09626",
+    "term": "阴",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-09645",
+    "term": "降",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-09680",
+    "term": "随",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-09698",
+    "term": "难",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-09721",
+    "term": "雨",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-09723",
+    "term": "雪",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-09764",
+    "term": "露",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-09772",
+    "term": "青",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-09778",
+    "term": "非",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-09851",
+    "term": "章",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-09857",
+    "term": "页",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-09862",
+    "term": "项",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-09867",
+    "term": "顾",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-09878",
+    "term": "颇",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-09900",
+    "term": "题",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-09969",
+    "term": "饶",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-10026",
+    "term": "马",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-10031",
+    "term": "驮",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-10054",
+    "term": "驾",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-10089",
+    "term": "骑",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-10148",
+    "term": "高",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-10218",
+    "term": "鱼",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-10258",
+    "term": "鲜",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-10348",
+    "term": "鸟",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-10517",
+    "term": "麻",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-10523",
+    "term": "黄",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-10531",
+    "term": "黑",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-10533",
+    "term": "墨",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-10595",
+    "term": "齐",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-10620",
+    "term": "龙",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-10961",
+    "term": "上头",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-11118",
+    "term": "下场",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-11191",
+    "term": "下调",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-11215",
+    "term": "下面",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-11549",
+    "term": "世故",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-11632",
+    "term": "东北",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-11658",
+    "term": "东方",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-11685",
+    "term": "东西",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-11931",
+    "term": "中庸",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-12056",
+    "term": "丰满",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-12221",
+    "term": "为人",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-12964",
+    "term": "互助",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-13303",
+    "term": "亲属",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-13372",
+    "term": "人家",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-13631",
+    "term": "仙女",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-14828",
+    "term": "便宜",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-15163",
+    "term": "倒数",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-15193",
+    "term": "倒车",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-15742",
+    "term": "儿女",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-15865",
+    "term": "先生",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-15914",
+    "term": "光泽",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-16365",
+    "term": "公道",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-16701",
+    "term": "内地",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-17481",
+    "term": "凤凰",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-17657",
+    "term": "出息",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-17667",
+    "term": "出来",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-17943",
+    "term": "分量",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-cvdict-18246",
+    "term": "利害",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-0014",
+    "term": "书",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-0018",
+    "term": "钱",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-0026",
+    "term": "三",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-0027",
+    "term": "水",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-0034",
+    "term": "车",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-0037",
+    "term": "旅行",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "zh-0043",
+    "term": "累",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  },
+  {
+    "id": "iv-zh-0008",
+    "term": "频率",
+    "reason": "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+  }
+]

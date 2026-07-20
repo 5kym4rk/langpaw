@@ -355,7 +355,10 @@ export interface DictCandidate {
   meaningVi: string;
   reading?: string;
   romanization?: string;
+  ipa?: string;
   partOfSpeech?: string;
+  example?: string;
+  exampleVi?: string;
 }
 
 export interface DictBuildOptions {
@@ -433,10 +436,11 @@ export function buildDictionaryDataset(
     term: c.term,
     reading: c.reading,
     romanization: c.romanization,
+    ipa: c.ipa,
     partOfSpeech: c.partOfSpeech,
     meaningVi: c.meaningVi,
-    example: "",
-    exampleVi: "",
+    example: c.example ?? "",
+    exampleVi: c.exampleVi ?? "",
     level: i < opts.baseCount ? opts.baseLevel : opts.advancedLevel,
     topic: opts.topic,
     tags: [],

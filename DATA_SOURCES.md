@@ -47,7 +47,27 @@ tiêu chuẩn từ Cisco, 3GPP, IEEE, ARM, Microchip, STMicroelectronics, Texas
 Instruments khi được phép trích dẫn. **Chỉ tạo bộ từ chọn lọc, dẫn nguồn từng
 khái niệm** — không sao chép toàn bộ cơ sở dữ liệu thuật ngữ.
 
-## Trạng thái hiện tại
+## Trạng thái hiện tại (2026-07-20)
 
-Giai đoạn 0 chưa đóng gói dữ liệu thực. Dữ liệu mẫu (Giai đoạn 1+) sẽ tự biên
-soạn, gắn `reviewStatus: draft` và trỏ tới nguồn phù hợp.
+Kho từ hiện có ~71.000 mục (en ~20.1k, zh ~20.1k, ja ~20.1k, ko ~10.8k), toàn bộ
+`reviewStatus: draft`. **Nguồn NGHĨA tiếng Việt theo từng ngôn ngữ (không gộp):**
+
+| Ngôn ngữ     | Nguồn nghĩa Việt              | Ghi chú                                               |
+| ------------ | ----------------------------- | ----------------------------------------------------- |
+| Trung        | CVDICT (CC BY-SA 4.0)         | nghĩa Việt thật từ từ điển                            |
+| Anh          | Gói StarDict en_vi            | **giấy phép CHƯA XÁC MINH — redistribution: unknown** |
+| Nhật         | Gói StarDict star_nhatviet    | **giấy phép CHƯA XÁC MINH — redistribution: unknown** |
+| Hàn          | 한국어기초사전 (krdict, NIKL) | bản dịch Việt chính thức                              |
+| Một phần nhỏ | LangPaw tự biên soạn (seed)   | các bộ seed/interview                                 |
+
+**Nguồn PHÂN CẤP chứng chỉ (vai trò certificate-level, tách với nguồn nghĩa):**
+
+| Lộ trình                            | Tiêu chuẩn (standardAuthority)            | Bản dữ liệu nhập (dataDistributor)                                                                 | Trạng thái                                  |
+| ----------------------------------- | ----------------------------------------- | -------------------------------------------------------------------------------------------------- | ------------------------------------------- |
+| CEFR tham khảo                      | CEFR-J 1.5 + Octanove C1/C2               | openlanguageprofiles/olp-en-cefrj (CC BY 4.0)                                                      | reference                                   |
+| Phân cấp theo HSK 3.0 / GF0025-2021 | GF0025-2021 (MOE/CLEC)                    | krmanik/HSK-3.0 + elkmovie/hsk30 — **bản chép/OCR cộng đồng, không phải bản phát hành chính thức** | official-standard / community-transcription |
+| JLPT tham khảo                      | (JLPT không công bố danh sách chính thức) | elzup/jlpt-word-list                                                                               | reference                                   |
+| NIKL A/B/C                          | 한국어기초사전 vocabularyLevel (NIKL)     | bản tải JSON chính thức của krdict                                                                 | reference                                   |
+
+Chi tiết số khớp/learning-ready: xem `docs/LEARNING_DATA_REPORT.md` và trang
+Nguồn trong ứng dụng.

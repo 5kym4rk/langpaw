@@ -22,6 +22,7 @@ function makeItem(id: string): VocabularyItem {
     certificateScheme: "CEFR-J",
     certificateLevel: "A1",
     certificateStatus: "reference",
+    learningReady: true,
   };
 }
 

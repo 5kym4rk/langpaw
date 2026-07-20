@@ -32,7 +32,11 @@
       "sourceIds": ["langpaw-selfauthored-zh"],
       "reviewStatus": "draft",
       "certificateLevel": null,
-      "certificateStatus": "unclassified"
+      "certificateStatus": "unclassified",
+      "learningReady": false,
+      "topicIds": ["greetings"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "zh-0002",
@@ -53,7 +57,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
       "certificateLevel": "HSK 1",
-      "certificateStatus": "official"
+      "certificateStatus": "official",
+      "learningReady": true,
+      "topicIds": ["greetings"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "zh-0003",
@@ -74,7 +82,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
       "certificateLevel": "HSK 1",
-      "certificateStatus": "official"
+      "certificateStatus": "official",
+      "learningReady": true,
+      "topicIds": ["greetings"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "zh-0004",
@@ -95,7 +107,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
       "certificateLevel": "HSK 1",
-      "certificateStatus": "official"
+      "certificateStatus": "official",
+      "learningReady": true,
+      "topicIds": ["greetings"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "zh-0005",
@@ -116,7 +132,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
       "certificateLevel": "HSK 1",
-      "certificateStatus": "official"
+      "certificateStatus": "official",
+      "learningReady": true,
+      "topicIds": ["greetings"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "zh-0006",
@@ -137,7 +157,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
       "certificateLevel": "HSK 1",
-      "certificateStatus": "official"
+      "certificateStatus": "official",
+      "learningReady": true,
+      "topicIds": ["family"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "zh-0007",
@@ -158,7 +182,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
       "certificateLevel": "HSK 1",
-      "certificateStatus": "official"
+      "certificateStatus": "official",
+      "learningReady": true,
+      "topicIds": ["family"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "zh-0008",
@@ -179,7 +207,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
       "certificateLevel": "HSK 1",
-      "certificateStatus": "official"
+      "certificateStatus": "official",
+      "learningReady": true,
+      "topicIds": ["family"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "zh-0009",
@@ -200,7 +232,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
       "certificateLevel": "HSK 1",
-      "certificateStatus": "official"
+      "certificateStatus": "official",
+      "learningReady": true,
+      "topicIds": ["family"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "zh-0010",
@@ -221,7 +257,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
       "certificateLevel": "HSK 1",
-      "certificateStatus": "official"
+      "certificateStatus": "official",
+      "learningReady": true,
+      "topicIds": ["family"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "zh-0011",
@@ -242,7 +282,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
       "certificateLevel": "HSK 1",
-      "certificateStatus": "official"
+      "certificateStatus": "official",
+      "learningReady": true,
+      "topicIds": ["school"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "zh-0012",
@@ -263,7 +307,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
       "certificateLevel": "HSK 1",
-      "certificateStatus": "official"
+      "certificateStatus": "official",
+      "learningReady": true,
+      "topicIds": ["school"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "zh-0013",
@@ -284,7 +332,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
       "certificateLevel": "HSK 1",
-      "certificateStatus": "official"
+      "certificateStatus": "official",
+      "learningReady": true,
+      "topicIds": ["school"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "zh-0014",
@@ -305,7 +357,13 @@
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
       "certificateLevel": "HSK 1",
-      "certificateStatus": "official"
+      "certificateStatus": "official",
+      "certificateRequiresReview": true,
+      "senseMismatch": true,
+      "learningReady": false,
+      "topicIds": ["school"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "zh-0015",
@@ -326,7 +384,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
       "certificateLevel": "HSK 1",
-      "certificateStatus": "official"
+      "certificateStatus": "official",
+      "learningReady": true,
+      "topicIds": ["school"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "zh-0016",
@@ -347,7 +409,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
       "certificateLevel": "HSK 1",
-      "certificateStatus": "official"
+      "certificateStatus": "official",
+      "learningReady": true,
+      "topicIds": ["work"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "zh-0017",
@@ -368,7 +434,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
       "certificateLevel": "HSK 2",
-      "certificateStatus": "official"
+      "certificateStatus": "official",
+      "learningReady": true,
+      "topicIds": ["work"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "zh-0018",
@@ -389,7 +459,13 @@
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
       "certificateLevel": "HSK 1",
-      "certificateStatus": "official"
+      "certificateStatus": "official",
+      "certificateRequiresReview": true,
+      "senseMismatch": true,
+      "learningReady": false,
+      "topicIds": ["work"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "zh-0019",
@@ -410,7 +486,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
       "certificateLevel": "HSK 1",
-      "certificateStatus": "official"
+      "certificateStatus": "official",
+      "learningReady": true,
+      "topicIds": ["work"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "zh-0020",
@@ -431,7 +511,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
       "certificateLevel": "HSK 1",
-      "certificateStatus": "official"
+      "certificateStatus": "official",
+      "learningReady": true,
+      "topicIds": ["time"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "zh-0021",
@@ -452,7 +536,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
       "certificateLevel": "HSK 1",
-      "certificateStatus": "official"
+      "certificateStatus": "official",
+      "learningReady": true,
+      "topicIds": ["time"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "zh-0022",
@@ -473,7 +561,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
       "certificateLevel": "HSK 1",
-      "certificateStatus": "official"
+      "certificateStatus": "official",
+      "learningReady": true,
+      "topicIds": ["time"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "zh-0023",
@@ -494,7 +586,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
       "certificateLevel": "HSK 1",
-      "certificateStatus": "official"
+      "certificateStatus": "official",
+      "learningReady": true,
+      "topicIds": ["time"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "zh-0024",
@@ -515,7 +611,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
       "certificateLevel": "HSK 1",
-      "certificateStatus": "official"
+      "certificateStatus": "official",
+      "learningReady": true,
+      "topicIds": ["numbers"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "zh-0025",
@@ -536,7 +636,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
       "certificateLevel": "HSK 1",
-      "certificateStatus": "official"
+      "certificateStatus": "official",
+      "learningReady": true,
+      "topicIds": ["numbers"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "zh-0026",
@@ -557,7 +661,13 @@
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
       "certificateLevel": "HSK 1",
-      "certificateStatus": "official"
+      "certificateStatus": "official",
+      "certificateRequiresReview": true,
+      "senseMismatch": true,
+      "learningReady": false,
+      "topicIds": ["numbers"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "zh-0027",
@@ -578,7 +688,13 @@
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
       "certificateLevel": "HSK 1",
-      "certificateStatus": "official"
+      "certificateStatus": "official",
+      "certificateRequiresReview": true,
+      "senseMismatch": true,
+      "learningReady": false,
+      "topicIds": ["food"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "zh-0028",
@@ -599,7 +715,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
       "certificateLevel": "HSK 1",
-      "certificateStatus": "official"
+      "certificateStatus": "official",
+      "learningReady": true,
+      "topicIds": ["food"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "zh-0029",
@@ -620,7 +740,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
       "certificateLevel": "HSK 1",
-      "certificateStatus": "official"
+      "certificateStatus": "official",
+      "learningReady": true,
+      "topicIds": ["food"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "zh-0030",
@@ -641,7 +765,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
       "certificateLevel": "HSK 3",
-      "certificateStatus": "official"
+      "certificateStatus": "official",
+      "learningReady": true,
+      "topicIds": ["food"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "zh-0031",
@@ -662,7 +790,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
       "certificateLevel": "HSK 1",
-      "certificateStatus": "official"
+      "certificateStatus": "official",
+      "learningReady": true,
+      "topicIds": ["shopping"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "zh-0032",
@@ -683,7 +815,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
       "certificateLevel": "HSK 3",
-      "certificateStatus": "official"
+      "certificateStatus": "official",
+      "learningReady": true,
+      "topicIds": ["shopping"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "zh-0033",
@@ -704,7 +840,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
       "certificateLevel": "HSK 1",
-      "certificateStatus": "official"
+      "certificateStatus": "official",
+      "learningReady": true,
+      "topicIds": ["shopping"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "zh-0034",
@@ -725,7 +865,13 @@
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
       "certificateLevel": "HSK 1",
-      "certificateStatus": "official"
+      "certificateStatus": "official",
+      "certificateRequiresReview": true,
+      "senseMismatch": true,
+      "learningReady": false,
+      "topicIds": ["transport"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "zh-0035",
@@ -746,7 +892,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
       "certificateLevel": "HSK 2",
-      "certificateStatus": "official"
+      "certificateStatus": "official",
+      "learningReady": true,
+      "topicIds": ["transport"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "zh-0036",
@@ -767,7 +917,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
       "certificateLevel": "HSK 1",
-      "certificateStatus": "official"
+      "certificateStatus": "official",
+      "learningReady": true,
+      "topicIds": ["transport"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "zh-0037",
@@ -788,7 +942,13 @@
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
       "certificateLevel": "HSK 2",
-      "certificateStatus": "official"
+      "certificateStatus": "official",
+      "certificateRequiresReview": true,
+      "senseMismatch": true,
+      "learningReady": false,
+      "topicIds": ["travel"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "zh-0038",
@@ -809,7 +969,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
       "certificateLevel": "HSK 2",
-      "certificateStatus": "official"
+      "certificateStatus": "official",
+      "learningReady": true,
+      "topicIds": ["travel"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "zh-0039",
@@ -830,7 +994,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
       "certificateLevel": "HSK 1",
-      "certificateStatus": "official"
+      "certificateStatus": "official",
+      "learningReady": true,
+      "topicIds": ["travel"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "zh-0040",
@@ -851,7 +1019,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
       "certificateLevel": "HSK 1",
-      "certificateStatus": "official"
+      "certificateStatus": "official",
+      "learningReady": true,
+      "topicIds": ["health"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "zh-0041",
@@ -872,7 +1044,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
       "certificateLevel": "HSK 2",
-      "certificateStatus": "official"
+      "certificateStatus": "official",
+      "learningReady": true,
+      "topicIds": ["health"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "zh-0042",
@@ -893,7 +1069,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
       "certificateLevel": "HSK 1",
-      "certificateStatus": "official"
+      "certificateStatus": "official",
+      "learningReady": true,
+      "topicIds": ["feelings"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "zh-0043",
@@ -914,7 +1094,13 @@
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
       "certificateLevel": "HSK 1",
-      "certificateStatus": "official"
+      "certificateStatus": "official",
+      "certificateRequiresReview": true,
+      "senseMismatch": true,
+      "learningReady": false,
+      "topicIds": ["feelings"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "zh-0044",
@@ -935,7 +1121,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
       "certificateLevel": "HSK 1",
-      "certificateStatus": "official"
+      "certificateStatus": "official",
+      "learningReady": true,
+      "topicIds": ["feelings"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "zh-0045",
@@ -949,14 +1139,18 @@
       "exampleVi": "Chúng ta có cuộc họp lúc mười giờ.",
       "level": "HSK 3",
       "syllabusVersion": "HSK2.0-old",
-      "topic": "Văn phòng",
+      "topic": "Công việc",
       "tags": ["office"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-zh"],
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
       "certificateLevel": "HSK 3",
-      "certificateStatus": "official"
+      "certificateStatus": "official",
+      "learningReady": true,
+      "topicIds": ["work"],
+      "topicStatus": "rule",
+      "topicConfidence": 0.75
     },
     {
       "id": "zh-0046",
@@ -970,14 +1164,18 @@
       "exampleVi": "Tôi sẽ gửi cho bạn một email.",
       "level": "HSK 3",
       "syllabusVersion": "HSK2.0-old",
-      "topic": "Văn phòng",
+      "topic": "Chưa phân loại chủ đề",
       "tags": ["office"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-zh"],
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
       "certificateLevel": "HSK 3",
-      "certificateStatus": "official"
+      "certificateStatus": "official",
+      "learningReady": true,
+      "topicIds": [],
+      "topicStatus": "unclassified",
+      "topicConfidence": 0
     },
     {
       "id": "zh-0047",
@@ -998,7 +1196,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
       "certificateLevel": "HSK 1",
-      "certificateStatus": "official"
+      "certificateStatus": "official",
+      "learningReady": true,
+      "topicIds": ["technology"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "zh-0048",
@@ -1019,7 +1221,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
       "certificateLevel": "HSK 1",
-      "certificateStatus": "official"
+      "certificateStatus": "official",
+      "learningReady": true,
+      "topicIds": ["technology"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "zh-0049",
@@ -1033,14 +1239,18 @@
       "exampleVi": "Bạn giúp tôi được không?",
       "level": "HSK 2",
       "syllabusVersion": "HSK2.0-old",
-      "topic": "Giao tiếp công sở",
+      "topic": "Chưa phân loại chủ đề",
       "tags": ["communication"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-zh"],
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
       "certificateLevel": "HSK 2",
-      "certificateStatus": "official"
+      "certificateStatus": "official",
+      "learningReady": true,
+      "topicIds": [],
+      "topicStatus": "unclassified",
+      "topicConfidence": 0
     },
     {
       "id": "zh-0050",
@@ -1054,14 +1264,18 @@
       "exampleVi": "Tôi hiểu câu hỏi này.",
       "level": "HSK 1",
       "syllabusVersion": "HSK2.0-old",
-      "topic": "Giao tiếp công sở",
+      "topic": "Giao tiếp",
       "tags": ["communication"],
       "isInterviewVocabulary": false,
       "sourceIds": ["langpaw-selfauthored-zh"],
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
       "certificateLevel": "HSK 1",
-      "certificateStatus": "official"
+      "certificateStatus": "official",
+      "learningReady": true,
+      "topicIds": ["communication"],
+      "topicStatus": "rule",
+      "topicConfidence": 0.8
     }
   ]
 }

@@ -27,7 +27,7 @@
       "example": "请测量电阻两端的电压。",
       "exampleVi": "Hãy đo điện áp trên điện trở.",
       "level": "Chưa phân loại",
-      "topic": "B. Điện tử cơ bản",
+      "topic": "Điện tử",
       "tags": ["electronics"],
       "isInterviewVocabulary": true,
       "interviewRoles": ["hardware-engineer", "hardware-test-engineer"],
@@ -36,7 +36,11 @@
       "sourceIds": ["interview-terminology-ref-zh"],
       "reviewStatus": "draft",
       "certificateLevel": null,
-      "certificateStatus": "unclassified"
+      "certificateStatus": "unclassified",
+      "learningReady": false,
+      "topicIds": ["electronics"],
+      "topicStatus": "rule",
+      "topicConfidence": 1
     },
     {
       "id": "iv-zh-0002",
@@ -51,7 +55,7 @@
       "example": "这根导线的电流是两安培。",
       "exampleVi": "Dòng điện qua dây này là 2 ampe.",
       "level": "Chưa phân loại",
-      "topic": "B. Điện tử cơ bản",
+      "topic": "Điện tử",
       "tags": ["electronics"],
       "isInterviewVocabulary": true,
       "interviewRoles": ["hardware-engineer", "hardware-test-engineer"],
@@ -60,7 +64,11 @@
       "sourceIds": ["interview-terminology-ref-zh"],
       "reviewStatus": "draft",
       "certificateLevel": null,
-      "certificateStatus": "unclassified"
+      "certificateStatus": "unclassified",
+      "learningReady": false,
+      "topicIds": ["electronics"],
+      "topicStatus": "rule",
+      "topicConfidence": 0.75
     },
     {
       "id": "iv-zh-0003",
@@ -75,7 +83,7 @@
       "example": "电阻越大，电流越小。",
       "exampleVi": "Điện trở càng lớn, dòng điện càng nhỏ.",
       "level": "Chưa phân loại",
-      "topic": "B. Điện tử cơ bản",
+      "topic": "Điện tử",
       "tags": ["electronics"],
       "isInterviewVocabulary": true,
       "interviewRoles": ["hardware-engineer", "rd-engineer"],
@@ -84,7 +92,11 @@
       "sourceIds": ["interview-terminology-ref-zh"],
       "reviewStatus": "draft",
       "certificateLevel": null,
-      "certificateStatus": "unclassified"
+      "certificateStatus": "unclassified",
+      "learningReady": false,
+      "topicIds": ["electronics"],
+      "topicStatus": "rule",
+      "topicConfidence": 1
     },
     {
       "id": "iv-zh-0004",
@@ -99,7 +111,7 @@
       "example": "电容可以稳定输出电压。",
       "exampleVi": "Tụ điện giúp ổn định điện áp đầu ra.",
       "level": "Chưa phân loại",
-      "topic": "B. Điện tử cơ bản",
+      "topic": "Điện tử",
       "tags": ["electronics"],
       "isInterviewVocabulary": true,
       "interviewRoles": ["hardware-engineer"],
@@ -108,7 +120,11 @@
       "sourceIds": ["interview-terminology-ref-zh"],
       "reviewStatus": "draft",
       "certificateLevel": null,
-      "certificateStatus": "unclassified"
+      "certificateStatus": "unclassified",
+      "learningReady": false,
+      "topicIds": ["electronics"],
+      "topicStatus": "rule",
+      "topicConfidence": 1
     },
     {
       "id": "iv-zh-0005",
@@ -123,7 +139,7 @@
       "example": "二极管阻止反向电流。",
       "exampleVi": "Điốt chặn dòng điện ngược.",
       "level": "Chưa phân loại",
-      "topic": "B. Điện tử cơ bản",
+      "topic": "Điện tử",
       "tags": ["electronics", "component"],
       "isInterviewVocabulary": true,
       "interviewRoles": ["hardware-engineer"],
@@ -132,7 +148,11 @@
       "sourceIds": ["interview-terminology-ref-zh"],
       "reviewStatus": "draft",
       "certificateLevel": null,
-      "certificateStatus": "unclassified"
+      "certificateStatus": "unclassified",
+      "learningReady": false,
+      "topicIds": ["electronics"],
+      "topicStatus": "rule",
+      "topicConfidence": 1
     },
     {
       "id": "iv-zh-0006",
@@ -147,7 +167,7 @@
       "example": "晶体管可以放大信号。",
       "exampleVi": "Tranzito có thể khuếch đại tín hiệu.",
       "level": "Chưa phân loại",
-      "topic": "B. Điện tử cơ bản",
+      "topic": "Điện tử",
       "tags": ["electronics", "component"],
       "isInterviewVocabulary": true,
       "interviewRoles": ["hardware-engineer", "rd-engineer"],
@@ -156,7 +176,11 @@
       "sourceIds": ["interview-terminology-ref-zh"],
       "reviewStatus": "draft",
       "certificateLevel": null,
-      "certificateStatus": "unclassified"
+      "certificateStatus": "unclassified",
+      "learningReady": false,
+      "topicIds": ["electronics", "telecommunications"],
+      "topicStatus": "rule",
+      "topicConfidence": 1
     },
     {
       "id": "iv-zh-0007",
@@ -171,7 +195,7 @@
       "example": "这个集成电路包含许多晶体管。",
       "exampleVi": "Mạch tích hợp này chứa nhiều tranzito.",
       "level": "Chưa phân loại",
-      "topic": "B. Điện tử cơ bản",
+      "topic": "Điện tử",
       "tags": ["electronics"],
       "isInterviewVocabulary": true,
       "interviewRoles": ["hardware-engineer", "embedded-firmware-engineer"],
@@ -180,7 +204,11 @@
       "sourceIds": ["interview-terminology-ref-zh"],
       "reviewStatus": "draft",
       "certificateLevel": null,
-      "certificateStatus": "unclassified"
+      "certificateStatus": "unclassified",
+      "learningReady": false,
+      "topicIds": ["electronics"],
+      "topicStatus": "rule",
+      "topicConfidence": 1
     },
     {
       "id": "iv-zh-0008",
@@ -194,8 +222,8 @@
       "explanationVi": "Số chu kỳ trong một giây, đo bằng héc.",
       "example": "信号频率是二点四吉赫。",
       "exampleVi": "Tần số tín hiệu là 2,4 GHz.",
-      "level": "HSK 6",
-      "topic": "E. Viễn thông và mạng",
+      "level": "HSK 7–9",
+      "topic": "Viễn thông",
       "tags": ["rf"],
       "isInterviewVocabulary": true,
       "interviewRoles": ["rf-engineer", "network-telecom-engineer"],
@@ -204,8 +232,14 @@
       "sourceIds": ["interview-terminology-ref-zh"],
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
-      "certificateLevel": "HSK 6",
-      "certificateStatus": "official"
+      "certificateLevel": "HSK 7–9",
+      "certificateStatus": "official",
+      "certificateRequiresReview": true,
+      "senseMismatch": true,
+      "learningReady": false,
+      "topicIds": ["telecommunications", "numbers"],
+      "topicStatus": "rule",
+      "topicConfidence": 1
     },
     {
       "id": "iv-zh-0009",
@@ -219,8 +253,8 @@
       "explanationVi": "Thiết bị phát và thu sóng điện từ.",
       "example": "天线发射无线信号。",
       "exampleVi": "Ăng-ten phát tín hiệu vô tuyến.",
-      "level": "HSK 6",
-      "topic": "E. Viễn thông và mạng",
+      "level": "HSK 7–9",
+      "topic": "Viễn thông",
       "tags": ["rf"],
       "isInterviewVocabulary": true,
       "interviewRoles": ["rf-engineer", "network-telecom-engineer"],
@@ -229,8 +263,12 @@
       "sourceIds": ["interview-terminology-ref-zh"],
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
-      "certificateLevel": "HSK 6",
-      "certificateStatus": "official"
+      "certificateLevel": "HSK 7–9",
+      "certificateStatus": "official",
+      "learningReady": true,
+      "topicIds": ["telecommunications"],
+      "topicStatus": "rule",
+      "topicConfidence": 1
     },
     {
       "id": "iv-zh-0010",
@@ -245,7 +283,7 @@
       "example": "这条链路带宽有限。",
       "exampleVi": "Đường truyền này có băng thông hạn chế.",
       "level": "Chưa phân loại",
-      "topic": "E. Viễn thông và mạng",
+      "topic": "Giao thông",
       "tags": ["network"],
       "isInterviewVocabulary": true,
       "interviewRoles": ["network-telecom-engineer"],
@@ -254,7 +292,11 @@
       "sourceIds": ["interview-terminology-ref-zh"],
       "reviewStatus": "draft",
       "certificateLevel": null,
-      "certificateStatus": "unclassified"
+      "certificateStatus": "unclassified",
+      "learningReady": false,
+      "topicIds": ["transport", "telecommunications"],
+      "topicStatus": "rule",
+      "topicConfidence": 0.75
     },
     {
       "id": "iv-zh-0011",
@@ -269,7 +311,7 @@
       "example": "TCP 是一种可靠的传输协议。",
       "exampleVi": "TCP là giao thức truyền tải tin cậy.",
       "level": "HSK 5",
-      "topic": "E. Viễn thông và mạng",
+      "topic": "Chưa phân loại chủ đề",
       "tags": ["network"],
       "isInterviewVocabulary": true,
       "interviewRoles": ["network-telecom-engineer"],
@@ -279,7 +321,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
       "certificateLevel": "HSK 5",
-      "certificateStatus": "official"
+      "certificateStatus": "official",
+      "learningReady": true,
+      "topicIds": [],
+      "topicStatus": "unclassified",
+      "topicConfidence": 0
     },
     {
       "id": "iv-zh-0012",
@@ -294,7 +340,7 @@
       "example": "仪器每年需要校准一次。",
       "exampleVi": "Thiết bị cần hiệu chuẩn mỗi năm một lần.",
       "level": "Chưa phân loại",
-      "topic": "C. Đo lường, kiểm thử và chất lượng",
+      "topic": "Số đếm",
       "tags": ["quality"],
       "isInterviewVocabulary": true,
       "interviewRoles": ["qa-qc-engineer", "hardware-test-engineer"],
@@ -303,7 +349,11 @@
       "sourceIds": ["interview-terminology-ref-zh"],
       "reviewStatus": "draft",
       "certificateLevel": null,
-      "certificateStatus": "unclassified"
+      "certificateStatus": "unclassified",
+      "learningReady": false,
+      "topicIds": ["numbers"],
+      "topicStatus": "rule",
+      "topicConfidence": 0.8
     }
   ]
 }

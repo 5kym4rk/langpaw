@@ -12,9 +12,21 @@ Zod, Lucide) được phát hành theo giấy phép MIT/ISC tương ứng.
 ## Dữ liệu từ vựng
 
 Xem `DATA_SOURCES.md`. Từng nguồn được ghi công theo điều kiện giấy phép của
-nguồn đó. Dữ liệu gốc (headword, cách đọc, POS, định nghĩa, entry id) lấy từ các
-nguồn dưới đây; **nghĩa Việt và câu ví dụ do LangPaw tự biên soạn** và ở trạng
-thái `draft` cho tới khi được rà soát/kiểm duyệt.
+nguồn đó. **Nguồn nghĩa tiếng Việt được ghi RIÊNG theo từng ngôn ngữ** (không có
+tuyên bố chung "LangPaw tự biên soạn" cho toàn bộ dữ liệu):
+
+- Trung: CVDICT (Phong Phan, CC BY-SA 4.0) cung cấp nghĩa Việt.
+- Anh: gói StarDict en_vi — nguồn/giấy phép gốc CHƯA XÁC MINH (redistribution:
+  unknown); cảnh báo hiển thị ở trang Nguồn.
+- Nhật: gói StarDict star_nhatviet (2007) — nguồn/giấy phép gốc CHƯA XÁC MINH
+  (redistribution: unknown).
+- Hàn: 한국어기초사전 (krdict/NIKL) cung cấp bản dịch Việt chính thức.
+- Seed/interview: LangPaw tự biên soạn.
+
+Toàn bộ ở trạng thái `draft` cho tới khi được người kiểm duyệt của LangPaw rà
+soát. Nguồn PHÂN CẤP chứng chỉ (CEFR-J/Octanove, GF0025-2021 qua bản chép cộng
+đồng, elzup/jlpt-word-list, NIKL vocabularyLevel) ghi tại `DATA_SOURCES.md` —
+mirror/OCR cộng đồng KHÔNG được gọi là nguồn phát hành chính thức.
 
 ### Open English WordNet (tiếng Anh)
 

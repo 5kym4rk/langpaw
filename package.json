@@ -27,7 +27,12 @@
     "import:ja-vi": "tsx scripts/import-ja-vi.ts",
     "gen:icons": "tsx scripts/generate-icons.ts",
     "import:certs": "tsx scripts/import-cert-indexes.ts",
-    "build:certs": "tsx scripts/build-certificates.ts"
+    "build:certs": "tsx scripts/build-certificates.ts",
+    "classify:topics": "tsx scripts/classify-topics.ts",
+    "validate:classification": "tsx scripts/validate-classification.ts",
+    "validate:learning-ready": "tsx scripts/validate-classification.ts --learning-ready",
+    "validate:topics": "tsx scripts/validate-classification.ts --topics",
+    "report:learning-data": "tsx scripts/build-certificates.ts"
   },
   "overrides": {
     "vite": "^6.0.5"

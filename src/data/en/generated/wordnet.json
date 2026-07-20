@@ -27,7 +27,7 @@
       "exampleVi": "Điện áp trên điện trở là năm vôn.",
       "level": "Chưa phân loại",
       "syllabusVersion": "CEFR-reference",
-      "topic": "Điện – Điện tử",
+      "topic": "Điện tử",
       "tags": ["electronics"],
       "isInterviewVocabulary": false,
       "sourceIds": ["oewn-2025"],
@@ -37,7 +37,11 @@
       "exampleSelfAuthored": true,
       "reviewStatus": "draft",
       "certificateLevel": null,
-      "certificateStatus": "unclassified"
+      "certificateStatus": "unclassified",
+      "learningReady": false,
+      "topicIds": ["electronics"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "en-oewn-0002",
@@ -51,7 +55,7 @@
       "exampleVi": "Một dòng điện lớn chạy qua dây.",
       "level": "B1",
       "syllabusVersion": "CEFR-reference",
-      "topic": "Điện – Điện tử",
+      "topic": "Điện tử",
       "tags": ["electronics"],
       "isInterviewVocabulary": false,
       "sourceIds": ["oewn-2025"],
@@ -62,7 +66,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "CEFR-J",
       "certificateLevel": "B1",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["electronics"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "en-oewn-0003",
@@ -76,7 +84,7 @@
       "exampleVi": "Điện trở hạn chế dòng điện.",
       "level": "Chưa phân loại",
       "syllabusVersion": "CEFR-reference",
-      "topic": "Điện – Điện tử",
+      "topic": "Điện tử",
       "tags": ["electronics"],
       "isInterviewVocabulary": false,
       "sourceIds": ["oewn-2025"],
@@ -86,7 +94,11 @@
       "exampleSelfAuthored": true,
       "reviewStatus": "draft",
       "certificateLevel": null,
-      "certificateStatus": "unclassified"
+      "certificateStatus": "unclassified",
+      "learningReady": false,
+      "topicIds": ["electronics"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "en-oewn-0004",
@@ -99,7 +111,7 @@
       "exampleVi": "Tụ điện làm phẳng điện áp đầu ra.",
       "level": "Chưa phân loại",
       "syllabusVersion": "CEFR-reference",
-      "topic": "Điện – Điện tử",
+      "topic": "Điện tử",
       "tags": ["electronics"],
       "isInterviewVocabulary": false,
       "sourceIds": ["oewn-2025"],
@@ -109,7 +121,11 @@
       "exampleSelfAuthored": true,
       "reviewStatus": "draft",
       "certificateLevel": null,
-      "certificateStatus": "unclassified"
+      "certificateStatus": "unclassified",
+      "learningReady": false,
+      "topicIds": ["electronics"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "en-oewn-0005",
@@ -134,7 +150,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "CEFR-J",
       "certificateLevel": "B1",
-      "certificateStatus": "reference"
+      "certificateStatus": "reference",
+      "learningReady": true,
+      "topicIds": ["telecommunications"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "en-oewn-0006",
@@ -160,7 +180,11 @@
       "certificateScheme": "CEFR-J",
       "certificateLevel": "B1",
       "certificateStatus": "reference",
-      "certificateRequiresReview": true
+      "certificateRequiresReview": true,
+      "learningReady": false,
+      "topicIds": ["telecommunications"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "en-oewn-0007",
@@ -174,7 +198,7 @@
       "exampleVi": "Đường truyền này có băng thông hạn chế.",
       "level": "Chưa phân loại",
       "syllabusVersion": "CEFR-reference",
-      "topic": "Mạng",
+      "topic": "Viễn thông",
       "tags": ["network"],
       "isInterviewVocabulary": false,
       "sourceIds": ["oewn-2025"],
@@ -184,7 +208,11 @@
       "exampleSelfAuthored": true,
       "reviewStatus": "draft",
       "certificateLevel": null,
-      "certificateStatus": "unclassified"
+      "certificateStatus": "unclassified",
+      "learningReady": false,
+      "topicIds": ["telecommunications"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "en-oewn-0008",
@@ -198,7 +226,7 @@
       "exampleVi": "Độ trễ thấp rất quan trọng với cuộc gọi video.",
       "level": "Chưa phân loại",
       "syllabusVersion": "CEFR-reference",
-      "topic": "Mạng",
+      "topic": "Viễn thông",
       "tags": ["network"],
       "isInterviewVocabulary": false,
       "sourceIds": ["oewn-2025"],
@@ -208,7 +236,11 @@
       "exampleSelfAuthored": true,
       "reviewStatus": "draft",
       "certificateLevel": null,
-      "certificateStatus": "unclassified"
+      "certificateStatus": "unclassified",
+      "learningReady": false,
+      "topicIds": ["telecommunications"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     }
   ]
 }

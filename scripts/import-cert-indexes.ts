@@ -79,37 +79,44 @@ writeFileSync(
 );
 console.log(`en: ${enEntries.length} mục CEFR-J/Octanove`);
 
-// ---------------- ZH: HSK 3.0 ----------------
-const LEVEL_HEADERS: Record<string, string> = {
-  一级词汇表: "HSK 1",
-  二级词汇表: "HSK 2",
-  三级词汇表: "HSK 3",
-  四级词汇表: "HSK 4",
-  五级词汇表: "HSK 5",
-  六级词汇表: "HSK 6",
-  "七—九级词汇表": "HSK 7–9",
-};
+// ---------------- ZH: HSK 3.0 (TSV có pinyin) ----------------
+// hskTxt giờ là THƯ MỤC chứa hsk-tsv-{1..6,7-9}.tsv (krmanik/HSK-3.0):
+// cột 1 giản thể, cột 2 phồn thể, cột 3 pinyin (HTML). Chuẩn hóa pinyin để
+// match sense (spec III.2) — mặt chữ đơn thuần không đủ.
+import { normalizePinyin } from "../src/services/classification/certificate-matcher.ts";
+
 interface ZhEntry {
   simplified: string;
+  traditional?: string;
+  pinyin?: string;
   level: string;
 }
+const stripHtml = (s: string) => s.replace(/<[^>]+>/g, "").trim();
 const zhEntries: ZhEntry[] = [];
-let currentLevel = "";
-for (const raw of readFileSync(hskTxt, "utf8").split(/\r?\n/)) {
-  const line = raw.trim();
-  if (!line || line.startsWith("#")) continue;
-  const header = Object.keys(LEVEL_HEADERS).find((h) => line.includes(h));
-  if (header) {
-    currentLevel = LEVEL_HEADERS[header];
-    continue;
-  }
-  // Dòng dạng "123 词语" (có thể kèm chú thích trong ngoặc).
-  const m = line.match(/^\d+\s+(\S+)/);
-  if (!m || !currentLevel) continue;
-  // Bỏ phần chú thích như 爱人（爱人儿） → lấy trước ngoặc; biến thể ｜ tách đôi.
-  const base = m[1].split(/[（(｜|]/)[0].trim();
-  if (/^[一-鿿]+$/.test(base)) {
-    zhEntries.push({ simplified: base, level: currentLevel });
+const ZH_LEVELS: [string, string][] = [
+  ["1", "HSK 1"],
+  ["2", "HSK 2"],
+  ["3", "HSK 3"],
+  ["4", "HSK 4"],
+  ["5", "HSK 5"],
+  ["6", "HSK 6"],
+  ["7-9", "HSK 7–9"],
+];
+for (const [suffix, level] of ZH_LEVELS) {
+  const file = path.join(hskTxt, `hsk-tsv-${suffix}.tsv`);
+  for (const line of readFileSync(file, "utf8").split(/\r?\n/)) {
+    const cols = line.split("\t");
+    if (cols.length < 3) continue;
+    const simplified = cols[0].trim();
+    if (!/^[一-鿿]+$/.test(simplified)) continue;
+    const traditional = cols[1].trim() || undefined;
+    const pinyinRaw = stripHtml(cols[2].replace(/^"|"$/g, ""));
+    zhEntries.push({
+      simplified,
+      traditional,
+      pinyin: pinyinRaw ? normalizePinyin(pinyinRaw) : undefined,
+      level,
+    });
   }
 }
 writeFileSync(
@@ -117,11 +124,17 @@ writeFileSync(
   JSON.stringify(
     {
       scheme: "HSK-3.0",
+      // Tiêu chuẩn là chính thức; DỮ LIỆU nhập là bản chép của cộng đồng —
+      // không gộp hai khái niệm (spec X).
       status: "official",
+      standardAuthority: "GF0025-2021 (Bộ Giáo dục Trung Quốc / CLEC)",
+      dataDistributor:
+        "krmanik/HSK-3.0 (bản chép cộng đồng, kèm pinyin) + elkmovie/hsk30 (OCR Pleco, MIT)",
       sourceId: "hsk30-gf0025",
-      sourceVersion: "GF0025-2021 (mirror elkmovie/hsk30, MIT)",
-      sourceUrl: "https://github.com/elkmovie/hsk30",
-      license: "MIT (bản OCR Pleco)",
+      sourceVersion: "GF0025-2021 — community transcription 2021",
+      sourceUrl: "https://github.com/krmanik/HSK-3.0",
+      license: "Theo repo nguồn (tham chiếu tiêu chuẩn GF0025-2021)",
+      note: "Phân cấp theo HSK 3.0 / GF0025-2021; dữ liệu nhập từ bản chép cộng đồng, không phải bản phát hành chính thức.",
       levels: ["HSK 1", "HSK 2", "HSK 3", "HSK 4", "HSK 5", "HSK 6", "HSK 7–9"],
       entries: zhEntries,
     },
@@ -129,7 +142,7 @@ writeFileSync(
     1,
   ) + "\n",
 );
-console.log(`zh: ${zhEntries.length} mục HSK 3.0`);
+console.log(`zh: ${zhEntries.length} mục HSK 3.0 (có pinyin)`);
 
 // ---------------- JA: JLPT reference ----------------
 interface JaEntry {
@@ -185,8 +198,12 @@ const KO_LEVEL: Record<string, string> = { 초급: "A", 중급: "B", 고급: "C"
 interface KoEntry {
   term: string;
   level: string;
+  pos?: string;
+  entryId?: string;
 }
-const koMap = new Map<string, string>();
+// Giữ MỌI entry (kể cả homonym) kèm entryId + POS để match ngữ nghĩa —
+// KHÔNG gộp lấy cấp thấp nhất (spec III.4).
+const koEntries: KoEntry[] = [];
 for (const f of readdirSync(krdictDir).filter((x) => x.endsWith(".json"))) {
   const doc = JSON.parse(readFileSync(path.join(krdictDir, f), "utf8"));
   for (const e of arr(doc?.LexicalResource?.Lexicon?.LexicalEntry)) {
@@ -194,15 +211,14 @@ for (const f of readdirSync(krdictDir).filter((x) => x.endsWith(".json"))) {
     if (!lv) continue;
     const term = fv(arr(e.Lemma)[0], "writtenForm");
     if (!term) continue;
-    // Nếu trùng term nhiều cấp, giữ cấp thấp nhất (A < B < C).
-    const prev = koMap.get(term);
-    if (!prev || lv < prev) koMap.set(term, lv);
+    koEntries.push({
+      term,
+      level: lv,
+      pos: fv(e, "partOfSpeech"),
+      entryId: (e as Node).val as string,
+    });
   }
 }
-const koEntries: KoEntry[] = [...koMap].map(([term, level]) => ({
-  term,
-  level,
-}));
 writeFileSync(
   path.join(outDir("ko"), "nikl-learning-index.json"),
   JSON.stringify(

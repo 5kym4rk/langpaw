@@ -26,7 +26,7 @@
       "exampleVi": "Điện áp của mạch này rất cao.",
       "level": "Chưa phân loại",
       "syllabusVersion": "GF0025-2021",
-      "topic": "Điện – Điện tử",
+      "topic": "Điện tử",
       "tags": ["electronics"],
       "isInterviewVocabulary": false,
       "sourceIds": ["cc-cedict"],
@@ -36,7 +36,11 @@
       "exampleSelfAuthored": true,
       "reviewStatus": "draft",
       "certificateLevel": null,
-      "certificateStatus": "unclassified"
+      "certificateStatus": "unclassified",
+      "learningReady": false,
+      "topicIds": ["electronics"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "zh-cedict-0002",
@@ -50,7 +54,7 @@
       "exampleVi": "Dòng điện chạy qua dây dẫn.",
       "level": "Chưa phân loại",
       "syllabusVersion": "GF0025-2021",
-      "topic": "Điện – Điện tử",
+      "topic": "Điện tử",
       "tags": ["electronics"],
       "isInterviewVocabulary": false,
       "sourceIds": ["cc-cedict"],
@@ -60,7 +64,11 @@
       "exampleSelfAuthored": true,
       "reviewStatus": "draft",
       "certificateLevel": null,
-      "certificateStatus": "unclassified"
+      "certificateStatus": "unclassified",
+      "learningReady": false,
+      "topicIds": ["electronics"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "zh-cedict-0003",
@@ -74,7 +82,7 @@
       "exampleVi": "Điện trở có thể hạn chế dòng điện.",
       "level": "Chưa phân loại",
       "syllabusVersion": "GF0025-2021",
-      "topic": "Điện – Điện tử",
+      "topic": "Điện tử",
       "tags": ["electronics"],
       "isInterviewVocabulary": false,
       "sourceIds": ["cc-cedict"],
@@ -84,7 +92,11 @@
       "exampleSelfAuthored": true,
       "reviewStatus": "draft",
       "certificateLevel": null,
-      "certificateStatus": "unclassified"
+      "certificateStatus": "unclassified",
+      "learningReady": false,
+      "topicIds": ["electronics"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "zh-cedict-0004",
@@ -98,7 +110,7 @@
       "exampleVi": "Tụ điện có thể tích trữ điện tích.",
       "level": "Chưa phân loại",
       "syllabusVersion": "GF0025-2021",
-      "topic": "Điện – Điện tử",
+      "topic": "Điện tử",
       "tags": ["electronics"],
       "isInterviewVocabulary": false,
       "sourceIds": ["cc-cedict"],
@@ -108,7 +120,11 @@
       "exampleSelfAuthored": true,
       "reviewStatus": "draft",
       "certificateLevel": null,
-      "certificateStatus": "unclassified"
+      "certificateStatus": "unclassified",
+      "learningReady": false,
+      "topicIds": ["electronics"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "zh-cedict-0005",
@@ -120,7 +136,7 @@
       "explanationVi": "Định nghĩa nguồn (EN): frequency",
       "example": "信号的频率是五十赫兹。",
       "exampleVi": "Tần số của tín hiệu là năm mươi héc.",
-      "level": "HSK 6",
+      "level": "HSK 7–9",
       "syllabusVersion": "GF0025-2021",
       "topic": "Viễn thông",
       "tags": ["telecom"],
@@ -132,8 +148,12 @@
       "exampleSelfAuthored": true,
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
-      "certificateLevel": "HSK 6",
-      "certificateStatus": "official"
+      "certificateLevel": "HSK 7–9",
+      "certificateStatus": "official",
+      "learningReady": true,
+      "topicIds": ["telecommunications"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "zh-cedict-0006",
@@ -158,7 +178,11 @@
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
       "certificateLevel": "HSK 2",
-      "certificateStatus": "official"
+      "certificateStatus": "official",
+      "learningReady": true,
+      "topicIds": ["telecommunications"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "zh-cedict-0007",
@@ -172,7 +196,7 @@
       "exampleVi": "Kết nối mạng không ổn định.",
       "level": "HSK 4",
       "syllabusVersion": "GF0025-2021",
-      "topic": "Mạng",
+      "topic": "Viễn thông",
       "tags": ["network"],
       "isInterviewVocabulary": false,
       "sourceIds": ["cc-cedict"],
@@ -183,7 +207,13 @@
       "reviewStatus": "draft",
       "certificateScheme": "HSK-3.0",
       "certificateLevel": "HSK 4",
-      "certificateStatus": "official"
+      "certificateStatus": "official",
+      "certificateRequiresReview": true,
+      "senseMismatch": true,
+      "learningReady": false,
+      "topicIds": ["telecommunications"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     },
     {
       "id": "zh-cedict-0008",
@@ -197,7 +227,7 @@
       "exampleVi": "Đây là một công ty điện tử.",
       "level": "Chưa phân loại",
       "syllabusVersion": "GF0025-2021",
-      "topic": "Điện – Điện tử",
+      "topic": "Điện tử",
       "tags": ["electronics"],
       "isInterviewVocabulary": false,
       "sourceIds": ["cc-cedict"],
@@ -207,7 +237,11 @@
       "exampleSelfAuthored": true,
       "reviewStatus": "draft",
       "certificateLevel": null,
-      "certificateStatus": "unclassified"
+      "certificateStatus": "unclassified",
+      "learningReady": false,
+      "topicIds": ["electronics"],
+      "topicStatus": "source",
+      "topicConfidence": 0.9
     }
   ]
 }

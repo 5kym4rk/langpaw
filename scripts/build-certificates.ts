@@ -1,15 +1,12 @@
 /**
- * Gán cấp chứng chỉ cho toàn bộ từ điển bằng EXACT-MATCH với certificate index
- * (spec phân loại chứng chỉ). Tuyệt đối không dùng độ dài từ / vị trí / AI đoán.
+ * Gán cấp chứng chỉ bằng match CÓ NGỮ NGHĨA (spec P0-II/III):
+ * exact-match mặt chữ chưa đủ — kiểm thêm POS (en), pinyin+sense (zh),
+ * reading chuẩn hóa (ja), entryId/homonym (ko). Tính learningReady thật.
  *
  *   npm run build:certs
  *
- * - Đọc 4 index trong src/data/certification/<lang>/.
- * - Ghi lại các dataset trong src/data/<lang>/ với certificateScheme/Level/
- *   Status/RequiresReview; item.level = displayLevel hoặc "Chưa phân loại".
- * - Xuất assignments-<lang>.json + docs/CERTIFICATION_REPORT.md.
- * - Kiểm tra: gán mâu thuẫn, POS lệch (en), reading lệch (ja), mục index không
- *   có trong từ điển, từ chưa phân loại.
+ * Ghi lại dataset (certificate fields, learningReady, senseMismatch,
+ * invalidMeaning), xuất assignments/review/summary + LEARNING_DATA_REPORT.md.
  */
 import { readFileSync, writeFileSync, readdirSync } from "node:fs";
 import path from "node:path";
@@ -19,6 +16,19 @@ import type {
   CertificateAssignment,
   CertificateScheme,
 } from "../src/types/vocabulary.ts";
+import {
+  matchEnglish,
+  matchChinese,
+  matchJapanese,
+  matchKorean,
+  isInvalidMeaningVi,
+  normalizeKana,
+  type MatchOutcome,
+  type EnIndexEntry,
+  type ZhIndexEntry,
+  type JaIndexEntry,
+  type KoIndexEntry,
+} from "../src/services/classification/certificate-matcher.ts";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const dataDir = path.join(ROOT, "src/data");
@@ -29,8 +39,12 @@ interface IndexFile {
   status: "official" | "reference";
   sourceId: string;
   sourceVersion: string;
+  sourceUrl?: string;
+  license?: string;
+  standardAuthority?: string;
+  dataDistributor?: string;
   levels: string[];
-  entries: Record<string, string>[];
+  entries: Record<string, string | undefined>[];
 }
 
 const ROUTES: Record<
@@ -44,7 +58,7 @@ const ROUTES: Record<
   },
   zh: {
     routeId: "hsk-3.0",
-    labelVi: "HSK 3.0 chính thức",
+    labelVi: "Phân cấp theo HSK 3.0 / GF0025-2021",
     file: "zh/hsk3-index.json",
   },
   ja: {
@@ -59,13 +73,6 @@ const ROUTES: Record<
   },
 };
 
-const loadIndex = (lang: string): IndexFile =>
-  JSON.parse(readFileSync(path.join(certDir, ROUTES[lang].file), "utf8"));
-
-// Chuẩn hóa POS tiếng Anh giữa từ điển và CEFR-J.
-const normPos = (p?: string): string =>
-  (p ?? "").toLowerCase().replace(/\./g, "").trim();
-
 function findJsonFiles(dir: string): string[] {
   const out: string[] = [];
   for (const e of readdirSync(dir, { withFileTypes: true })) {
@@ -76,142 +83,148 @@ function findJsonFiles(dir: string): string[] {
   return out;
 }
 
-interface MatchResult {
-  sourceLevel: string;
-  displayLevel: string;
-  matchType: CertificateAssignment["matchType"];
-  confidence: number;
-  requiresReview: boolean;
+interface LangStats {
+  total: number;
+  matched: number;
+  requiresReview: number;
+  learningReady: number;
+  unclassified: number;
+  invalidMeaning: number;
+  missingReading: number;
+  senseMismatch: number;
+  byLevel: Map<string, number>;
+  readyByLevel: Map<string, number>;
 }
 
 const report: string[] = [];
+const summary: Record<string, unknown>[] = [];
+const rejectedExamples: string[] = [];
 let hardErrors = 0;
 
+const READING_REQUIRED = new Set(["zh", "ja", "ko"]);
+
 for (const lang of ["en", "zh", "ja", "ko"] as const) {
-  const idx = loadIndex(lang);
+  const idx: IndexFile = JSON.parse(
+    readFileSync(path.join(certDir, ROUTES[lang].file), "utf8"),
+  );
   const route = ROUTES[lang];
   const levelRank = new Map(idx.levels.map((l, i) => [l, i]));
 
-  // ---- Dựng bảng tra theo ngôn ngữ ----
-  // en: lemma -> [{pos, level}] ; ja: expression -> [{reading, level}]
-  // zh/ko: term -> level (duy nhất; nếu trùng giữ cấp thấp nhất)
-  const multi = new Map<string, Record<string, string>[]>();
-  const single = new Map<string, string>();
+  // Bảng tra theo khóa mặt chữ (giá trị: mọi candidate — giữ homonym).
+  const table = new Map<string, Record<string, string | undefined>[]>();
+  const keyOf = (e: Record<string, string | undefined>): string =>
+    lang === "en"
+      ? (e.lemma as string)
+      : lang === "zh"
+        ? (e.simplified as string)
+        : lang === "ja"
+          ? (e.expression as string)
+          : (e.term as string);
   for (const e of idx.entries) {
-    if (lang === "en") {
-      const k = e.lemma;
-      (multi.get(k) ?? multi.set(k, []).get(k)!).push(e);
-    } else if (lang === "ja") {
-      const k = e.expression;
-      (multi.get(k) ?? multi.set(k, []).get(k)!).push(e);
-    } else {
-      const k = lang === "zh" ? e.simplified : e.term;
-      const prev = single.get(k);
-      if (!prev || levelRank.get(e.level)! < levelRank.get(prev)!) {
-        single.set(k, e.level);
-      }
-    }
+    const k = keyOf(e);
+    if (!k) continue;
+    (table.get(k) ?? table.set(k, []).get(k)!).push(e);
   }
 
-  const match = (item: VocabularyItem): MatchResult | null => {
-    if (lang === "zh" || lang === "ko") {
-      const level = single.get(item.term);
-      if (!level) return null;
-      return {
-        sourceLevel: level,
-        displayLevel: level,
-        matchType: "exact-term",
-        confidence: 1,
-        requiresReview: false,
-      };
-    }
+  const match = (item: VocabularyItem): MatchOutcome | null => {
     if (lang === "en") {
-      const cands = multi.get(item.term.toLowerCase());
-      if (!cands?.length) return null;
-      const pos = normPos(item.partOfSpeech);
-      const posHit = pos
-        ? cands.find((c) => normPos(c.pos) === pos)
-        : undefined;
-      if (posHit) {
-        return {
-          sourceLevel: posHit.level,
-          displayLevel: posHit.level,
-          matchType: "lemma-pos",
-          confidence: 1,
-          requiresReview: false,
-        };
-      }
-      const levels = [...new Set(cands.map((c) => c.level))];
-      const lowest = levels.sort(
-        (a, b) => levelRank.get(a)! - levelRank.get(b)!,
-      )[0];
-      // Một cấp duy nhất → chắc chắn; nhiều cấp (POS không rõ) → cần rà soát.
-      return {
-        sourceLevel: lowest,
-        displayLevel: lowest,
-        matchType: "exact-term",
-        confidence: levels.length === 1 ? 0.9 : 0.6,
-        requiresReview: levels.length > 1,
-      };
+      return matchEnglish(
+        item.term,
+        item.partOfSpeech,
+        table.get(item.term.toLowerCase()) as EnIndexEntry[] | undefined,
+        levelRank,
+      );
     }
-    // ja: expression + reading
-    const cands = multi.get(item.term);
-    if (!cands?.length) return null;
-    const readingHit = item.reading
-      ? cands.find((c) => c.reading === item.reading)
-      : undefined;
-    if (readingHit) {
-      return {
-        sourceLevel: readingHit.level,
-        displayLevel: readingHit.level,
-        matchType: "term-reading",
-        confidence: 1,
-        requiresReview: false,
-      };
+    if (lang === "zh") {
+      return matchChinese(
+        item.term,
+        item.romanization ?? item.reading,
+        item.meaningVi,
+        table.get(item.term) as ZhIndexEntry[] | undefined,
+      );
     }
-    const levels = [...new Set(cands.map((c) => c.level))];
-    if (levels.length > 1) return null; // nhiều cấp mâu thuẫn → review queue, KHÔNG gán
-    // Không có reading khớp nhưng cấp duy nhất → gán kèm cờ rà soát (spec).
-    return {
-      sourceLevel: levels[0],
-      displayLevel: levels[0],
-      matchType: "exact-term",
-      confidence: 0.7,
-      requiresReview: true,
-    };
+    if (lang === "ja") {
+      return matchJapanese(
+        item.term,
+        item.reading,
+        table.get(item.term) as JaIndexEntry[] | undefined,
+      );
+    }
+    return matchKorean(
+      item.term,
+      item.sourceEntryId,
+      undefined, // POS từ điển là nhãn EN đã map; entryId là kênh chính
+      table.get(item.term) as KoIndexEntry[] | undefined,
+    );
   };
 
-  // ---- Quét & ghi lại dataset ----
-  const files = findJsonFiles(path.join(dataDir, lang));
+  const st: LangStats = {
+    total: 0,
+    matched: 0,
+    requiresReview: 0,
+    learningReady: 0,
+    unclassified: 0,
+    invalidMeaning: 0,
+    missingReading: 0,
+    senseMismatch: 0,
+    byLevel: new Map(),
+    readyByLevel: new Map(),
+  };
   const assignments: CertificateAssignment[] = [];
   const reviewQueue: { id: string; term: string; reason: string }[] = [];
-  const matchedTerms = new Set<string>();
-  let total = 0;
-  let exact = 0;
-  let review = 0;
-  let unclassified = 0;
-  const byLevel = new Map<string, number>();
-  const byTopic = new Map<string, number>();
 
-  for (const file of files) {
+  for (const file of findJsonFiles(path.join(dataDir, lang))) {
     const doc = JSON.parse(readFileSync(file, "utf8"));
     if (!Array.isArray(doc.items)) continue;
     for (const item of doc.items as VocabularyItem[]) {
-      total += 1;
+      st.total += 1;
+
+      const invalidMeaning = isInvalidMeaningVi(item.meaningVi);
+      const missingReading =
+        READING_REQUIRED.has(lang) &&
+        !(item.reading || item.romanization) &&
+        // kana thuần tự làm reading cho ja
+        !(
+          lang === "ja" &&
+          !/[一-鿿]/.test(item.term) &&
+          normalizeKana(item.term)
+        );
+      if (invalidMeaning) st.invalidMeaning += 1;
+      if (missingReading) st.missingReading += 1;
+
       const m = match(item);
       if (m) {
+        st.matched += 1;
+        if (m.requiresReview) st.requiresReview += 1;
+        if (m.senseMismatch) st.senseMismatch += 1;
+
+        const ready =
+          !m.requiresReview &&
+          !m.senseMismatch &&
+          !invalidMeaning &&
+          !missingReading;
+
         item.certificateScheme = idx.scheme;
-        item.certificateLevel = m.displayLevel;
+        item.certificateLevel = m.level;
         item.certificateStatus = idx.status;
         item.certificateRequiresReview = m.requiresReview || undefined;
-        item.level = m.displayLevel;
-        matchedTerms.add(lang === "en" ? item.term.toLowerCase() : item.term);
+        item.senseMismatch = m.senseMismatch || undefined;
+        item.invalidMeaning = invalidMeaning || undefined;
+        item.learningReady = ready;
+        item.level = m.level;
+
+        if (ready) {
+          st.learningReady += 1;
+          st.readyByLevel.set(m.level, (st.readyByLevel.get(m.level) ?? 0) + 1);
+        }
+        st.byLevel.set(m.level, (st.byLevel.get(m.level) ?? 0) + 1);
+
         assignments.push({
           dictionaryItemId: item.id,
           routeId: route.routeId,
           scheme: idx.scheme,
-          sourceLevel: m.sourceLevel,
-          displayLevel: m.displayLevel,
+          sourceLevel: m.level,
+          displayLevel: m.level,
           sourceId: idx.sourceId,
           sourceVersion: idx.sourceVersion,
           matchType: m.matchType,
@@ -219,97 +232,141 @@ for (const lang of ["en", "zh", "ja", "ko"] as const) {
           confidence: m.confidence,
           requiresReview: m.requiresReview,
         });
-        exact += 1;
-        if (m.requiresReview) {
-          review += 1;
-          reviewQueue.push({
-            id: item.id,
-            term: item.term,
-            reason:
-              lang === "en"
-                ? "POS không khớp / nhiều cấp CEFR"
-                : "Thiếu reading khớp với index JLPT",
-          });
+        if (m.requiresReview || m.senseMismatch) {
+          const reason = m.senseMismatch
+            ? "Sense khác với sense của index (pinyin/nghĩa hiếm)"
+            : lang === "en"
+              ? "Nhiều POS/cấp, POS từ điển chưa xác minh"
+              : lang === "ja"
+                ? "Reading không khớp/thiếu so với index"
+                : "Homonym nhiều cấp, thiếu entryId khớp";
+          reviewQueue.push({ id: item.id, term: item.term, reason });
+          if (rejectedExamples.length < 40) {
+            rejectedExamples.push(
+              `- [${lang}] ${item.term} (${item.id}): ${reason} — meaningVi="${item.meaningVi.slice(0, 50)}"`,
+            );
+          }
+        } else if (invalidMeaning && rejectedExamples.length < 40) {
+          rejectedExamples.push(
+            `- [${lang}] ${item.term} (${item.id}): nghĩa không đủ chất lượng — "${item.meaningVi.slice(0, 50)}"`,
+          );
         }
-        byLevel.set(m.displayLevel, (byLevel.get(m.displayLevel) ?? 0) + 1);
-        byTopic.set(item.topic, (byTopic.get(item.topic) ?? 0) + 1);
       } else {
+        st.unclassified += 1;
         item.certificateScheme = undefined;
         item.certificateLevel = null;
         item.certificateStatus = "unclassified";
         item.certificateRequiresReview = undefined;
+        item.senseMismatch = undefined;
+        item.invalidMeaning = invalidMeaning || undefined;
+        item.learningReady = false;
         item.level = "Chưa phân loại";
-        unclassified += 1;
-        if (lang === "ja" && multi.has(item.term)) {
-          reviewQueue.push({
-            id: item.id,
-            term: item.term,
-            reason: "Cùng chữ nhưng nhiều cấp/reading mâu thuẫn trong index",
-          });
-        }
       }
     }
     writeFileSync(file, JSON.stringify(doc, null, 2) + "\n", "utf8");
   }
 
-  // Mục index không xuất hiện trong từ điển (thông tin, không chặn).
-  const indexKeys =
-    lang === "en" || lang === "ja" ? [...multi.keys()] : [...single.keys()];
-  const notInDict = indexKeys.filter((k) => !matchedTerms.has(k)).length;
-
   writeFileSync(
     path.join(certDir, `assignments-${lang}.json`),
     JSON.stringify(assignments, null, 1) + "\n",
-    "utf8",
   );
   writeFileSync(
     path.join(certDir, `review-${lang}.json`),
     JSON.stringify(reviewQueue, null, 1) + "\n",
-    "utf8",
   );
 
+  summary.push({
+    language: lang,
+    routeId: route.routeId,
+    labelVi: route.labelVi,
+    scheme: idx.scheme,
+    status: idx.status,
+    standardAuthority: idx.standardAuthority,
+    dataDistributor: idx.dataDistributor,
+    sourceVersion: idx.sourceVersion,
+    sourceUrl: idx.sourceUrl,
+    license: idx.license,
+    indexEntries: idx.entries.length,
+    total: st.total,
+    matched: st.matched,
+    requiresReview: st.requiresReview,
+    learningReady: st.learningReady,
+    unclassified: st.unclassified,
+    invalidMeaning: st.invalidMeaning,
+    missingReading: st.missingReading,
+    senseMismatch: st.senseMismatch,
+  });
+
   const levelLines = idx.levels
-    .filter((l) => byLevel.has(l))
-    .map((l) => `  - ${l}: ${byLevel.get(l)}`)
+    .filter((l) => st.byLevel.has(l))
+    .map(
+      (l) =>
+        `  - ${l}: ${st.byLevel.get(l)} khớp / ${st.readyByLevel.get(l) ?? 0} learning-ready`,
+    )
     .join("\n");
-  const learningReady = exact - review;
   report.push(
     [
       `## ${lang.toUpperCase()} — ${route.labelVi} (${idx.status})`,
       ``,
-      `- Nguồn: ${idx.sourceVersion}`,
-      `- Tổng từ trong kho: ${total}`,
-      `- Exact matched: ${exact}`,
-      `- Requires review: ${review}`,
-      `- Unclassified: ${unclassified}`,
-      `- Learning ready (matched, không cần rà soát): ${learningReady}`,
-      `- Mục index chưa có trong từ điển: ${notInDict}`,
-      `- Theo cấp:`,
+      `| Chỉ số | Số lượng |`,
+      `| --- | --- |`,
+      `| Tổng kho từ | ${st.total} |`,
+      `| Khớp certificate | ${st.matched} |`,
+      `| Learning ready | ${st.learningReady} |`,
+      `| Requires review | ${st.requiresReview} |`,
+      `| Sense mismatch | ${st.senseMismatch} |`,
+      `| Invalid meaning | ${st.invalidMeaning} |`,
+      `| Missing reading | ${st.missingReading} |`,
+      `| Ngoài lộ trình (unclassified) | ${st.unclassified} |`,
+      ``,
+      `Theo cấp (khớp / learning-ready):`,
       levelLines,
     ].join("\n"),
   );
   console.log(
-    `${lang}: matched ${exact}/${total} (review ${review}, unclassified ${unclassified})`,
+    `${lang}: matched ${st.matched}/${st.total} · ready ${st.learningReady} · review ${st.requiresReview} · sense ${st.senseMismatch} · invalid ${st.invalidMeaning}`,
   );
 
-  // Validation cứng: một item hai cấp khác nhau là bug ghép.
-  const seen = new Map<string, string>();
-  for (const a of assignments) {
-    const prev = seen.get(a.dictionaryItemId);
-    if (prev && prev !== a.displayLevel) {
-      console.error(
-        `❌ [${lang}] ${a.dictionaryItemId} gán 2 cấp: ${prev} vs ${a.displayLevel}`,
-      );
-      hardErrors += 1;
+  // Hard check: learningReady=true mà vi phạm điều kiện là bug.
+  for (const file of findJsonFiles(path.join(dataDir, lang))) {
+    const doc = JSON.parse(readFileSync(file, "utf8"));
+    if (!Array.isArray(doc.items)) continue;
+    for (const it of doc.items as VocabularyItem[]) {
+      if (
+        it.learningReady &&
+        (it.certificateRequiresReview ||
+          it.senseMismatch ||
+          it.invalidMeaning ||
+          !it.certificateLevel)
+      ) {
+        console.error(
+          `❌ [${lang}] ${it.id} learningReady nhưng vi phạm điều kiện`,
+        );
+        hardErrors += 1;
+      }
     }
-    seen.set(a.dictionaryItemId, a.displayLevel);
   }
 }
 
 writeFileSync(
-  path.join(ROOT, "docs/CERTIFICATION_REPORT.md"),
-  `# Báo cáo phân loại chứng chỉ\n\nSinh bởi \`npm run build:certs\` — exact-match với certificate index, không dùng độ dài từ/vị trí/AI đoán.\n\n${report.join("\n\n")}\n`,
-  "utf8",
+  path.join(certDir, "summary.json"),
+  JSON.stringify(summary, null, 1) + "\n",
 );
-console.log("→ docs/CERTIFICATION_REPORT.md");
+
+writeFileSync(
+  path.join(ROOT, "docs/LEARNING_DATA_REPORT.md"),
+  [
+    `# Báo cáo dữ liệu học (learning data)`,
+    ``,
+    `Sinh bởi \`npm run build:certs\`. Match có ngữ nghĩa: POS (en), pinyin+sense (zh), reading chuẩn hóa (ja), entryId/homonym (ko). learningReady chỉ true khi: có cấp + nghĩa hợp lệ + có cách đọc (zh/ja/ko) + không cần rà soát + không sense mismatch.`,
+    ``,
+    report.join("\n\n"),
+    ``,
+    `## Ví dụ mục bị loại khỏi learning-ready (và lý do)`,
+    ``,
+    rejectedExamples.join("\n"),
+    ``,
+  ].join("\n"),
+);
+console.log("→ docs/LEARNING_DATA_REPORT.md + summary.json");
 if (hardErrors > 0) process.exit(1);

@@ -1,1 +1,47 @@
-[]
+[
+  {
+    "id": "ko-0008",
+    "term": "형",
+    "reason": "Homonym nhiều cấp, thiếu entryId khớp"
+  },
+  {
+    "id": "ko-0018",
+    "term": "돈",
+    "reason": "Homonym nhiều cấp, thiếu entryId khớp"
+  },
+  {
+    "id": "ko-0023",
+    "term": "주",
+    "reason": "Homonym nhiều cấp, thiếu entryId khớp"
+  },
+  {
+    "id": "ko-0027",
+    "term": "물",
+    "reason": "Homonym nhiều cấp, thiếu entryId khớp"
+  },
+  {
+    "id": "ko-0032",
+    "term": "가격",
+    "reason": "Homonym nhiều cấp, thiếu entryId khớp"
+  },
+  {
+    "id": "ko-0034",
+    "term": "차",
+    "reason": "Homonym nhiều cấp, thiếu entryId khớp"
+  },
+  {
+    "id": "ko-0039",
+    "term": "지도",
+    "reason": "Homonym nhiều cấp, thiếu entryId khớp"
+  },
+  {
+    "id": "ko-0040",
+    "term": "의사",
+    "reason": "Homonym nhiều cấp, thiếu entryId khớp"
+  },
+  {
+    "id": "ko-0045",
+    "term": "회의",
+    "reason": "Homonym nhiều cấp, thiếu entryId khớp"
+  }
+]

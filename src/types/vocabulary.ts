@@ -76,6 +76,19 @@ export interface VocabularyItem {
   certificateStatus?: CertificateStatus;
   /** Cần người rà soát (nhiều POS/reading mâu thuẫn…). */
   certificateRequiresReview?: boolean;
+
+  /** ĐỦ điều kiện đưa vào phiên học của lộ trình (spec P0-II):
+   *  nghĩa hợp lệ + có cấp + không cần rà soát + có cách đọc (zh/ja/ko). */
+  learningReady?: boolean;
+  /** Nghĩa trong từ điển là sense khác với sense của certificate index. */
+  senseMismatch?: boolean;
+  /** Nghĩa Việt không đủ chất lượng làm flashcard (chỉ nhãn POS, lỗi…). */
+  invalidMeaning?: boolean;
+
+  /** Chủ đề học theo taxonomy cố định (spec P1-V). */
+  topicIds?: string[];
+  topicStatus?: "source" | "rule" | "manual" | "unclassified";
+  topicConfidence?: number;
 }
 
 export type CertificateScheme =

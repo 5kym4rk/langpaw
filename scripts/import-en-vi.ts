@@ -6,10 +6,10 @@
 import { existsSync, readdirSync } from "node:fs";
 import path from "node:path";
 import {
-  cleanViMeaning,
   buildDictionaryDataset,
   type DictCandidate,
 } from "../src/services/data/import/parsers.ts";
+import { parseEnViDefinition } from "../src/services/data/import/stardict-parsers.ts";
 import { readStarDict } from "./stardict.ts";
 import { writeDataset } from "./import-common.ts";
 
@@ -32,9 +32,17 @@ for (const e of entries) {
   const term = e.word.trim();
   // Chỉ lấy từ đơn, chữ cái thường (bỏ cụm từ, tên riêng, ký tự lạ).
   if (!/^[a-z][a-z-]{1,}$/.test(term)) continue;
-  const meaningVi = cleanViMeaning(e.definition);
-  if (!meaningVi) continue;
-  cands.push({ term, meaningVi });
+  // Bóc IPA + POS + nghĩa + ví dụ từ cấu trúc "@word /IPA/ * POS - nghĩa =vd+".
+  const parsed = parseEnViDefinition(e.definition);
+  if (!parsed) continue;
+  cands.push({
+    term,
+    meaningVi: parsed.meaningVi.slice(0, 200),
+    ipa: parsed.ipa,
+    partOfSpeech: parsed.partOfSpeech,
+    example: parsed.example,
+    exampleVi: parsed.exampleVi,
+  });
 }
 
 const dataset = buildDictionaryDataset(cands, {

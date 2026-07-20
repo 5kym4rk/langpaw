@@ -7,11 +7,10 @@
 import { existsSync, readdirSync } from "node:fs";
 import path from "node:path";
 import {
-  cleanViMeaning,
-  extractKanaReading,
   buildDictionaryDataset,
   type DictCandidate,
 } from "../src/services/data/import/parsers.ts";
+import { parseJaViDefinition } from "../src/services/data/import/stardict-parsers.ts";
 import { readStarDict } from "./stardict.ts";
 import { writeDataset } from "./import-common.ts";
 
@@ -41,10 +40,16 @@ for (const e of entries) {
   if (!term || term.includes(" ") || !hasJapanese(term) || isMarkOnly(term))
     continue;
   if (term.length === 1 && isKana(term)) continue;
-  const meaningVi = cleanViMeaning(e.definition);
-  if (!meaningVi) continue;
-  const reading = isKana(term) ? term : extractKanaReading(e.definition);
-  cands.push({ term, meaningVi, reading });
+  const parsed = parseJaViDefinition(e.definition);
+  if (!parsed) continue;
+  const reading = isKana(term) ? term : parsed.reading;
+  cands.push({
+    term,
+    meaningVi: parsed.meaningVi.slice(0, 200),
+    reading,
+    example: parsed.example,
+    exampleVi: parsed.exampleVi,
+  });
 }
 
 const dataset = buildDictionaryDataset(cands, {

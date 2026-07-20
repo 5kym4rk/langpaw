@@ -27,24 +27,35 @@ function item(over: Partial<VocabularyItem>): VocabularyItem {
 
 describe("filterByRoute", () => {
   const items = [
-    item({ id: "a", certificateStatus: "reference", certificateLevel: "A1" }),
-    item({ id: "b", certificateStatus: "official", certificateLevel: "HSK 1" }),
+    item({
+      id: "a",
+      certificateStatus: "reference",
+      certificateLevel: "A1",
+      learningReady: true,
+    }),
+    item({
+      id: "b",
+      certificateStatus: "official",
+      certificateLevel: "HSK 1",
+      learningReady: true,
+    }),
     item({
       id: "c",
       certificateStatus: "unclassified",
       certificateLevel: null,
+      learningReady: false,
     }),
-    item({ id: "d" }), // không có trường certificate → coi như chưa phân loại
+    item({ id: "d" }), // thiếu trường → chưa đủ điều kiện học
   ];
 
-  it("certificate = chỉ mục đã gán qua exact-match", () => {
+  it("certificate = chỉ mục learningReady", () => {
     expect(filterByRoute(items, "certificate").map((i) => i.id)).toEqual([
       "a",
       "b",
     ]);
   });
 
-  it("dictionary = phần chưa phân loại (vẫn trong kho)", () => {
+  it("dictionary = phần còn lại (Ngoài lộ trình, vẫn trong kho)", () => {
     expect(filterByRoute(items, "dictionary").map((i) => i.id)).toEqual([
       "c",
       "d",
